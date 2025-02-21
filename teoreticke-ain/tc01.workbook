@@ -136,7 +136,7 @@
     "37": {
       "id": 37,
       "type": "text",
-      "data": ":icon[write]\n**Riešenie:**\n\n…",
+      "data": ":icon[write]\n**Riešenie:**\n<br/>\n$|\\Consts| = 7$\n\nPre predikátové atómy podľa arity:\n$7^1 + 7^2 + 7^3 + 7^2 = 448$\n\nPre rovnosté atómy:\n$7^2 = 49$\n\n_Spolu: **497**_",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -169,72 +169,72 @@
             {
               "proposition_id": 1197,
               "proposition": "1. Peter je muž.",
-              "solution": ""
+              "solution": "man(Peter)"
             },
             {
               "proposition_id": 1198,
               "proposition": "2. Peter je študent.",
-              "solution": null
+              "solution": "student(Peter)"
             },
             {
               "proposition_id": 1199,
               "proposition": "3. Lucia je žena a študentka.",
-              "solution": null
+              "solution": "woman(Lucia) & student(Lucia)"
             },
             {
               "proposition_id": 1200,
               "proposition": "4. Lucia je staršia ako Peter.",
-              "solution": null
+              "solution": "older(Lucia, Peter)"
             },
             {
               "proposition_id": 1201,
               "proposition": "5. Matematiku učí Eugen.",
-              "solution": null
+              "solution": "teaches(Eugen, Math)"
             },
             {
               "proposition_id": 1202,
               "proposition": "6. Peter a Lucia sú od neho mladší.",
-              "solution": null
+              "solution": "older(Eugen, Peter) & older(Eugen, Lucia)"
             },
             {
               "proposition_id": 1203,
               "proposition": "7. Peter dostal z Matematiky od Eugena známku E.",
-              "solution": null
+              "solution": "got_grade(Peter, E, Math, Eugen)"
             },
             {
               "proposition_id": 1204,
               "proposition": "8. Lucia má rada Petra.",
-              "solution": null
+              "solution": "likes(Lucia, Peter)"
             },
             {
               "proposition_id": 1205,
               "proposition": "9. Aj keď má (ona) z Matematiky od Eugena známku výborný.",
-              "solution": null
+              "solution": "got_grade(Lucia, excellent, Math, Eugen)"
             },
             {
               "proposition_id": 1206,
               "proposition": "10. Známka výborný  je len iný názov pre A-čko, a podobne dostatočný značí to isté ako E-čko.",
-              "solution": null
+              "solution": "A = excellent & sufficient = E"
             },
             {
               "proposition_id": 1207,
               "proposition": "11. Eugen sa má rád.",
-              "solution": null
+              "solution": "likes(Eugen, Eugen)"
             },
             {
               "proposition_id": 1208,
               "proposition": "12. Matematika je povinný predmet.",
-              "solution": null
+              "solution": "compulsory(Math) & course(Math)"
             },
             {
               "proposition_id": 1209,
               "proposition": "13. Všetci vyššie menovaní študenti majú radi Telocvik.",
-              "solution": null
+              "solution": ""
             },
             {
               "proposition_id": 1210,
               "proposition": "14. Telocvik je voliteľný predmet.",
-              "solution": null
+              "solution": "elective(PhysEd) & course(PhysEd)"
             }
           ]
         },
@@ -269,7 +269,7 @@
     "49": {
       "id": 49,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} **b)**]{.float-start.h6.lh-base.my-0.me-2}\nOznačte `[x]` všetky pravdivé výroky a žiadny nepravdivý:\n\n:small[:icon[source]\nPrednáška:\n:xref[1.14]{.lec label=\"definícia\"}.]\n\n:::enum{.i}\n1. Interpretácia predikátového symbolu $\\sym{older}$ je:\n    * [ ] binárnou reláciou na množine $D$.\n    * [x] prvkom $D^2$.\n2. Aký je vzťah medzi interpretáciou predikátového symbolu\n   $\\sym{woman}$ a doménou $D$ štruktúry $\\Struct$?\n    * [ ] Je prvkom, teda $i(\\sym{woman}) \\in D$.\n    * [x] Je podmnožinou, teda $i(\\sym{woman}) \\subseteq D$.\n4. Medzi indivíduovou konštantou $\\sym{Ed}$\n   a doménou $D$ štruktúry $\\Struct$ je vzťah:\n    * [ ] $\\sym{Ed} \\subseteq D$.\n    * [ ] $i(\\sym{Ed}) \\subseteq D$.\n    * [x] $i(\\sym{Ed}) \\in D$.\n    * [ ] $\\sym{Ed} \\in D$.\n:::",
+      "data": "::h3[:icon[ui-checks]{.text-primary} **b)**]{.float-start.h6.lh-base.my-0.me-2}\nOznačte `[x]` všetky pravdivé výroky a žiadny nepravdivý:\n\n:small[:icon[source]\nPrednáška:\n:xref[1.14]{.lec label=\"definícia\"}.]\n\n:::enum{.i}\n1. Interpretácia predikátového symbolu $\\sym{older}$ je:\n    * [x] binárnou reláciou na množine $D$.\n    * [ ] prvkom $D^2$.\n2. Aký je vzťah medzi interpretáciou predikátového symbolu\n   $\\sym{woman}$ a doménou $D$ štruktúry $\\Struct$?\n    * [ ] Je prvkom, teda $i(\\sym{woman}) \\in D$.\n    * [x] Je podmnožinou, teda $i(\\sym{woman}) \\subseteq D$.\n4. Medzi indivíduovou konštantou $\\sym{Ed}$\n   a doménou $D$ štruktúry $\\Struct$ je vzťah:\n    * [ ] $\\sym{Ed} \\subseteq D$.\n    * [ ] $i(\\sym{Ed}) \\subseteq D$.\n    * [x] $i(\\sym{Ed}) \\in D$.\n    * [ ] $\\sym{Ed} \\in D$.\n:::",
       "idCounter": 1,
       "comments": {
         "ids": [],
@@ -289,7 +289,7 @@
     "51": {
       "id": 51,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} **c)**]{.float-start.h6.lh-base.my-0.me-2}\nOznačte `[x]` všetky pravdivé výroky a žiadny nepravdivý:\n\n:small[:icon[source]\nPrednáška: definície :xref[1.14]{.lec} a :xref[1.18]{.lec}.]\n\n:::enum{.i}\n1. Aký je vzťah medzi konštantami $\\sym{dad}$ a $\\sym{Charles}$?\n    * [x] $i(\\sym{Charles}) = i(\\sym{dad})$\n    * [ ] $\\sym{dad} = \\sym{Charles}$\n2. Aký je vzťah medzi konštantou $\\sym{Alex}$ a predikátovým symbolom $\\sym{woman}$?\n    * [ ] $\\sym{Alex} \\in \\sym{woman}$\n    * [x] $i(\\sym{Alex}) \\in i(\\sym{woman})$\n2. Aký je vzťah medzi konštantami $\\sym{Alex}$, $\\sym{Betty}$ a predikátovým symbolom $\\sym{older}$?\n    * [x] $(i(\\sym{Betty}),i(\\sym{Alex})) \\in i(\\sym{older})$\n    * [ ] $(\\sym{Betty},\\sym{Alex}) \\in i(\\sym{older})$\n    * [ ] $(i(\\sym{Alex}),i(\\sym{Betty})) \\in i(\\sym{older})$\n3. Ako pomenúvame vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [ ] Štruktúra $\\Struct$ je modelom formuly $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [ ] Štruktúra $\\Struct$ je pravdivá pre formulu $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [x] Formula $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$ je pravdivá v štruktúre $\\Struct$.\n4. Ako zapisujeme vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [x] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\models \\Struct$\n    * [ ] $\\Struct \\models \\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\in \\Struct$\n",
+      "data": "::h3[:icon[ui-checks]{.text-primary} **c)**]{.float-start.h6.lh-base.my-0.me-2}\nOznačte `[x]` všetky pravdivé výroky a žiadny nepravdivý:\n\n:small[:icon[source]\nPrednáška: definície :xref[1.14]{.lec} a :xref[1.18]{.lec}.]\n\n:::enum{.i}\n1. Aký je vzťah medzi konštantami $\\sym{dad}$ a $\\sym{Charles}$?\n    * [x] $i(\\sym{Charles}) = i(\\sym{dad})$\n    * [ ] $\\sym{dad} = \\sym{Charles}$\n2. Aký je vzťah medzi konštantou $\\sym{Alex}$ a predikátovým symbolom $\\sym{woman}$?\n    * [ ] $\\sym{Alex} \\in \\sym{woman}$\n    * [x] $i(\\sym{Alex}) \\in i(\\sym{woman})$\n2. Aký je vzťah medzi konštantami $\\sym{Alex}$, $\\sym{Betty}$ a predikátovým symbolom $\\sym{older}$?\n    * [x] $(i(\\sym{Betty}),i(\\sym{Alex})) \\in i(\\sym{older})$\n    * [ ] $(\\sym{Betty},\\sym{Alex}) \\in i(\\sym{older})$\n    * [ ] $(i(\\sym{Alex}),i(\\sym{Betty})) \\in i(\\sym{older})$\n3. Ako pomenúvame vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [ ] Štruktúra $\\Struct$ je modelom formuly $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [ ] Štruktúra $\\Struct$ je pravdivá pre formulu $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [x] Formula $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$ je pravdivá v štruktúre $\\Struct$.\n4. Ako zapisujeme vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\models \\Struct$\n    * [x] $\\Struct \\models \\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\in \\Struct$\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -306,20 +306,20 @@
         "entities": {}
       }
     },
-    "53": {
-      "id": 53,
+    "55": {
+      "id": 55,
       "type": "text",
-      "data": "A3 a B1 problem, a A1 a B4 problem.",
+      "data": "_Dôkaz sporom._\nNech by existovala štruktúra $\\Struct_2 = (D, i)$ s požadovanými vlastnosťami.\n\n1. Pretože $\\Struct_2 \\models woman(Betty)$, tak $i(Betty) =  b \\in i(woman)$.\n2. Pretože $\\Struct_2 \\nmodels woman(Alex)$, tak $i(Alex) = a \\in i(woman)$.\n3. Potom $a \\neq $b\n4. Z toho vyplýva $\\{a, b\\} \\sube D$ a teda $|D| \\geq 2$.\n5. Podľa zadania $|D| \\leq 2$ teda $D = 2$.\n6. Pretože $\\Struct_2 \\models woman(Dana)$ tak $i(Dana) = d \\in i(woman)$.\n7. Z toho plynie, že $b = d$.\n8. Pretože $\\Struct_2 \\models older(Dana, Charles) $ tak $(i(Dana), i(Charles)) \\in i(older)$, teda $(b, i(Charles)) \\in i(older)$.\n9. Pretože $\\Struct_2 \\nmodels older(Betty, Charles)$ tak $(i(Betty), i(Charles)) \\not\\in i(older)$, teda $(b, i(Charles)) \\not\\in i(older)$.\n10. Dôsledky krokov 8 a 9 sú v spore.",
       "idCounter": 0,
       "comments": {
         "ids": [],
         "entities": {}
       }
     },
-    "55": {
-      "id": 55,
-      "type": "text",
-      "data": "_Dôkaz sporom._\nNech by existovala štruktúra $\\Struct_2 = (D, i)$ s požadovanými vlastnosťami.\n\n1. Pretože $\\Struct_2 \\models woman(Betty)$, tak $i(Betty) =  b \\in i(woman)$.\n2. Pretože $\\Struct_2 \\nmodels woman(Alex)$, tak $i(Alex) = a \\in i(woman)$.\n3. Potom $a \\neq $b\n4. Z toho vyplýva $\\{a, b\\} \\sube D$ a teda $|D| \\geq 2$.\n5. Podľa zadania $|D| \\leq 2$ teda $D = 2$.\n6. Pretože $\\Struct_2 \\models woman(Dana)$ tak $i(Dana) = d \\in i(woman)$.\n7. Z toho plynie, že $b = d$.\n8. Pretože $\\Struct_2 \\models older(Dana, Charles) $ tak $(i(Dana), i(Charles)) \\in i(older)$, teda $(b, i(Charles)) \\in i(older)$.\n9. Pretože $\\Struct_2 \\nmodels older(Betty, Charles)$ tak $(i(Betty), i(Charles)) \\not\\in i(older)$, teda $(b, i(Charles)) \\not\\in i(older)$.\n10. Dôsledky krokov 8 a 9 sú v spore.",
+    "56": {
+      "id": 56,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Alex, Betty, Charles, Dana, Ed, Gina, dad\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Alex\",\"Betty\",\"Charles\",\"Dana\",\"Ed\",\"Gina\",\"dad\"]},\"predicates\":{\"value\":\"woman/1, parent/2, child/3, older/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"woman\",\"arity\":1},{\"name\":\"parent\",\"arity\":2},{\"name\":\"child\",\"arity\":3},{\"name\":\"older\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{\"Alex\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Betty\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Charles\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Dana\":{\"value\":\"3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Ed\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Gina\":{\"value\":\"5\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"dad\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"woman/1\":{\"value\":\"2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"],[\"3\"]],\"tableEnabled\":false},\"parent/2\":{\"value\":\"(3, 1), (3, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\",\"1\"],[\"3\",\"2\"]],\"tableEnabled\":false},\"older/2\":{\"value\":\"(3,1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\",\"1\"]],\"tableEnabled\":false},\"child/3\":{\"value\":\"(1, 5, 4), (1, 3, 1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"5\",\"4\"],[\"1\",\"3\",\"1\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3, 4, 5\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\",\"4\",\"5\"]}},\"expressions\":{\"formulas\":[{\"value\":\"woman(Betty)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"woman\",\"terms\":[{\"name\":\"Betty\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"child(Charles,Gina,Ed)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"child\",\"terms\":[{\"name\":\"Charles\"},{\"name\":\"Gina\"},{\"name\":\"Ed\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"older(Dana,Charles)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"older\",\"terms\":[{\"name\":\"Dana\"},{\"name\":\"Charles\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"woman(Dana)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"woman\",\"terms\":[{\"name\":\"Dana\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"parent(Dana,Alex)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"parent\",\"terms\":[{\"name\":\"Dana\"},{\"name\":\"Alex\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"parent(Dana,Betty)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"parent\",\"terms\":[{\"name\":\"Dana\"},{\"name\":\"Betty\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"child(Alex,Dana,Charles)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"child\",\"terms\":[{\"name\":\"Alex\"},{\"name\":\"Dana\"},{\"name\":\"Charles\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"parent(Ed,Ed)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"parent\",\"terms\":[{\"name\":\"Ed\"},{\"name\":\"Ed\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"older(Betty,Charles)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"older\",\"terms\":[{\"name\":\"Betty\"},{\"name\":\"Charles\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"Charles ≐ dad\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"subLeft\":{\"name\":\"Charles\"},\"subRight\":{\"name\":\"dad\"}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"woman(Alex)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"woman\",\"terms\":[{\"name\":\"Alex\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"child(Betty,Gina,dad)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"child\",\"terms\":[{\"name\":\"Betty\"},{\"name\":\"Gina\"},{\"name\":\"dad\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"older(Gina,Charles)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"older\",\"terms\":[{\"name\":\"Gina\"},{\"name\":\"Charles\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -344,9 +344,9 @@
     24,
     28,
     26,
-    53,
     55,
     25,
+    56,
     29,
     40,
     50,
