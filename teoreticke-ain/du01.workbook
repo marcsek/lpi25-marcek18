@@ -54,7 +54,7 @@
     "26": {
       "id": 26,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} **c)** Štruktúra a pravdivosť.]{.float-start.h6.lh-base.my-0.me-2}\nNech $\\Struct = (D,i)$ je štruktúra pre jazyk $\\Lang$, o ktorej vieme nasledovné fakty: \n\n* $i(\\sym{A}) \\in i(\\sym{triangle})$\n* $\\Struct \\nmodels \\sym{circle}(\\sym{E})$\n* V štruktúre $\\Struct$ nie je pravdivá formula $(\\sym{large}(\\sym{B})\\lor\\sym{medium}(\\sym{B}))$.\n* $\\Struct \\models \\sym{B} \\doteq \\sym{C}$\n* Štruktúra $\\Struct$ je modelom formuly $\\sym{same\\_size}(\\sym{B}, \\sym{D})$.\n* V štruktúre $\\Struct$ nie je interpretácia indivíduovej konštanty $\\sym{C}$ prvkom interpretácie predikátového symbolu $\\sym{square}$.\n\nPotom:\n:::enum{.i}\n1. $i(\\sym{C}) \\notin i(\\sym{large})$\n    * [ ] Pravda\n    * [ ] Nepravda\n2. V štruktúre $\\Struct$ je pravdivá formula $(\\sym{circle}(\\sym{E})\\limpl\\sym{small}(\\sym{E}))$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. Štruktúra $\\Struct$ je modelom formuly $\\lnot(\\sym{larger}(\\sym{B}, \\sym{A})\\land\\sym{square}(\\sym{C}))$.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. Ak $\\Struct \\models (\\sym{small}(\\sym{C})\\limpl\\sym{triangle}(\\sym{A}))$, tak $\\Struct \\models \\sym{small}(\\sym{C})$.\n    * [ ] Pravda\n    * [ ] Nepravda  \n:::",
+      "data": "::h3[:icon[ui-checks]{.text-primary} **c)** Štruktúra a pravdivosť.]{.float-start.h6.lh-base.my-0.me-2}\nNech $\\Struct = (D,i)$ je štruktúra pre jazyk $\\Lang$, o ktorej vieme nasledovné fakty: \n\n* $i(\\sym{A}) \\in i(\\sym{triangle})$\n* $\\Struct \\nmodels \\sym{circle}(\\sym{E})$\n* V štruktúre $\\Struct$ nie je pravdivá formula $(\\sym{large}(\\sym{B})\\lor\\sym{medium}(\\sym{B}))$.\n* $\\Struct \\models \\sym{B} \\doteq \\sym{C}$\n* Štruktúra $\\Struct$ je modelom formuly $\\sym{same\\_size}(\\sym{B}, \\sym{D})$.\n* V štruktúre $\\Struct$ nie je interpretácia indivíduovej konštanty $\\sym{C}$ prvkom interpretácie predikátového symbolu $\\sym{square}$.\n\nPotom:\n:::enum{.i}\n1. $i(\\sym{C}) \\notin i(\\sym{large})$\n    * [x] Pravda\n    * [ ] Nepravda\n2. V štruktúre $\\Struct$ je pravdivá formula $(\\sym{circle}(\\sym{E})\\limpl\\sym{small}(\\sym{E}))$.\n    * [x] Pravda\n    * [ ] Nepravda\n3. Štruktúra $\\Struct$ je modelom formuly $\\lnot(\\sym{larger}(\\sym{B}, \\sym{A})\\land\\sym{square}(\\sym{C}))$.\n    * [x] Pravda\n    * [ ] Nepravda\n4. Ak $\\Struct \\models (\\sym{small}(\\sym{C})\\limpl\\sym{triangle}(\\sym{A}))$, tak $\\Struct \\models \\sym{small}(\\sym{C})$.\n    * [ ] Pravda\n    * [x] Nepravda  \n:::",
       "idCounter": 2,
       "comments": {
         "ids": [],
@@ -147,7 +147,7 @@
     "30": {
       "id": 30,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} **a)** Arita.]{.h6}\n\n:::enum{.i}\n1. Predikátový symbol $\\sym{circle}$ je unárny.\n    * [ ] Pravda\n    * [ ] Nepravda\n2. Arita predikátového symbolu $\\sym{triangle}$ je $3$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. $\\arity_\\Lang(\\sym{larger}) = \\arity_\\Lang(\\sym{same\\_size})$\n    * [ ] Pravda\n    * [ ] Nepravda\n4. $\\arity_\\Lang\\colon \\Preds \\to \\N^+$\n    * [ ] Pravda\n    * [ ] Nepravda\n:::",
+      "data": "::h3[:icon[ui-checks]{.text-primary} **a)** Arita.]{.h6}\n\n:::enum{.i}\n1. Predikátový symbol $\\sym{circle}$ je unárny.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Arita predikátového symbolu $\\sym{triangle}$ je $3$.\n    * [ ] Pravda\n    * [x] Nepravda\n3. $\\arity_\\Lang(\\sym{larger}) = \\arity_\\Lang(\\sym{same\\_size})$\n    * [x] Pravda\n    * [ ] Nepravda\n4. $\\arity_\\Lang\\colon \\Preds \\to \\N^+$\n    * [x] Pravda\n    * [ ] Nepravda\n:::",
       "idCounter": 1,
       "comments": {
         "ids": [],
@@ -173,16 +173,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "35": {
-      "id": 35,
-      "type": "text",
-      "data": "Vybavene: Red, Blue, triangle, square 1, 4, 10, 11\n\nc nie triangle, circle",
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -191,7 +181,6 @@
     29,
     21,
     11,
-    35,
     33,
     30,
     34,
