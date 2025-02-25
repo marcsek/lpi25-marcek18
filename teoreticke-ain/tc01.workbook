@@ -15,11 +15,20 @@
     "12": {
       "id": 12,
       "type": "text",
-      "data": "::h3[:icon[write] **a)**]{.float-start.h6.lh-base.my-0.me-2}\nPreložte nasledujúce atomické formuly\ndo čo najprirodzenejších výrokov v slovenčine.\nVýroky napíšte priamo do tejto textovej bunky namiesto „…“.\n\n$A_1 = \\sym{woman}(\\sym{Betty})$:\nBetty je žena.\n\n$A_2 = \\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$:\nCharles je dieťaťom matky Giny a otca Eda.\n\n$B_1 = \\sym{older}(\\sym{Betty},\\sym{Charles})$:\nBetty je staršia ako Charles.\n\n$B_2 = \\sym{parent}(\\sym{Ed},\\sym{Ed})$:\nEd je rodičom Eda.\n\n$B_3 = \\sym{Charles} \\doteq \\sym{dad}$:\nCharles je dad.",
-      "idCounter": 1,
+      "data": "::h3[:icon[write] **a)**]{.float-start.h6.lh-base.my-0.me-2}\nPreložte nasledujúce atomické formuly\ndo čo najprirodzenejších výrokov v slovenčine.\nVýroky napíšte priamo do tejto textovej bunky namiesto „…“.\n\n$A_1 = \\sym{woman}(\\sym{Betty})$:\nBetty je žena.\n\n$A_2 = \\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$:\nCharles je dieťaťom matky Giny a otca Eda.\n\n$B_1 = \\sym{older}(\\sym{Betty},\\sym{Charles})$:\nBetty je staršia ako Charles.\n\n$B_2 = \\sym{parent}(\\sym{Ed},\\sym{Ed})$:\nEd je rodičom samého seba.\n\n$B_3 = \\sym{Charles} \\doteq \\sym{dad}$:\nCharles je tá istá osoba ako dad.",
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "marcsek",
+            "text": "Nie Ed je rodičom Eda. (Mohol by to byť niekto iný)",
+            "timestamp": 1740485699454,
+            "id": 1
+          }
+        }
       },
       "isEdited": false
     },
@@ -229,7 +238,7 @@
             {
               "proposition_id": 1209,
               "proposition": "13. Všetci vyššie menovaní študenti majú radi Telocvik.",
-              "solution": ""
+              "solution": "likes(Lucia, PhysEd) & likes(Peter, PhysEd)"
             },
             {
               "proposition_id": 1210,
@@ -289,7 +298,7 @@
     "51": {
       "id": 51,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} **c)**]{.float-start.h6.lh-base.my-0.me-2}\nOznačte `[x]` všetky pravdivé výroky a žiadny nepravdivý:\n\n:small[:icon[source]\nPrednáška: definície :xref[1.14]{.lec} a :xref[1.18]{.lec}.]\n\n:::enum{.i}\n1. Aký je vzťah medzi konštantami $\\sym{dad}$ a $\\sym{Charles}$?\n    * [x] $i(\\sym{Charles}) = i(\\sym{dad})$\n    * [ ] $\\sym{dad} = \\sym{Charles}$\n2. Aký je vzťah medzi konštantou $\\sym{Alex}$ a predikátovým symbolom $\\sym{woman}$?\n    * [ ] $\\sym{Alex} \\in \\sym{woman}$\n    * [x] $i(\\sym{Alex}) \\in i(\\sym{woman})$\n2. Aký je vzťah medzi konštantami $\\sym{Alex}$, $\\sym{Betty}$ a predikátovým symbolom $\\sym{older}$?\n    * [x] $(i(\\sym{Betty}),i(\\sym{Alex})) \\in i(\\sym{older})$\n    * [ ] $(\\sym{Betty},\\sym{Alex}) \\in i(\\sym{older})$\n    * [ ] $(i(\\sym{Alex}),i(\\sym{Betty})) \\in i(\\sym{older})$\n3. Ako pomenúvame vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [ ] Štruktúra $\\Struct$ je modelom formuly $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [ ] Štruktúra $\\Struct$ je pravdivá pre formulu $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [x] Formula $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$ je pravdivá v štruktúre $\\Struct$.\n4. Ako zapisujeme vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\models \\Struct$\n    * [x] $\\Struct \\models \\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\in \\Struct$\n",
+      "data": "::h3[:icon[ui-checks]{.text-primary} **c)**]{.float-start.h6.lh-base.my-0.me-2}\nOznačte `[x]` všetky pravdivé výroky a žiadny nepravdivý:\n\n:small[:icon[source]\nPrednáška: definície :xref[1.14]{.lec} a :xref[1.18]{.lec}.]\n\n:::enum{.i}\n1. Aký je vzťah medzi konštantami $\\sym{dad}$ a $\\sym{Charles}$?\n    * [x] $i(\\sym{Charles}) = i(\\sym{dad})$\n    * [ ] $\\sym{dad} = \\sym{Charles}$\n2. Aký je vzťah medzi konštantou $\\sym{Alex}$ a predikátovým symbolom $\\sym{woman}$?\n    * [ ] $\\sym{Alex} \\in \\sym{woman}$\n    * [x] $i(\\sym{Alex}) \\in i(\\sym{woman})$\n2. Aký je vzťah medzi konštantami $\\sym{Alex}$, $\\sym{Betty}$ a predikátovým symbolom $\\sym{older}$?\n    * [x] $(i(\\sym{Betty}),i(\\sym{Alex})) \\in i(\\sym{older})$\n    * [ ] $(\\sym{Betty},\\sym{Alex}) \\in i(\\sym{older})$\n    * [ ] $(i(\\sym{Alex}),i(\\sym{Betty})) \\in i(\\sym{older})$\n3. Ako pomenúvame vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [x] Štruktúra $\\Struct$ je modelom formuly $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [ ] Štruktúra $\\Struct$ je pravdivá pre formulu $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$.\n    * [x] Formula $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$ je pravdivá v štruktúre $\\Struct$.\n4. Ako zapisujeme vzťah medzi štruktúrou $\\Struct$ a formulou $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$?\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\models \\Struct$\n    * [x] $\\Struct \\models \\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed})$\n    * [ ] $\\sym{child}(\\sym{Charles},\\sym{Gina},\\sym{Ed}) \\in \\Struct$\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
