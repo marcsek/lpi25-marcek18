@@ -212,27 +212,27 @@
             {
               "proposition_id": 1178,
               "proposition": "6. Pretože „byť spolužiakom*čkou“ je symetrický vzťah, je Gabika Fernandovou spolužiačkou rovnako, ako je on jej spolužiakom.",
-              "solution": null
+              "solution": "(has_classmate(Gabika, Fernando) -> has_classmate(Fernando, Gabika)) & (has_classmate(Fernando, Gabika) -> has_classmate(Gabika, Fernando))"
             },
             {
               "proposition_id": 1179,
               "proposition": "7. Fero absolvoval programovanie iba za predpokladu, že nedostal na maturite z informatiky jednotku.",
-              "solution": null
+              "solution": "(passed(Fero, Programming) -> \\neg grad_exam(Fero, Informatics, 1))"
             },
             {
               "proposition_id": 1180,
               "proposition": "8. Ak ju nedostal, potom musel absolvovať aj kombinatoriku.",
-              "solution": null
+              "solution": "(\\neg grad_exam(Fero, Informatics, 1) -> passed(Fero, Combinatorics))"
             },
             {
               "proposition_id": 1181,
               "proposition": "9. Dominika určite neabsolvovala ani kurz slovenčiny, ani češtiny, pokiaľ nie je zo zahraničia.",
-              "solution": null
+              "solution": "(comes_from(Dominika, Slovakia) -> (\\neg passed(Dominika, Slovak_l) & \\neg passed(Dominika, Czech_l)))"
             },
             {
               "proposition_id": 1182,
               "proposition": "10. Buď Dominika alebo Gabika je zo Slovenska (no nie obe).",
-              "solution": null
+              "solution": "(comes_from(Dominika, Slovakia) & \\neg comes_from(Gabika, Slovakia) \\lor (\\neg comes_from(Dominika, Slovakia) & comes_from(Gabika, Slovakia)))"
             }
           ]
         },
