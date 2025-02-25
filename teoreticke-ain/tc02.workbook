@@ -74,7 +74,7 @@
     "9": {
       "id": 9,
       "type": "text",
-      "data": ":icon[ui-checks]{.text-primary}\nOznačte `[x]` všetky možnosti, ktoré sú formulami nad nejakou množinou konštánt $\\Consts$ a predikátových symbolov $\\Preds$.:\n\n* [ ] $(\\sym{woman}(\\sym{Alex})\\land\\sym{man}(\\sym{Alex}))$\n* [ ] $\\lnot(\\sym{likes}(\\sym{Alex},\\sym{Alex}))$\n* [ ] $(\\lnot(\\sym{man}(\\sym{Alex})\\land\\sym{woman}(\\sym{Alex}))\\limpl(\\lnot\\sym{man}(\\sym{Alex})\\lor\\lnot\\sym{woman}(\\sym{Alex})))$\n* [ ] $(\\lnot\\lnot\\sym{older}(\\sym{Alex},\\sym{Ed})\\lequiv(\\sym{older}(\\sym{Alex},\\sym{Ed})\\lnot\\land\\sym{man}(\\sym{Ed})))$\n* [ ] $\\bigl(\\sym{older}(\\sym{Ed}, \\sym{Alex})\\limpl(\\lnot\\sym{older}(\\sym{Alex},\\sym{Ed}))\\bigr)$\n* [ ] $(\\sym{Alex}\\lor\\lnot\\sym{dad})$\n",
+      "data": ":icon[ui-checks]{.text-primary}\nOznačte `[x]` všetky možnosti, ktoré sú formulami nad nejakou množinou konštánt $\\Consts$ a predikátových symbolov $\\Preds$.:\n\n* [x] $(\\sym{woman}(\\sym{Alex})\\land\\sym{man}(\\sym{Alex}))$\n* [x] $\\lnot(\\sym{likes}(\\sym{Alex},\\sym{Alex}))$\n* [x] $(\\lnot(\\sym{man}(\\sym{Alex})\\land\\sym{woman}(\\sym{Alex}))\\limpl(\\lnot\\sym{man}(\\sym{Alex})\\lor\\lnot\\sym{woman}(\\sym{Alex})))$\n* [ ] $(\\lnot\\lnot\\sym{older}(\\sym{Alex},\\sym{Ed})\\lequiv(\\sym{older}(\\sym{Alex},\\sym{Ed})\\lnot\\land\\sym{man}(\\sym{Ed})))$\n* [ ] $\\bigl(\\sym{older}(\\sym{Ed}, \\sym{Alex})\\limpl(\\lnot\\sym{older}(\\sym{Alex},\\sym{Ed}))\\bigr)$\n* [ ] $(\\sym{Alex}\\lor\\lnot\\sym{dad})$\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
