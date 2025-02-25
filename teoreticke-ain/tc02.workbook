@@ -154,7 +154,7 @@
     "26": {
       "id": 26,
       "type": "structureExplorer",
-      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Andy, Woody\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[\"Andy\",\"Woody\"]},\"predicates\":{\"value\":\"toy/1, boy/1, plays_with/2  \",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"toy\",\"arity\":1},{\"name\":\"boy\",\"arity\":1},{\"name\":\"plays_with\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{\"Andy\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]},\"Woody\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]}},\"predicates\":{\"toy/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"boy/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"plays_with/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"Domain cannot be empty\",\"parsed\":[]}},\"expressions\":{\"formulas\":[{\"value\":\"toy(Woody)\",\"expressionValue\":null,\"answerValue\":true,\"errorMessage\":\"The interpretation of the constant Woody is not defined\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"toy\",\"terms\":[{\"name\":\"Woody\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"boy(Andy)\",\"expressionValue\":null,\"answerValue\":true,\"errorMessage\":\"The interpretation of the constant Andy is not defined\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"boy\",\"terms\":[{\"name\":\"Andy\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"plays_with(Andy,Woody)\",\"expressionValue\":null,\"answerValue\":true,\"errorMessage\":\"The interpretation of the constant Andy is not defined\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"plays_with\",\"terms\":[{\"name\":\"Andy\"},{\"name\":\"Woody\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"toy(Andy)\",\"expressionValue\":null,\"answerValue\":false,\"errorMessage\":\"The interpretation of the constant Andy is not defined\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"toy\",\"terms\":[{\"name\":\"Andy\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"boy(Woody)\",\"expressionValue\":null,\"answerValue\":false,\"errorMessage\":\"The interpretation of the constant Woody is not defined\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"boy\",\"terms\":[{\"name\":\"Woody\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"plays_with(Woody,Andy)\",\"expressionValue\":null,\"answerValue\":false,\"errorMessage\":\"The interpretation of the constant Woody is not defined\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"plays_with\",\"terms\":[{\"name\":\"Woody\"},{\"name\":\"Andy\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Andy, Woody\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[\"Andy\",\"Woody\"]},\"predicates\":{\"value\":\"toy/1, boy/1, plays_with/2  \",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"toy\",\"arity\":1},{\"name\":\"boy\",\"arity\":1},{\"name\":\"plays_with\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{\"Andy\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Woody\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"toy/1\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"]],\"tableEnabled\":false},\"boy/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"plays_with/2\":{\"value\":\"(1, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":true,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\"]}},\"expressions\":{\"formulas\":[{\"value\":\"toy(Woody)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"toy\",\"terms\":[{\"name\":\"Woody\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"boy(Andy)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"boy\",\"terms\":[{\"name\":\"Andy\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"plays_with(Andy,Woody)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"plays_with\",\"terms\":[{\"name\":\"Andy\"},{\"name\":\"Woody\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"toy(Andy)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"toy\",\"terms\":[{\"name\":\"Andy\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"boy(Woody)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"boy\",\"terms\":[{\"name\":\"Woody\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"plays_with(Woody,Andy)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":true,\"answerLocked\":true,\"parsed\":{\"name\":\"plays_with\",\"terms\":[{\"name\":\"Woody\"},{\"name\":\"Andy\"}]},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -164,7 +164,7 @@
     "27": {
       "id": 27,
       "type": "text",
-      "data": ":icon[write]\n**Riešenie:**\n\n$$v = \\{ ... \\mapsto ..., ... \\} $$",
+      "data": ":icon[write]\n**Riešenie:**\n\n$$v = \\{ beer(Jack) \\mapsto f, beer(Corona) \\mapsto t, drink(Jack, Corona) \\mapsto f, drink(Jack, Jack) \\mapsto f, drink(Corona, Corona) \\mapsto f, drink(Corona, Jack) \\mapsto f \\} $$",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -187,27 +187,27 @@
             {
               "proposition_id": 1173,
               "proposition": "1. Študentka Dominika má spolužiaka Fernanda, ktorý je zo Španielska.",
-              "solution": null
+              "solution": "(student(Dominika) & has_classmate(Dominika, Fernando)) & comes_from(Fernando, Spain)"
             },
             {
               "proposition_id": 1174,
               "proposition": "2. Fernando je, samozrejme, tiež študent, napriek tomu, že popri štúdiu aj pracuje.",
-              "solution": null
+              "solution": "(student(Fernando) & works(Fernando))"
             },
             {
               "proposition_id": 1175,
               "proposition": "3. Elena je profesorka a školí Dominiku alebo Fernanda.",
-              "solution": null
+              "solution": "(professor(Elena) & (supervises(Elena, Dominika) \\lor supervises(Elena, Fernando)))"
             },
             {
               "proposition_id": 1176,
               "proposition": "4. Fernanda tiež volajú Fero.",
-              "solution": null
+              "solution": "(Fernando = Fero)"
             },
             {
               "proposition_id": 1177,
               "proposition": "5. Ak Dominika absolvovala aj databázy alebo programovanie, aj logiku, tak je Elena jej školiteľkou.",
-              "solution": null
+              "solution": "(((passed(Dominika, Databases) \\lor passed(Dominika, Programming)) & passed(Dominika, Logics)) -> supervises(Elena, Dominika))"
             },
             {
               "proposition_id": 1178,
