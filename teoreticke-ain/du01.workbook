@@ -77,37 +77,37 @@
             {
               "proposition_id": 1827,
               "proposition": "1. D je malý, ak je taký aj C.",
-              "solution": "small(C) -> small(D)"
+              "solution": "(small(C) -> small(D))"
             },
             {
               "proposition_id": 1828,
               "proposition": "2. C je trojuholník, hoci nie je veľký.",
-              "solution": "triangle(C)&\\neg large(C)"
+              "solution": "(triangle(C) & \\neg large(C))"
             },
             {
               "proposition_id": 1829,
               "proposition": "3. Ak A je kruh, tak aj B je kruh.",
-              "solution": "circle(A) -> circle(B)"
+              "solution": "(circle(A) -> circle(B))"
             },
             {
               "proposition_id": 1830,
               "proposition": "4. A je malý a B je veľký, iba ak aspoň jeden z nich je kruh.",
-              "solution": "(small(A)&large(B)) -> (circle(A) \\lor circle(B))"
+              "solution": "((small(A) & large(B)) -> (circle(A) \\lor circle(B)))"
             },
             {
               "proposition_id": 1831,
               "proposition": "5. D je kruh, iba ak žiadny z A, B, C nie je kruh.",
-              "solution": "circle(D) -> ((\\neg circle(A))&(\\neg circle(B))& (\\neg circle(C)))"
+              "solution": "(circle(D) -> (\\neg circle(A) & \\neg circle(B) & \\neg circle(C)))"
             },
             {
               "proposition_id": 1832,
               "proposition": "6. Ak E je malý štvorec, tak F nie je kruh ani trojuholník.",
-              "solution": "(small(E) & square(E)) -> ((\\neg circle(F)) & (\\neg triangle(F)))"
+              "solution": "((small(E) & square(E)) -> (\\neg circle(F) & \\neg triangle(F)))"
             },
             {
               "proposition_id": 1833,
               "proposition": "7. E je veľký, pokiaľ A nie je stredne veľký trojuholník.",
-              "solution": "(\\neg(medium(A) & triangle(A))) -> large(E)"
+              "solution": "((\\neg(medium(A) & triangle(A))) -> large(E))"
             },
             {
               "proposition_id": 1834,
@@ -117,22 +117,22 @@
             {
               "proposition_id": 1835,
               "proposition": "9. B a C majú rovnaký tvar.",
-              "solution": "(triangle(B) & triangle(C)) \\lor (circle(B) & circle(C)) \\lor (square(B) & square(C))"
+              "solution": "((triangle(B) & triangle(C)) \\lor (circle(B) & circle(C)) \\lor (square(B) & square(C)))"
             },
             {
               "proposition_id": 1836,
               "proposition": "10. C je veľký, ak a iba ak je pravda, že D je malý práve vtedy, keď je taký E.",
-              "solution": "(small(E) <-> small(D)) <-> large(C)"
+              "solution": "((small(E) <-> small(D)) <-> large(C))"
             },
             {
               "proposition_id": 1837,
               "proposition": "11. C je buď veľký alebo malý, ak je to kruh.",
-              "solution": "circle(C) -> ((small(C) & \\neg large(C)) \\lor (\\neg small(C) & large(C)))"
+              "solution": "(circle(C) -> ((small(C) & \\neg large(C)) \\lor (\\neg small(C) & large(C))))"
             },
             {
               "proposition_id": 1838,
               "proposition": "12. A je väčší než D, iba ak je D väčší než E.",
-              "solution": " larger(A, D) -> larger(D, E)"
+              "solution": " (larger(A, D) -> larger(D, E))"
             }
           ]
         },
@@ -167,7 +167,7 @@
     "34": {
       "id": 34,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} **b)** Jazyk.]{.float-start.h6.lh-base.my-0.me-2}\nMôžeme zostrojiť jazyk výrokovologickej časti logiky prvého rádu $\\Lang'$, kde: \n\n:::enum{.i}\n1. $\\mathcal{P}_{\\Lang'} = \\Preds \\cup \\{\\land^2\\}$\n  a $\\mathcal{C}_{\\Lang'} = \\emptyset$.\n    * [ ] Pravda\n    * [ ] Nepravda\n2. $\\mathcal{P}_{\\Lang'} = \\Preds \\cup \\{\\asym{1}{A}\\}$\n  a $\\mathcal{C}_{\\Lang'} = \\Consts \\setminus \\{ \\sym{A} \\}$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. $\\mathcal{P}_{\\Lang'} = \\Preds$\n  a $\\mathcal{C}_{\\Lang'} = \\Consts \\cup \\{ \\sym{A} \\}$.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. $\\mathcal{P}_{\\Lang'} = \\Preds \\cup \\{\\sym{same\\_shape}^2\\}$\n  a $\\mathcal{C}_{\\Lang'} = \\Consts$.\n    * [ ] Pravda\n    * [ ] Nepravda  \n:::",
+      "data": "::h3[:icon[ui-checks]{.text-primary} **b)** Jazyk.]{.float-start.h6.lh-base.my-0.me-2}\nMôžeme zostrojiť jazyk výrokovologickej časti logiky prvého rádu $\\Lang'$, kde: \n\n:::enum{.i}\n1. $\\mathcal{P}_{\\Lang'} = \\Preds \\cup \\{\\land^2\\}$\n  a $\\mathcal{C}_{\\Lang'} = \\emptyset$.\n    * [ ] Pravda\n    * [x] Nepravda\n2. $\\mathcal{P}_{\\Lang'} = \\Preds \\cup \\{\\asym{1}{A}\\}$\n  a $\\mathcal{C}_{\\Lang'} = \\Consts \\setminus \\{ \\sym{A} \\}$.\n    * [x] Pravda\n    * [ ] Nepravda\n3. $\\mathcal{P}_{\\Lang'} = \\Preds$\n  a $\\mathcal{C}_{\\Lang'} = \\Consts \\cup \\{ \\sym{A} \\}$.\n    * [x] Pravda\n    * [ ] Nepravda\n4. $\\mathcal{P}_{\\Lang'} = \\Preds \\cup \\{\\sym{same\\_shape}^2\\}$\n  a $\\mathcal{C}_{\\Lang'} = \\Consts$.\n    * [x] Pravda\n    * [ ] Nepravda  \n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
