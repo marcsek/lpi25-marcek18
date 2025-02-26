@@ -124,7 +124,7 @@
     "23": {
       "id": 23,
       "type": "text",
-      "data": "::h3[:icon[write] **a)**]{.float-start.h6.lh-base.my-0.me-2}\nZapíšte vytvárajúci strom pre formulu $X$.\n\n_Riešenie:_\n\n* $X$\n     * …\n     * …\n\n:::aside{.note.bg-transparent.p-0.pt-3.border-top}\n:icon[explanation] Vytvárajúci strom môžete zapísať napríklad pomocou viacúrovňového \nzoznamu nasledovne:\n\n* toto je koreň stromu\n    * odsadením vytvárame deti\n        * viacnásobným odsadením vytvárame deti detí\n            * atď.\n    * toto je druhé dieťa koreňa\n\n:::",
+      "data": "::h3[:icon[write] **a)**]{.float-start.h6.lh-base.my-0.me-2}\nZapíšte vytvárajúci strom pre formulu $X$.\n\n_Riešenie:_\n\n* $X$ [4]\n     * $(\\sym{parent}(\\sym{Bruno},\\sym{Hugo}) \\land\n     \\sym{parent}(\\sym{Bruno},\\sym{Tina}))$ [1]\n       * $\\sym{parent}(\\sym{Bruno},\\sym{Hugo})$ [0]\n       * $\\sym{parent}(\\sym{Bruno},\\sym{Tina})$ [0]\n     * $\\bigl(\n      (\\neg \\sym{woman}(\\sym{Hugo}) \\land \\sym{man}(\\sym{Hugo})) \\limpl\n      \\sym{brother}(\\sym{Hugo},\\sym{Tina})\\bigr)$ [3]\n       * $(\\neg \\sym{woman}(\\sym{Hugo}) \\land \\sym{man}(\\sym{Hugo}))$ [2]\n         * $\\neg \\sym{woman}(\\sym{Hugo})$ [1]\n           * $\\sym{woman}(\\sym{Hugo})$ [0]\n         * $\\sym{man}(\\sym{Hugo})$ [0]\n       * $\\sym{brother}(\\sym{Hugo},\\sym{Tina})$ [0]\n\n:::aside{.note.bg-transparent.p-0.pt-3.border-top}\n:icon[explanation] Vytvárajúci strom môžete zapísať napríklad pomocou viacúrovňového \nzoznamu nasledovne:\n\n* toto je koreň stromu\n    * odsadením vytvárame deti\n        * viacnásobným odsadením vytvárame deti detí\n            * atď.\n    * toto je druhé dieťa koreňa\n\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -247,7 +247,7 @@
     "37": {
       "id": 37,
       "type": "text",
-      "data": "::h3[:icon[write] **b)**]{.float-start.h6.lh-base.my-0.me-2}\nVypočítajte stupeň formuly $X$.\nKaždému uzlu vo vytvárajúcom strome z časti a) pridajte do hranatých zátvoriek\nstupeň formuly, ktorá sa v ňom nachádza.\nVýslednú hodnotu stupňa formuly $X$ zapíšte nižšie.\n\n_Riešenie:_\n$$\n\\deg(X) = …\n$$",
+      "data": "::h3[:icon[write] **b)**]{.float-start.h6.lh-base.my-0.me-2}\nVypočítajte stupeň formuly $X$.\nKaždému uzlu vo vytvárajúcom strome z časti a) pridajte do hranatých zátvoriek\nstupeň formuly, ktorá sa v ňom nachádza.\nVýslednú hodnotu stupňa formuly $X$ zapíšte nižšie.\n\n_Riešenie:_\n$$\n\\deg(X) = 4\n$$",
       "idCounter": 0,
       "comments": {
         "ids": [],
