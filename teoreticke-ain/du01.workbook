@@ -97,7 +97,7 @@
             {
               "proposition_id": 1831,
               "proposition": "5. D je kruh, iba ak žiadny z A, B, C nie je kruh.",
-              "solution": "(circle(D) -> (\\neg circle(A) & \\neg circle(B) & \\neg circle(C)))"
+              "solution": "(circle(D) -> ((\\neg circle(A) & \\neg circle(B)) & \\neg circle(C)))"
             },
             {
               "proposition_id": 1832,
@@ -117,7 +117,7 @@
             {
               "proposition_id": 1835,
               "proposition": "9. B a C majú rovnaký tvar.",
-              "solution": "((triangle(B) & triangle(C)) \\lor (circle(B) & circle(C)) \\lor (square(B) & square(C)))"
+              "solution": "(((triangle(B) & triangle(C)) \\lor (circle(B) & circle(C))) \\lor (square(B) & square(C)))"
             },
             {
               "proposition_id": 1836,
