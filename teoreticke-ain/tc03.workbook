@@ -14,7 +14,7 @@
     "4": {
       "id": 4,
       "type": "text",
-      "data": "::h3[:icon[write] **a)**]{.h6.float-start.my-0.me-2.lh-base}\nDoplňte nasledujúcu pravdivostnú tabuľku, ktorá vám umožní určiť vzťah formúl $X_1$–$X_3$ k teórii $T$.\n\n:::div{.table.table-truth}\n\n|       | $\\FTAB$ | $\\FFA$ | $\\FSA$ | $A_1$ | $A_2$ | $A_3$ | $X_1$ | $X_2$ | $X_3$ |\n| :---- | :-----: | :----: | :----: | :---: | :---: | :---: | :---: | :---: | :---: |\n| $v_1$ |     0   |    0   |    0   | $\\pmodels$/$\\npmodels$ | ...\n| $v_2$ |     0   |    0   |    1   | …\n| …     |    …\n\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help]\nPre vzťahy formúl $X_1$, …, $X_3$ s teóriou $T$ (vyplývanie a nezávislosť),\nsú dôležité iba tie ohodnotenia, v ktorých je $T$ pravdivá. \nPreto akonáhle pre ohodnotenie $v_i$ zistíme,\nže v ňom nie je pravdivá niektorá z formúl teórie ($A_1$, …, $A_3$),\npravdivosť ostatných formúl vo $v_i$ už vyhodnocovať nemusíme\n(a to tak zvyšných formúl v $T$ ako aj $X_1$, …, $X_3$).\nAk je $T$ vo $v_i$ pravdivá, potrebujeme vyhodnotiť všetky formuly $X_1$, …, $X_3$.\n\n:icon[technical]\nPre symboly (ne)pravdivosti formuly/teórie\nvo výrokovologickom ohodnotení $\\pmodels$ a $\\npmodels$\nsme v $\\TeX$u zadefinovali makrá `\\pmodels` a `\\npmodels`\n(z angl.  <i>propositionally models</i>).\n\n:icon[technical]\nZapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
+      "data": "::h3[:icon[write] **a)**]{.h6.float-start.my-0.me-2.lh-base}\nDoplňte nasledujúcu pravdivostnú tabuľku, ktorá vám umožní určiť vzťah formúl $X_1$–$X_3$ k teórii $T$.\n\n:::div{.table.table-truth}\n\n|       | $\\FTAB$ | $\\FFA$ | $\\FSA$ | $A_1$ | $A_2$ | $A_3$ | $X_1$ | $X_2$ | $X_3$ |\n| :---- | :-----: | :----: | :----: | :---: | :---: | :---: | :---: | :---: | :---: |\n| $v_1$ |     0   |    0   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ |\n| $v_2$ |     0   |    0   |    1   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$  | $\\npmodels$ | $\\npmodels$ |\n| $v_3$ |     0   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$  |\n| $v_4$ |     0   |    1   |    1   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\npmodels$ |\n| $v_5$ |     1   |    0   |    0   | $\\npmodels$ | $\\pmodels$ | $\\npmodels$ | .. | .. | .. |\n| $v_6$ |     1   |    0   |    1   | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ | .. | .. | .. |\n| $v_7$ |     1   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ |\n| $v_8$ |     1   |    1   |    1   | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ | .. | .. | .. |\n\n\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help]\nPre vzťahy formúl $X_1$, …, $X_3$ s teóriou $T$ (vyplývanie a nezávislosť),\nsú dôležité iba tie ohodnotenia, v ktorých je $T$ pravdivá. \nPreto akonáhle pre ohodnotenie $v_i$ zistíme,\nže v ňom nie je pravdivá niektorá z formúl teórie ($A_1$, …, $A_3$),\npravdivosť ostatných formúl vo $v_i$ už vyhodnocovať nemusíme\n(a to tak zvyšných formúl v $T$ ako aj $X_1$, …, $X_3$).\nAk je $T$ vo $v_i$ pravdivá, potrebujeme vyhodnotiť všetky formuly $X_1$, …, $X_3$.\n\n:icon[technical]\nPre symboly (ne)pravdivosti formuly/teórie\nvo výrokovologickom ohodnotení $\\pmodels$ a $\\npmodels$\nsme v $\\TeX$u zadefinovali makrá `\\pmodels` a `\\npmodels`\n(z angl.  <i>propositionally models</i>).\n\n:icon[technical]\nZapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -84,7 +84,7 @@
     "28": {
       "id": 28,
       "type": "text",
-      "data": ":icon[write] **Riešenie:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je/nie je tautológiou**, pretože …\n\n2. …\n\n3. …\n\n4. …\n:::",
+      "data": ":icon[write] **Riešenie:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **nie je tautológiou**, pretože nie je pravdivá v každom výrokovom ohodnotení $v$.\n\n2. **je splniteľná**, pretože existuje výrokové ohodnotenie $v$, v ktorom je pravdivá.\n\n3. **je falzifikovateľná**, pretože existuje výrokové ohodnotiene $v$, v ktorom je nepravdivá.\n\n4. **nie je nespliteľná**, pretože nie je nepravdivá v každom výrokovom ohodnotení $v$.\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -104,7 +104,7 @@
     "35": {
       "id": 35,
       "type": "text",
-      "data": ":icon[source]\nPreštudujte si ukážku analýzy vlastností formuly $X_1$\nv :xref[3.2.3]{.exbook label=\"príklade\"} v zbierke úloh.\n\n:icon[write]\nZaškrtnite `[x]` všetky správne možnosti:\n\na) Ohodnotenie, v ktorom je formula $B$ pravdivá:\n  * [ ] existuje,\n  * [ ] môže ale aj nemusí existovať,\n  * [ ] neexistuje.\n\nb) Ohodnotenie, v ktorom je formula $X_1$ pravdivá:\n  * [ ] existuje,\n  * [ ] môže ale aj nemusí existovať,\n  * [ ] neexistuje.\n\nc) Platí, že\n  * [ ] $X_1$ je tautológia,\n  * [ ] $X_1$ je splniteľná,\n  * [ ] $X_1$ je nesplniteľná,\n  * [ ] $X_1$ je falzifikovateľná,\n  * [ ] nedá sa rozhodnúť o týchto vlastnostiach formuly $X_1$.\n",
+      "data": ":icon[source]\nPreštudujte si ukážku analýzy vlastností formuly $X_1$\nv :xref[3.2.3]{.exbook label=\"príklade\"} v zbierke úloh.\n\n:icon[write]\nZaškrtnite `[x]` všetky správne možnosti:\n\na) Ohodnotenie, v ktorom je formula $B$ pravdivá:\n  * [ ] existuje,\n  * [x] môže ale aj nemusí existovať,\n  * [ ] neexistuje.\n\nb) Ohodnotenie, v ktorom je formula $X_1$ pravdivá:\n  * [ ] existuje,\n  * [ ] môže ale aj nemusí existovať,\n  * [x] neexistuje.\n\nc) Platí, že\n  * [ ] $X_1$ je tautológia,\n  * [ ] $X_1$ je splniteľná,\n  * [x] $X_1$ je nesplniteľná,\n  * [x] $X_1$ je falzifikovateľná,\n  * [ ] nedá sa rozhodnúť o týchto vlastnostiach formuly $X_1$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -114,7 +114,7 @@
     "36": {
       "id": 36,
       "type": "text",
-      "data": ":icon[source] V rovnakom :xref[3.2.3]{.exbook label=\"príklade\"} si môžete pozrieť aj analýzu vlastností formuly $X_2$.\n\n:icon[write] Zaškrtnite `[x]` všetky správne možnosti: \n\n* [ ] ak $A$ je tautológia, tak $X_2$ je tautológia,\n* [ ] ak $B$ je nesplniteľná, tak $X_2$ je nesplniteľná,\n* [ ] $X_2$ je splniteľná,\n* [ ] nedá sa rozhodnúť, či je $X_2$ nesplniteľná,\n* [ ] ak $A$ je falzifikovateľná, tak $X_2$ je falzifikovateľná,\n* [ ] ak $B$ je splniteľná, tak $X_2$ je splniteľná.\n",
+      "data": ":icon[source] V rovnakom :xref[3.2.3]{.exbook label=\"príklade\"} si môžete pozrieť aj analýzu vlastností formuly $X_2$.\n\n:icon[write] Zaškrtnite `[x]` všetky správne možnosti: \n\n* [x] ak $A$ je tautológia, tak $X_2$ je tautológia,\n* [ ] ak $B$ je nesplniteľná, tak $X_2$ je nesplniteľná,\n* [ ] $X_2$ je splniteľná,\n* [ ] nedá sa rozhodnúť, či je $X_2$ nesplniteľná,\n* [ ] ak $A$ je falzifikovateľná, tak $X_2$ je falzifikovateľná,\n* [ ] ak $B$ je splniteľná, tak $X_2$ je splniteľná.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -134,17 +134,26 @@
     "38": {
       "id": 38,
       "type": "text",
-      "data": "::h3[:icon[write] **e)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n* [ ] $T \\pentails X_3$\n* [ ] $X_3$ je nezávislá od $T$\n* [ ] $T \\npentails X_3$ a $X_3$ **nie je** nezávislá od $T$\n* [ ] $T \\pentails \\neg X_3$\n\n**Zdôvodnenie:** \n...",
-      "idCounter": 0,
+      "data": "::h3[:icon[write] **e)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n* [ ] $T \\pentails X_3$\n* [ ] $X_3$ je nezávislá od $T$\n* [x] $T \\npentails X_3$ a $X_3$ **nie je** nezávislá od $T$\n* [ ] $T \\pentails \\neg X_3$\n\n**Zdôvodnenie:** \n* Keďže pre niektoré $v_i$ **neplatí**, že ak $v_i \\pmodels T$, tak $v_i \\pmodels X_3$ a zároveň **neexistuje** ohodnotenie $v_2$, $v_3$, v ktorom $v_2 \\pmodels T$ a $v_3 \\pmodels T$, ale $v_2 \\npmodels X_3$ a $v_3 \\npmodels X_3$.",
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "Aj 4 ?",
+            "timestamp": 1741094688680,
+            "id": 0
+          }
+        }
       }
     },
     "39": {
       "id": 39,
       "type": "text",
-      "data": "::h3[:icon[write] **d)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n* [ ] $T \\pentails X_2$\n* [ ] $X_2 \\npentails T$\n* [ ] $T \\npentails X_2$\n* [ ] $X_2$ je nezávislá od $T$\n* [ ] $T \\npentails X_2$ a $X_2$ **nie je** nezávislá od $T$\n\n**Zdôvodnenie:**\n...",
+      "data": "::h3[:icon[write] **d)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n* [ ] $T \\pentails X_2$\n* [ ] $X_2 \\npentails T$\n* [x] $T \\npentails X_2$\n* [x] $X_2$ je nezávislá od $T$\n* [ ] $T \\npentails X_2$ a $X_2$ **nie je** nezávislá od $T$\n\n**Zdôvodnenie:**\n* Keďže pre niektoré $v_i$ **neplatí**, že ak $v_i \\pmodels T$, tak $v_i \\pmodels X_2$.\n* Keďže existuje ohodnotenie $v_2$, $v_3$, v ktorom $v_2 \\pmodels T$ a $v_3 \\pmodels T$, ale $v_2 \\npmodels X_2$ a $v_3 \\npmodels X_2$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -154,7 +163,7 @@
     "40": {
       "id": 40,
       "type": "text",
-      "data": "::h3[:icon[write] **c)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n\n* [ ] $T \\pentails X_1$\n* [ ] $X_1 \\pentails T$\n* [ ] $X_1$ je nezávislá od $T$\n\n**Zdôvodnenie:**\n...",
+      "data": "::h3[:icon[write] **c)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n\n* [x] $T \\pentails X_1$\n* [ ] $X_1 \\pentails T$\n* [ ] $X_1$ je nezávislá od $T$\n\n**Zdôvodnenie:**\nKeďže pre každé $v_i$ platí, že ak $v_i \\pmodels T$, tak $v_i \\pmodels X_1$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -164,7 +173,7 @@
     "41": {
       "id": 41,
       "type": "text",
-      "data": "::h3[:icon[write] **b)**]{.h6.float-start.my-0.me-2.lh-base}\nJe $T$ splniteľná? Ktoré z ohodnotení $v_1$, $v_2$, … sú jej modelmi?\n\n...",
+      "data": "::h3[:icon[write] **b)**]{.h6.float-start.my-0.me-2.lh-base}\nJe $T$ splniteľná? Ktoré z ohodnotení $v_1$, $v_2$, … sú jej modelmi?\n\n$T$ je splniteľná, jej modelmi sú $v_2$, $v_3$, $v_4$, $v_7$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
