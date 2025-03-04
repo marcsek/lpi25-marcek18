@@ -114,7 +114,7 @@
     "36": {
       "id": 36,
       "type": "text",
-      "data": ":icon[source] V rovnakom :xref[3.2.3]{.exbook label=\"príklade\"} si môžete pozrieť aj analýzu vlastností formuly $X_2$.\n\n:icon[write] Zaškrtnite `[x]` všetky správne možnosti: \n\n* [x] ak $A$ je tautológia, tak $X_2$ je tautológia,\n* [ ] ak $B$ je nesplniteľná, tak $X_2$ je nesplniteľná,\n* [ ] $X_2$ je splniteľná,\n* [ ] nedá sa rozhodnúť, či je $X_2$ nesplniteľná,\n* [ ] ak $A$ je falzifikovateľná, tak $X_2$ je falzifikovateľná,\n* [ ] ak $B$ je splniteľná, tak $X_2$ je splniteľná.\n",
+      "data": ":icon[source] V rovnakom :xref[3.2.3]{.exbook label=\"príklade\"} si môžete pozrieť aj analýzu vlastností formuly $X_2$.\n\n:icon[write] Zaškrtnite `[x]` všetky správne možnosti: \n\n* [x] ak $A$ je tautológia, tak $X_2$ je tautológia,\n* [ ] ak $B$ je nesplniteľná, tak $X_2$ je nesplniteľná,\n* [ ] $X_2$ je splniteľná,\n* [x] nedá sa rozhodnúť, či je $X_2$ nesplniteľná,\n* [x] ak $A$ je falzifikovateľná, tak $X_2$ je falzifikovateľná,\n* [ ] ak $B$ je splniteľná, tak $X_2$ je splniteľná.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -134,20 +134,11 @@
     "38": {
       "id": 38,
       "type": "text",
-      "data": "::h3[:icon[write] **e)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n* [ ] $T \\pentails X_3$\n* [ ] $X_3$ je nezávislá od $T$\n* [x] $T \\npentails X_3$ a $X_3$ **nie je** nezávislá od $T$\n* [ ] $T \\pentails \\neg X_3$\n\n**Zdôvodnenie:** \n* Keďže pre niektoré $v_i$ **neplatí**, že ak $v_i \\pmodels T$, tak $v_i \\pmodels X_3$ a zároveň **neexistuje** ohodnotenie $v_2$, $v_3$, v ktorom $v_2 \\pmodels T$ a $v_3 \\pmodels T$, ale $v_2 \\npmodels X_3$ a $v_3 \\npmodels X_3$.",
+      "data": "::h3[:icon[write] **e)**]{.h6.float-start.my-0.me-2.lh-base}\nOznačte `[x]` všetky správne možnosti a kladné odpovede zdôvodnite:\n* [ ] $T \\pentails X_3$\n* [ ] $X_3$ je nezávislá od $T$\n* [x] $T \\npentails X_3$ a $X_3$ **nie je** nezávislá od $T$\n* [x] $T \\pentails \\neg X_3$\n\n**Zdôvodnenie:** \n* Keďže pre niektoré $v_i$ **neplatí**, že ak $v_i \\pmodels T$, tak $v_i \\pmodels X_3$ a zároveň **neexistuje** ohodnotenie $v_2$, $v_3$, v ktorom $v_2 \\pmodels T$ a $v_3 \\pmodels T$, ale $v_2 \\npmodels X_3$ a $v_3 \\npmodels X_3$.",
       "idCounter": 1,
       "comments": {
-        "ids": [
-          0
-        ],
-        "entities": {
-          "0": {
-            "author": "marcsek",
-            "text": "Aj 4 ?",
-            "timestamp": 1741094688680,
-            "id": 0
-          }
-        }
+        "ids": [],
+        "entities": {}
       }
     },
     "39": {
