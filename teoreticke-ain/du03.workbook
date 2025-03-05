@@ -24,7 +24,7 @@
     "6": {
       "id": 6,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania? Napr. splniteľnosť ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.\n\n:icon[help] **Pomôcka.** Musíme vyriešiť 3 formálne problémy.\n:::\n\n1. …\n2. …\n3. …\n",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania? Napr. splniteľnosť ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.\n\n:icon[help] **Pomôcka.** Musíme vyriešiť 3 formálne problémy.\n:::\n\n1. Musíme zistiť, či je teória splniteľná.\n2. Musíme zistiť, či je formula **a** tautológia.\n3. Musíme zistiť, či je formula **b** tautológia.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -127,47 +127,47 @@
             {
               "proposition_id": 1848,
               "proposition": "1. Petra si upletie sveter, čiapku, ponožky alebo šál.",
-              "solution": null
+              "solution": "(jumper(Y) \\lor (hat(Y) \\lor  (socks(Y) \\lor scarf(Y))))"
             },
             {
               "proposition_id": 1849,
               "proposition": "2. Priadza je buď hrubá alebo tenká.",
-              "solution": null
+              "solution": "((thick(Y) & \\neg thin(Y)) \\lor (\\neg thick(Y) & thin(Y)))"
             },
             {
               "proposition_id": 1850,
               "proposition": "3. Priadza je bavlnená, vlnená alebo akrylová, pričom prípustné sú aj zmesi týchto materiálov.",
-              "solution": null
+              "solution": "((cotton(Y) \\lor wool(Y)) \\lor acrylic(Y))"
             },
             {
               "proposition_id": 1851,
               "proposition": "4. Na sveter je potrebná hrubá priadza bez obsahu bavlny (inak by nebol dosť teplý).",
-              "solution": null
+              "solution": "(jumper(Y) -> (thick(Y) & \\neg cotton(Y)))"
             },
             {
               "proposition_id": 1852,
               "proposition": "5. Vlna \"hryzie\". Takže ak priadza obsahuje vlnu, nehodí sa na šál ani ponožky.",
-              "solution": null
+              "solution": "((scarf(Y) \\lor socks(Y)) -> \\neg wool(Y))"
             },
             {
               "proposition_id": 1853,
               "proposition": "6. Ponožky sa dajú upliesť iba z tenkej priadze.",
-              "solution": null
+              "solution": "(socks(Y) -> thin(Y))"
             },
             {
               "proposition_id": 1854,
               "proposition": "7. Petra sa oblieka štýlovo a chce, aby jej kúsky navzájom ladili. Preto čiapku si upletie jedine, ak si k nej upletie aj šál. Rovnako šál by si neuplietla bez čiapky.",
-              "solution": null
+              "solution": "((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))"
             },
             {
               "proposition_id": 1855,
               "proposition": "a. Ak je priadza tenká, tak nie je vlnená.",
-              "solution": null
+              "solution": "(thin(Y) -> \\neg wool(Y))"
             },
             {
               "proposition_id": 1856,
               "proposition": "b. Ak si Petra upletie sveter, nemôže si už upliesť čiapku.",
-              "solution": null
+              "solution": "(jumper(Y) -> \\neg hat(Y))"
             }
           ]
         },
