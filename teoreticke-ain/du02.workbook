@@ -53,7 +53,7 @@
     "15": {
       "id": 15,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAko vyriešime formálne problémy, ktoré ste určili v predošlej časti? Uveďte postup riešenia.\n:::\n\nZostrojíme pravdivostnú tabuľku:\n\n:::div{.table.table-truth}\n|       | $\\sym{sunny}(\\sym{W})$ | $\\sym{raining}(\\sym{W})$ | $\\sym{rainbow}(\\sym{W})$ | $A_1$ | $A_2$ | $A_3$ | $X_1$ | $X_2$ | $X_3$ |\n| :---- | :-----: | :----: | :----: | :---: | :---: | :---: | :---: | :---: | :---: |\n| $v_1$ |     0   |    0   |    0   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ |\n| $v_2$ |     0   |    0   |    1   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ | \n| $v_3$ |     0   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | \n| $v_4$ |     0   |    1   |    1   | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ | \n| $v_5$ |     1   |    0   |    0   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\npmodels$ |\n| $v_6$ |     1   |    0   |    1   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ |\n| $v_7$ |     1   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | \n| $v_8$ |     1   |    1   |    1   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ |\n\n:::\n\n*Pri formálnych problémoch x a y nevypisujem ohodnotenia, v ktorých je $T$ nepravdivá, \nkeďže $X_1$ a $X_2$ sú v týchto prípadoch vždy pravdivé. Podobne nemusím vypisovať ani pre formálny problém z, \nkeďže zisťujeme nezávislosť od téorie $T$*.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help] Zapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAko vyriešime formálne problémy, ktoré ste určili v predošlej časti? Uveďte postup riešenia.\n:::\n\nZostrojíme pravdivostnú tabuľku:\n\n:::div{.table.table-truth}\n|       | $\\sym{sunny}(\\sym{W})$ | $\\sym{raining}(\\sym{W})$ | $\\sym{rainbow}(\\sym{W})$ | $A_1$ | $A_2$ | $A_3$ | $X_1$ | $X_2$ | $X_3$ |\n| :---- | :-----: | :----: | :----: | :---: | :---: | :---: | :---: | :---: | :---: |\n| $v_1$ |     0   |    0   |    0   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ |\n| $v_2$ |     0   |    0   |    1   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ | \n| $v_3$ |     0   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | \n| $v_4$ |     0   |    1   |    1   | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ | \n| $v_5$ |     1   |    0   |    0   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\npmodels$ |\n| $v_6$ |     1   |    0   |    1   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ |\n| $v_7$ |     1   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | \n| $v_8$ |     1   |    1   |    1   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ |\n\n:::\n\n*Pri formálnych problémoch x) a y) nevypisujem ohodnotenia, v ktorých je $T$ nepravdivá, \nkeďže $X_1$ a $X_2$ sú v týchto prípadoch vždy pravdivé. Podobne nemusím vypisovať ani pre formálny problém z), \nkeďže zisťujeme nezávislosť od téorie $T$*.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help] Zapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -93,7 +93,7 @@
     "28": {
       "id": 28,
       "type": "text",
-      "data": "::h3[**a)**]{.h6.float-start.my-0.me-2.lh-base}\nNech pre všetky výrokovologické ohodnotenia $v$ je pravda, že ak $v\\pmodels T$, tak $v\\pmodels A$. Potom:\n\n:::enum{.i}\n1. $A$ výrokovologicky vyplýva z $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $T$ je nesplniteľná, tak $T\\pentails B$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. $T$ nie je prázdna.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. $T\\pentails (A\\lor B)$\n    * [ ] Pravda\n    * [ ] Nepravda\n:::\n",
+      "data": "::h3[**a)**]{.h6.float-start.my-0.me-2.lh-base}\nNech pre všetky výrokovologické ohodnotenia $v$ je pravda, že ak $v\\pmodels T$, tak $v\\pmodels A$. Potom:\n\n:::enum{.i}\n1. $A$ výrokovologicky vyplýva z $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $T$ je nesplniteľná, tak $T\\pentails B$.\n    * [x] Pravda\n    * [ ] Nepravda\n3. $T$ nie je prázdna.\n    * [ ] Pravda\n    * [x] Nepravda\n4. $T\\pentails (A\\lor B)$\n    * [x] Pravda\n    * [ ] Nepravda\n:::\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -103,17 +103,26 @@
     "29": {
       "id": 29,
       "type": "text",
-      "data": "::h3[**b)**]{.h6.float-start.my-0.me-2.lh-base}\nNech $A$ je nesplniteľná výrokovologická formula. Potom:\n\n:::enum{.i}\n1. $T\\cup \\{A\\}$ je nesplniteľná výrokovologická teória.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. $A$ vyplýva z každej výrokovologickej teórie $T$.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. Neexistuje výrokovologické ohodnotenie $v$, ktoré by bolo modelom $A$.\n    * [ ] Pravda\n    * [ ] Nepravda\n5. $A\\notin T$\n    * [ ] Pravda\n    * [ ] Nepravda\n:::",
-      "idCounter": 0,
+      "data": "::h3[**b)**]{.h6.float-start.my-0.me-2.lh-base}\nNech $A$ je nesplniteľná výrokovologická formula. Potom:\n\n:::enum{.i}\n1. $T\\cup \\{A\\}$ je nesplniteľná výrokovologická teória.\n    * [x] Pravda\n    * [ ] Nepravda\n3. $A$ vyplýva z každej výrokovologickej teórie $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n4. Neexistuje výrokovologické ohodnotenie $v$, ktoré by bolo modelom $A$.\n    * [x] Pravda\n    * [ ] Nepravda\n5. $A\\notin T$\n    * [ ] Pravda\n    * [x] Nepravda\n:::",
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "ii ????",
+            "timestamp": 1741189173435,
+            "id": 0
+          }
+        }
       }
     },
     "30": {
       "id": 30,
       "type": "text",
-      "data": "::h3[**c)**]{.h6.float-start.my-0.me-2.lh-base}\nNech $A$ a $B$ sú výrokovologicky ekvivalentné formuly. Potom:\n\n:::enum{.i}\n1. Ak $T\\pentails A$, tak $T\\pentails B$.\n    * [ ] Pravda\n    * [ ] Nepravda\n2. Ak $B\\notin T$, tak $A\\notin T$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. Existuje výrokovologické ohodnotenie $v$ také, že $v\\pmodels A$ a $v\\pmodels B$.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. Pre každé výrokovologické ohodnotenie $v$ je pravda, že $v$ je modelom $A$ práve vtedy, keď $v$ je modelom $B$.\n    * [ ] Pravda\n    * [ ] Nepravda\n:::",
+      "data": "::h3[**c)**]{.h6.float-start.my-0.me-2.lh-base}\nNech $A$ a $B$ sú výrokovologicky ekvivalentné formuly. Potom:\n\n:::enum{.i}\n1. Ak $T\\pentails A$, tak $T\\pentails B$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $B\\notin T$, tak $A\\notin T$.\n    * [ ] Pravda\n    * [x] Nepravda\n3. Existuje výrokovologické ohodnotenie $v$ také, že $v\\pmodels A$ a $v\\pmodels B$.\n    * [x] Pravda\n    * [ ] Nepravda\n4. Pre každé výrokovologické ohodnotenie $v$ je pravda, že $v$ je modelom $A$ práve vtedy, keď $v$ je modelom $B$.\n    * [x] Pravda\n    * [ ] Nepravda\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
