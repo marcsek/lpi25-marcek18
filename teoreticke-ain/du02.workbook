@@ -24,11 +24,20 @@
     "6": {
       "id": 6,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálny problém]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme overili správnosť Jožkových záverov x)–z)?\nNapr. splniteľnosť ktorej konkrétnej formuly/teórie, tautologickosť ktorej konkrétnej formuly, ekvivalencia ktorých konkrétnych formúl, vyplývanie/nezávislosť ktorej konkrétnej formuly z/od ktorej konkrétnej teórie, atď.\n\n:icon[help] Závery sú 3 a každému zodpovedá jeden logický problém.\n**Navyše** všetky závery ovplyvňuje **ďalší** dôležitý logický problém,\nktorý musíme vyriešiť ako prvý. Nižšie ho označujeme w).\n\n:icon[warning] Nerozširujte jazyk $\\Lang$.\nFormálne logické problémy sa dajú sformulovať na účely tejto úlohy\ndostatočne presne využitím iba existujúcich predikátov a konštanty.\n:::\n\nw) …\n\nx) …\n\ny) …\n\nz) …\n",
-      "idCounter": 0,
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálny problém]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme overili správnosť Jožkových záverov x)–z)?\nNapr. splniteľnosť ktorej konkrétnej formuly/teórie, tautologickosť ktorej konkrétnej formuly, ekvivalencia ktorých konkrétnych formúl, vyplývanie/nezávislosť ktorej konkrétnej formuly z/od ktorej konkrétnej teórie, atď.\n\n:icon[help] Závery sú 3 a každému zodpovedá jeden logický problém.\n**Navyše** všetky závery ovplyvňuje **ďalší** dôležitý logický problém,\nktorý musíme vyriešiť ako prvý. Nižšie ho označujeme w).\n\n:icon[warning] Nerozširujte jazyk $\\Lang$.\nFormálne logické problémy sa dajú sformulovať na účely tejto úlohy\ndostatočne presne využitím iba existujúcich predikátov a konštanty.\n:::\n\nw) Musíme overiť, či je $T$ **splniteľná**.\n\nx) Musíme zistiť, či je formula $X_1 = (T \\limpl \\sym{sunny}(\\sym{W}))$ tautológia.\n\ny) Musíme zistiť, či je formula $X_2 = (T \\limpl \\sym{raining}(\\sym{W}))$ tautológia.\n\nz) Musíme zistiť, či je formula $X_3 =\\sym{rainbow}(\\sym{W})$ nezávislá od teórie $T$.\n",
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "Alebo zistit ci je X dosledkom teorie T?",
+            "timestamp": 1741168015655,
+            "id": 0
+          }
+        }
       }
     },
     "10": {
@@ -44,7 +53,7 @@
     "15": {
       "id": 15,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAko vyriešime formálne problémy, ktoré ste určili v predošlej časti? Uveďte postup riešenia.\n:::\n\n…\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help] Zapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAko vyriešime formálne problémy, ktoré ste určili v predošlej časti? Uveďte postup riešenia.\n:::\n\nZostrojíme pravdivostnú tabuľku:\n\n:::div{.table.table-truth}\n|       | $\\sym{sunny}(\\sym{W})$ | $\\sym{raining}(\\sym{W})$ | $\\sym{rainbow}(\\sym{W})$ | $A_1$ | $A_2$ | $A_3$ | $X_1$ | $X_2$ | $X_3$ |\n| :---- | :-----: | :----: | :----: | :---: | :---: | :---: | :---: | :---: | :---: |\n| $v_1$ |     0   |    0   |    0   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ |\n| $v_2$ |     0   |    0   |    1   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ | \n| $v_3$ |     0   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | \n| $v_4$ |     0   |    1   |    1   | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ | \n| $v_5$ |     1   |    0   |    0   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\npmodels$ |\n| $v_6$ |     1   |    0   |    1   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ |\n| $v_7$ |     1   |    1   |    0   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | \n| $v_8$ |     1   |    1   |    1   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ |\n\n:::\n\n*Pri formálnych problémoch x a y nevypisujem ohodnotenia, v ktorých je $T$ nepravdivá, \nkeďže $X_1$ a $X_2$ sú v týchto prípadoch vždy pravdivé. Podobne nemusím vypisovať ani pre formálny problém z, \nkeďže zisťujeme nezávislosť od téorie $T$*.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help] Zapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -54,7 +63,7 @@
     "16": {
       "id": 16,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Interpretácia]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **5 %**]\n\n:::aside{.small}\nKtoré z Jožkových záverov x)–z) sú správne a ktoré nesprávne? Ako to súvisí s riešeniami formálnych problémov?\n:::\n\nx) …\n\ny) …\n\nz) …",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Interpretácia]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **5 %**]\n\n:::aside{.small}\nKtoré z Jožkových záverov x)–z) sú správne a ktoré nesprávne? Ako to súvisí s riešeniami formálnych problémov?\n:::\n\nx) Keďže $X_1$ je tautológia, tak Jožkov záver je **správny**.\n\ny) Keďže $X_2$ nie je tautológia, tak Jožkov záver je **nesprávny**.\n\nz) Keďže $X_3$ je nezávislá od teórie $T$, tak Jožkov záver je **správny**.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -64,7 +73,7 @@
     "22": {
       "id": 22,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda napr. vysvetlite, prečo vaša pravdivostná tabuľka ukazuje, že formula/teória je splniteľná.\n:::\n\nw) …\n\nx) …\n\ny) …\n\nz) …",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda napr. vysvetlite, prečo vaša pravdivostná tabuľka ukazuje, že formula/teória je splniteľná.\n:::\n\nw) Teória $T$ **je splniteľná**, pretože existuje výrokové ohodnotenie $v$, v ktorom je pravdivá.\n\nx) Formula $X_1$ **je tautológia**, pretože pre všetky výrokové ohodnotenia $v$ je pravdivá.\n\ny) Formula $X_2$ **nie je tautológia**, pretože nie je pre všetky výrokové ohodnotenia $v$ pravdivá.\n\nz) Fromula $X_3$ **je nezávislá** od téorie $T$, pretože existujú také ohodnotenia $v_0$ a $v_1$ pre jazyk $\\Lang$, že $v_0 \\pmodels T$ aj $v_1 \\pmodels T$, ale $v_0 \\npmodels \\sym{rainbow}(\\sym{W})$ a $v_1 \\pmodels \\sym{rainbow}(\\sym{W})$. *Konkrétne sú to ohodnotenia $v_5$ a $v_6$*.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -84,7 +93,7 @@
     "28": {
       "id": 28,
       "type": "text",
-      "data": "::h3[**a)**]{.h6.float-start.my-0.me-2.lh-base}\nNech pre všetky výrokovologické ohodnotenia $v$ je pravda, že ak $v\\pmodels T$, tak $v\\pmodels A$. Potom:\n\n:::enum{.i}\n1. $A$ výrokovologicky vyplýva z $T$.\n    * [ ] Pravda\n    * [ ] Nepravda\n2. Ak $T$ je nesplniteľná, tak $T\\pentails B$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. $T$ nie je prázdna.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. $T\\pentails (A\\lor B)$\n    * [ ] Pravda\n    * [ ] Nepravda\n:::\n",
+      "data": "::h3[**a)**]{.h6.float-start.my-0.me-2.lh-base}\nNech pre všetky výrokovologické ohodnotenia $v$ je pravda, že ak $v\\pmodels T$, tak $v\\pmodels A$. Potom:\n\n:::enum{.i}\n1. $A$ výrokovologicky vyplýva z $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $T$ je nesplniteľná, tak $T\\pentails B$.\n    * [ ] Pravda\n    * [ ] Nepravda\n3. $T$ nie je prázdna.\n    * [ ] Pravda\n    * [ ] Nepravda\n4. $T\\pentails (A\\lor B)$\n    * [ ] Pravda\n    * [ ] Nepravda\n:::\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -124,7 +133,7 @@
     "32": {
       "id": 32,
       "type": "text",
-      "data": ":icon[write] **Záver:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je/nie je tautológiou** pre ľubovoľné $A$ a $B$, pretože …\n\n2. …\n\n3. …\n\n4. …\n:::",
+      "data": ":icon[write] **Záver:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je tautológiou** pre ľubovoľné $A$ a $B$, pretože je pravdivá pre každé ohodnotenie $v$.\n\n2. **je splniteľná** pre ľubovoľné $A$ a $B$, pretože neexistuje ohodnotenie $v$, v ktorom by bola nepravdivá.\n\n3. **nie je splniteľná** pre ľubovoľné $A$ a $B$, pretože pre každé ohodnotenie $v$ je pravdivá.\n\n4. **nie je nesplniteľná** pre ľubovoľné $A$ a $B$, pretože nie je nepravdivá pre každé ohodnotenie $v$.\n:::",
       "idCounter": 1,
       "comments": {
         "ids": [],
@@ -134,7 +143,7 @@
     "33": {
       "id": 33,
       "type": "text",
-      "data": ":icon[write] **Formálne riešenie:**\n\n…\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help] Zapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
+      "data": ":icon[write] **Formálne riešenie:**\n\n:::div{.table.table-truth}\n\n|       | $A$ | $B$ | $\\neg B$ | $(A \\limpl \\neg B)$ | $\\neg A$ | $(B \\limpl \\neg A)$ | $\\bigl((A \\limpl \\neg B) \\limpl (B \\limpl \\neg A)\\bigr)$ |\n| :---- | :-----: | :----: | :----: | :---: | :---: | :---: | :---: |\n| $v_1$ |    $\\npmodels$   |    $\\npmodels$   | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$ |\n| $v_2$ |    $\\npmodels$   |    $\\pmodels$   | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ | $\\pmodels$  | $\\pmodels$ |\n| $v_3$ |    $\\pmodels$   |    $\\npmodels$   | $\\pmodels$ | $\\pmodels$ | $\\npmodels$ | $\\pmodels$ | $\\pmodels$ |\n| $v_4$ |    $\\pmodels$   |    $\\pmodels$   | $\\npmodels$ | $\\npmodels$ | $\\npmodels$ | $\\npmodels$ | $\\pmodels$ |\n\n\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[help] Zapísať pravdivostnú tabuľku v Markdowne vám pomôže\n[Markdown Table Editor and Generator](https://tableconvert.com/markdown-generator).\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
