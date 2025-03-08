@@ -36,7 +36,6 @@ class Constant {
     }
 }
 
-
 class Formula {
     public List<Formula> subfs() {
         throw new RuntimeException("Not implemented");
@@ -78,51 +77,65 @@ class Formula {
     }
 }
 
-
 class AtomicFormula extends Formula {
 }
 
-
 class PredicateAtom extends AtomicFormula {
+    String name;
+    List<Constant> args;
+
     PredicateAtom(String name, List<Constant> args) {
-        throw new RuntimeException("Not implemented");
+        this.name = name;
+        this.args = args;
     }
 
     String name() {
-        throw new RuntimeException("Not implemented");
+        return name;
     }
 
     List<Constant> arguments() {
-        throw new RuntimeException("Not implemented");
+        return args;
+    }
+
+    @Override
+    public int deg() {
+        return 0;
     }
 }
 
-
 class EqualityAtom extends AtomicFormula {
+    Constant left, right;
+
     EqualityAtom(Constant left, Constant right) {
-        throw new RuntimeException("Not implemented");
+        this.left = left;
+        this.right = right;
     }
 
     Constant left() {
-        throw new RuntimeException("Not implemented");
+        return left;
     }
 
     Constant right() {
-        throw new RuntimeException("Not implemented");
+        return right;
     }
 }
 
-
 class Negation extends Formula {
+    Formula originalFormula;
+
     Negation(Formula originalFormula) {
-        throw new RuntimeException("Not implemented");
+        this.originalFormula = originalFormula;
     }
 
     public Formula originalFormula() {
-        throw new RuntimeException("Not implemented");
+        return originalFormula;
+    }
+
+    @Override
+    public int deg() {
+        return originalFormula.deg() + 1;
     }
 }
-
 
 class Disjunction extends Formula {
     Disjunction(List<Formula> disjuncts) {
@@ -130,35 +143,41 @@ class Disjunction extends Formula {
     }
 }
 
-
 class Conjunction extends Formula {
     Conjunction(List<Formula> conjuncts) {
         throw new RuntimeException("Not implemented");
     }
 }
 
-
 class BinaryFormula extends Formula {
+    Formula leftSide, rightSide;
+    String connective;
+
     BinaryFormula(Formula leftSide, Formula rightSide, String connective) {
-        throw new RuntimeException("Not implemented");
+        this.leftSide = leftSide;
+        this.rightSide = rightSide;
+        this.connective = connective;
     }
 
     public Formula leftSide() {
-        throw new RuntimeException("Not implemented");
+        return leftSide;
     }
 
     public Formula rightSide() {
-        throw new RuntimeException("Not implemented");
+        return rightSide;
+    }
+
+    @Override
+    public int deg() {
+        return leftSide.deg() + rightSide.deg() + 1;
     }
 }
-
 
 class Implication extends BinaryFormula {
     Implication(Formula leftSide, Formula rightSide) {
         super(leftSide, rightSide, "->");
     }
 }
-
 
 class Equivalence extends BinaryFormula {
     Equivalence(Formula leftSide, Formula rightSide) {
