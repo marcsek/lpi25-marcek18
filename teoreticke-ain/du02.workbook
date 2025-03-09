@@ -124,7 +124,7 @@
     "32": {
       "id": 32,
       "type": "text",
-      "data": ":icon[write] **Záver:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je tautológiou** pre ľubovoľné $A$ a $B$, pretože je pravdivá pre každé ohodnotenie $v$.\n\n2. **je splniteľná** pre ľubovoľné $A$ a $B$, pretože neexistuje ohodnotenie $v$, v ktorom by bola nepravdivá.\n\n3. **nie je falzifikovateľná** pre ľubovoľné $A$ a $B$, pretože pre každé ohodnotenie $v$ je pravdivá.\n\n4. **nie je nesplniteľná** pre ľubovoľné $A$ a $B$, pretože nie je nepravdivá pre každé ohodnotenie $v$.\n:::",
+      "data": ":icon[write] **Záver:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je tautológiou** pre ľubovoľné $A$ a $B$, pretože je pravdivá pre každé ohodnotenie $v$.\n\n2. **je splniteľná** pre ľubovoľné $A$ a $B$, kedže je pravdivá pre každé ohodnotenie $v$ a teda s istotou môžeme tvrdiť, že existuje také ohodnotenie $v$ v ktorom je pravdivá.\n\n3. **nie je falzifikovateľná** pre ľubovoľné $A$ a $B$, pretože pre každé ohodnotenie $v$ je pravdivá.\n\n4. **nie je nesplniteľná** pre ľubovoľné $A$ a $B$, pretože nie je nepravdivá pre každé ohodnotenie $v$.\n:::",
       "idCounter": 1,
       "comments": {
         "ids": [],
