@@ -64,7 +64,7 @@
     "22": {
       "id": 22,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda napr. vysvetlite, prečo vaša pravdivostná tabuľka ukazuje, že formula/teória je splniteľná.\n:::\n\nw) Teória $T$ **je splniteľná**, pretože existuje výrokové ohodnotenie $v$, v ktorom je pravdivá.\n\nx) $\\sym{sunny}(\\sym{W})$ **vyplýva** z $T$, pretože platí, že ak $v \\pmodels T$, tak $v \\pmodels X_1$.\n\ny) $\\sym{raining}(\\sym{W})$ **nevyplýva** z $T$, pretože neplatí, že ak $v \\pmodels T$, tak $v \\pmodels X_2$.\n\nz) $\\sym{rainbow}(\\sym{W})$ **je nezávislá** od téorie $T$, pretože existujú také ohodnotenia $v_0$ a $v_1$ pre jazyk $\\Lang$, že $v_0 \\pmodels T$ aj $v_1 \\pmodels T$, ale $v_0 \\npmodels \\sym{rainbow}(\\sym{W})$ a $v_1 \\pmodels \\sym{rainbow}(\\sym{W})$. *Konkrétne sú to ohodnotenia $v_5$ a $v_6$*.",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda napr. vysvetlite, prečo vaša pravdivostná tabuľka ukazuje, že formula/teória je splniteľná.\n:::\n\nw) Teória $T$ **je splniteľná**, pretože existuje výrokové ohodnotenie $v$, v ktorom je pravdivá (napr. pre $v_5$).\n\nx) $\\sym{sunny}(\\sym{W})$ **vyplýva** z $T$, pretože platí, že ak $v \\pmodels T$, tak $v \\pmodels X_1$ ($v_5$ a $v_6$ pravdivé).\n\ny) $\\sym{raining}(\\sym{W})$ **nevyplýva** z $T$, pretože neplatí, že ak $v \\pmodels T$, tak $v \\pmodels X_2$ (napr. pre $v_5$).\n\nz) $\\sym{rainbow}(\\sym{W})$ **je nezávislá** od téorie $T$, pretože existujú také ohodnotenia $v_0$ a $v_1$ pre jazyk $\\Lang$, že $v_0 \\pmodels T$ aj $v_1 \\pmodels T$, ale $v_0 \\npmodels \\sym{rainbow}(\\sym{W})$ a $v_1 \\pmodels \\sym{rainbow}(\\sym{W})$. *Konkrétne sú to ohodnotenia $v_5$ a $v_6$*.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -124,7 +124,7 @@
     "32": {
       "id": 32,
       "type": "text",
-      "data": ":icon[write] **Záver:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je tautológiou** pre ľubovoľné $A$ a $B$, pretože je pravdivá pre každé ohodnotenie $v$.\n\n2. **je splniteľná** pre ľubovoľné $A$ a $B$, pretože neexistuje ohodnotenie $v$, v ktorom by bola nepravdivá.\n\n3. **nie je splniteľná** pre ľubovoľné $A$ a $B$, pretože pre každé ohodnotenie $v$ je pravdivá.\n\n4. **nie je nesplniteľná** pre ľubovoľné $A$ a $B$, pretože nie je nepravdivá pre každé ohodnotenie $v$.\n:::",
+      "data": ":icon[write] **Záver:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **je tautológiou** pre ľubovoľné $A$ a $B$, pretože je pravdivá pre každé ohodnotenie $v$.\n\n2. **je splniteľná** pre ľubovoľné $A$ a $B$, pretože neexistuje ohodnotenie $v$, v ktorom by bola nepravdivá.\n\n3. **nie je falzifikovateľná** pre ľubovoľné $A$ a $B$, pretože pre každé ohodnotenie $v$ je pravdivá.\n\n4. **nie je nesplniteľná** pre ľubovoľné $A$ a $B$, pretože nie je nepravdivá pre každé ohodnotenie $v$.\n:::",
       "idCounter": 1,
       "comments": {
         "ids": [],
