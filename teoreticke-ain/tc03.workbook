@@ -84,7 +84,7 @@
     "28": {
       "id": 28,
       "type": "text",
-      "data": ":icon[write] **Riešenie:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **nie je tautológiou**, pretože nie je pravdivá v každom výrokovom ohodnotení $v$.\n\n2. **je splniteľná**, pretože existuje výrokové ohodnotenie $v$, v ktorom je pravdivá.\n\n3. **je falzifikovateľná**, pretože existuje výrokové ohodnotiene $v$, v ktorom je nepravdivá.\n\n4. **nie je nespliteľná**, pretože nie je nepravdivá v každom výrokovom ohodnotení $v$.\n:::",
+      "data": ":icon[write] **Riešenie:**\n\nFormula $X$:\n\n:::enum{.i}\n1. **nie je tautológiou**, pretože neexistue ohodnotenie $v$, v ktorom je nepravdivá.\n\n2. **je splniteľná**, pretože existuje výrokové ohodnotenie $v$, v ktorom je pravdivá.\n\n3. **je falzifikovateľná**, pretože existuje výrokové ohodnotiene $v$, v ktorom je nepravdivá.\n\n4. **nie je nespliteľná**, pretože existue ohodnotenie $v$, v ktorom je nepravdivá.\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
