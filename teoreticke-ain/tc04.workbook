@@ -480,7 +480,7 @@
     "17": {
       "id": 17,
       "type": "text",
-      "data": ":icon[write] \n**Záver**:\n\nPretože existuje uzavreté tablo pre množinu označených formúl\n$S^+ = \\{\\, \\sign{T} A_i \\mid i \\in \\{1, 2, 3, 4, 5\\} \\,\\} \\cup \\{ \\sign{F} X \\}$,\nformula $X$ je dokázateľná z teórie $T$ ($T \\pproves X$).\nPodľa $5.18$ z prednášky formula $X$ logicky vyplýva z teórie $T$ ($T \\pentails X$).",
+      "data": ":icon[write] \n**Záver**:\n\nPretože existuje uzavreté tablo pre množinu označených formúl\n$S^+ = \\{\\, \\sign{T} A_i \\mid i \\in \\{1, 2, 3, 4, 5\\} \\,\\} \\cup \\{ \\sign{F} X \\}$,\nformula $X$ je dokázateľná z teórie $T$ ($T \\pproves X$).\nPodľa dôsledku $5.18$ z prednášky formula $X$ logicky vyplýva z teórie $T$ ($T \\pentails X$).",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -490,7 +490,7 @@
     "18": {
       "id": 18,
       "type": "text",
-      "data": ":icon[write] \n**Záver a jeho zdôvodnenie**:\n\nPretože … tablo pre …, formula $X$ je … z teórie $T$.\nPodľa … z prednášky formula $X$ … z teórie $T$.",
+      "data": ":icon[write] \n**Záver a jeho zdôvodnenie**:\n\nPretože existuje uzavreté tablo pre množinu označených formúl\n$S^+ = \\{\\, \\sign{T} A_i \\mid i \\in \\{1, 2, 3, 4, 5\\} \\,\\} \\cup \\{ \\sign{F} X \\}$, formula $X$ je dokázateľná z teórie $T$.\nPodľa dôsledku $5.18$ z prednášky formula $X$ logicky vyplýva z teórie $T$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -553,11 +553,185 @@
       "id": 21,
       "type": "tableauEditor",
       "data": {
-        "type": "open",
+        "type": "assumption",
         "node": {
           "id": 1,
-          "value": "",
+          "value": "T (cinema(Fred,Anne)∨(listens(Fred,PinkFloyd)∨plays(Fred,FredsPS)))",
           "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T (¬frustrated(Fred)→cinema(Fred,Anne))",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T (listens(Fred,PinkFloyd)→¬frustrated(Fred))",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F (¬plays(Fred,FredsPS)→cinema(Fred,Anne))",
+                "references": []
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "T ¬plays(Fred,FredsPS)",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F cinema(Fred,Anne)",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "beta",
+                    "node": {
+                      "id": 7,
+                      "value": "F plays(Fred,FredsPS)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "leftChild": {
+                      "type": "closed",
+                      "node": {
+                        "id": 8,
+                        "value": "T cinema(Fred,Anne)",
+                        "references": [
+                          "1"
+                        ]
+                      },
+                      "closed": [
+                        "6",
+                        "8"
+                      ]
+                    },
+                    "rightChild": {
+                      "type": "beta",
+                      "node": {
+                        "id": 9,
+                        "value": "T (listens(Fred,PinkFloyd)∨plays(Fred,FredsPS))",
+                        "references": [
+                          "1"
+                        ]
+                      },
+                      "leftChild": {
+                        "type": "closed",
+                        "node": {
+                          "id": 10,
+                          "value": "T plays(Fred,FredsPS)",
+                          "references": [
+                            "9"
+                          ]
+                        },
+                        "closed": [
+                          "7",
+                          "10"
+                        ]
+                      },
+                      "rightChild": {
+                        "type": "beta",
+                        "node": {
+                          "id": 11,
+                          "value": "T listens(Fred,PinkFloyd)",
+                          "references": [
+                            "9"
+                          ]
+                        },
+                        "leftChild": {
+                          "type": "closed",
+                          "node": {
+                            "id": 12,
+                            "value": "T cinema(Fred,Anne)",
+                            "references": [
+                              "2"
+                            ]
+                          },
+                          "closed": [
+                            "6",
+                            "12"
+                          ]
+                        },
+                        "rightChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 13,
+                            "value": "F ¬frustrated(Fred)",
+                            "references": [
+                              "2"
+                            ]
+                          },
+                          "child": {
+                            "type": "beta",
+                            "node": {
+                              "id": 14,
+                              "value": "T frustrated(Fred)",
+                              "references": [
+                                "13"
+                              ]
+                            },
+                            "leftChild": {
+                              "type": "closed",
+                              "node": {
+                                "id": 15,
+                                "value": "F listens(Fred,PinkFloyd)",
+                                "references": [
+                                  "3"
+                                ]
+                              },
+                              "closed": [
+                                "11",
+                                "15"
+                              ]
+                            },
+                            "rightChild": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 16,
+                                "value": "T ¬frustrated(Fred)",
+                                "references": [
+                                  "3"
+                                ]
+                              },
+                              "child": {
+                                "type": "closed",
+                                "node": {
+                                  "id": 17,
+                                  "value": "F frustrated(Fred)",
+                                  "references": [
+                                    "16"
+                                  ]
+                                },
+                                "closed": [
+                                  "14",
+                                  "17"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "config": "Basic propositional"
       },
