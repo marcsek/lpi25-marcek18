@@ -24,7 +24,7 @@
     "6": {
       "id": 6,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania? Napr. splniteľnosť ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.\n\n:icon[help] **Pomôcka.** Musíme vyriešiť 3 formálne problémy.\n:::\n\n1. Musíme zistiť, či je teória splniteľná.\n2. Musíme zistiť, či je formula **a** tautológia.\n3. Musíme zistiť, či je formula **b** tautológia.\n",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania? Napr. splniteľnosť ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.\n\n:icon[help] **Pomôcka.** Musíme vyriešiť 3 formálne problémy.\n:::\n\n1. Musíme zistiť, či je teória $T$ splniteľná.\n2. Musíme zistiť, či formula $X_1$ vyplýva z teórie $T$.\n3. Musíme zistiť, či formula $X_2$ vyplýva z teórie $T$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -188,6 +188,334 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "40": {
+      "id": 40,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T (jumper(Y) ∨  (hat(Y) ∨  (socks(Y) ∨ scarf(Y))))",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
+                "references": []
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F ( thin(Y) → ¬ wool(Y) )",
+                  "references": []
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "T thin(Y) ",
+                    "references": [
+                      "5"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "F ¬ wool(Y)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "T wool(Y)",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T (hat(Y) -> scarf(Y))",
+                          "references": [
+                            "4"
+                          ]
+                        },
+                        "child": {
+                          "type": "beta",
+                          "node": {
+                            "id": 10,
+                            "value": "T (scarf(Y) -> hat(Y))",
+                            "references": [
+                              "4"
+                            ]
+                          },
+                          "leftChild": {
+                            "type": "open",
+                            "node": {
+                              "id": 11,
+                              "value": "F hat(Y)",
+                              "references": [
+                                "9"
+                              ]
+                            }
+                          },
+                          "rightChild": {
+                            "type": "beta",
+                            "node": {
+                              "id": 12,
+                              "value": "T scarf(Y)",
+                              "references": [
+                                "9"
+                              ]
+                            },
+                            "leftChild": {
+                              "type": "closed",
+                              "node": {
+                                "id": 13,
+                                "value": "F scarf(Y)",
+                                "references": [
+                                  "10"
+                                ]
+                              },
+                              "closed": [
+                                "12",
+                                "13"
+                              ]
+                            },
+                            "rightChild": {
+                              "type": "beta",
+                              "node": {
+                                "id": 14,
+                                "value": "T hat(Y)",
+                                "references": [
+                                  "10"
+                                ]
+                              },
+                              "leftChild": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 15,
+                                  "value": "F jumper(Y)",
+                                  "references": [
+                                    "2"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 16,
+                                    "value": "F (scarf(Y) ∨ socks(Y))",
+                                    "references": [
+                                      "3"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 17,
+                                      "value": "F scarf(Y) ",
+                                      "references": [
+                                        "16"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "open",
+                                      "node": {
+                                        "id": 18,
+                                        "value": "F socks(Y)",
+                                        "references": [
+                                          "16"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 19,
+                                    "value": "T ¬ wool(Y)",
+                                    "references": [
+                                      "3"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "closed",
+                                    "node": {
+                                      "id": 20,
+                                      "value": "F wool(Y)",
+                                      "references": [
+                                        "19"
+                                      ]
+                                    },
+                                    "closed": [
+                                      "8",
+                                      "20"
+                                    ]
+                                  }
+                                }
+                              },
+                              "rightChild": {
+                                "type": "alpha",
+                                "node": {
+                                  "id": 21,
+                                  "value": "T (thick(Y) & ¬ cotton(Y))",
+                                  "references": [
+                                    "2"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 22,
+                                    "value": "T thick(Y)",
+                                    "references": [
+                                      "21"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 23,
+                                      "value": "T ¬ cotton(Y)",
+                                      "references": [
+                                        "21"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "beta",
+                                      "node": {
+                                        "id": 24,
+                                        "value": "F cotton(Y)",
+                                        "references": [
+                                          "23"
+                                        ]
+                                      },
+                                      "leftChild": {
+                                        "type": "open",
+                                        "node": {
+                                          "id": 25,
+                                          "value": "T jumper(Y) ",
+                                          "references": [
+                                            "1"
+                                          ]
+                                        }
+                                      },
+                                      "rightChild": {
+                                        "type": "beta",
+                                        "node": {
+                                          "id": 26,
+                                          "value": "T (hat(Y) ∨  (socks(Y) ∨ scarf(Y)))",
+                                          "references": [
+                                            "1"
+                                          ]
+                                        },
+                                        "leftChild": {
+                                          "type": "open",
+                                          "node": {
+                                            "id": 27,
+                                            "value": "T hat(Y) ",
+                                            "references": [
+                                              "26"
+                                            ]
+                                          }
+                                        },
+                                        "rightChild": {
+                                          "type": "beta",
+                                          "node": {
+                                            "id": 28,
+                                            "value": "T (socks(Y) ∨ scarf(Y))",
+                                            "references": [
+                                              "26"
+                                            ]
+                                          },
+                                          "leftChild": {
+                                            "type": "open",
+                                            "node": {
+                                              "id": 29,
+                                              "value": "T socks(Y)",
+                                              "references": [
+                                                "28"
+                                              ]
+                                            }
+                                          },
+                                          "rightChild": {
+                                            "type": "open",
+                                            "node": {
+                                              "id": 30,
+                                              "value": "T scarf(Y)",
+                                              "references": [
+                                                "28"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "44": {
+      "id": 44,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]},\"predicates\":{\"value\":\"thick/1, thin/1, wool/1, cotton/1, acrylic/1, socks/1, jumper/1, scarf/1, hat/1 \",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"thick\",\"arity\":1},{\"name\":\"thin\",\"arity\":1},{\"name\":\"wool\",\"arity\":1},{\"name\":\"cotton\",\"arity\":1},{\"name\":\"acrylic\",\"arity\":1},{\"name\":\"socks\",\"arity\":1},{\"name\":\"jumper\",\"arity\":1},{\"name\":\"scarf\",\"arity\":1},{\"name\":\"hat\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"Y\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"thick/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"thin/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"wool/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"cotton/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"acrylic/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"socks/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"jumper/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"scarf/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"hat/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(jumper(Y) \\\\lor (hat(Y) \\\\lor  (socks(Y) \\\\lor scarf(Y))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((thick(Y) & \\\\neg thin(Y)) \\\\lor (\\\\neg thick(Y) & thin(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"subRight\":{\"subLeft\":{\"subFormula\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((cotton(Y) \\\\lor wool(Y)) \\\\lor acrylic(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"acrylic\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(jumper(Y) -> (thick(Y) & \\\\neg cotton(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((scarf(Y) \\\\lor socks(Y)) -> \\\\neg wool(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subFormula\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(socks(Y) -> thin(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "45": {
+      "id": 45,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]},\"predicates\":{\"value\":\"thick/1, thin/1, wool/1, cotton/1, acrylic/1, socks/1, jumper/1, scarf/1, hat/1 \",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"thick\",\"arity\":1},{\"name\":\"thin\",\"arity\":1},{\"name\":\"wool\",\"arity\":1},{\"name\":\"cotton\",\"arity\":1},{\"name\":\"acrylic\",\"arity\":1},{\"name\":\"socks\",\"arity\":1},{\"name\":\"jumper\",\"arity\":1},{\"name\":\"scarf\",\"arity\":1},{\"name\":\"hat\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"Y\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"thick/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"thin/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"wool/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"cotton/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"acrylic/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"socks/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"jumper/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"scarf/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"hat/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(jumper(Y) \\\\lor (hat(Y) \\\\lor  (socks(Y) \\\\lor scarf(Y))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((thick(Y) & \\\\neg thin(Y)) \\\\lor (\\\\neg thick(Y) & thin(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"subRight\":{\"subLeft\":{\"subFormula\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((cotton(Y) \\\\lor wool(Y)) \\\\lor acrylic(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"acrylic\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(jumper(Y) -> (thick(Y) & \\\\neg cotton(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((scarf(Y) \\\\lor socks(Y)) -> \\\\neg wool(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subFormula\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(socks(Y) -> thin(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(jumper(Y) & hat(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -197,6 +525,9 @@
     38,
     6,
     15,
+    40,
+    44,
+    45,
     39,
     22,
     16,
