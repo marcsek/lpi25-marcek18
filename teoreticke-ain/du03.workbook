@@ -1694,28 +1694,28 @@
             "type": "assumption",
             "node": {
               "id": 3,
-              "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
+              "value": "T ( jumper(Y) → ( thick(Y) ∧ ¬ cotton(Y) ) )",
               "references": []
             },
             "child": {
               "type": "assumption",
               "node": {
                 "id": 4,
-                "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
+                "value": "T ( ( scarf(Y) ∨ socks(Y) ) → ¬ wool(Y) )",
                 "references": []
               },
               "child": {
                 "type": "assumption",
                 "node": {
                   "id": 5,
-                  "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
+                  "value": "T ( ( hat(Y) → scarf(Y) ) ∧ ( scarf(Y) → hat(Y) ) )",
                   "references": []
                 },
                 "child": {
                   "type": "alpha",
                   "node": {
                     "id": 6,
-                    "value": "F (thin(Y) -> ¬ wool(Y))",
+                    "value": "F ( thin(Y) → ¬ wool(Y) )",
                     "references": []
                   },
                   "child": {
@@ -1731,7 +1731,7 @@
                       "type": "alpha",
                       "node": {
                         "id": 8,
-                        "value": "F ¬wool(Y)",
+                        "value": "F ¬ wool(Y)",
                         "references": [
                           "6"
                         ]
@@ -1758,7 +1758,7 @@
                             "type": "alpha",
                             "node": {
                               "id": 11,
-                              "value": "F (scarf(Y) ∨ socks(Y))",
+                              "value": "F ( scarf(Y) ∨ socks(Y) )",
                               "references": [
                                 "4"
                               ]
@@ -1785,7 +1785,7 @@
                                   "type": "alpha",
                                   "node": {
                                     "id": 14,
-                                    "value": "T (hat(Y) -> scarf(Y))",
+                                    "value": "T ( hat(Y) → scarf(Y) )",
                                     "references": [
                                       "5"
                                     ]
@@ -1794,7 +1794,7 @@
                                     "type": "beta",
                                     "node": {
                                       "id": 15,
-                                      "value": "T (scarf(Y) -> hat(Y))",
+                                      "value": "T ( scarf(Y) → hat(Y) )",
                                       "references": [
                                         "5"
                                       ]
@@ -1812,7 +1812,7 @@
                                         "type": "beta",
                                         "node": {
                                           "id": 17,
-                                          "value": "F scarf(Y) ",
+                                          "value": "F scarf(Y)",
                                           "references": [
                                             "15"
                                           ]
@@ -1867,7 +1867,7 @@
                                               "type": "closed",
                                               "node": {
                                                 "id": 22,
-                                                "value": "T socks(Y) ",
+                                                "value": "T socks(Y)",
                                                 "references": [
                                                   "21"
                                                 ]
@@ -1932,7 +1932,7 @@
                             "type": "alpha",
                             "node": {
                               "id": 26,
-                              "value": "T¬ wool(Y)",
+                              "value": "T ¬ wool(Y)",
                               "references": [
                                 "4"
                               ]
@@ -1957,7 +1957,7 @@
                           "type": "alpha",
                           "node": {
                             "id": 28,
-                            "value": "T (thick(Y) & ¬ cotton(Y))",
+                            "value": "T ( thick(Y) ∧ ¬ cotton(Y) )",
                             "references": [
                               "3"
                             ]
@@ -2011,7 +2011,7 @@
                                       "type": "alpha",
                                       "node": {
                                         "id": 34,
-                                        "value": " T ¬ thin(Y) ",
+                                        "value": "T ¬ thin(Y)",
                                         "references": [
                                           "32"
                                         ]
@@ -2020,7 +2020,7 @@
                                         "type": "closed",
                                         "node": {
                                           "id": 35,
-                                          "value": "F thin(Y) ",
+                                          "value": "F thin(Y)",
                                           "references": [
                                             "34"
                                           ]
