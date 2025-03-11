@@ -196,158 +196,496 @@
         "type": "assumption",
         "node": {
           "id": 1,
-          "value": "T (jumper(Y) ∨  (hat(Y) ∨  (socks(Y) ∨ scarf(Y))))",
+          "value": "T ( jumper(Y) ∨ ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) ) )",
           "references": []
         },
         "child": {
           "type": "assumption",
           "node": {
             "id": 2,
-            "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
+            "value": "T ( ( thick(Y) ∧ ¬ thin(Y) ) ∨ ( ¬ thick(Y) ∧ thin(Y) ) )",
             "references": []
           },
           "child": {
             "type": "assumption",
             "node": {
               "id": 3,
-              "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
+              "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
               "references": []
             },
             "child": {
               "type": "assumption",
               "node": {
                 "id": 4,
-                "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
+                "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
                 "references": []
               },
               "child": {
-                "type": "alpha",
+                "type": "assumption",
                 "node": {
                   "id": 5,
-                  "value": "F ( thin(Y) → ¬ wool(Y) )",
+                  "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
                   "references": []
                 },
                 "child": {
                   "type": "alpha",
                   "node": {
                     "id": 6,
-                    "value": "T thin(Y) ",
-                    "references": [
-                      "5"
-                    ]
+                    "value": "F (thin(Y) -> ¬ wool(Y))",
+                    "references": []
                   },
                   "child": {
                     "type": "alpha",
                     "node": {
                       "id": 7,
-                      "value": "F ¬ wool(Y)",
+                      "value": "T thin(Y)",
                       "references": [
-                        "5"
+                        "6"
                       ]
                     },
                     "child": {
                       "type": "alpha",
                       "node": {
                         "id": 8,
-                        "value": "T wool(Y)",
+                        "value": "F ¬wool(Y)",
                         "references": [
-                          "7"
+                          "6"
                         ]
                       },
                       "child": {
-                        "type": "alpha",
+                        "type": "beta",
                         "node": {
                           "id": 9,
-                          "value": "T (hat(Y) -> scarf(Y))",
+                          "value": "T wool(Y)",
                           "references": [
-                            "4"
+                            "8"
                           ]
                         },
-                        "child": {
+                        "leftChild": {
                           "type": "beta",
                           "node": {
                             "id": 10,
-                            "value": "T (scarf(Y) -> hat(Y))",
+                            "value": "F jumper(Y)",
                             "references": [
-                              "4"
+                              "3"
                             ]
                           },
                           "leftChild": {
-                            "type": "open",
+                            "type": "closed",
                             "node": {
                               "id": 11,
-                              "value": "F hat(Y)",
+                              "value": "T jumper(Y)",
                               "references": [
-                                "9"
+                                "1"
                               ]
-                            }
+                            },
+                            "closed": [
+                              "10",
+                              "11"
+                            ]
                           },
                           "rightChild": {
                             "type": "beta",
                             "node": {
                               "id": 12,
-                              "value": "T scarf(Y)",
+                              "value": "T ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) )",
                               "references": [
-                                "9"
+                                "1"
                               ]
                             },
                             "leftChild": {
-                              "type": "closed",
+                              "type": "alpha",
                               "node": {
                                 "id": 13,
-                                "value": "F scarf(Y)",
+                                "value": "T hat(Y)",
                                 "references": [
-                                  "10"
+                                  "12"
                                 ]
                               },
-                              "closed": [
-                                "12",
-                                "13"
-                              ]
+                              "child": {
+                                "type": "alpha",
+                                "node": {
+                                  "id": 14,
+                                  "value": "T (hat(Y) -> scarf(Y))",
+                                  "references": [
+                                    "5"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "beta",
+                                  "node": {
+                                    "id": 15,
+                                    "value": "T (scarf(Y) -> hat(Y))",
+                                    "references": [
+                                      "5"
+                                    ]
+                                  },
+                                  "leftChild": {
+                                    "type": "closed",
+                                    "node": {
+                                      "id": 16,
+                                      "value": "F hat(Y)",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    },
+                                    "closed": [
+                                      "16",
+                                      "13"
+                                    ]
+                                  },
+                                  "rightChild": {
+                                    "type": "beta",
+                                    "node": {
+                                      "id": 17,
+                                      "value": "T scarf(Y)",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    },
+                                    "leftChild": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 18,
+                                        "value": "F (scarf(Y) ∨ socks(Y))",
+                                        "references": [
+                                          "4"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 19,
+                                          "value": "F scarf(Y)",
+                                          "references": [
+                                            "18"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "17",
+                                          "19"
+                                        ]
+                                      }
+                                    },
+                                    "rightChild": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 20,
+                                        "value": "T¬ wool(Y)",
+                                        "references": [
+                                          "4"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 21,
+                                          "value": "F wool(Y)",
+                                          "references": [
+                                            "20"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "21",
+                                          "9"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             },
                             "rightChild": {
                               "type": "beta",
                               "node": {
-                                "id": 14,
-                                "value": "T hat(Y)",
+                                "id": 22,
+                                "value": "T  ( socks(Y) ∨ scarf(Y) )",
                                 "references": [
-                                  "10"
+                                  "12"
                                 ]
                               },
                               "leftChild": {
                                 "type": "beta",
                                 "node": {
-                                  "id": 15,
-                                  "value": "F jumper(Y)",
+                                  "id": 23,
+                                  "value": "T socks(Y)",
                                   "references": [
-                                    "2"
+                                    "22"
                                   ]
                                 },
                                 "leftChild": {
                                   "type": "alpha",
                                   "node": {
-                                    "id": 16,
+                                    "id": 24,
                                     "value": "F (scarf(Y) ∨ socks(Y))",
                                     "references": [
-                                      "3"
+                                      "4"
                                     ]
                                   },
                                   "child": {
                                     "type": "alpha",
                                     "node": {
-                                      "id": 17,
-                                      "value": "F scarf(Y) ",
+                                      "id": 25,
+                                      "value": "F scarf(Y)",
                                       "references": [
-                                        "16"
+                                        "24"
                                       ]
                                     },
                                     "child": {
-                                      "type": "open",
+                                      "type": "closed",
                                       "node": {
-                                        "id": 18,
+                                        "id": 26,
                                         "value": "F socks(Y)",
                                         "references": [
-                                          "16"
+                                          "24"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "23",
+                                        "26"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 27,
+                                    "value": "T ¬ wool(Y)",
+                                    "references": [
+                                      "4"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "closed",
+                                    "node": {
+                                      "id": 28,
+                                      "value": "F wool(Y)",
+                                      "references": [
+                                        "27"
+                                      ]
+                                    },
+                                    "closed": [
+                                      "9",
+                                      "28"
+                                    ]
+                                  }
+                                }
+                              },
+                              "rightChild": {
+                                "type": "alpha",
+                                "node": {
+                                  "id": 29,
+                                  "value": "T scarf(Y)",
+                                  "references": [
+                                    "22"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 30,
+                                    "value": "T (hat(Y) -> scarf(Y))",
+                                    "references": [
+                                      "5"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "beta",
+                                    "node": {
+                                      "id": 31,
+                                      "value": "T (scarf(Y) -> hat(Y))",
+                                      "references": [
+                                        "5"
+                                      ]
+                                    },
+                                    "leftChild": {
+                                      "type": "beta",
+                                      "node": {
+                                        "id": 32,
+                                        "value": "F hat(Y)",
+                                        "references": [
+                                          "30"
+                                        ]
+                                      },
+                                      "leftChild": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 33,
+                                          "value": "F scarf(Y)",
+                                          "references": [
+                                            "31"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "29",
+                                          "33"
+                                        ]
+                                      },
+                                      "rightChild": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 34,
+                                          "value": "T hat(Y)",
+                                          "references": [
+                                            "31"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "34",
+                                          "32"
+                                        ]
+                                      }
+                                    },
+                                    "rightChild": {
+                                      "type": "beta",
+                                      "node": {
+                                        "id": 35,
+                                        "value": "T scarf(Y)",
+                                        "references": [
+                                          "30"
+                                        ]
+                                      },
+                                      "leftChild": {
+                                        "type": "alpha",
+                                        "node": {
+                                          "id": 36,
+                                          "value": "F (scarf(Y) ∨ socks(Y))",
+                                          "references": [
+                                            "4"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "alpha",
+                                          "node": {
+                                            "id": 37,
+                                            "value": "F scarf(Y)",
+                                            "references": [
+                                              "36"
+                                            ]
+                                          },
+                                          "child": {
+                                            "type": "closed",
+                                            "node": {
+                                              "id": 38,
+                                              "value": "F socks(Y)",
+                                              "references": [
+                                                "36"
+                                              ]
+                                            },
+                                            "closed": [
+                                              "29",
+                                              "37"
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "rightChild": {
+                                        "type": "alpha",
+                                        "node": {
+                                          "id": 39,
+                                          "value": "T¬ wool(Y)",
+                                          "references": [
+                                            "4"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "closed",
+                                          "node": {
+                                            "id": 40,
+                                            "value": "F wool(Y)",
+                                            "references": [
+                                              "39"
+                                            ]
+                                          },
+                                          "closed": [
+                                            "9",
+                                            "40"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "rightChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 41,
+                            "value": "T (thick(Y) & ¬ cotton(Y))",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 42,
+                              "value": "T thick(Y)",
+                              "references": [
+                                "41"
+                              ]
+                            },
+                            "child": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 43,
+                                "value": "T ¬ cotton(Y)",
+                                "references": [
+                                  "41"
+                                ]
+                              },
+                              "child": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 44,
+                                  "value": "F cotton(Y)",
+                                  "references": [
+                                    "43"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 45,
+                                    "value": "T ( thick(Y) ∧ ¬ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 46,
+                                      "value": "T thick(Y)",
+                                      "references": [
+                                        "45"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 47,
+                                        "value": "T ¬ thin(Y) ",
+                                        "references": [
+                                          "45"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 48,
+                                          "value": "F thin(Y) ",
+                                          "references": [
+                                            "47"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "7",
+                                          "48"
                                         ]
                                       }
                                     }
@@ -356,123 +694,43 @@
                                 "rightChild": {
                                   "type": "alpha",
                                   "node": {
-                                    "id": 19,
-                                    "value": "T ¬ wool(Y)",
+                                    "id": 49,
+                                    "value": "T ( ¬ thick(Y) ∧ thin(Y) )",
                                     "references": [
-                                      "3"
-                                    ]
-                                  },
-                                  "child": {
-                                    "type": "closed",
-                                    "node": {
-                                      "id": 20,
-                                      "value": "F wool(Y)",
-                                      "references": [
-                                        "19"
-                                      ]
-                                    },
-                                    "closed": [
-                                      "8",
-                                      "20"
-                                    ]
-                                  }
-                                }
-                              },
-                              "rightChild": {
-                                "type": "alpha",
-                                "node": {
-                                  "id": 21,
-                                  "value": "T (thick(Y) & ¬ cotton(Y))",
-                                  "references": [
-                                    "2"
-                                  ]
-                                },
-                                "child": {
-                                  "type": "alpha",
-                                  "node": {
-                                    "id": 22,
-                                    "value": "T thick(Y)",
-                                    "references": [
-                                      "21"
+                                      "2"
                                     ]
                                   },
                                   "child": {
                                     "type": "alpha",
                                     "node": {
-                                      "id": 23,
-                                      "value": "T ¬ cotton(Y)",
+                                      "id": 50,
+                                      "value": "T ¬ thick(Y)",
                                       "references": [
-                                        "21"
+                                        "49"
                                       ]
                                     },
                                     "child": {
-                                      "type": "beta",
+                                      "type": "alpha",
                                       "node": {
-                                        "id": 24,
-                                        "value": "F cotton(Y)",
+                                        "id": 51,
+                                        "value": "T thin(Y)",
                                         "references": [
-                                          "23"
+                                          "49"
                                         ]
                                       },
-                                      "leftChild": {
-                                        "type": "open",
+                                      "child": {
+                                        "type": "closed",
                                         "node": {
-                                          "id": 25,
-                                          "value": "T jumper(Y) ",
+                                          "id": 52,
+                                          "value": "F thick(Y)",
                                           "references": [
-                                            "1"
-                                          ]
-                                        }
-                                      },
-                                      "rightChild": {
-                                        "type": "beta",
-                                        "node": {
-                                          "id": 26,
-                                          "value": "T (hat(Y) ∨  (socks(Y) ∨ scarf(Y)))",
-                                          "references": [
-                                            "1"
+                                            "50"
                                           ]
                                         },
-                                        "leftChild": {
-                                          "type": "open",
-                                          "node": {
-                                            "id": 27,
-                                            "value": "T hat(Y) ",
-                                            "references": [
-                                              "26"
-                                            ]
-                                          }
-                                        },
-                                        "rightChild": {
-                                          "type": "beta",
-                                          "node": {
-                                            "id": 28,
-                                            "value": "T (socks(Y) ∨ scarf(Y))",
-                                            "references": [
-                                              "26"
-                                            ]
-                                          },
-                                          "leftChild": {
-                                            "type": "open",
-                                            "node": {
-                                              "id": 29,
-                                              "value": "T socks(Y)",
-                                              "references": [
-                                                "28"
-                                              ]
-                                            }
-                                          },
-                                          "rightChild": {
-                                            "type": "open",
-                                            "node": {
-                                              "id": 30,
-                                              "value": "T scarf(Y)",
-                                              "references": [
-                                                "28"
-                                              ]
-                                            }
-                                          }
-                                        }
+                                        "closed": [
+                                          "42",
+                                          "52"
+                                        ]
                                       }
                                     }
                                   }
@@ -516,6 +774,1328 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "46": {
+      "id": 46,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ( jumper(Y) ∨ ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) ) )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ( ( thick(Y) ∧ ¬ thin(Y) ) ∨ ( ¬ thick(Y) ∧ thin(Y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
+                  "references": []
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F (thin(Y) -> ¬ wool(Y))",
+                    "references": []
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "T thin(Y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ¬wool(Y)",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "beta",
+                        "node": {
+                          "id": 9,
+                          "value": "T wool(Y)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "leftChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 10,
+                            "value": "F jumper(Y)",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 11,
+                              "value": "T (hat(Y) -> scarf(Y))",
+                              "references": [
+                                "5"
+                              ]
+                            },
+                            "child": {
+                              "type": "beta",
+                              "node": {
+                                "id": 12,
+                                "value": "T (scarf(Y) -> hat(Y))",
+                                "references": [
+                                  "5"
+                                ]
+                              },
+                              "leftChild": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 13,
+                                  "value": "F hat(Y)",
+                                  "references": [
+                                    "11"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "beta",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "F scarf(Y)",
+                                    "references": [
+                                      "12"
+                                    ]
+                                  },
+                                  "leftChild": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "F (scarf(Y) ∨ socks(Y))",
+                                      "references": [
+                                        "4"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "F scarf(Y)",
+                                        "references": [
+                                          "15"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "beta",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "F socks(Y)",
+                                          "references": [
+                                            "15"
+                                          ]
+                                        },
+                                        "leftChild": {
+                                          "type": "closed",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T jumper(Y)",
+                                            "references": [
+                                              "1"
+                                            ]
+                                          },
+                                          "closed": [
+                                            "10",
+                                            "18"
+                                          ]
+                                        },
+                                        "rightChild": {
+                                          "type": "beta",
+                                          "node": {
+                                            "id": 19,
+                                            "value": "T ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) )",
+                                            "references": [
+                                              "1"
+                                            ]
+                                          },
+                                          "leftChild": {
+                                            "type": "closed",
+                                            "node": {
+                                              "id": 20,
+                                              "value": "T hat(Y)",
+                                              "references": [
+                                                "19"
+                                              ]
+                                            },
+                                            "closed": [
+                                              "13",
+                                              "20"
+                                            ]
+                                          },
+                                          "rightChild": {
+                                            "type": "beta",
+                                            "node": {
+                                              "id": 21,
+                                              "value": "T ( socks(Y) ∨ scarf(Y) )",
+                                              "references": [
+                                                "19"
+                                              ]
+                                            },
+                                            "leftChild": {
+                                              "type": "closed",
+                                              "node": {
+                                                "id": 22,
+                                                "value": "T socks(Y)",
+                                                "references": [
+                                                  "21"
+                                                ]
+                                              },
+                                              "closed": [
+                                                "17",
+                                                "22"
+                                              ]
+                                            },
+                                            "rightChild": {
+                                              "type": "closed",
+                                              "node": {
+                                                "id": 23,
+                                                "value": "T scarf(Y)",
+                                                "references": [
+                                                  "21"
+                                                ]
+                                              },
+                                              "closed": [
+                                                "16",
+                                                "23"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "rightChild": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 24,
+                                      "value": "T ¬ wool(Y)",
+                                      "references": [
+                                        "4"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 25,
+                                        "value": "F wool(Y)",
+                                        "references": [
+                                          "24"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "9",
+                                        "25"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "closed",
+                                  "node": {
+                                    "id": 26,
+                                    "value": "T hat(Y)",
+                                    "references": [
+                                      "12"
+                                    ]
+                                  },
+                                  "closed": [
+                                    "13",
+                                    "26"
+                                  ]
+                                }
+                              },
+                              "rightChild": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 27,
+                                  "value": "T scarf(Y)",
+                                  "references": [
+                                    "11"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 28,
+                                    "value": "F (scarf(Y) ∨ socks(Y))",
+                                    "references": [
+                                      "4"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 29,
+                                      "value": "F scarf(Y)",
+                                      "references": [
+                                        "28"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 30,
+                                        "value": "F socks(Y)",
+                                        "references": [
+                                          "28"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "27",
+                                        "29"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 31,
+                                    "value": "T¬ wool(Y)",
+                                    "references": [
+                                      "4"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "closed",
+                                    "node": {
+                                      "id": 32,
+                                      "value": "F wool(Y)",
+                                      "references": [
+                                        "31"
+                                      ]
+                                    },
+                                    "closed": [
+                                      "9",
+                                      "32"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "rightChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 33,
+                            "value": "T (thick(Y) & ¬ cotton(Y))",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 34,
+                              "value": "T thick(Y)",
+                              "references": [
+                                "33"
+                              ]
+                            },
+                            "child": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 35,
+                                "value": "T ¬ cotton(Y)",
+                                "references": [
+                                  "33"
+                                ]
+                              },
+                              "child": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 36,
+                                  "value": "F cotton(Y)",
+                                  "references": [
+                                    "35"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 37,
+                                    "value": "T ( thick(Y) ∧ ¬ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 38,
+                                      "value": "T thick(Y)",
+                                      "references": [
+                                        "37"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 39,
+                                        "value": " T ¬ thin(Y) ",
+                                        "references": [
+                                          "37"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 40,
+                                          "value": "F thin(Y) ",
+                                          "references": [
+                                            "39"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "7",
+                                          "40"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 41,
+                                    "value": "T ( ¬ thick(Y) ∧ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 42,
+                                      "value": "T ¬ thick(Y)",
+                                      "references": [
+                                        "41"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 43,
+                                        "value": "T thin(Y)",
+                                        "references": [
+                                          "41"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 44,
+                                          "value": "F thick(Y)",
+                                          "references": [
+                                            "42"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "34",
+                                          "44"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "47": {
+      "id": 47,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ( jumper(Y) ∨ ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) ) )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ( ( thick(Y) ∧ ¬ thin(Y) ) ∨ ( ¬ thick(Y) ∧ thin(Y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
+                  "references": []
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F (thin(Y) -> ¬ wool(Y))",
+                    "references": []
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "T thin(Y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ¬wool(Y)",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "beta",
+                        "node": {
+                          "id": 9,
+                          "value": "T wool(Y)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "leftChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 10,
+                            "value": "F jumper(Y)",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 11,
+                              "value": "T (hat(Y) -> scarf(Y))",
+                              "references": [
+                                "5"
+                              ]
+                            },
+                            "child": {
+                              "type": "beta",
+                              "node": {
+                                "id": 12,
+                                "value": "T (scarf(Y) -> hat(Y))",
+                                "references": [
+                                  "5"
+                                ]
+                              },
+                              "leftChild": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 13,
+                                  "value": "F hat(Y)",
+                                  "references": [
+                                    "11"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "beta",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "F scarf(Y) ",
+                                    "references": [
+                                      "12"
+                                    ]
+                                  },
+                                  "leftChild": {
+                                    "type": "closed",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T jumper(Y)",
+                                      "references": [
+                                        "1"
+                                      ]
+                                    },
+                                    "closed": [
+                                      "10",
+                                      "15"
+                                    ]
+                                  },
+                                  "rightChild": {
+                                    "type": "beta",
+                                    "node": {
+                                      "id": 16,
+                                      "value": "T ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) )",
+                                      "references": [
+                                        "1"
+                                      ]
+                                    },
+                                    "leftChild": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 17,
+                                        "value": "T hat(Y)",
+                                        "references": [
+                                          "16"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "13",
+                                        "17"
+                                      ]
+                                    },
+                                    "rightChild": {
+                                      "type": "beta",
+                                      "node": {
+                                        "id": 18,
+                                        "value": "T ( socks(Y) ∨ scarf(Y) )",
+                                        "references": [
+                                          "16"
+                                        ]
+                                      },
+                                      "leftChild": {
+                                        "type": "open",
+                                        "node": {
+                                          "id": 19,
+                                          "value": "T socks(Y) ",
+                                          "references": [
+                                            "18"
+                                          ]
+                                        }
+                                      },
+                                      "rightChild": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 20,
+                                          "value": "T scarf(Y)",
+                                          "references": [
+                                            "18"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "14",
+                                          "20"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "closed",
+                                  "node": {
+                                    "id": 21,
+                                    "value": "T hat(Y)",
+                                    "references": [
+                                      "12"
+                                    ]
+                                  },
+                                  "closed": [
+                                    "13",
+                                    "21"
+                                  ]
+                                }
+                              },
+                              "rightChild": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 22,
+                                  "value": "T scarf(Y)",
+                                  "references": [
+                                    "11"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 23,
+                                    "value": "F (scarf(Y) ∨ socks(Y))",
+                                    "references": [
+                                      "4"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 24,
+                                      "value": "F scarf(Y)",
+                                      "references": [
+                                        "23"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 25,
+                                        "value": "F socks(Y)",
+                                        "references": [
+                                          "23"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "22",
+                                        "24"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 26,
+                                    "value": "T¬ wool(Y)",
+                                    "references": [
+                                      "4"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "closed",
+                                    "node": {
+                                      "id": 27,
+                                      "value": "F wool(Y)",
+                                      "references": [
+                                        "26"
+                                      ]
+                                    },
+                                    "closed": [
+                                      "9",
+                                      "27"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "rightChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 28,
+                            "value": "T (thick(Y) & ¬ cotton(Y))",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 29,
+                              "value": "T thick(Y)",
+                              "references": [
+                                "28"
+                              ]
+                            },
+                            "child": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 30,
+                                "value": "T ¬ cotton(Y)",
+                                "references": [
+                                  "28"
+                                ]
+                              },
+                              "child": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 31,
+                                  "value": "F cotton(Y)",
+                                  "references": [
+                                    "30"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 32,
+                                    "value": "T ( thick(Y) ∧ ¬ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 33,
+                                      "value": "T thick(Y)",
+                                      "references": [
+                                        "32"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 34,
+                                        "value": " T ¬ thin(Y) ",
+                                        "references": [
+                                          "32"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 35,
+                                          "value": "F thin(Y) ",
+                                          "references": [
+                                            "34"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "7",
+                                          "35"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 36,
+                                    "value": "T ( ¬ thick(Y) ∧ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 37,
+                                      "value": "T ¬ thick(Y)",
+                                      "references": [
+                                        "36"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 38,
+                                        "value": "T thin(Y)",
+                                        "references": [
+                                          "36"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 39,
+                                          "value": "F thick(Y)",
+                                          "references": [
+                                            "37"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "29",
+                                          "39"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "48": {
+      "id": 48,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ( jumper(Y) ∨ ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) ) )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ( ( thick(Y) ∧ ¬ thin(Y) ) ∨ ( ¬ thick(Y) ∧ thin(Y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T (jumper(Y) -> (thick(Y) & ¬ cotton(Y)))",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ((scarf(Y) ∨ socks(Y)) -> ¬ wool(Y))",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))",
+                  "references": []
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F (thin(Y) -> ¬ wool(Y))",
+                    "references": []
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "T thin(Y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ¬wool(Y)",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "beta",
+                        "node": {
+                          "id": 9,
+                          "value": "T wool(Y)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "leftChild": {
+                          "type": "beta",
+                          "node": {
+                            "id": 10,
+                            "value": "F jumper(Y)",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "leftChild": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 11,
+                              "value": "F (scarf(Y) ∨ socks(Y))",
+                              "references": [
+                                "4"
+                              ]
+                            },
+                            "child": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 12,
+                                "value": "F scarf(Y)",
+                                "references": [
+                                  "11"
+                                ]
+                              },
+                              "child": {
+                                "type": "alpha",
+                                "node": {
+                                  "id": 13,
+                                  "value": "F socks(Y)",
+                                  "references": [
+                                    "11"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T (hat(Y) -> scarf(Y))",
+                                    "references": [
+                                      "5"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "beta",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T (scarf(Y) -> hat(Y))",
+                                      "references": [
+                                        "5"
+                                      ]
+                                    },
+                                    "leftChild": {
+                                      "type": "beta",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "F hat(Y)",
+                                        "references": [
+                                          "14"
+                                        ]
+                                      },
+                                      "leftChild": {
+                                        "type": "beta",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "F scarf(Y) ",
+                                          "references": [
+                                            "15"
+                                          ]
+                                        },
+                                        "leftChild": {
+                                          "type": "closed",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T jumper(Y)",
+                                            "references": [
+                                              "1"
+                                            ]
+                                          },
+                                          "closed": [
+                                            "10",
+                                            "18"
+                                          ]
+                                        },
+                                        "rightChild": {
+                                          "type": "beta",
+                                          "node": {
+                                            "id": 19,
+                                            "value": "T ( hat(Y) ∨ ( socks(Y) ∨ scarf(Y) ) )",
+                                            "references": [
+                                              "1"
+                                            ]
+                                          },
+                                          "leftChild": {
+                                            "type": "closed",
+                                            "node": {
+                                              "id": 20,
+                                              "value": "T hat(Y)",
+                                              "references": [
+                                                "19"
+                                              ]
+                                            },
+                                            "closed": [
+                                              "16",
+                                              "20"
+                                            ]
+                                          },
+                                          "rightChild": {
+                                            "type": "beta",
+                                            "node": {
+                                              "id": 21,
+                                              "value": "T ( socks(Y) ∨ scarf(Y) )",
+                                              "references": [
+                                                "19"
+                                              ]
+                                            },
+                                            "leftChild": {
+                                              "type": "closed",
+                                              "node": {
+                                                "id": 22,
+                                                "value": "T socks(Y) ",
+                                                "references": [
+                                                  "21"
+                                                ]
+                                              },
+                                              "closed": [
+                                                "13",
+                                                "22"
+                                              ]
+                                            },
+                                            "rightChild": {
+                                              "type": "closed",
+                                              "node": {
+                                                "id": 23,
+                                                "value": "T scarf(Y)",
+                                                "references": [
+                                                  "21"
+                                                ]
+                                              },
+                                              "closed": [
+                                                "17",
+                                                "23"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "rightChild": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 24,
+                                          "value": "T hat(Y)",
+                                          "references": [
+                                            "15"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "16",
+                                          "24"
+                                        ]
+                                      }
+                                    },
+                                    "rightChild": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 25,
+                                        "value": "T scarf(Y)",
+                                        "references": [
+                                          "14"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "12",
+                                        "25"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "rightChild": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 26,
+                              "value": "T¬ wool(Y)",
+                              "references": [
+                                "4"
+                              ]
+                            },
+                            "child": {
+                              "type": "closed",
+                              "node": {
+                                "id": 27,
+                                "value": "F wool(Y)",
+                                "references": [
+                                  "26"
+                                ]
+                              },
+                              "closed": [
+                                "9",
+                                "27"
+                              ]
+                            }
+                          }
+                        },
+                        "rightChild": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 28,
+                            "value": "T (thick(Y) & ¬ cotton(Y))",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 29,
+                              "value": "T thick(Y)",
+                              "references": [
+                                "28"
+                              ]
+                            },
+                            "child": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 30,
+                                "value": "T ¬ cotton(Y)",
+                                "references": [
+                                  "28"
+                                ]
+                              },
+                              "child": {
+                                "type": "beta",
+                                "node": {
+                                  "id": 31,
+                                  "value": "F cotton(Y)",
+                                  "references": [
+                                    "30"
+                                  ]
+                                },
+                                "leftChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 32,
+                                    "value": "T ( thick(Y) ∧ ¬ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 33,
+                                      "value": "T thick(Y)",
+                                      "references": [
+                                        "32"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 34,
+                                        "value": " T ¬ thin(Y) ",
+                                        "references": [
+                                          "32"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 35,
+                                          "value": "F thin(Y) ",
+                                          "references": [
+                                            "34"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "7",
+                                          "35"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "rightChild": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 36,
+                                    "value": "T ( ¬ thick(Y) ∧ thin(Y) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 37,
+                                      "value": "T ¬ thick(Y)",
+                                      "references": [
+                                        "36"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 38,
+                                        "value": "T thin(Y)",
+                                        "references": [
+                                          "36"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "closed",
+                                        "node": {
+                                          "id": 39,
+                                          "value": "F thick(Y)",
+                                          "references": [
+                                            "37"
+                                          ]
+                                        },
+                                        "closed": [
+                                          "29",
+                                          "39"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -525,7 +2105,10 @@
     38,
     6,
     15,
+    48,
     40,
+    47,
+    46,
     44,
     45,
     39,
