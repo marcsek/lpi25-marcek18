@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 class Literal {
-	private AtomicFormula atom;
+    private AtomicFormula atom;
     private boolean neg;
     Literal(AtomicFormula atom) {
         this.atom = atom;
@@ -47,22 +47,21 @@ class Clause extends ArrayList<Literal> {
         super(lits);
     }
     public boolean isTrue(Structure m) {
-        for (Literal lit : this)
+        for (Literal lit: this)
             if (lit.isTrue(m))
                 return true;
         return false;
     }
     public Set<AtomicFormula> atoms() {
         Set<AtomicFormula> vs = new HashSet<AtomicFormula>();
-        for (Literal lit : this)
+        for (Literal lit: this)
             vs.add(lit.atom());
         return vs;
     }
     public String toString() {
         return stream()
-            .map( l -> l.toString() )
-            .collect(Collectors.joining(" "))
-        ;
+                .map(l -> l.toString())
+                .collect(Collectors.joining(" "));
     }
 }
 
@@ -74,21 +73,20 @@ class Cnf extends ArrayList<Clause> {
         super(cls);
     }
     public boolean isTrue(Structure m) {
-        for(Clause c : this)
+        for (Clause c: this)
             if (!c.isTrue(m))
                 return false;
         return true;
     }
     public Set<AtomicFormula> atoms() {
         Set<AtomicFormula> vs = new HashSet<AtomicFormula>();
-        for (Clause cls : this)
+        for (Clause cls: this)
             vs.addAll(cls.atoms());
         return vs;
     }
     public String toString() {
         return stream()
-            .map( cls -> cls.toString() + "\n" )
-            .collect(Collectors.joining(""))
-        ;
+                .map(cls -> cls.toString() + "\n")
+                .collect(Collectors.joining(""));
     }
 }

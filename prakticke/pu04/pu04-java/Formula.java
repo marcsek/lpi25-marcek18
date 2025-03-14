@@ -1,5 +1,7 @@
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 class Constant {
     String name;
@@ -36,20 +38,23 @@ class Constant {
     }
 }
 
-
 class Formula {
     public List<Formula> subfs() {
-        throw new RuntimeException("Not implemented");
-    }
-
-    @Override
-    public String toString() {
-        throw new RuntimeException("Not implemented");
+        return switch (this) {
+            case Negation n -> List.of(n.originalFormula());
+            case Disjunction d -> d.disjuncts();
+            case Conjunction c -> c.conjuncts();
+            case BinaryFormula b -> List.of(b.leftSide(), b.rightSide());
+            default -> List.of();
+        };
     }
 
     @Override
     public boolean equals(Object other) {
-        throw new RuntimeException("Not implemented");
+        if (this == other) return true;
+        if (other == null) return false;
+        if (getClass() != other.getClass()) return false;
+        return true;
     }
 
     @Override
@@ -58,18 +63,34 @@ class Formula {
     }
 
     public int deg() {
-        throw new RuntimeException("Not implemented");
+        return 1 + subfs().stream()
+                           .map(f -> f.deg())
+                           .collect(Collectors.summingInt(Integer::intValue));
     }
 
     public Set<AtomicFormula> atoms() {
-        throw new RuntimeException("Not implemented");
+        return subfs()
+                .stream()
+                .map(f -> f.atoms())
+                .reduce(new HashSet<>(), (acc, f) -> {acc.addAll(f); return acc; });
     }
 
     public Set<String> constants() {
-        throw new RuntimeException("Not implemented");
+        return subfs()
+                .stream()
+                .map(f -> f.constants())
+                .reduce(new HashSet<>(), (acc, f) -> {acc.addAll(f); return acc; });
     }
 
     public Set<String> predicates() {
+        return subfs()
+                .stream()
+                .map(f -> f.predicates())
+                .reduce(new HashSet<>(), (acc, f) -> {acc.addAll(f); return acc; });
+    }
+
+    @Override
+    public String toString() {
         throw new RuntimeException("Not implemented");
     }
 
@@ -108,75 +129,230 @@ class Formula {
     }
 }
 
-
 class AtomicFormula extends Formula {
+    @Override
+    public int deg() {
+        return 0;
+    }
+
+    @Override
+    public Set<AtomicFormula> atoms() {
+        return Set.of(this);
+    }
 }
 
-
 class PredicateAtom extends AtomicFormula {
+    private String name;
+    private List<Constant> args;
+
     PredicateAtom(String name, List<Constant> args) {
-        throw new RuntimeException("Not implemented");
+        this.name = name;
+        this.args = args;
     }
 
     String name() {
-        throw new RuntimeException("Not implemented");
+        return name;
     }
 
     List<Constant> arguments() {
-        throw new RuntimeException("Not implemented");
+        return args;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s(%s)",
+                             name(),
+                             constants()
+                                     .stream()
+                                     .map(d -> d.toString())
+                                     .collect(Collectors.joining(",")));
+    }
+
+    @Override
+    public boolean isTrue(Structure m) {
+        List<String> iArgs = args.stream()
+                                     .map(e -> e.eval(m))
+                                     .collect(Collectors.toList());
+
+        return m.iP(name).stream().anyMatch(pa -> pa.equals(iArgs));
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!super.equals(other)) return false;
+        PredicateAtom otherC = (PredicateAtom) other;
+        return name().equals(otherC.name()) && args.equals(otherC.arguments());
+    }
+
+    @Override
+    public Set<String> constants() {
+        return args.stream()
+                .map(c -> c.name())
+                .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<String> predicates() {
+        return Set.of(name);
     }
 }
 
-
 class Negation extends Formula {
+    private Formula originalFormula;
+
     Negation(Formula originalFormula) {
-        throw new RuntimeException("Not implemented");
+        this.originalFormula = originalFormula;
     }
 
     public Formula originalFormula() {
-        throw new RuntimeException("Not implemented");
+        return originalFormula;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("-%s", originalFormula().toString());
+    }
+
+    @Override
+    public boolean isTrue(Structure m) {
+        return !originalFormula().isTrue(m);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!super.equals(other)) return false;
+        Negation otherC = (Negation) other;
+        return originalFormula().equals(otherC.originalFormula());
     }
 }
-
 
 class Disjunction extends Formula {
+    private List<Formula> disjuncts;
+
     Disjunction(List<Formula> disjuncts) {
-        throw new RuntimeException("Not implemented");
+        this.disjuncts = disjuncts;
+    }
+
+    public List<Formula> disjuncts() {
+        return disjuncts;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("(%s)",
+                             disjuncts()
+                                     .stream()
+                                     .map(d -> d.toString())
+                                     .collect(Collectors.joining("|")));
+    }
+
+    @Override
+    public boolean isTrue(Structure m) {
+        return disjuncts().stream().anyMatch(d -> d.isTrue(m));
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!super.equals(other)) return false;
+        Disjunction otherC = (Disjunction) other;
+        return disjuncts().equals(otherC.disjuncts());
     }
 }
-
 
 class Conjunction extends Formula {
+    private List<Formula> conjuncts;
+
     Conjunction(List<Formula> conjuncts) {
-        throw new RuntimeException("Not implemented");
+        this.conjuncts = conjuncts;
+    }
+
+    public List<Formula> conjuncts() {
+        return conjuncts;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("(%s)",
+                             conjuncts()
+                                     .stream()
+                                     .map(d -> d.toString())
+                                     .collect(Collectors.joining("&")));
+    }
+
+    @Override
+    public boolean isTrue(Structure m) {
+        return conjuncts().stream().allMatch(d -> d.isTrue(m));
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!super.equals(other)) return false;
+        Conjunction otherC = (Conjunction) other;
+        return conjuncts().equals(otherC.conjuncts());
     }
 }
 
-
 class BinaryFormula extends Formula {
+    private Formula leftSide, rightSide;
+    private String connective;
+
     BinaryFormula(Formula leftSide, Formula rightSide, String connective) {
-        throw new RuntimeException("Not implemented");
+        this.leftSide = leftSide;
+        this.rightSide = rightSide;
+        this.connective = connective;
+    }
+
+    public String connective() {
+        return connective;
     }
 
     public Formula leftSide() {
-        throw new RuntimeException("Not implemented");
+        return leftSide;
     }
 
     public Formula rightSide() {
-        throw new RuntimeException("Not implemented");
+        return rightSide;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!super.equals(other)) return false;
+        BinaryFormula otherC = (BinaryFormula) other;
+        return leftSide().equals(otherC.leftSide()) &&
+                rightSide().equals(otherC.rightSide()) &&
+                connective().equals(otherC.connective());
     }
 }
-
 
 class Implication extends BinaryFormula {
     Implication(Formula leftSide, Formula rightSide) {
         super(leftSide, rightSide, "->");
     }
-}
 
+    @Override
+    public String toString() {
+        return String.format("(%s->%s)", leftSide().toString(), rightSide().toString());
+    }
+
+    @Override
+    public boolean isTrue(Structure m) {
+        return !leftSide().isTrue(m) || rightSide().isTrue(m);
+    }
+}
 
 class Equivalence extends BinaryFormula {
     Equivalence(Formula leftSide, Formula rightSide) {
         super(leftSide, rightSide, "<->");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("(%s<->%s)", leftSide().toString(), rightSide().toString());
+    }
+
+    @Override
+    public boolean isTrue(Structure m) {
+        return (leftSide().isTrue(m) && rightSide().isTrue(m)) ||
+                (!leftSide().isTrue(m) && !rightSide().isTrue(m));
     }
 }
