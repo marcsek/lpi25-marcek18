@@ -40,13 +40,18 @@ class Constant {
 
 class Formula {
     public List<Formula> subfs() {
-        return switch (this) {
-            case Negation n -> List.of(n.originalFormula());
-            case Disjunction d -> d.disjuncts();
-            case Conjunction c -> c.conjuncts();
-            case BinaryFormula b -> List.of(b.leftSide(), b.rightSide());
-            default -> List.of();
-        };
+        if (this instanceof Negation) {
+            return List.of(((Negation) this).originalFormula());
+        } else if (this instanceof Disjunction) {
+            return ((Disjunction) this).disjuncts();
+        } else if (this instanceof Conjunction) {
+            return ((Conjunction) this).conjuncts();
+        } else if (this instanceof BinaryFormula) {
+            BinaryFormula b = (BinaryFormula) this;
+            return List.of(b.leftSide(), b.rightSide());
+        } else {
+            return List.of();
+        }
     }
 
     @Override
