@@ -15,10 +15,19 @@
       "id": 2,
       "type": "text",
       "data": "## Úloha 2.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **35 %** · :icon[source] Zbierka:\n:xref[3.1.5]{.exbook label=\"úloha\"}, :xref[3.1.2]{.exbook label=\"príklad\"}.]\n\nJožko ide ráno na prechádzku, pričom o aktuálnom počasí má tieto informácie:\n\n1) Ak neprší, tak svieti slnko.\n2) Ak prší, tak dúhu vidno, iba ak aj svieti slnko.\n3) Vonku vidno dúhu a prší, hoci nesvieti slnko. Alebo neprší.\n\nNa základe týchto informácií usúdil, že na prechádzke:\n\n:::enum{.a}\n24. _určite_ potrebuje _slnečné_ okuliare;\n25. bez dáždnika _určite zmokne_;\n26. _nedá sa rozhodnúť_, či na prechádzke _uvidí_ alebo _neuvidí_ dúhu.\n:::\n\nZistite o každom Jožkovom závere, či je správny.",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "iveta331",
+            "text": "35%\n\nsuper!",
+            "timestamp": 1742039137096,
+            "id": 1
+          }
+        }
       }
     },
     "6": {
@@ -85,40 +94,76 @@
       "id": 28,
       "type": "text",
       "data": "::h3[**a)**]{.h6.float-start.my-0.me-2.lh-base}\nNech pre všetky výrokovologické ohodnotenia $v$ je pravda, že ak $v\\pmodels T$, tak $v\\pmodels A$. Potom:\n\n:::enum{.i}\n1. $A$ výrokovologicky vyplýva z $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $T$ je nesplniteľná, tak $T\\pentails B$.\n    * [x] Pravda\n    * [ ] Nepravda\n3. $T$ nie je prázdna.\n    * [ ] Pravda\n    * [x] Nepravda\n4. $T\\pentails (A\\lor B)$\n    * [x] Pravda\n    * [ ] Nepravda\n:::\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "10% – všetko správne",
+            "timestamp": 1741822063591,
+            "id": 0
+          }
+        }
       }
     },
     "29": {
       "id": 29,
       "type": "text",
       "data": "::h3[**b)**]{.h6.float-start.my-0.me-2.lh-base}\nNech $A$ je nesplniteľná výrokovologická formula. Potom:\n\n:::enum{.i}\n1. $T\\cup \\{A\\}$ je nesplniteľná výrokovologická teória.\n    * [x] Pravda\n    * [ ] Nepravda\n3. $A$ vyplýva z každej výrokovologickej teórie $T$.\n    * [ ] Pravda\n    * [x] Nepravda\n4. Neexistuje výrokovologické ohodnotenie $v$, ktoré by bolo modelom $A$.\n    * [x] Pravda\n    * [ ] Nepravda\n5. $A\\notin T$\n    * [ ] Pravda\n    * [x] Nepravda\n:::",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "amszek",
+            "text": "10% – všetko správne",
+            "timestamp": 1741822121171,
+            "id": 1
+          }
+        }
       }
     },
     "30": {
       "id": 30,
       "type": "text",
       "data": "::h3[**c)**]{.h6.float-start.my-0.me-2.lh-base}\nNech $A$ a $B$ sú výrokovologicky ekvivalentné formuly. Potom:\n\n:::enum{.i}\n1. Ak $T\\pentails A$, tak $T\\pentails B$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $B\\notin T$, tak $A\\notin T$.\n    * [ ] Pravda\n    * [x] Nepravda\n3. Existuje výrokovologické ohodnotenie $v$ také, že $v\\pmodels A$ a $v\\pmodels B$.\n    * [ ] Pravda\n    * [x] Nepravda\n4. Pre každé výrokovologické ohodnotenie $v$ je pravda, že $v$ je modelom $A$ práve vtedy, keď $v$ je modelom $B$.\n    * [x] Pravda\n    * [ ] Nepravda\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "10% – všetko správne",
+            "timestamp": 1741822147640,
+            "id": 0
+          }
+        }
       }
     },
     "31": {
       "id": 31,
       "type": "text",
       "data": "## Úloha 2.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **35 %** · :icon[source] Zbierka: :xref[3.2.3]{.exbook label=\"príklad\"}.\n]\n\nNech $\\Lang$ je ľubovoľný jazyk výrokovologickej časti logiky prvého rádu. Nech $A$ a $B$ sú ľubovoľné výrokovologické formuly jazyka $\\Lang$. Ďalej nech\n\n$$\nX=\\bigl((A \\limpl \\neg B)\n    \\limpl (B \\limpl \\neg A)\\bigr).\n$$\n\nRozhodnite, či formula $X$ je\ni. tautológia, ii. splniteľná, iii. falzifikovateľná, iv. nesplniteľná.\nRozhodnite o **všetkých** uvedených vlastnostiach\na rozhodnutia **zdôvodnite** na základe definície príslušnej vlastnosti.\n",
-      "idCounter": 3,
+      "idCounter": 4,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          3
+        ],
+        "entities": {
+          "3": {
+            "author": "iveta331",
+            "text": "35%\n\nvelmi pekne :)",
+            "timestamp": 1742038899547,
+            "id": 3
+          }
+        }
       }
     },
     "32": {
