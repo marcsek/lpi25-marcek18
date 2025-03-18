@@ -40,13 +40,18 @@ class Constant {
 
 class Formula {
     public List<Formula> subfs() {
-        return switch (this) {
-            case Negation n -> List.of(n.originalFormula());
-            case Disjunction d -> d.disjuncts();
-            case Conjunction c -> c.conjuncts();
-            case BinaryFormula b -> List.of(b.leftSide(), b.rightSide());
-            default -> List.of();
-        };
+        switch (this) {
+            case Negation n:
+                return List.of(n.originalFormula());
+            case Disjunction d:
+                return d.disjuncts();
+            case Conjunction c:
+                return c.conjuncts();
+            case BinaryFormula b:
+                return List.of(b.leftSide(), b.rightSide());
+            default:
+                return List.of();
+        }
     }
 
     @Override
@@ -125,6 +130,10 @@ class Formula {
      * @return a formula in NNF
      */
     public Formula toNnf() {
+        return toNnf(false);
+    }
+
+    public Formula toNnf(boolean isNegated) {
         throw new RuntimeException("Not implemented");
     }
 }
@@ -195,6 +204,16 @@ class PredicateAtom extends AtomicFormula {
     public Set<String> predicates() {
         return Set.of(name);
     }
+
+    public Formula toNnf(boolean isNegated) {
+        if (isNegated)
+            return new Negation(new PredicateAtom(name, args));
+        return new PredicateAtom(name, args);
+    }
+
+    public Cnf nnfToCnf() {
+        return new Cnf(new Clause(new Literal(this)));
+    }
 }
 
 class Negation extends Formula {
@@ -223,6 +242,16 @@ class Negation extends Formula {
         if (!super.equals(other)) return false;
         Negation otherC = (Negation) other;
         return originalFormula().equals(otherC.originalFormula());
+    }
+
+    public Formula toNnf(boolean isNegated) {
+        return originalFormula.toNnf(!isNegated);
+    }
+
+    public Cnf nnfToCnf() {
+        if (originalFormula instanceof AtomicFormula)
+            return new Cnf(new Clause(new Literal((AtomicFormula) originalFormula, true)));
+        throw new RuntimeException("Negation not atomic");
     }
 }
 
@@ -257,6 +286,38 @@ class Disjunction extends Formula {
         Disjunction otherC = (Disjunction) other;
         return disjuncts().equals(otherC.disjuncts());
     }
+
+    public Formula toNnf(boolean isNegated) {
+        var subFormulas = disjuncts
+                                  .stream()
+                                  .map(c -> c.toNnf(isNegated))
+                                  .collect(Collectors.toList());
+
+        if (isNegated)
+            return new Conjunction(subFormulas);
+        return new Disjunction(subFormulas);
+    }
+
+    public Cnf nnfToCnf() {
+        Cnf result = new Cnf();
+        var cnfs = disjuncts().stream().map(c -> c.nnfToCnf()).collect(Collectors.toList());
+
+        result.add(new Clause());
+
+        for (Cnf list: cnfs) {
+            var temp = new Cnf();
+            for (Clause res: result) {
+                for (Clause item: list) {
+                    Clause newCombination = new Clause(res);
+                    newCombination.addAll(item);
+                    temp.add(newCombination);
+                }
+            }
+            result = temp;
+        }
+
+        return result;
+    }
 }
 
 class Conjunction extends Formula {
@@ -289,6 +350,27 @@ class Conjunction extends Formula {
         if (!super.equals(other)) return false;
         Conjunction otherC = (Conjunction) other;
         return conjuncts().equals(otherC.conjuncts());
+    }
+
+    public Formula toNnf(boolean isNegated) {
+        var subFormulas = conjuncts()
+                                  .stream()
+                                  .map(c -> c.toNnf(isNegated))
+                                  .collect(Collectors.toList());
+
+        if (isNegated)
+            return new Disjunction(subFormulas);
+        return new Conjunction(subFormulas);
+    }
+
+    public Cnf nnfToCnf() {
+        return conjuncts()
+                .stream()
+                .map(c -> c.nnfToCnf())
+                .reduce(new Cnf(), (acc, v) -> {
+                    acc.addAll(v);
+                    return acc;
+                });
     }
 }
 
@@ -338,6 +420,14 @@ class Implication extends BinaryFormula {
     public boolean isTrue(Structure m) {
         return !leftSide().isTrue(m) || rightSide().isTrue(m);
     }
+
+    public Formula toNnf(boolean isNegated) {
+        return new Disjunction(
+                       List.of(
+                               new Negation(leftSide()),
+                               rightSide()))
+                .toNnf(isNegated);
+    }
 }
 
 class Equivalence extends BinaryFormula {
@@ -354,5 +444,13 @@ class Equivalence extends BinaryFormula {
     public boolean isTrue(Structure m) {
         return (leftSide().isTrue(m) && rightSide().isTrue(m)) ||
                 (!leftSide().isTrue(m) && !rightSide().isTrue(m));
+    }
+
+    public Formula toNnf(boolean isNegated) {
+        return new Conjunction(
+                       List.of(
+                               new Implication(leftSide(), rightSide()),
+                               new Implication(rightSide(), leftSide())))
+                .toNnf(isNegated);
     }
 }
