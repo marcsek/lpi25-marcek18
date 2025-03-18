@@ -64,7 +64,7 @@
     "11": {
       "id": 11,
       "type": "text",
-      "data": "::h3[**Záver pre $A$**]{.h6}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Aké vlastnosti má tablo/majú tablá, ktoré ste skonštruovali?\n:::\n\nTablo pre množinu označených formúl $\\{ \\sign{znamienko}A \\}$ …\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ktoré z vyššie uvedených vlastností má a ktoré nemá formula $A$? Pre každú vlastnosť uveďte, z akej vlastnosti ktorého tabla vyplýva.\n:::\n\nFormula $A$:\n:::enum{.i}\n* je/nie je splniteľná, pretože tablo pre $\\{ \\sign{znamienko}A \\}$ …\n* je/nie je nesplniteľná, pretože …\n* je/nie je tautológia, pretože …\n* je/nie je falzifikovateľná, pretože …\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ak je formula $A$ splniteľná aj falzifikovateľná, zapíšte jej model (ohodnotenie, v ktorom je pravdivá) aj ohodnotenie, v ktorom je nepravdivá.\nPre každé ohodnotenie uveďte ktorá vetva ktorého tabla ho určuje (identifikujte ju číslom listu, v ktorom končí).\n:::\n\nFormula $A$ je pravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t/f, … \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{znamienko}A \\}$ končiaca listom č. ….\n\nFormula $A$ je nepravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t/f, … \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{znamienko}A \\}$ končiaca listom č. ….\n",
+      "data": "::h3[**Záver pre $A$**]{.h6}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Aké vlastnosti má tablo/majú tablá, ktoré ste skonštruovali?\n:::\n\nTablo pre množinu označených formúl $\\{ \\sign{F}A \\}$ má úplnú otvorenú vetvu.\n\\\nTablo pre množinu označených formúl $\\{ \\sign{T}A \\}$ nemá úplnú otvorenú vetvu.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ktoré z vyššie uvedených vlastností má a ktoré nemá formula $A$? Pre každú vlastnosť uveďte, z akej vlastnosti ktorého tabla vyplýva.\n:::\n\nFormula $A$:\n:::enum{.i}\n* nie je splniteľná, pretože tablo pre $\\{\\sign{T}A\\}$ má všetky vetvy uzavreté.\n* je nesplniteľná, pretože tablo pre $\\{\\sign{T}A\\}$ má všetky vetvy uzavreté.\n* nie je tautológia, pretože tablo pre $\\{\\sign{F}A\\}$ úplnú otvorenú vetvu.\n* je falzifikovateľná, pretože pretože tablo pre $\\{\\sign{F}A\\}$ úplnú otvorenú vetvu.\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ak je formula $A$ splniteľná aj falzifikovateľná, zapíšte jej model (ohodnotenie, v ktorom je pravdivá) aj ohodnotenie, v ktorom je nepravdivá.\nPre každé ohodnotenie uveďte ktorá vetva ktorého tabla ho určuje (identifikujte ju číslom listu, v ktorom končí).\n:::\n\nFormula $A$ nie je nikdy pravdivá.\n\nFormula $A$ je nepravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t, {\\sf t(c)} \\mapsto f, {\\sf s(c)} \\mapsto t \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{F}A \\}$ končiaca listom č. 4.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -74,7 +74,7 @@
     "13": {
       "id": 13,
       "type": "text",
-      "data": "::h4[**Záver pre $B$**]{.h6}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Aké vlastnosti majú tablá, ktoré ste skonštruovali?\n:::\n\n…\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ktoré z vyššie uvedených vlastností má a ktoré nemá formula $B$? Pre každú vlastnosť uveďte, z akej vlastnosti ktorého tabla vyplýva.\n:::\n\nFormula $B$\n:::enum{.i}\n* je/nie je splniteľná, tablo pre $\\{ \\sign{znamienko}B \\}$ …\n* …\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ak je formula $B$ splniteľná aj falzifikovateľná, zapíšte jej model (ohodnotenie, v ktorom je pravdivá) aj ohodnotenie, v ktorom je nepravdivá.\nPre každé ohodnotenie uveďte ktorá vetva ktorého tabla ho určuje (identifikujte ju číslom listu, v ktorom končí).\n:::\n\nFormula $B$ je pravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t/f, … \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{znamienko}B \\}$ končiaca listom č. ….\n\nFormula $B$ je nepravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t/f, … \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{znamienko}B \\}$ končiaca listom č. ….",
+      "data": "::h4[**Záver pre $B$**]{.h6}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Aké vlastnosti majú tablá, ktoré ste skonštruovali?\n:::\n\nTablo pre množinu označených formúl $\\{ \\sign{F}B \\}$ má úplnú otvorenú vetvu.\nTablo pre množinu označených formúl $\\{ \\sign{T}B \\}$ má úplnú otvorenú vetvu.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ktoré z vyššie uvedených vlastností má a ktoré nemá formula $B$? Pre každú vlastnosť uveďte, z akej vlastnosti ktorého tabla vyplýva.\n:::\n\nFormula $B$\n:::enum{.i}\n* je splniteľná, pretože tablo pre $\\{\\sign{T}B\\}$ má úplnú otvorenú vetvu.\n* nie je nesplniteľná, pretože tablo pre $\\{\\sign{T}A\\}$ má úplnú otvorenú vetvu.\n* nie je tautológia, pretože tablo pre $\\{\\sign{F}B\\}$ má úplnú otvorenú vetvu.\n* je falzifikovateľná, pretože pretože tablo pre $\\{\\sign{F}B\\}$ má úplnú otvorenú vetvu.\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Ak je formula $B$ splniteľná aj falzifikovateľná, zapíšte jej model (ohodnotenie, v ktorom je pravdivá) aj ohodnotenie, v ktorom je nepravdivá.\nPre každé ohodnotenie uveďte ktorá vetva ktorého tabla ho určuje (identifikujte ju číslom listu, v ktorom končí).\n:::\n\nFormula $B$ je pravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t, {\\sf s(c)} \\mapsto f, {\\sf t(c)} \\mapsto f \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{T}B \\}$ končiaca listom č. 4.\n\nFormula $B$ je nepravdivá v ohodnotení\n$$\n  \\{ {\\sf r(c)} \\mapsto t, {\\sf s(c)} \\mapsto t, {\\sf t(c)} \\mapsto t \\}.\n$$\nUrčuje ho vetva tabla pre $\\{ \\sign{F}B \\}$ končiaca listom č. 6.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -145,16 +145,25 @@
       "id": 28,
       "type": "text",
       "data": "::h3[b) Chybné ekvivalentné úpravy]{.h5}\nNasledujúce neekvivalencie predstavujú schémy rôznych **chybných ekvivalentných úprav**:\n:::enum{.i}\n5. $((A \\limpl B) \\limpl C) \\alertnpEquiv (A \\limpl (B \\limpl C))$    \n   (Implikácia nie je asociatívna.)\n6. $(A \\limpl B) \\alertnpEquiv (B \\limpl A)$    \n   (Implikácia nie je komutatívna.)\n7. $(A \\land (B \\limpl C)) \\alertnpEquiv ((A \\land B) \\limpl (A \\land C))$    \n   (Konjunkcia nie je distributívna vzhľadom na implikáciu.)\n8. $(A \\land (B \\lequiv C)) \\alertnpEquiv ((A \\land B) \\lequiv (A \\land C))$    \n   (Konjunkcia nie je distributívna vzhľadom na ekvivalenciu.)\n:::\n\nPre každú vyššie uvedenú dvojicu $X \\npEquiv Y$ dokážte,\nže formuly $X$ a $Y$ **nie sú vo všeobecnosti ekvivalentné**.\n\nNa to je potrebné zostrojiť **kontrapríklad ekvivalencie**:\n* formuly $A$, $B$, $C$ vo vhodnom jazyku,\n* aspoň jedno ohodnotenie $v$ pre tento jazyk,\n  ktoré je modelom jednej z formúl $X$, $Y$, ale nie je modelom druhej.\n\nPre _niektoré_ dvojice je **implikácia _v jednom smere_** (teda $(X \\limpl Y)$ alebo $(Y \\limpl X)$) **tautológiou**. Ktorá?\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "Ekvivalencia musi byt tautologia. Ukazeme ze to tak nebude.",
+            "timestamp": 1742305160616,
+            "id": 0
+          }
+        }
       }
     },
     "33": {
       "id": 33,
       "type": "text",
-      "data": "::h4[Kontrapríklad pre chybný úsudok iii]{.h6.fw-bold}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Zvoľte jazyk a formuly $A$, $B$, $C$ tak,\naby neobmedzili možné ohodnotenia.\n:::\n\nNech $\\Lang$ je jazyk výrokovologickej časti logiky prvého rádu,\nkde $\\Consts = \\{ … \\}$ a $\\Preds = \\{ … \\}$.\nNech $A = …$, $B = …$, $C = …$.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Vyberte znamienka ($\\sign{T}$ alebo $\\sign{F}$) a doplňte formuly do definície $S^+$.\n:::\n\nZostrojíme tablo pre množinu označených formúl\n$S^+ = \\{ \\sign{znamienko} …, \\sign{znamienko} … \\}$.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[tools] Zostrojte tablo tak,\naby vám pomohlo vytvoriť kontrapríklad vyplývania.\nTablo vložte za túto bunku.\n:::",
+      "data": "::h4[Kontrapríklad pre chybný úsudok iii]{.h6.fw-bold}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Zvoľte jazyk a formuly $A$, $B$, $C$ tak,\naby neobmedzili možné ohodnotenia.\n:::\n\nNech $\\Lang$ je jazyk výrokovologickej časti logiky prvého rádu,\nkde $\\Consts = \\{ \\sym{a}, \\sym{b}, \\sym{c} \\}$ a $\\Preds = \\{ \\sym{p}^1 \\}$.\nNech $A = \\sym{p}(\\sym{a})$, $B = \\sym{p}(\\sym{b})$, $C = \\sym{p}(\\sym{c})$.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Vyberte znamienka ($\\sign{T}$ alebo $\\sign{F}$) a doplňte formuly do definície $S^+$.\n:::\n\nZostrojíme tablo pre množinu označených formúl\n$S^+ = \\{ \\sign{T} (\\sym{p}(\\sym{a}) → \\sym{p}(\\sym{c})), \\sign{F} ((\\sym{p}(\\sym{a})∨ \\sym{p}(\\sym{b}))→\\sym{p}(\\sym{c})) \\}$.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[tools] Zostrojte tablo tak,\naby vám pomohlo vytvoriť kontrapríklad vyplývania.\nTablo vložte za túto bunku.\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -164,7 +173,7 @@
     "34": {
       "id": 34,
       "type": "text",
-      "data": ":::aside{.note.bg-transparent.p-0}\n:icon[write] Doplňte číslo listu tabla, ohodnotenie, teóriu a formulu\na :span[vyberte z možností]{.text-primary} tak, aby bol záver podložený a správny.\n:::\n\nOtvorená a úplná vetva tabla pre $S^+$ končiaca listom č. …\nurčuje ohodnotenie\n$$\n\\{ … \\mapsto 0/1, … \\},\n$$\nktoré :span[je/nie je modelom]{.text-primary} teórie $\\{ … \\}$,\nale :span[je/nie je modelom]{.text-primary} formuly $…$.\nPreto vo všeobecnosti $\\{ … \\} \\npentails …$.\n",
+      "data": ":::aside{.note.bg-transparent.p-0}\n:icon[write] Doplňte číslo listu tabla, ohodnotenie, teóriu a formulu\na :span[vyberte z možností]{.text-primary} tak, aby bol záver podložený a správny.\n:::\n\nOtvorená a úplná vetva tabla pre $S^+$ končiaca listom č. 7\nurčuje ohodnotenie\n$$\n\\{ \\sym{p}(\\sym{a}) \\mapsto 0, \\sym{p}(\\sym{b}) \\mapsto 1, \\sym{p}(\\sym{c}) \\mapsto 0 \\},\n$$\nktoré :span[je modelom]{.text-primary} teórie $\\{ (\\sym{p}(\\sym{a}) → \\sym{p}(\\sym{c})) \\}$,\nale :span[nie je modelom]{.text-primary} formuly $((\\sym{p}(\\sym{a})∨ \\sym{p}(\\sym{b}))→\\sym{p}(\\sym{c}))$.\nPreto vo všeobecnosti $\\{ (A \\limpl C) \\} \\npentails ((A \\lor B) \\limpl C)$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -253,18 +262,423 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "40": {
+      "id": 40,
+      "type": "tableauEditor",
+      "data": {
+        "type": "beta",
+        "node": {
+          "id": 1,
+          "value": "F ((r(c)→t(c))∧¬(t(c)∨¬r(c)))",
+          "references": []
+        },
+        "leftChild": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "F (r(c)→t(c))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T r(c)",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "openComplete",
+              "node": {
+                "id": 4,
+                "value": "F t(c)",
+                "references": [
+                  "2"
+                ]
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 5,
+            "value": "F ¬(t(c)∨¬r(c))",
+            "references": [
+              "1"
+            ]
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "41": {
+      "id": 41,
+      "type": "tableauEditor",
+      "data": {
+        "type": "alpha",
+        "node": {
+          "id": 1,
+          "value": "T ((r(c)→t(c))∧¬(t(c)∨¬r(c)))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T (r(c)→t(c))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ¬(t(c)∨¬r(c))",
+              "references": [
+                "1"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F (t(c)∨¬r(c))",
+                "references": [
+                  "3"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F t(c)",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F ¬r(c)",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "beta",
+                    "node": {
+                      "id": 7,
+                      "value": "T r(c)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "leftChild": {
+                      "type": "closed",
+                      "node": {
+                        "id": 8,
+                        "value": "F r(c)",
+                        "references": [
+                          "2"
+                        ]
+                      },
+                      "closed": [
+                        "7",
+                        "8"
+                      ]
+                    },
+                    "rightChild": {
+                      "type": "closed",
+                      "node": {
+                        "id": 9,
+                        "value": "T t(c)",
+                        "references": [
+                          "2"
+                        ]
+                      },
+                      "closed": [
+                        "5",
+                        "9"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "42": {
+      "id": 42,
+      "type": "tableauEditor",
+      "data": {
+        "type": "alpha",
+        "node": {
+          "id": 1,
+          "value": "F ((s(c)∨t(c))→(¬r(c)∧(¬s(c)→t(c))))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T (s(c)∨t(c))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "beta",
+            "node": {
+              "id": 3,
+              "value": "F (¬r(c)∧(¬s(c)→t(c)))",
+              "references": [
+                "1"
+              ]
+            },
+            "leftChild": {
+              "type": "beta",
+              "node": {
+                "id": 4,
+                "value": "T s(c)",
+                "references": [
+                  "2"
+                ]
+              },
+              "leftChild": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F ¬r(c)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "openComplete",
+                  "node": {
+                    "id": 6,
+                    "value": "T r(c)",
+                    "references": [
+                      "5"
+                    ]
+                  }
+                }
+              },
+              "rightChild": {
+                "type": "open",
+                "node": {
+                  "id": 7,
+                  "value": "F (¬s(c)→t(c))",
+                  "references": [
+                    "3"
+                  ]
+                }
+              }
+            },
+            "rightChild": {
+              "type": "open",
+              "node": {
+                "id": 8,
+                "value": "T t(c)",
+                "references": [
+                  "2"
+                ]
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "43": {
+      "id": 43,
+      "type": "tableauEditor",
+      "data": {
+        "type": "beta",
+        "node": {
+          "id": 1,
+          "value": "T ((s(c)∨t(c))→(¬r(c)∧(¬s(c)→t(c))))",
+          "references": []
+        },
+        "leftChild": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "F (s(c)∨t(c))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "F s(c)",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "openComplete",
+              "node": {
+                "id": 4,
+                "value": "F t(c)",
+                "references": [
+                  "2"
+                ]
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 5,
+            "value": "T (¬r(c)∧(¬s(c)→t(c)))",
+            "references": [
+              "1"
+            ]
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "44": {
+      "id": 44,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T (p(a) → p(c))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "F ((p(a)∨p(b))→p(c))",
+            "references": []
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T(p(a)∨p(b))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "beta",
+              "node": {
+                "id": 4,
+                "value": "F p(c)",
+                "references": [
+                  "2"
+                ]
+              },
+              "leftChild": {
+                "type": "beta",
+                "node": {
+                  "id": 5,
+                  "value": "F p(a)",
+                  "references": [
+                    "1"
+                  ]
+                },
+                "leftChild": {
+                  "type": "closed",
+                  "node": {
+                    "id": 6,
+                    "value": "T p(a)",
+                    "references": [
+                      "3"
+                    ]
+                  },
+                  "closed": [
+                    "5",
+                    "6"
+                  ]
+                },
+                "rightChild": {
+                  "type": "openComplete",
+                  "node": {
+                    "id": 7,
+                    "value": "T p(b)",
+                    "references": [
+                      "3"
+                    ]
+                  }
+                }
+              },
+              "rightChild": {
+                "type": "open",
+                "node": {
+                  "id": 8,
+                  "value": "T p(c)",
+                  "references": [
+                    "1"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
     1,
     2,
     10,
+    40,
+    41,
     11,
     9,
+    42,
+    43,
     13,
     22,
     27,
     33,
+    44,
     34,
     38,
     28,
