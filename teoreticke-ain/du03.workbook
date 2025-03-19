@@ -25,10 +25,19 @@
       "id": 6,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania? Napr. splniteľnosť ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.\n\n:icon[help] **Pomôcka.** Musíme vyriešiť 3 formálne problémy.\n:::\n\n1. Musíme zistiť, či je teória $T$ splniteľná.\n2. Musíme zistiť, či formula $X_1$ vyplýva z teórie $T$.\n3. Musíme zistiť, či formula $X_2$ vyplýva z teórie $T$.\n\n*:small[(viď označenia vyššie)]*\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "10%",
+            "timestamp": 1742380217561,
+            "id": 0
+          }
+        }
       }
     },
     "10": {
@@ -45,30 +54,64 @@
       "id": 15,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **30 %**]\n\n:::aside{.small}\nAko vyriešime jednotlivé formálne problémy, ktoré ste určili v časti ii?\nPrípustné sú nasledovné spôsoby riešenia:\n* skonštruovanie uzavretého tabla pre vhodnú množinu označených formúl – uveďte akú;\n* nájdenie vhodnej štruktúry/ohodnotenia s požadovanými vlastnosťami – uveďte akými.\n:::\n\n1. Na overenie splniteľnosti téorie $T$, stačí nájsť ľubovoľnú štruktúru $\\Struct$ v ktorej je $T$ pravdivá.\n2. To, že formula $X_1$ vyplýva z $T$ sa pokúsime dokázať nájdením uzavretého tabla pre množinu označených formúl $S^+ = \\{ \\sign TA_1, \\sign TA_2, \\sign TA_4, \\sign TA_5, \\sign TA_7 \\} \\ \\cup \\ \\{ \\sign FX_1 \\}$\n3. Pokúsime sa nájsť štruktúrú $\\Struct$, v ktorej je $T$ pravdivá a $X_2$ nie je.\n",
-      "idCounter": 2,
+      "idCounter": 4,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          2,
+          3
+        ],
+        "entities": {
+          "2": {
+            "author": "boborova3",
+            "text": "Ok, pekný úvod.",
+            "timestamp": 1742402738074,
+            "id": 2
+          },
+          "3": {
+            "author": "boborova3",
+            "text": "30%",
+            "timestamp": 1742402825769,
+            "id": 3
+          }
+        }
       }
     },
     "16": {
       "id": 16,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Interpretácia]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **5 %**]\n\n:small[Aké sú odpovede na dve neformálne otázky zo zadania slovnej úlohy? Ako súvisia s riešeniami formálnych problémov?]\n\nTvrdenie *a)* **vyplýva** z informácií 1-7. Pretože vieme, že tieto informácie sú zároveň splniteľné, môžeme na ich základe s istotou tvrdiť, že *ak je priadza tenká, tak nie je vlnená*.\n\nTvrdenie *b)* **nevyplýva** z informácií 1-7. Nemôžeme s istotou tvrdiť, že *ak si Petra upletie sveter, nemôže si už upliesť čiapku*.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok. Ale pri tom formálnom odôvodnení je lepšie držať sa tých formálnych zápisov a výsledkov. \n\n5%",
+            "timestamp": 1742402896587,
+            "id": 0
+          }
+        }
       }
     },
     "22": {
       "id": 22,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **10 %**]\n\n:small[Aké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda napr. vysvetlite, prečo vaše tablo/štruktúra/ohodnotenie ukazuje, že formula/teória je splniteľná.]\n\n1. Našli sme štruktúru $\\Struct$, v ktorej je $T$ pravdivá $(\\varphi_1-\\varphi_7)$, keďže pre každú formulu $A$ z $T$ platí $\\Struct \\entails A$. Teória $T$ je teda splniteľná (bunka č. $1$).\n2. Pretože existuje uzavreté tablo pre množinu označených formúl\n$S^+$, formula $X_1$ je dokázateľná z teórie $T$.\nPodľa dôsledku $5.18$ z prednášky formula $X_1$ logicky vyplýva z teórie $T$ (bunka č. $2$).\n3. Našli sme štruktúru $\\Struct$, v ktorej je $T$ pravdivá $(\\varphi_1-\\varphi_7)$, ale $X_2$ nepravdivá $(\\varphi_8)$. Preto $T \\npentails X_2$ (bunka č. $3$).",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "boborova3",
+            "text": "Pekne.\n\n10%",
+            "timestamp": 1742402813301,
+            "id": 1
+          }
+        }
       }
     },
     "27": {
@@ -85,30 +128,57 @@
       "id": 28,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.float-start.my-0.me-2.lh-base}\n:small[:icon[source] Prednášky: :xref[2.20]{.lec label=\"def.\"}, :xref[2.21]{.lec label=\"def.\"}, :xref[2.26]{.lec label=\"def.\"}, :xref[2.28]{.lec label=\"def.\"}, [sekcia 2.8](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=subsection.2.8), :xref[3.4]{.lec label=\"def.\"}.]\n\nNech $\\Struct = (D,i)$ je ľubovoľná štruktúra pre $\\Lang$. Potom:\n\n:::enum{.i}\n1. Ak $\\Struct\\models X$, tak $X$ je pravdivá v každom výrokovologickom ohodnotení $v$.\n    * [ ] Pravda\n    * [x] Nepravda\n2. Ak neexistuje výrokovologické ohodnotenie $v$ také, že $v\\pmodels Y$, tak $\\Struct\\nmodels(X\\land Y)$.\n    * [x] Pravda\n    * [ ] Nepravda\n3. Nech existuje ohodnotenie $v$ také, že $v\\pmodels T$ a $v\\npmodels X$. Potom ak $\\Struct\\models T$, tak $\\Struct\\nmodels X$.\n    * [ ] Pravda\n    * [x] Nepravda\n4. Ak $\\Struct\\nmodels X$, tak je možné skonštruovať výrokovologické ohodnotenie $v$, ktoré je modelom formuly $(X\\limpl Y)$.\n    * [x] Pravda\n    * [ ] Nepravda\n:::\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "10% – všetko správne",
+            "timestamp": 1742348248839,
+            "id": 0
+          }
+        }
       }
     },
     "29": {
       "id": 29,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.float-start.my-0.me-2.lh-base}\n:small[:icon[source] Prednášky: [sekcia 3.2](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=subsection.3.2).]\n\n:::enum{.i}\n1. Ak existujú ohodnotenia $v_1$ a $v_2$, ktoré sú modelmi teórie $T$, také, že $v_1\\pmodels X$ a $v_2\\npmodels X$, tak $X$ je nezávislá od $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n2. Nech $T\\pentails X$, potom existuje ohodnotenie $v$ také, že $v\\pmodels X$.\n    * [ ] Pravda\n    * [x] Nepravda\n3. Ohodnotenie $v$ také, že $v\\pmodels T$ a $v\\pmodels X$, existuje vtedy a len vtedy, keď $T\\pentails X$.\n    * [ ] Pravda\n    * [x] Nepravda\n4. Ak existuje ohodnotenie $v$ také, že $v\\pmodels A$ pre každú formulu $A \\in T$, ale $v\\npmodels (X\\lor Y)$, tak $X$ nevyplýva z $T$.\n    * [x] Pravda\n    * [ ] Nepravda\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "10% – všetko správne",
+            "timestamp": 1742348269109,
+            "id": 0
+          }
+        }
       }
     },
     "30": {
       "id": 30,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.float-start.my-0.me-2.lh-base}\n:small[:icon[source] Prednášky: [sekcia 5.2](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=subsection.5.2), :xref[3.7]{.lec label=\"def.\"}.]\n\n:::enum{.i}\n1. Ak neexistuje uzavreté tablo pre množinu označených formúl\n   $\\{\\sign F X\\}$, tak formula $X$ nie je dokázateľná\n   ($\\npproves X$).\n    * [x] Pravda\n    * [ ] Nepravda\n2. Ak $\\pproves X$, tak každé tablo pre množinu označených formúl $\\{\\sign F X\\}$ je uzavreté.\n    * [ ] Pravda\n    * [x] Nepravda\n3. Ak existuje uzavreté tablo pre množinu označených formúl\n   $\\{\\,\\sign T A \\mid A \\in T\\,\\} \\cup \\{\\sign F X\\}$,\n   tak $T \\pproves X$.\n    * [x] Pravda\n    * [ ] Nepravda\n4. Ak existuje ohodnotenie $v$, ktoré je modelom $T$\n   a nie je modelom $X$,\n   tak neexistuje uzavreté tablo pre množinu označených formúl\n   $\\{\\,\\sign T A \\mid A \\in T\\,\\} \\cup \\{\\sign F X\\}$.\n    * [x] Pravda\n    * [ ] Nepravda\n:::",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "amszek",
+            "text": "10% – všetko správne",
+            "timestamp": 1742348290741,
+            "id": 1
+          }
+        }
       }
     },
     "38": {
@@ -173,10 +243,19 @@
         },
         "exerciseId": 50
       },
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Tvrdenie 7 celkom jasne zodpovedá ekvivalencii. Využívajte túto uvedenú skratku, v prípadoch, kde sa hodí.\n\n15%",
+            "timestamp": 1742367100643,
+            "id": 0
+          }
+        }
       }
     },
     "39": {
@@ -193,20 +272,38 @@
       "id": 44,
       "type": "structureExplorer",
       "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]},\"predicates\":{\"value\":\"thick/1, thin/1, wool/1, cotton/1, acrylic/1, socks/1, jumper/1, scarf/1, hat/1 \",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"thick\",\"arity\":1},{\"name\":\"thin\",\"arity\":1},{\"name\":\"wool\",\"arity\":1},{\"name\":\"cotton\",\"arity\":1},{\"name\":\"acrylic\",\"arity\":1},{\"name\":\"socks\",\"arity\":1},{\"name\":\"jumper\",\"arity\":1},{\"name\":\"scarf\",\"arity\":1},{\"name\":\"hat\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"Y\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"thick/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"thin/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"wool/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"cotton/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"acrylic/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"socks/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"jumper/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"scarf/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"hat/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(jumper(Y) \\\\lor (hat(Y) \\\\lor  (socks(Y) \\\\lor scarf(Y))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((thick(Y) & \\\\neg thin(Y)) \\\\lor (\\\\neg thick(Y) & thin(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"subRight\":{\"subLeft\":{\"subFormula\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((cotton(Y) \\\\lor wool(Y)) \\\\lor acrylic(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"acrylic\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(jumper(Y) -> (thick(Y) & \\\\neg cotton(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((scarf(Y) \\\\lor socks(Y)) -> \\\\neg wool(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subFormula\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(socks(Y) -> thin(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1742402752019,
+            "id": 0
+          }
+        }
       }
     },
     "45": {
       "id": 45,
       "type": "structureExplorer",
       "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]},\"predicates\":{\"value\":\"thick/1, thin/1, wool/1, cotton/1, acrylic/1, socks/1, jumper/1, scarf/1, hat/1 \",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"thick\",\"arity\":1},{\"name\":\"thin\",\"arity\":1},{\"name\":\"wool\",\"arity\":1},{\"name\":\"cotton\",\"arity\":1},{\"name\":\"acrylic\",\"arity\":1},{\"name\":\"socks\",\"arity\":1},{\"name\":\"jumper\",\"arity\":1},{\"name\":\"scarf\",\"arity\":1},{\"name\":\"hat\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"Y\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"thick/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"thin/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"wool/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"cotton/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"acrylic/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"socks/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"jumper/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"scarf/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false},\"hat/1\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"Y\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"Y\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Y\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(jumper(Y) \\\\lor (hat(Y) \\\\lor  (socks(Y) \\\\lor scarf(Y))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((thick(Y) & \\\\neg thin(Y)) \\\\lor (\\\\neg thick(Y) & thin(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"subRight\":{\"subLeft\":{\"subFormula\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((cotton(Y) \\\\lor wool(Y)) \\\\lor acrylic(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"name\":\"acrylic\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(jumper(Y) -> (thick(Y) & \\\\neg cotton(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"thick\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"cotton\",\"terms\":[{\"name\":\"Y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((scarf(Y) \\\\lor socks(Y)) -> \\\\neg wool(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subFormula\":{\"name\":\"wool\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(socks(Y) -> thin(Y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"socks\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"thin\",\"terms\":[{\"name\":\"Y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"((hat(Y) -> scarf(Y)) & (scarf(Y) -> hat(Y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"scarf\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(jumper(Y) -> \\\\neg hat(Y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"jumper\",\"terms\":[{\"name\":\"Y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"hat\",\"terms\":[{\"name\":\"Y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1742402781221,
+            "id": 0
+          }
+        }
       }
     },
     "48": {
@@ -627,20 +724,38 @@
         },
         "config": "Basic propositional"
       },
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1742402772639,
+            "id": 0
+          }
+        }
       }
     },
     "49": {
       "id": 49,
       "type": "text",
       "data": "::h3[Označenia]{.h5}\n\nSformalizované informácie 1-7 označíme ako $A_1, \\dots, A_7$. Tiež majme teóriu $T = \\{A_1, \\dots, A_7\\}$.\nFormalizáciu výroku *a)* označíme ako $X_1$ a výroku *b)* ako $X_2$.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok. Treba to niekde pomenovať, aby sme vedeli definovať teóriu. ",
+            "timestamp": 1742380205610,
+            "id": 0
+          }
+        }
       }
     }
   },
