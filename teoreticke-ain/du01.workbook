@@ -77,7 +77,7 @@
             {
               "proposition_id": 1827,
               "proposition": "1. D je malý, ak je taký aj C.",
-              "solution": "(small(C) -> small(D))"
+              "solution": ""
             },
             {
               "proposition_id": 1828,
