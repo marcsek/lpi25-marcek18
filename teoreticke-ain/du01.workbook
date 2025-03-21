@@ -107,7 +107,7 @@
             {
               "proposition_id": 1833,
               "proposition": "7. E je veľký, pokiaľ A nie je stredne veľký trojuholník.",
-              "solution": "(large(E) -> \\neg(medium(A) & triangle(A)))"
+              "solution": ""
             },
             {
               "proposition_id": 1834,
