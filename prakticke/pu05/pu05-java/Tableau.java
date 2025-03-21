@@ -1,11 +1,12 @@
+import static java.lang.Math.max;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+import java.lang.StringBuilder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.lang.StringBuilder;
-import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.joining;
-import static java.lang.Math.max;
 
 class SignedFormula {
     private Formula f;
@@ -63,8 +64,7 @@ class SignedFormula {
         return toString().hashCode();
     }
 
-    public boolean equals(Object other)
-    {
+    public boolean equals(Object other) {
         if (this == other) return true;
         if (other == null) return false;
         if (getClass() != other.getClass()) return false;
@@ -75,7 +75,7 @@ class SignedFormula {
 
 class Node {
     private SignedFormula sf;
-    private Node source ;
+    private Node source;
     private Node closedFrom = null;
     private List<Node> children = new ArrayList<Node>();
     private Tableau tableau = null;
@@ -103,7 +103,6 @@ class Node {
     public int number() { return number; }
     public Node source() { return source; }
 
-
     /**
      * Closes this node (and this branch) because the formula
      * in this node  is coplementary to `closedFrom`.
@@ -121,7 +120,7 @@ class Node {
         if (closedFrom != null)
             return true;
 
-        for (Node child : children)
+        for (Node child: children)
             if (!child.isClosed())
                 return false;
         return children.size() > 0;
@@ -131,7 +130,7 @@ class Node {
      * Removes the node and its children from the tableau it belongs to.
      */
     public void disown() {
-        for (Node child : children)
+        for (Node child: children)
             child.disown();
         tableau = null;
     }
@@ -149,8 +148,7 @@ class Node {
      * This sets the tableu it belongs to and a sequential number inside that tableau.
      * Used by Tableau.
      */
-    public void addToTableau(Tableau t, int number)
-    {
+    public void addToTableau(Tableau t, int number) {
         this.tableau = t;
         this.number = number;
     }
@@ -163,7 +161,7 @@ class Node {
     public String label() {
         String lbl = "(" + number + ") " + sf;
         if (source != null)
-            lbl = lbl + " (" + source.number +  ")";
+            lbl = lbl + " (" + source.number + ")";
         return lbl;
     }
 
@@ -183,7 +181,7 @@ class Node {
     private int treeWidth() {
         int thisWd = label().length();
         int childrenWd = 0;
-        for (Node child : children)
+        for (Node child: children)
             childrenWd += child.treeWidth();
         childrenWd += separator.length() * max(0, children.size() - 1);
         return max(thisWd, childrenWd);
@@ -216,25 +214,23 @@ class Node {
             if (source == null && children.get(0).source != null) {
                 // last "input" node
                 lines.add(repeat("=", width));
-            }
-            else if (children.size() > 1) {
+            } else if (children.size() > 1) {
                 lines.add(repeat("-", width));
             }
             lines.addAll(treeMergeChildLines());
         }
 
         return lines
-            .stream()
-            .map(l -> center(l, width))
-            .collect(toList())
-        ;
+                .stream()
+                .map(l -> center(l, width))
+                .collect(toList());
     }
 
     private List<String> treeMergeChildLines() {
         List<List<String>> chLines =
-            children.stream().map(c -> c.treeLines()).collect(toList());
+                children.stream().map(c -> c.treeLines()).collect(toList());
         List<Integer> chWidths =
-            children.stream().map(c -> c.treeWidth()).collect(toList());
+                children.stream().map(c -> c.treeWidth()).collect(toList());
 
         List<String> lines = new ArrayList<String>();
         int l = 0;
@@ -265,7 +261,7 @@ class Node {
  */
 class Tableau {
     private Node root = null;
-    private int number = 0;
+    private int number = 1;
 
     /**
      * @return true if the tableau is closed (i.e. all branches are closed).
@@ -297,7 +293,6 @@ class Tableau {
         return root.tree();
     }
 
-
     /**
      * Add signed formulas as the "input" of a tableau.
      *
@@ -307,8 +302,21 @@ class Tableau {
      *             as input
      * @return A list of nodes that were created.
      */
-    public List<Node>  addInitial(SignedFormula[] sfs) {
-        throw new RuntimeException("Not implemented");
+    public List<Node> addInitial(SignedFormula[] sfs) {
+        List<Node> createdNodes = new ArrayList<>(sfs.length);
+        if (sfs.length < 1) return createdNodes;
+
+        var root = new Node(sfs[0], null);
+        addNode(null, root);
+        createdNodes.add(root);
+
+        for (int i = 1; i < sfs.length; i++) {
+            var newNode = new Node(sfs[i], null);
+            addNode(createdNodes.get(i - 1), newNode);
+            createdNodes.add(newNode);
+        }
+
+        return createdNodes;
     }
 
     /**
@@ -324,9 +332,10 @@ class Tableau {
      *
      * TODO `SignedFormula sf` instead of index?
      */
-    public Node extendAlpha(Node leaf, Node from, int index)
-    {
-        throw new RuntimeException("Not implemented");
+    public Node extendAlpha(Node leaf, Node from, int index) {
+        var newNode = new Node(from.sf().subfs().get(index), from);
+        addNode(leaf, newNode);
+        return newNode;
     }
 
     /**
@@ -338,9 +347,15 @@ class Tableau {
      *             will be added
      * @return list of references to the added nodes
      */
-    public List<Node> extendBeta(Node leaf, Node from)
-    {
-        throw new RuntimeException("Not implemented");
+    public List<Node> extendBeta(Node leaf, Node from) {
+        List<Node> newSubfs = new ArrayList<>();
+        for (var sf: from.sf().subfs()) {
+            var newNode = new Node(sf, from);
+            addNode(leaf, newNode);
+            newSubfs.add(newNode);
+        }
+
+        return newSubfs;
     }
 
     /**
@@ -353,7 +368,10 @@ class Tableau {
      * @param node the node to insert
      */
     private void addNode(Node parent, Node node) {
-        throw new RuntimeException("Not implemented");
+        if (parent == null)
+            root = node;
+        else
+            parent.addChild(node);
+        node.addToTableau(this, number++);
     }
-
 }
