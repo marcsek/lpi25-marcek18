@@ -112,7 +112,7 @@
             {
               "proposition_id": 1834,
               "proposition": "8. A a B sú rovnakej veľkosti.",
-              "solution": "A = B"
+              "solution": ""
             },
             {
               "proposition_id": 1835,
