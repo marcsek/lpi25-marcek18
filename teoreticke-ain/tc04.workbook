@@ -840,6 +840,254 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "38": {
+      "id": 38,
+      "type": "tableauEditor",
+      "data": {
+        "type": "alpha",
+        "node": {
+          "id": 1,
+          "value": "F (A -> A)",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T A",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "closed",
+            "node": {
+              "id": 3,
+              "value": "F A",
+              "references": [
+                "1"
+              ]
+            },
+            "closed": [
+              "2",
+              "3"
+            ]
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "39": {
+      "id": 39,
+      "type": "tableauEditor",
+      "data": {
+        "type": "alpha",
+        "node": {
+          "id": 1,
+          "value": "F ((((A→B)→A)→A))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T (((A→B)→A))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "beta",
+            "node": {
+              "id": 3,
+              "value": "F A",
+              "references": [
+                "1"
+              ]
+            },
+            "leftChild": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F (A -> B)",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "closed",
+                "node": {
+                  "id": 5,
+                  "value": "T A",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "closed": [
+                  "3",
+                  "5"
+                ]
+              }
+            },
+            "rightChild": {
+              "type": "closed",
+              "node": {
+                "id": 6,
+                "value": "T A",
+                "references": [
+                  "2"
+                ]
+              },
+              "closed": [
+                "3",
+                "6"
+              ]
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "40": {
+      "id": 40,
+      "type": "tableauEditor",
+      "data": {
+        "type": "alpha",
+        "node": {
+          "id": 1,
+          "value": "F (((A→B)∧(A→¬B))→¬A)",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T ((A→B)∧(A→¬B))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "F ¬A",
+              "references": [
+                "1"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T A",
+                "references": [
+                  "3"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "T (A→B)",
+                  "references": [
+                    "2"
+                  ]
+                },
+                "child": {
+                  "type": "beta",
+                  "node": {
+                    "id": 6,
+                    "value": "T (A→¬B)",
+                    "references": [
+                      "2"
+                    ]
+                  },
+                  "leftChild": {
+                    "type": "closed",
+                    "node": {
+                      "id": 7,
+                      "value": "F A",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "closed": [
+                      "4",
+                      "7"
+                    ]
+                  },
+                  "rightChild": {
+                    "type": "beta",
+                    "node": {
+                      "id": 8,
+                      "value": "T B",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "leftChild": {
+                      "type": "closed",
+                      "node": {
+                        "id": 9,
+                        "value": "F A",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "closed": [
+                        "4",
+                        "9"
+                      ]
+                    },
+                    "rightChild": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 10,
+                        "value": "T ¬B",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "closed",
+                        "node": {
+                          "id": 11,
+                          "value": "F B",
+                          "references": [
+                            "10"
+                          ]
+                        },
+                        "closed": [
+                          "8",
+                          "11"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -861,8 +1109,11 @@
     18,
     19,
     30,
+    38,
     27,
+    39,
     35,
+    40,
     34,
     31,
     33,
