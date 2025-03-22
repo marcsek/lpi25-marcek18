@@ -94,7 +94,7 @@
     "20": {
       "id": 20,
       "type": "text",
-      "data": "::h3[:cnt[b]{.i}. Formálne prostriedky a riešenie]{.h5}\n\n:icon[write]\nAké tablo alebo tablá pre aké množiny označených formúl je potrebné zostrojiť,\naby ste vyriešili logické problémy, ktoré ste určili v časti b)?\n\n…\n\n:icon[tools]\nPomocou aplikácie Tableau editor zostrojte toto tablo resp. tieto tablá.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[info]\nÚloha sa dá vyriešiť pomocou tabla/tabiel s najviac 20-timi uzlami.\n\n:icon[warning]\nAk má vaše tablo **viac ako 30 uzlov**, všimnite si, ktoré kroky sa opakujú, a tablo upravte, aby ste sa opakovaniu podľa možnosti vyhli.\n:::",
+      "data": "::h3[:cnt[b]{.i}. Formálne prostriedky a riešenie]{.h5}\n\n:icon[write]\nAké tablo alebo tablá pre aké množiny označených formúl je potrebné zostrojiť,\naby ste vyriešili logické problémy, ktoré ste určili v časti b)?\n\n1. S = {TA_1, TA_2, TA_3, TA_4}\n\n:icon[tools]\nPomocou aplikácie Tableau editor zostrojte toto tablo resp. tieto tablá.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[info]\nÚloha sa dá vyriešiť pomocou tabla/tabiel s najviac 20-timi uzlami.\n\n:icon[warning]\nAk má vaše tablo **viac ako 30 uzlov**, všimnite si, ktoré kroky sa opakujú, a tablo upravte, aby ste sa opakovaniu podľa možnosti vyhli.\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -104,7 +104,7 @@
     "21": {
       "id": 21,
       "type": "text",
-      "data": "::h3[:cnt[b]{.i}. Formálne problémy]{.h5}\n\n:icon[write]\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania?\n\n:small[Napr. splniteľnosť alebo nájdenie všetkých modelov ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.]\n\n…",
+      "data": "::h3[:cnt[b]{.i}. Formálne problémy]{.h5}\n\n:icon[write]\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania?\n\n:small[Napr. splniteľnosť alebo nájdenie všetkých modelov ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.]\n\n1. Musime zistit ci je teoria T splnitelna.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -236,22 +236,22 @@
             {
               "proposition_id": 1335,
               "proposition": "Ak by chystali sendviče alebo koláč, tak určite nestihnú pripraviť aj ovocnú misu.",
-              "solution": null
+              "solution": "((sandwiches(snacks) \\lor cake(snacks)) -> \\neg fruits(snacks))"
             },
             {
               "proposition_id": 1336,
               "proposition": "Michalova mama je vegetariánka, takže určite nachystajú oriešky, syrový tanier, koláč alebo ovocnú misu (inak by mama nemala čo jesť).",
-              "solution": null
+              "solution": "(nuts(snacks) \\lor (cheese(snacks) \\lor (cake(snacks) \\lor fruits(snacks))))"
             },
             {
               "proposition_id": 1337,
               "proposition": "Rodičia prídu na návštevu hladní, takže ak Michal s Monikou nenachystajú sendviče, určite musia aspoň upiecť koláč.",
-              "solution": null
+              "solution": "(\\neg sandwiches(snacks) -> cake(snacks))"
             },
             {
               "proposition_id": 1338,
               "proposition": "Mladý pár má novú rúru, ale ešte ju nestihli vyskúšať, takže si netrúfnu hneď na prvý pokus piecť koláč pre návštevu.",
-              "solution": null
+              "solution": "\\neg cake(snacks)"
             }
           ]
         },
@@ -662,6 +662,214 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "45": {
+      "id": 45,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ((sandwiches(snacks) | cake(snacks)) ->  ¬fruits(snacks))",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T (nuts(snacks) | (cheese(snacks) | (cake(snacks) | fruits(snacks))))",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ( ¬ sandwiches(snacks) -> cake(snacks))",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T  ¬cake(snacks)",
+                "references": []
+              },
+              "child": {
+                "type": "beta",
+                "node": {
+                  "id": 5,
+                  "value": "F cake(snacks)",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "leftChild": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F ¬ sandwiches(snacks)",
+                    "references": [
+                      "3"
+                    ]
+                  },
+                  "child": {
+                    "type": "beta",
+                    "node": {
+                      "id": 7,
+                      "value": "T sandwiches(snacks)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "leftChild": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F (sandwiches(snacks) | cake(snacks))",
+                        "references": [
+                          "1"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "F sandwiches(snacks)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "child": {
+                          "type": "closed",
+                          "node": {
+                            "id": 10,
+                            "value": "F cake(snacks)",
+                            "references": [
+                              "8"
+                            ]
+                          },
+                          "closed": [
+                            "7",
+                            "9"
+                          ]
+                        }
+                      }
+                    },
+                    "rightChild": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 11,
+                        "value": "T ¬fruits(snacks)",
+                        "references": [
+                          "1"
+                        ]
+                      },
+                      "child": {
+                        "type": "beta",
+                        "node": {
+                          "id": 12,
+                          "value": "F fruits(snacks)",
+                          "references": [
+                            "11"
+                          ]
+                        },
+                        "leftChild": {
+                          "type": "openComplete",
+                          "node": {
+                            "id": 13,
+                            "value": "T nuts(snacks)",
+                            "references": [
+                              "2"
+                            ]
+                          }
+                        },
+                        "rightChild": {
+                          "type": "beta",
+                          "node": {
+                            "id": 14,
+                            "value": "T (cheese(snacks) | (cake(snacks) | fruits(snacks)))",
+                            "references": [
+                              "2"
+                            ]
+                          },
+                          "leftChild": {
+                            "type": "openComplete",
+                            "node": {
+                              "id": 15,
+                              "value": "T cheese(snacks) ",
+                              "references": [
+                                "14"
+                              ]
+                            }
+                          },
+                          "rightChild": {
+                            "type": "beta",
+                            "node": {
+                              "id": 16,
+                              "value": "T (cake(snacks) | fruits(snacks))",
+                              "references": [
+                                "14"
+                              ]
+                            },
+                            "leftChild": {
+                              "type": "closed",
+                              "node": {
+                                "id": 17,
+                                "value": "T cake(snacks)",
+                                "references": [
+                                  "16"
+                                ]
+                              },
+                              "closed": [
+                                "5",
+                                "17"
+                              ]
+                            },
+                            "rightChild": {
+                              "type": "closed",
+                              "node": {
+                                "id": 18,
+                                "value": "T  fruits(snacks)",
+                                "references": [
+                                  "16"
+                                ]
+                              },
+                              "closed": [
+                                "12",
+                                "18"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "rightChild": {
+                  "type": "closed",
+                  "node": {
+                    "id": 19,
+                    "value": "T cake(snacks)",
+                    "references": [
+                      "3"
+                    ]
+                  },
+                  "closed": [
+                    "5",
+                    "19"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -690,6 +898,7 @@
     39,
     21,
     20,
+    45,
     4,
     24
   ],
