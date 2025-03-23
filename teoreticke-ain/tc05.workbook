@@ -147,17 +147,8 @@
       "data": "::h3[b) Chybné ekvivalentné úpravy]{.h5}\nNasledujúce neekvivalencie predstavujú schémy rôznych **chybných ekvivalentných úprav**:\n:::enum{.i}\n5. $((A \\limpl B) \\limpl C) \\alertnpEquiv (A \\limpl (B \\limpl C))$    \n   (Implikácia nie je asociatívna.)\n6. $(A \\limpl B) \\alertnpEquiv (B \\limpl A)$    \n   (Implikácia nie je komutatívna.)\n7. $(A \\land (B \\limpl C)) \\alertnpEquiv ((A \\land B) \\limpl (A \\land C))$    \n   (Konjunkcia nie je distributívna vzhľadom na implikáciu.)\n8. $(A \\land (B \\lequiv C)) \\alertnpEquiv ((A \\land B) \\lequiv (A \\land C))$    \n   (Konjunkcia nie je distributívna vzhľadom na ekvivalenciu.)\n:::\n\nPre každú vyššie uvedenú dvojicu $X \\npEquiv Y$ dokážte,\nže formuly $X$ a $Y$ **nie sú vo všeobecnosti ekvivalentné**.\n\nNa to je potrebné zostrojiť **kontrapríklad ekvivalencie**:\n* formuly $A$, $B$, $C$ vo vhodnom jazyku,\n* aspoň jedno ohodnotenie $v$ pre tento jazyk,\n  ktoré je modelom jednej z formúl $X$, $Y$, ale nie je modelom druhej.\n\nPre _niektoré_ dvojice je **implikácia _v jednom smere_** (teda $(X \\limpl Y)$ alebo $(Y \\limpl X)$) **tautológiou**. Ktorá?\n",
       "idCounter": 1,
       "comments": {
-        "ids": [
-          0
-        ],
-        "entities": {
-          "0": {
-            "author": "marcsek",
-            "text": "Ekvivalencia musi byt tautologia. Ukazeme ze to tak nebude.",
-            "timestamp": 1742305160616,
-            "id": 0
-          }
-        }
+        "ids": [],
+        "entities": {}
       }
     },
     "33": {
@@ -183,7 +174,7 @@
     "35": {
       "id": 35,
       "type": "text",
-      "data": ":::aside{.note.bg-transparent.p-0}\n:icon[write] Doplňte číslo listu tabla, ohodnotenie, teóriu a formulu, :span[vyberte z možností]{.text-primary} a označte `[x]` správny prípad\ntak, aby boli závery podložené a správne.\n:::\n\nOtvorená a úplná vetva tabla pre $S^+$ končiaca listom č. …\nurčuje ohodnotenie\n$$\nv = \\{ … \\mapsto 0/1, … \\},\n$$\nktoré :span[je/nie je modelom]{.text-primary} formuly $…$,\nale :span[je/nie je modelom]{.text-primary} formuly $…$.\nPreto vo všeobecnosti $… \\npEquiv …$.\n\n* [ ] Implikácia $(… \\limpl …)$ je tautológia,\n  pretože podstrom nášho tabla tvorený uzlami č. … až …\n  je :span[otvoreným/a/úplným/uzavretým]{.text-primary} tablom\n  pre množinu označených formúl $\\{ \\sign{znamienko}  (… \\limpl …)\\}$.\n* [ ] Ani jedna z implikácií $(… \\limpl …)$ a $(… \\limpl …)$\n  nie je tautológiou, pretože $v \\npmodels (… \\limpl …)$\n  a otvorená a úplná vetva tabla pre $S^+$ končiaca listom č. …\n  určuje ohodnotenie\n  $$\n  \\{ … \\mapsto 0/1, … \\},\n  $$\n  ktoré nie je modelom opačnej implikácie $(… \\limpl …)$.",
+      "data": ":::aside{.note.bg-transparent.p-0}\n:icon[write] Doplňte číslo listu tabla, ohodnotenie, teóriu a formulu, :span[vyberte z možností]{.text-primary} a označte `[x]` správny prípad\ntak, aby boli závery podložené a správne.\n:::\n\nOtvorená a úplná vetva tabla pre $S^+$ končiaca listom č. 6\nurčuje ohodnotenie\n$$\nv = \\{ p(a) \\mapsto 0, p(b) \\mapsto 0, p(c) \\mapsto 0 \\},\n$$\nktoré :span[je]{.text-primary} formuly $(p(a)→(p(b)→p(c)))$,\nale :span[nie je modelom]{.text-primary} formuly $((p(a)→p(b))→p(c))$.\nPreto vo všeobecnosti $(p(a)→(p(b)→p(c))) \\npEquiv ((p(a)→p(b))→p(c))$.\n\n* [x] Implikácia $(((A \\limpl B) \\limpl C) \\limpl (A \\limpl (B \\limpl C)))$ je tautológia,\n  pretože podstrom nášho tabla tvorený uzlami č. … až …\n  je :span[uzavretým]{.text-primary} tablom\n  pre množinu označených formúl $\\{ \\sign{T} ((\\sym{p}(\\sym{a}) → \\sym{p}(\\sym{b}))→ \\sym{p}(\\sym{c})), \\sign{F}(\\sym{p}(\\sym{a}) → (\\sym{p}(\\sym{b})→ \\sym{p}(\\sym{c})))\\}$.\n* [ ] Ani jedna z implikácií $(… \\limpl …)$ a $(… \\limpl …)$\n  nie je tautológiou, pretože $v \\npmodels (… \\limpl …)$\n  a otvorená a úplná vetva tabla pre $S^+$ končiaca listom č. …\n  určuje ohodnotenie\n  $$\n  \\{ … \\mapsto 0/1, … \\},\n  $$\n  ktoré nie je modelom opačnej implikácie $(… \\limpl …)$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -193,7 +184,7 @@
     "36": {
       "id": 36,
       "type": "text",
-      "data": "::h3[**Kontrapríklad pre chybnú ekvivalenciu v**]{.h6}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Rovnako ako pri chybnom úsudku iii vysvetlite,\nako budeme pri riešení postupovať:\naký jazyk, formuly $A$, $B$, $C$, zvolíme a aké tablo skonštruujeme.\n:::\n\n…\n\n:::aside{.note.bg-transparent.p-0}\n:icon[tools] Zostrojte tablo tak,\naby vám pomohlo vytvoriť kontrapríklad ekvivalencie\na zodpovedať otázku o tautologickosti niektorej z implikácií.\nTablo vložte za túto bunku.\n:::",
+      "data": "::h3[**Kontrapríklad pre chybnú ekvivalenciu v**]{.h6}\n:::aside{.note.bg-transparent.p-0}\n:icon[write] Rovnako ako pri chybnom úsudku iii vysvetlite,\nako budeme pri riešení postupovať:\naký jazyk, formuly $A$, $B$, $C$, zvolíme a aké tablo skonštruujeme.\n:::\n\nNech $\\Lang$ je jazyk výrokovologickej časti logiky prvého rádu,\nkde $\\Consts = \\{ \\sym{a}, \\sym{b}, \\sym{c} \\}$ a $\\Preds = \\{ \\sym{p}^1 \\}$.\nNech $A = \\sym{p}(\\sym{a})$, $B = \\sym{p}(\\sym{b})$, $C = \\sym{p}(\\sym{c})$.\n\nZostrojíme tablo pre množinu označených formúl\n$S^+ = \\{ \\sign{F} ((\\sym{p}(\\sym{a}) → \\sym{p}(\\sym{b}))→ \\sym{p}(\\sym{c})), \\sign{T}(\\sym{p}(\\sym{a}) → (\\sym{p}(\\sym{b})→ \\sym{p}(\\sym{c}))) \\}$.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[tools] Zostrojte tablo tak,\naby vám pomohlo vytvoriť kontrapríklad ekvivalencie\na zodpovedať otázku o tautologickosti niektorej z implikácií.\nTablo vložte za túto bunku.\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -870,6 +861,164 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "47": {
+      "id": 47,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T (p(a)→(p(b)→p(c)))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "F ((p(a)→p(b))→p(c))",
+            "references": []
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T (p(a)→p(b))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "beta",
+              "node": {
+                "id": 4,
+                "value": "F p(c)",
+                "references": [
+                  "2"
+                ]
+              },
+              "leftChild": {
+                "type": "beta",
+                "node": {
+                  "id": 5,
+                  "value": "F p(a)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "leftChild": {
+                  "type": "openComplete",
+                  "node": {
+                    "id": 6,
+                    "value": "F p(a)",
+                    "references": [
+                      "1"
+                    ]
+                  }
+                },
+                "rightChild": {
+                  "type": "beta",
+                  "node": {
+                    "id": 7,
+                    "value": "T (p(b)→p(c))",
+                    "references": [
+                      "1"
+                    ]
+                  },
+                  "leftChild": {
+                    "type": "openComplete",
+                    "node": {
+                      "id": 8,
+                      "value": "F p(b)",
+                      "references": [
+                        "7"
+                      ]
+                    }
+                  },
+                  "rightChild": {
+                    "type": "closed",
+                    "node": {
+                      "id": 9,
+                      "value": "T p(c)",
+                      "references": [
+                        "7"
+                      ]
+                    },
+                    "closed": [
+                      "4",
+                      "9"
+                    ]
+                  }
+                }
+              },
+              "rightChild": {
+                "type": "beta",
+                "node": {
+                  "id": 10,
+                  "value": "T p(b)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "leftChild": {
+                  "type": "openComplete",
+                  "node": {
+                    "id": 11,
+                    "value": "F p(a)",
+                    "references": [
+                      "1"
+                    ]
+                  }
+                },
+                "rightChild": {
+                  "type": "beta",
+                  "node": {
+                    "id": 12,
+                    "value": "T (p(b)→p(c))",
+                    "references": [
+                      "1"
+                    ]
+                  },
+                  "leftChild": {
+                    "type": "closed",
+                    "node": {
+                      "id": 13,
+                      "value": "F p(b)",
+                      "references": [
+                        "12"
+                      ]
+                    },
+                    "closed": [
+                      "10",
+                      "13"
+                    ]
+                  },
+                  "rightChild": {
+                    "type": "closed",
+                    "node": {
+                      "id": 14,
+                      "value": "T p(c)",
+                      "references": [
+                        "12"
+                      ]
+                    },
+                    "closed": [
+                      "4",
+                      "14"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic propositional"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -891,6 +1040,7 @@
     38,
     28,
     36,
+    47,
     35,
     37,
     3,
