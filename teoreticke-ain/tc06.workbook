@@ -4,7 +4,7 @@
     "2": {
       "id": 2,
       "type": "text",
-      "data": "## Cvičenie 6.:cnt[a]\n:small[:icon[source] Zbierka: :xref[4.4.1]{.exbook label=\"úloha\"}.\nPrednášky: :xref[5.33]{.lec label=\"tvrdenie\"} (korektnosť pravidla MP).]\n\nDokážte, že nasledujúce tablové pravidlo je korektné:\n\n$$\n\\begin{array}{c}\n  \\sign T (X \\limpl Y)\\quad\\sign F Y \\\\\n  \\hline\n  \\sign F X\n\\end{array}\n\\tag{MT}\n$$\n\n::h3[:icon[write] Riešenie]{.h6}\n\n::h3[Tvrdenie (Korektnosť pravidla MT).]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n…\n\n_Dôkaz._\n…\n",
+      "data": "## Cvičenie 6.:cnt[a]\n:small[:icon[source] Zbierka: :xref[4.4.1]{.exbook label=\"úloha\"}.\nPrednášky: :xref[5.33]{.lec label=\"tvrdenie\"} (korektnosť pravidla MP).]\n\nDokážte, že nasledujúce tablové pravidlo je korektné:\n\n$$\n\\begin{array}{c}\n  \\sign T (X \\limpl Y)\\quad\\sign F Y \\\\\n  \\hline\n  \\sign F X\n\\end{array}\n\\tag{MT}\n$$\n\n::h3[:icon[write] Riešenie]{.h6}\n\n::h3[Tvrdenie (Korektnosť pravidla MT).]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\nNech $X$ a $Y$ sú ľubovoľné výrokovologické formuly v ľubovoľnom jazyku $\\Lang$. Nech $v$ je ľubovoľné ohodnotenie pre jazyk $\\Lang$. Potom: Ak $v \\pmodels \\sign{T}(X \\limpl Y)$ a $v \\pmodels \\sign{F}Y$, tak $v \\pmodels \\sign{F}X$.\n\n_Dôkaz._\n…\n",
       "idCounter": 3,
       "comments": {
         "ids": [],
@@ -64,7 +64,7 @@
     "8": {
       "id": 8,
       "type": "text",
-      "data": "## Cvičenie 6.:cnt[a]\n:small[:icon[source]\nZbierka: :xref[4.5.2]{.exbook label=\"príklad\"}.\nPrednášky: definície :xref[3.10]{.lec label=\"nezávislosti\"}, :xref[5.5]{.lec label=\"pravdivosti označenej formuly v ohodnotení\"}, :xref[5.15]{.lec label=\"uzavretej a otvorenej vetvy\"} a :xref[5.24]{.lec label=\"úplnej vetvy\"}.]\n\nDokážte alebo vyvráťte nasledujúce tvrdenie:\n\nNech $S$ je výrokovologická teória a $X$ je výrokovologická formula. Nech $\\Tabl$ je ľubovoľné tablo pre množinu označených formúl $\\setc{\\sign{T} A \\mid A \\in S} \\cup \\sete{ \\sign{F} X }$. Ak je v $\\Tabl$ niektorá vetva úplná otvorená a iná uzavretá,\ntak $X$ je nezávislá od $S$.\n\n::h3[:icon[write] Riešenie]{.h6}\n:::aside{.note.bg-transparent.p-0}\n\\* Nehodiace sa zmažte.\n:::\n\nTvrdenie :mark[je/nie je]\\* pravdivé.\n\n_:mark[Dôkaz/Kontrapríklad]\\*._\n…\n",
+      "data": "## Cvičenie 6.:cnt[a]\n:small[:icon[source]\nZbierka: :xref[4.5.2]{.exbook label=\"príklad\"}.\nPrednášky: definície :xref[3.10]{.lec label=\"nezávislosti\"}, :xref[5.5]{.lec label=\"pravdivosti označenej formuly v ohodnotení\"}, :xref[5.15]{.lec label=\"uzavretej a otvorenej vetvy\"} a :xref[5.24]{.lec label=\"úplnej vetvy\"}.]\n\nDokážte alebo vyvráťte nasledujúce tvrdenie:\n\nNech $S$ je výrokovologická teória a $X$ je výrokovologická formula. Nech $\\Tabl$ je ľubovoľné tablo pre množinu označených formúl $\\setc{\\sign{T} A \\mid A \\in S} \\cup \\sete{ \\sign{F} X }$. Ak je v $\\Tabl$ niektorá vetva úplná otvorená a iná uzavretá,\ntak $X$ je nezávislá od $S$.\n\n::h3[:icon[write] Riešenie]{.h6}\n:::aside{.note.bg-transparent.p-0}\n\\* Nehodiace sa zmažte.\n:::\n\nTvrdenie **nie je** pravdivé.\n\n_Kontrapríklad:_\n\\\n$S = \\{ (p(a) \\lor \\neg p(b) \\limpl p(b)) \\} \\ \\ \\ \\ \\ \\  X = \\neg p(b)$\n\n$S \\pmodels \\neg X$\n\nV table by bolo $\\sign{T}(p(a) \\lor \\neg p(b) \\limpl p(b))$ ...\n",
       "idCounter": 1,
       "comments": {
         "ids": [],
@@ -74,7 +74,7 @@
     "18": {
       "id": 18,
       "type": "text",
-      "data": "## Cvičenie 6.:cnt[a]\n:small[:icon[source]\nZbierka: :xref[4.4.1]{.exbook label=\"úloha\"}.\nPrednášky: :xref[5.37]{.lec label=\"tvrdenie\"} (korektnosť pravidla rezu).]\n\nDokážte, že nasledujúce tablové pravidlo je korektné:\n\n$$\n\\begin{array}{c}\n  \\sign T (X \\lequiv Y) \\\\\n  \\hline\n  \\sign T (X \\land Y)\\quad|\\quad\\sign F(X \\lor Y)\n\\end{array}\n\\tag{ECDT}\n$$\n\n::h3[:icon[write] Riešenie]{.h6}\n\n::h3[Tvrdenie (Korektnosť pravidla ECDT).]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n…\n\n_Dôkaz._\n…\n",
+      "data": "## Cvičenie 6.:cnt[a]\n:small[:icon[source]\nZbierka: :xref[4.4.1]{.exbook label=\"úloha\"}.\nPrednášky: :xref[5.37]{.lec label=\"tvrdenie\"} (korektnosť pravidla rezu).]\n\nDokážte, že nasledujúce tablové pravidlo je korektné:\n\n$$\n\\begin{array}{c}\n  \\sign T (X \\lequiv Y) \\\\\n  \\hline\n  \\sign T (X \\land Y)\\quad|\\quad\\sign F(X \\lor Y)\n\\end{array}\n\\tag{ECDT}\n$$\n\n::h3[:icon[write] Riešenie]{.h6}\n\n::h3[Tvrdenie (Korektnosť pravidla ECDT).]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\nNech $X$ a $Y$ sú ľubovoľné výrokovologické formuly v ľubovoľnom jazyku $\\Lang$. Nech $v$ je ľubovoľné ohodnotenie pre jazyk $\\Lang$. Potom: Ak $v \\pmodels \\sign{T}(X \\lequiv Y)$, tak $v \\pmodels \\sign{T}(X \\land Y)$ alebo $v \\pmodels \\sign{F}(X \\lor Y)$\n\n_Dôkaz._\nNech $v$ je ľubovoľné ohodnotenie a nech $v \\pmodels \\sign{T}(X \\lequiv Y)$. Potom $v \\pmodels (X \\lequiv Y)$ a teda $v \\pmodels ((X \\limpl Y) \\land (Y \\limpl X))$ teda $v \\pmodels (X \\limpl Y)$ a $v \\pmodels (Y \\limpl X)$.\n\nUvažujme dve možnosti.\n\n- Nech $v \\pmodels X$. Potom podľa 11) musí byť $v \\pmodels Y$. Potom podľa def. (?) $v \\pmodels (X \\land Y)$ a $v \\pmodels \\sign{T}(X \\land Y)$.\n- Nech $v \\npmodels X$. Potom podľa (2?) $v \\npmodels Y$. Potom $v \\npmodels (X \\lor Y)$, preto $v \\pmodels \\sign{F}(X \\lor Y)$.\n\nNa základe uvedenej analýzy prípadov $v \\pmodels \\sign{T}(X \\land Y)$ alebo $v \\pmodels \\sign{F} (X \\lor Y)$. $\\ \\square$\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -94,7 +94,7 @@
     "20": {
       "id": 20,
       "type": "text",
-      "data": "::h3[**a)**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n\nAk $T \\pentails (X \\limpl Y)$,\ntak $T \\npentails X$ alebo $T \\pentails Y$.\n\n::h4[:icon[write] Riešenie]{.h6}\n:::aside{.note.bg-transparent.p-0}\n\\* Nehodiace sa zmažte.\n:::\n\nTvrdenie :mark[je/nie je]\\* pravdivé.\n\n_:mark[Dôkaz/Kontrapríklad]\\*._\n…\n",
+      "data": "::h3[**a)**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n\nAk $T \\pentails (X \\limpl Y)$,\ntak $T \\npentails X$ alebo $T \\pentails Y$.\n\n::h4[:icon[write] Riešenie]{.h6}\n:::aside{.note.bg-transparent.p-0}\n\\* Nehodiace sa zmažte.\n:::\n\nTvrdenie **je** pravdivé.\n\n_Dôkaz_ sporom. Predpokladajme, že $T \\pmodels (X \\limpl Y)$ a zároveň $T \\pmodels X$ a $T \\npmodels Y$. Teda existuje ohodnotenie $v^*$, také že $v^* \\pmodels T$ _(1)_ a $v^* \\npmodels X$ _(2)_. Z $T \\pmodels X$ a _(1)_ potom $v^* \\pmodels X$ _(3)_. Z ? $T \\pmodels (X \\limpl Y)$ vieme povedať, že $v^* \\pmodels (X \\limpl Y)$. Z def. pravdivosti implikácie $v^* \\npmodels X$ alebo $v^* \\pmodels Y$. Toto je v spore s _(2)_ a _(3)_, teda pôvodné tvrdenie platí.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -104,7 +104,7 @@
     "21": {
       "id": 21,
       "type": "text",
-      "data": "::h3[**b)**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n\nAk $T \\pentails (X \\limpl Y)$,\ntak $T \\pentails \\neg X$ alebo $T \\pentails Y$.\n\n::h4[:icon[write] Riešenie]{.h6}\n:::aside{.note.bg-transparent.p-0}\n\\* Nehodiace sa zmažte.\n:::\n\nTvrdenie :mark[je/nie je]\\* pravdivé.\n\n_:mark[Dôkaz/Kontrapríklad]\\*._\n…\n",
+      "data": "::h3[**b)**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n\nAk $T \\pentails (X \\limpl Y)$,\ntak $T \\pentails \\neg X$ alebo $T \\pentails Y$.\n\n::h4[:icon[write] Riešenie]{.h6}\n:::aside{.note.bg-transparent.p-0}\n\\* Nehodiace sa zmažte.\n:::\n\nTvrdenie **nie je** pravdivé.\n\n_Kontrapríklad:_\n\\\n$T = \\{\\}$\n\\\n\\\nMajme $\\Lang$ s $\\Consts = \\{a\\}, \\Preds = \\{p^1\\}$.\n\\\n\\\n$X = Y = p(a)$.\n\n:::div{.table.table-truth}\n|  | $X$ | $\\neg X$ | $Y$ | $(X \\limpl Y)$ |  |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| $v_1$ | 1 | $\\npmodels$ | 1 | $\\pmodels$ |\n| $v_2$ | 0 | $\\pmodels$ | 0 | $\\pmodels$ |\n:::\n\\\nKeďže $T = \\{\\}$, tak $v_1 \\pmodels T$ a $v_2 \\pmodels T$. Zároveň $v_1 \\pmodels (X \\limpl Y)$ a $v_2 \\pmodels (X \\limpl Y)$, takže $T \\pmodels (X \\limpl Y)$. Avšak $v_1 \\npmodels \\neg X$ ani $v_2 \\npmodels Y$, čiže $T \\npmodels \\neg X$ a $T \\npmodels Y$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
