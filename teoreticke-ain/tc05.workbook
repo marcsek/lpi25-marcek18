@@ -104,7 +104,7 @@
     "21": {
       "id": 21,
       "type": "text",
-      "data": "::h3[:cnt[b]{.i}. Formálne problémy]{.h5}\n\n:icon[write]\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania?\n\n:small[Napr. splniteľnosť alebo nájdenie všetkých modelov ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.]\n\n1. Musime zistit ci je teoria T splnitelna.",
+      "data": "::h3[:cnt[b]{.i}. Formálne problémy]{.h5}\n\n:icon[write]\nAké formálne logické problémy musíme vyriešiť, aby sme zodpovedali neformálne otázky zo zadania?\n\n:small[Napr. splniteľnosť alebo nájdenie všetkých modelov ktorej formuly/teórie, tautologickosť ktorej formuly, ekvivalencia ktorých formúl, vyplývanie/nezávislosť ktorej formuly z/od ktorej teórie, atď.]\n\n1. Musime zistit ci je teoria T splnitelna.\n2. Musime najst vsetky ohodnotenia ktore su zaroven aj modelmi teorie $T$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
