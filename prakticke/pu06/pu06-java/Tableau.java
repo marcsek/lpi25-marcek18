@@ -260,7 +260,7 @@ class Node {
  */
 class Tableau {
     private Node root = null;
-    private int number = 0;
+    private int number = 1;
 
     /**
      * @return true if the tableau is closed (i.e. all branches are closed).
