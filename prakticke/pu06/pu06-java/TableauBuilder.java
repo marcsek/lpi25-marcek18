@@ -15,7 +15,7 @@ class TableauBuilder {
             if (processNode(node, alphas, betas, branch))
                 return t;
 
-        expand(t, branch.getLast(), alphas, betas, branch);
+        expand(t, branch.get(branch.size() - 1), alphas, betas, branch);
         return t;
     }
 
