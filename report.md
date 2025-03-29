@@ -7,7 +7,11 @@
 |                 |        |                                          |
 |**Teoretické domáce úlohy** |      9 |                                          |
 |                 |        |                                          |
+|          test01 |     14 | 4,5 + 4,6 + 4,9                          |
 |                 |        |                                          |
-|         **SUM** |      9 |  semester!!                              |
+|       **Testy** |     14 |                                          |
+|                 |        |                                          |
+|                 |        |                                          |
+|         **SUM** |     23 |  semester!!                              |
 
 Alias: marcek18
