@@ -24,7 +24,7 @@
     "5": {
       "id": 5,
       "type": "text",
-      "data": "## Cvičenie 7.:cnt[a]\n:small[:icon[source]\nZbierka: :xref[5.2.2]{.exbook label=\"úloha\"}.]\n\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu,\nkde $\\Consts = \\{\\sym{ACME}\\}$, $\\Preds = \\{\\sym{faulty}^1,$ $\\sym{cheap}^1,$ $\\sym{expensive}^1,$ $\\sym{article}^1,$ $\\sym{branded}^1,$ $\\sym{made\\_by}^2\\}$\nso zamýšľaným významom symbolov:\n\n:::div{.table.table-intended-meaning.small}\n| Symbol | Zamýšľaný význam | | Symbol | Zamýšľaný význam |\n|--------|------------------|-|-|-|\n| expensive($x$) | $x$ je drahý || made_by($x$, $y$) | $x$ bol vyrobený (firmou) $y$ |\n| article($x$) | $x$ je tovar || faulty($x$) | $x$ je chybný |\n| cheap($x$) | $x$ je lacný || branded($x$) | $x$ je značkový |\n:::\n\n::h3[:icon[write] :cnt[c]{.a})]{.h6.lh-base.float-start.me-2.my-0}\nKaždú z nasledujúcich formúl preložte do čo najprirodzenejšieho slovenského tvrdenia.\n\n$A_1 = \\A{\\vx}(\\sym{article}(\\vx) \\limpl (\\sym{expensive}(\\vx) \\lor \\sym{cheap}(\\vx)))$  \n...\n\n$A_2 = \\A{\\vx}(\\sym{expensive}(\\vx) \\limpl \\neg \\sym{cheap}(\\vx))$  \n...\n\n$A_3 = (\\E{\\vx}(\\sym{article}(\\vx) \\land \\sym{cheap}(\\vx)) \\land \\E{\\vx}(\\sym{article}(\\vx) \\land \\neg \\sym{cheap}(\\vx)))$  \n...\n\n$A_4 = \\A{\\vx}(\\sym{article}(\\vx) \\limpl (\\sym{expensive}(\\vx) \\limpl \\sym{made\\_by}(\\vx,\\sym{ACME})))$  \n...\n\n$A_5 = \\A{\\vx}(\\sym{made\\_by}(\\vx,\\sym{ACME}) \\limpl \\sym{branded}(\\vx))$  \n...\n\n$A_6 = (\\lnot\\A{\\vx}\\lnot\\sym{expensive}(\\vx) \\limpl \\neg\\E{\\vx}(\\neg\\sym{faulty}(\\vx) \\land \\sym{branded}(\\vx)))$  \n...\n\n$A_7 = \\neg\\A{\\vx}(\\neg\\sym{branded}(\\vx) \\limpl \\neg\\sym{faulty}(\\vx))$  \n...\n",
+      "data": "## Cvičenie 7.:cnt[a]\n:small[:icon[source]\nZbierka: :xref[5.2.2]{.exbook label=\"úloha\"}.]\n\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu,\nkde $\\Consts = \\{\\sym{ACME}\\}$, $\\Preds = \\{\\sym{faulty}^1,$ $\\sym{cheap}^1,$ $\\sym{expensive}^1,$ $\\sym{article}^1,$ $\\sym{branded}^1,$ $\\sym{made\\_by}^2\\}$\nso zamýšľaným významom symbolov:\n\n:::div{.table.table-intended-meaning.small}\n| Symbol | Zamýšľaný význam | | Symbol | Zamýšľaný význam |\n|--------|------------------|-|-|-|\n| expensive($x$) | $x$ je drahý || made_by($x$, $y$) | $x$ bol vyrobený (firmou) $y$ |\n| article($x$) | $x$ je tovar || faulty($x$) | $x$ je chybný |\n| cheap($x$) | $x$ je lacný || branded($x$) | $x$ je značkový |\n:::\n\n::h3[:icon[write] :cnt[c]{.a})]{.h6.lh-base.float-start.me-2.my-0}\nKaždú z nasledujúcich formúl preložte do čo najprirodzenejšieho slovenského tvrdenia.\n\n$A_1 = \\A{\\vx}(\\sym{article}(\\vx) \\limpl (\\sym{expensive}(\\vx) \\lor \\sym{cheap}(\\vx)))$  \n...\n\n$A_2 = \\A{\\vx}(\\sym{expensive}(\\vx) \\limpl \\neg \\sym{cheap}(\\vx))$  \n...\n\n$A_3 = (\\E{\\vx}(\\sym{article}(\\vx) \\land \\sym{cheap}(\\vx)) \\land \\E{\\vx}(\\sym{article}(\\vx) \\land \\neg \\sym{cheap}(\\vx)))$  \n...\n\n$A_4 = \\A{\\vx}(\\sym{article}(\\vx) \\limpl (\\sym{expensive}(\\vx) \\limpl \\sym{made\\_by}(\\vx,\\sym{ACME})))$  \n...\n\n$A_5 = \\A{\\vx}(\\sym{made\\_by}(\\vx,\\sym{ACME}) \\limpl \\sym{branded}(\\vx))$  \n...\n\n$A_6 = (\\lnot\\A{\\vx}\\lnot\\sym{expensive}(\\vx) \\limpl \\neg\\E{\\vx}(\\neg\\sym{faulty}(\\vx) \\land \\sym{branded}(\\vx)))$  \nAk nie je pravda, ze nic nie je drahe, potom, neexistuje nieco znackove co nie je chybne.\n\n$A_7 = \\neg\\A{\\vx}(\\neg\\sym{branded}(\\vx) \\limpl \\neg\\sym{faulty}(\\vx))$  \nNie je pravda, ze vsetko neznackove nie je chybne\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -347,42 +347,42 @@
             {
               "proposition_id": 1451,
               "proposition": "1. Evka je doktorandka a má školiteľa.",
-              "solution": ""
+              "solution": "(phd_student(Evka) \\land \\exists x supervisor(x, Evka))"
             },
             {
               "proposition_id": 1452,
               "proposition": "2. Všetko sú ľudia.",
-              "solution": null
+              "solution": "\\forall x human(x)"
             },
             {
               "proposition_id": 1453,
               "proposition": "3. Všetci doktorandi sú študenti.",
-              "solution": null
+              "solution": "\\forall x (phd_student(x) -> student(x))"
             },
             {
               "proposition_id": 1454,
               "proposition": "4. Niektorí doktorandi sú aj učiteľmi.",
-              "solution": null
+              "solution": "\\exists x(phd_student(x) & teacher(x))"
             },
             {
               "proposition_id": 1455,
               "proposition": "5. Nikto neučí sám seba.",
-              "solution": null
+              "solution": "\\neg \\exists x (teaches(x, x))"
             },
             {
               "proposition_id": 1456,
               "proposition": "6. Žiaden profesor nie je doktorand.",
-              "solution": null
+              "solution": "\\neg \\exists x (full_prof(x) & phd_student(x))"
             },
             {
               "proposition_id": 1457,
               "proposition": "7. Niektorí študenti samozrejme nie sú doktorandi.",
-              "solution": null
+              "solution": "\\exists x (student(x) & \\neg phd_student(x))"
             },
             {
               "proposition_id": 1458,
               "proposition": "8. Doktorandi profesora Nového sú cvičiaci na Teórii všetkého alebo Úvode do abstrakcie.",
-              "solution": null
+              "solution": "\\forall x ((phd_student(x) & supervisor(Novy, x)) -> (teaching_assistant(x, Theory_of_everything) \\lor teaching_assistant(x, Introduction_to_abstraction))) & full_prof(Novy)"
             },
             {
               "proposition_id": 1459,
