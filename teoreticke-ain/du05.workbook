@@ -167,52 +167,52 @@
             {
               "proposition_id": 1938,
               "proposition": "1. FMFI je fakulta, ktorá je súčasťou univerzity UK_BA a sídli v Bratislave.",
-              "solution": null
+              "solution": "(((faculty(FMFI) & part_of(FMFI, UK_BA)) & university(UK_BA)) & located_in(FMFI, Bratislava))"
             },
             {
               "proposition_id": 1939,
               "proposition": "2. Fakulty majú svoje sídlo.",
-              "solution": null
+              "solution": "\\forall x (faculty(x) -> \\exists y located_in(x, y))"
             },
             {
               "proposition_id": 1940,
               "proposition": "3. Každá katedra je súčasťou nejakej fakulty a každá fakulta zas nejakej univerzity. ",
-              "solution": null
+              "solution": "\\forall x (department(x) -> \\exists y (part_of(x, y) & faculty(y))) & \\forall x (faculty(x) -> \\exists y (part_of(x, y) & university(y)))"
             },
             {
               "proposition_id": 1941,
               "proposition": "4. Dekanom fakulty je iba ten, kto má na príslušnej fakulte funkčné obdobie s nejakým začiatočným a koncovým dátumom.",
-              "solution": null
+              "solution": "\\forall x \\forall y ((dean_of(x, y) & faculty(y)) -> \\exists z \\exists w (date(z) & date(w) & fun_period(x, y, z, w)))"
             },
             {
               "proposition_id": 1942,
               "proposition": "5. Žiadna fakulta nemá viac ako jedného dekana.",
-              "solution": null
+              "solution": "\\forall x \\forall y \\forall z ((faculty(x) & dean_of(y, x) & dean_of(z, x)) -> z = y)"
             },
             {
               "proposition_id": 1943,
               "proposition": "6. Pre nejakú univerzitu platí, že všetky učebne a kancelárie, ktoré sú jej súčasťou, sa nachádzajú v Bratislave.",
-              "solution": null
+              "solution": "\\exists x (university(x) & \\forall y ((part_of(y, x) & (classroom(y) | office(y))) -> located_in(y, Bratislava)))"
             },
             {
               "proposition_id": 1944,
               "proposition": "7. Niektorí zamestnanci jednej fakulty sú zamestnancami aj inej.",
-              "solution": null
+              "solution": "\\exists x \\exists y \\exists z (employee(x, y) & faculty(y) & employee(x, z) & faculty(z) & y != z)"
             },
             {
               "proposition_id": 1945,
               "proposition": "8. Zamestnanci fakulty sú zamestnancami práve tých univerzít, ktorých súčasťou je táto fakulta.",
-              "solution": null
+              "solution": "\\forall x \\forall y \\forall z ((faculty(y) & employee(x, y) & university(z)) -> (employee(x, z) <-> part_of(y, z)))"
             },
             {
               "proposition_id": 1946,
               "proposition": "9. UK_BA má práve dve sídla.",
-              "solution": null
+              "solution": "\\exists x \\exists y (located_in(UK_BA, x) & located_in(UK_BA, y) & x != y & \\neg \\exists z (located_in(UK_BA, z) & z != y & x != z))"
             },
             {
               "proposition_id": 1947,
               "proposition": "10. Ak niekto sedí v aspoň dvoch kanceláriách, každá z nich je súčasťou inej fakulty.",
-              "solution": null
+              "solution": "\\forall x \\forall y \\forall z ((occupies(x, y) & office(y) & occupies(x, z) & office(z) & z != y) -> \\exists w (faculty(w) & part_of(y, w) & \\exists v (faculty(v)& part_of(z, v) & v != w)))"
             }
           ]
         },
