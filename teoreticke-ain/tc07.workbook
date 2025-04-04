@@ -387,42 +387,42 @@
             {
               "proposition_id": 1459,
               "proposition": "9. Učitelia okrem asistentov sú profesori a docenti.",
-              "solution": null
+              "solution": "\\forall x ((teacher(x) \\land \\neg assistant_prof(x)) -> (full_prof(x) \\lor associate_prof(x)))"
             },
             {
               "proposition_id": 1460,
               "proposition": "10. Adamov školiteľ je docent alebo profesor v prípade, že je Adam doktorand.",
-              "solution": null
+              "solution": "\\forall x ((phd_student(Adam) \\land supervisor(x, Adam)) -> ((full_prof(x) \\lor associate_prof(x))))"
             },
             {
               "proposition_id": 1461,
               "proposition": "11.  Docentka Mladá školí iba takých študentov, ktorí absolvovali s vyznamenaním Históriu vesmíru, ale nie sú doktorandi.",
-              "solution": null
+              "solution": "\\forall x (( supervisor(Mlada, x) \\land student(x)) -> (aced(x, History_of_universe) \\land \\neg phd_student(x))) \\land associate_prof(Mlada)"
             },
             {
               "proposition_id": 1462,
               "proposition": "12. Teóriu všetkého si nemôžu zapísať tí, čo neabsolvovali ani Históriu vesmíru, ani Úvod do abstrakcie.",
-              "solution": null
+              "solution": "\\forall x (\\neg(passed(x, History_of_universe) \\lor passed(x, Introduction_to_abstraction)) -> \\neg enrolled_in(x, Theory_of_everything))"
             },
             {
               "proposition_id": 1463,
               "proposition": "13. Ak nejaký kurz učí Nový, tak ide o neobľúbený kurz.",
-              "solution": null
+              "solution": "\\forall x ((teaches(Novy, x) \\land course(x)) -> \\neg popular(x))"
             },
             {
               "proposition_id": 1464,
               "proposition": "14. Doktorandi Nového cvičiaci Teóriu všetkého sú externisti.",
-              "solution": null
+              "solution": "\\forall x ((phd_student(x) \\land supervisor(Novy, x) \\land teaching_assistant(x, Theory_of_everything)) -> external(x))"
             },
             {
               "proposition_id": 1465,
               "proposition": "15. Ak má Mladá nejakého doktoranda, ktorý nie je externý, tak je šťastná.",
-              "solution": null
+              "solution": "(\\exists x ((supervisor(Mlada, x) \\land phd_student(x) \\land \\neg external(x))) -> happy(Mlada))"
             },
             {
               "proposition_id": 1466,
               "proposition": "16. Nový je šťastný, iba ak aspoň jeden študent má rád Teóriu všetkého.",
-              "solution": null
+              "solution": "happy(Novy) -> (\\exists x (student(x) \\land likes(x, Theory_of_everything)))"
             }
           ]
         },
