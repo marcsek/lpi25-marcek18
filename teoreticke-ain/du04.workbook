@@ -15,10 +15,19 @@
       "id": 3,
       "type": "text",
       "data": "## Úloha 4.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **70 %** · :icon[source] Zbierka: :xref[3.4.5]{.exbook label=\"príklad\"}.]\n\nUvažujme jazyk $\\Lang$ výrokovologickej časti logiky prvého rádu bez rovnosti.\nNech $X$ a $Y$ sú ľubovoľné výrokovologické formuly jazyka $\\Lang$, nech $T$ je ľubovoľná\nvýrokovologická teória v $\\Lang$.\n\nDokážte alebo vyvráťte na základe definícií vyplývania a pravdivosti vo výrokovologickom ohodnotení:",
-      "idCounter": 4,
+      "idCounter": 5,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          4
+        ],
+        "entities": {
+          "4": {
+            "author": "pukancova",
+            "text": "62%",
+            "timestamp": 1744146698859,
+            "id": 4
+          }
+        }
       }
     },
     "4": {
