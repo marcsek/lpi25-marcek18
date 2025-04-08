@@ -35,10 +35,19 @@
       "id": 5,
       "type": "text",
       "data": "::h3[**:cnt[b]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\nAk $T \\npentails (X \\land Y)$, tak $T \\npentails X$ alebo $T \\npentails Y$.\n\n::h4[:icon[write] Riešenie.]{.h6}\n\nTvrdenie ***je*** pravdivé.\n\n*Dôkaz* sporom. Predpokladajme, že \n$$\nT \\npmodels (X \\land Y)\n\\tag{1}\n$$\n$$\nT \\pmodels X\n\\tag{2}\n$$\n$$\nT \\pmodels Y\n\\tag{3}\n$$\n\nZ $(1)$ teda existuje ohodnotenie $v^*$, pre ktoré platí $v^* \\pmodels T$ a $v^* \\npmodels (X \\land Y)$. Potom z *def. ohodnotenia* $v^* \\pmodels \\neg (X \\land Y)$, *z def. negácie konjunkcie*  $v^* \\pmodels (\\neg X \\lor \\neg Y)$, *z def. ohodnotenia* $v^* \\pmodels \\neg X$ alebo $v^* \\pmodels \\neg Y$ rovnako ako $v^* \\npmodels X$ alebo $v^* \\npmodels Y$ $(4)$. Ale zároveň z $(2)$ $v^* \\pmodels X$ a z $(3)$ $v^* \\pmodels Y$ (keďže vieme, že $v^* \\pmodels T$). To je v spore so $(4)$, teda platí pôvodné tvrdenie.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "pukancova",
+            "text": "Čo je definícia negácie konjunkcie? Opierať ste sa mali o definíciu pravdivosti formuly v ohodnotení. Z $v^* \\npmodels (X \\land Y)$ vieme, že $v^* \\npmodels X$ alebo $v^* \\npmodels Y$. Našťastie sa k tomu po nesprávnych krokoch (úpravy formúl) dostávate aj Vy.\n\nZáver super.\n\n30%",
+            "timestamp": 1744146430879,
+            "id": 0
+          }
+        }
       }
     },
     "28": {
