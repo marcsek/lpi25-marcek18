@@ -322,27 +322,27 @@
             {
               "proposition_id": 1983,
               "proposition": "8. Každý doktorand má práve jedného školiteľa.",
-              "solution": ""
+              "solution": "\\forall x (phd_student(x) -> \\exists y (supervises(y, x) & \\forall z (supervises(z, x) -> z = y)))"
             },
             {
               "proposition_id": 1984,
               "proposition": "9. Nikto si nezapisuje výberové predmety.",
-              "solution": null
+              "solution": "\\neg \\exists x (subject(x) & optional(x) & \\exists y  \\exists z  enrolled_in(y, x, z))"
             },
             {
               "proposition_id": 1985,
               "proposition": "10. Každý študent má medzi študentmi aspoň dvoch kamarátov.",
-              "solution": null
+              "solution": "\\forall x (student(x) -> \\exists y \\exists z (student(y) & student(z) & has_friend(x, y) & has_friend(x, z) & y != z))"
             },
             {
               "proposition_id": 1986,
               "proposition": "11. Najviac dvaja učitelia, ktorí nie sú profesori, sú spokojní.",
-              "solution": null
+              "solution": "\\forall x \\forall y \\forall z ((teacher(x) & teacher(y) & satisfied(x) & satisfied(y) & \\neg professor(x) & \\neg professor(y) & teacher(z) & satisfied(z) & \\neg professor(z)) -> x = z | y = z | x = y)"
             },
             {
               "proposition_id": 1987,
               "proposition": "12. Nejaký profesor školí práve dvoch študentov, pričom práve jeden z nich je doktorand.",
-              "solution": null
+              "solution": "\\exists x \\exists y \\exists z (professor(x) & student(y) & student(z) & supervises(x, y) & supervises(x, z) & phd_student(z) & \\neg phd_student(y) & \\forall w ((student(w) & supervises(x, w)) -> w = y | w = z))"
             }
           ]
         },
