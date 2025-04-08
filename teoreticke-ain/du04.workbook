@@ -25,10 +25,19 @@
       "id": 4,
       "type": "text",
       "data": "::h3[**:cnt[b]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\nAk $T \\npentails (X \\lor Y)$, tak $T \\pentails \\lnot X$ a $T \\pentails \\lnot Y$.\n\n::h4[:icon[write] Riešenie.]{.h6}\n\n\nTvrdenie ***nie je*** pravdivé.\n\nKontrapríklad:\nMajme prázdnu teóriu $T = \\{\\}$ a tiež jazyk\n$\\Lang$ s $\\Consts = \\{a\\}, \\Preds = \\{\\sym{p}^1\\}$. Nech platí $X = Y = \\sym{p}(\\sym{a})$.\n\nOhodnotenia znázorníme v tabuľke.\n:::div{.table.table-truth}\n|  | $X$ | $\\neg X$ | $Y$ |$\\neg Y$ | $(X \\lor Y)$ |  |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| $v_1$ | 1 | $\\npmodels$| 1 | $\\npmodels$ | $\\pmodels$ |\n| $v_2$ | 0 | $\\pmodels$ | 0 | $\\pmodels$ | $\\npmodels$ |\n:::\n\\\nKeďže $T = \\{\\}$, tak $v_1 \\pmodels T$ a $v_2 \\pmodels T$. Zároveň $v_1 \\pmodels (X \\lor Y)$ a $v_2 \\npmodels (X \\lor Y)$, takže $T \\npmodels (X \\lor Y)$. Avšak $v_1 \\npmodels \\neg X$ a $v_1 \\npmodels \\neg Y$, čiže $T \\npmodels \\neg X$ ani $T \\npmodels \\neg Y$.\n\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "pukancova",
+            "text": "Super. 35%",
+            "timestamp": 1744146493460,
+            "id": 0
+          }
+        }
       }
     },
     "5": {
