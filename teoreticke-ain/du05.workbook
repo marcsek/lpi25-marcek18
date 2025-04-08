@@ -44,7 +44,7 @@
     "30": {
       "id": 30,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %**\n]\n\nSprávne doplňte definície na miestach vyznačených „:mark[…]“ resp. „:mark[$…$]“.\nNie vždy postačuje jedno slovo alebo symbol.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[technical] Zachovajte značky `:mark[]`.\n:::\n\n::h4[Definícia 1.]{.h6.float-start.my-0.me-2.lh-base}\n_Symbolmi jazyka $\\Lang$ relačnej logiky prvého rádu_ sú:\n* _indivíduové premenné_ z nejakej :mark[…] množiny $\\Vars$;\n* _:mark[…] symboly_, ktorými sú:\n    * _indivíduové konštanty_\n      z nejakej:mark[…] množiny\n      :mark[$\\mathcal{…}_\\Lang$],\n    * _:mark[…] symboly_\n      z nejakej :mark[…] množiny\n      :mark[$\\mathcal{…}_\\Lang$];\n* _:mark[…] symboly_, ktorými sú:\n    * :mark[…] $\\lnot$ (unárna), $\\land$, $\\lor$, $\\limpl$ (binárne),\n    * :mark[…] $\\doteq$,\n    * :mark[…] $\\forall$ a $\\exists$;\n* _:mark[…] symboly_, ktorými sú $($, $)$, a $,$ (ľavá a pravá zátvorka a čiarka).\n\nMnožiny $\\Vars$, $\\Consts$ a $\\Preds$ sú :mark[…].\n:mark[…] symboly sa nevyskytujú v symboloch z $\\Vars$, $\\Consts$ a $\\Preds$.\n\nKaždému symbolu :mark[$… \\in \\mathcal{…}_\\Lang$]\nje priradená _:mark[…]_\n:mark[$\\mathrm{…}_\\Lang(…) \\in …$].\n\n\n::h4[Definícia 2.]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu.\n\n* _:mark[…]_ jazyka $\\Lang$\n  je každá postupnosť symbolov $t_1 \\doteq t_2$,\n  kde $t_1$ a $t_2$ sú termy jazyka $\\Lang$.\n* _Predikátový atóm_ jazyka $\\Lang$\n  je každá postupnosť symbolov :mark[…].\n\n_:mark[…]_\n(skrátene _:mark[…]_) jazyka $\\Lang$\nsúhrnne nazývame všetky :mark[…]\njazyka $\\Lang$.\n\nMnožinu :mark[…]\njazyka $\\Lang$ označujeme :mark[$\\mathcal{…}_\\Lang$].\n\n\n::h4[Definícia 3.]{.h6.float-start.my-0.me-2.lh-base}\nMnožina $\\Forms$ všetkých :mark[…]\njazyka relačnej logiky prvého rádu $\\Lang$\nje :mark[…] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms … \\Forms$].\n* Ak $A \\in \\Forms$,\n  tak :mark[…].\n* Ak $A, B \\in \\Forms$,\n  tak :mark[…].\n* Ak :mark[…]\n  a $A \\in \\Forms$,\n  tak :mark[…].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[…]_ jazyka $\\Lang$.\n",
+      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %**\n]\n\nSprávne doplňte definície na miestach vyznačených „:mark[…]“ resp. „:mark[$…$]“.\nNie vždy postačuje jedno slovo alebo symbol.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[technical] Zachovajte značky `:mark[]`.\n:::\n\n::h4[Definícia 1.]{.h6.float-start.my-0.me-2.lh-base}\n_Symbolmi jazyka $\\Lang$ relačnej logiky prvého rádu_ sú:\n* _indivíduové premenné_ z nejakej :mark[nekonečnej spočítateľnej] množiny $\\Vars$;\n* _:mark[mimologické] symboly_, ktorými sú:\n    * _indivíduové konštanty_\n      z nejakej:mark[spočítateľnej] množiny\n      :mark[$\\mathcal{C}_\\Lang$],\n    * _:mark[predikátové] symboly_\n      z nejakej :mark[spočíteteľnej] množiny\n      :mark[$\\mathcal{P}_\\Lang$];\n* _:mark[logické] symboly_, ktorými sú:\n    * :mark[logické spojky] $\\lnot$ (unárna), $\\land$, $\\lor$, $\\limpl$ (binárne),\n    * :mark[symbol rovnosti] $\\doteq$,\n    * :mark[kvantifikátory] $\\forall$ a $\\exists$;\n* _:mark[pomocné] symboly_, ktorými sú $($, $)$, a $,$ (ľavá a pravá zátvorka a čiarka).\n\nMnožiny $\\Vars$, $\\Consts$ a $\\Preds$ sú :mark[vzájomne disjunktné].\n:mark[Logické a pomocné] symboly sa nevyskytujú v symboloch z $\\Vars$, $\\Consts$ a $\\Preds$.\n\nKaždému symbolu :mark[$P \\in \\mathcal{P}_\\Lang$]\nje priradená _:mark[arita]_\n:mark[$\\mathrm{ar}_\\Lang(P) \\in \\mathbb{N}^+$].\n\n\n::h4[Definícia 2.]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu.\n\n* _:mark[Rovnostný atóm]_ jazyka $\\Lang$\n  je každá postupnosť symbolov $t_1 \\doteq t_2$,\n  kde $t_1$ a $t_2$ sú termy jazyka $\\Lang$.\n* _Predikátový atóm_ jazyka $\\Lang$\n  je každá postupnosť symbolov :mark[$P(t_1, \\dots, t_n)$, kde $P$ je predikátový symbol s aritou $n$ a $t_1 \\dots t_n$ sú termy jazyka $\\Lang$.]\n\n_:mark[Atomickými formulami]_\n(skrátene _:mark[atómami]_) jazyka $\\Lang$\nsúhrnne nazývame všetky :mark[rovnostné a predikátové]\njazyka $\\Lang$.\n\nMnožinu :mark[všetký atómov]\njazyka $\\Lang$ označujeme :mark[$\\mathcal{A}_\\Lang$].\n\n\n::h4[Definícia 3.]{.h6.float-start.my-0.me-2.lh-base}\nMnožina $\\Forms$ všetkých :mark[formúl]\njazyka relačnej logiky prvého rádu $\\Lang$\nje :mark[najmenšia množina postupností symbolov] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms \\subseteq \\Forms$].\n* Ak $A \\in \\Forms$,\n  tak :mark[aj postupnosť symbolov $\\neg A \\in \\Forms$].\n* Ak $A, B \\in \\Forms$,\n  tak :mark[aj postupnosti symbolov $(A \\land B), (A \\lor B), (A \\limpl B)$ patria do $\\Forms$].\n* Ak :mark[x je indivíduová premenná]\n  a $A \\in \\Forms$,\n  tak :mark[tak aj postupnosti symbolov $\\exists x A$ a $\\forall x A$ patria do $\\Forms$].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[formulou]_ jazyka $\\Lang$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -64,7 +64,7 @@
     "33": {
       "id": 33,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %**\n]\n\nZ nasledujúcich prípadov označte `[x]` práve tie, ktoré sú pravdivé:\n\n:::enum{.i}\n* [ ] Premenná $\\vx$ má vo formule $\\A{\\vy}(\\E{\\vx}\\sR(\\vx,\\vy) \\limpl (\\sR(\\vy,\\vx) \\land \\sP(\\vy)))$ voľný výskyt.\n* [ ] Premenná $\\vy$ nemá vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ viazaný výskyt.\n* [ ] Premenná $\\vy$ je vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ voľná.\n* [ ] Premenná $\\vy$ je vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ viazaná.\n* [ ] Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::\n",
+      "data": "::h3[:icon[ui-checks]{.text-primary} :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %**\n]\n\nZ nasledujúcich prípadov označte `[x]` práve tie, ktoré sú pravdivé:\n\n:::enum{.i}\n* [x] Premenná $\\vx$ má vo formule $\\A{\\vy}(\\E{\\vx}\\sR(\\vx,\\vy) \\limpl (\\sR(\\vy,\\vx) \\land \\sP(\\vy)))$ voľný výskyt.\n* [ ] Premenná $\\vy$ nemá vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ viazaný výskyt.\n* [ ] Premenná $\\vy$ je vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ voľná.\n* [ ] Premenná $\\vy$ je vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ viazaná.\n* [ ] Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -84,7 +84,7 @@
     "39": {
       "id": 39,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **6 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme overili správnosť záverov x) a y)?\nNapr. splniteľnosť ktorej konkrétnej formuly/teórie, tautologickosť ktorej konkrétnej formuly, ekvivalencia ktorých konkrétnych formúl, vyplývanie/nezávislosť ktorej konkrétnej formuly z/od ktorej konkrétnej teórie, atď.\n\n:icon[help] Závery sú 2 a každému zodpovedá jeden logický problém.\n**Navyše** všetky závery ovplyvňuje **ďalší** dôležitý logický problém,\nktorý musíme vyriešiť ako prvý. Nižšie ho označujeme w).\n\n:icon[warning] Nerozširujte jazyk $\\Lang$.\nFormálne logické problémy sa dajú sformulovať na účely tejto úlohy\ndostatočne presne využitím iba existujúcich predikátov a konštanty.\n:::\n\nw) …\n\nx) …\n\ny) …\n",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **6 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme overili správnosť záverov x) a y)?\nNapr. splniteľnosť ktorej konkrétnej formuly/teórie, tautologickosť ktorej konkrétnej formuly, ekvivalencia ktorých konkrétnych formúl, vyplývanie/nezávislosť ktorej konkrétnej formuly z/od ktorej konkrétnej teórie, atď.\n\n:icon[help] Závery sú 2 a každému zodpovedá jeden logický problém.\n**Navyše** všetky závery ovplyvňuje **ďalší** dôležitý logický problém,\nktorý musíme vyriešiť ako prvý. Nižšie ho označujeme w).\n\n:icon[warning] Nerozširujte jazyk $\\Lang$.\nFormálne logické problémy sa dajú sformulovať na účely tejto úlohy\ndostatočne presne využitím iba existujúcich predikátov a konštanty.\n:::\n\nw) Musíme zistiť, či je teória $T$ splniteľná.\n\nx) Musíme zistiť, či formula $X$ vypláva z teória $T$.\n\ny) Musíme zistiť, či formula $Y$ vypláva z teória $T$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -104,7 +104,7 @@
     "41": {
       "id": 41,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **24 %**]\n\n:::aside{.small}\nAko vyriešime jednotlivé formálne problémy, ktoré ste určili v časti ii?\nPrípustné sú nasledovné spôsoby riešenia:\n* skonštruovanie uzavretého tabla pre vhodnú množinu označených formúl – uveďte akú;\n* nájdenie vhodnej štruktúry s požadovanými vlastnosťami – uveďte akými.\n:::\n\n…\n",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **24 %**]\n\n:::aside{.small}\nAko vyriešime jednotlivé formálne problémy, ktoré ste určili v časti ii?\nPrípustné sú nasledovné spôsoby riešenia:\n* skonštruovanie uzavretého tabla pre vhodnú množinu označených formúl – uveďte akú;\n* nájdenie vhodnej štruktúry s požadovanými vlastnosťami – uveďte akými.\n:::\n\n1. Na overenie splniteľnosti téorie $T$, stačí nájsť ľubovoľnú štruktúru $\\Struct$ v ktorej je $T$ pravdivá.\n\n2. To, že formula $X$ vyplýva z $T$ sa pokúsime dokázať nájdením uzavretého tabla pre množinu označených formúl $S^+ = \\{ \\sign TA \\mid A \\in T \\} \\ \\cup \\ \\{ \\sign FX \\}$\n\n3. Pokúsime sa nájsť štruktúrú $\\Struct$, v ktorej je $T$ pravdivá a $Y$ nie je.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -124,7 +124,7 @@
     "43": {
       "id": 43,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **6 %**]\n\n:small[Aké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda vysvetlite, prečo vaše tablo/štruktúra/ohodnotenie ukazuje, že formula/teória je (ne)splniteľná/(ne)vyplýva z teórie a pod.]\n\nw) …\n\nx) …\n\ny) …\n",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **6 %**]\n\n:small[Aké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda vysvetlite, prečo vaše tablo/štruktúra/ohodnotenie ukazuje, že formula/teória je (ne)splniteľná/(ne)vyplýva z teórie a pod.]\n\nw) Našli sme štruktúru $\\Struct$, v ktorej je $T$ pravdivá, keďže pre každú formulu $A$ z $T$ platí $\\Struct \\entails A$. Teória $T$ je teda splniteľná.\n\nx) Pretože existuje uzavreté tablo pre množinu označených formúl\n$S^+$, formula $X$ je dokázateľná z teórie $T$.\nPotom formula $X$ logicky vyplýva z teórie $T$.\n\ny) Našli sme štruktúru $\\Struct$, v ktorej je $T$ pravdivá, ale $Y$ nepravdivá. Preto Y logicky nevyplýva z $T$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -134,7 +134,7 @@
     "44": {
       "id": 44,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[b]{.i}. Interpretácia]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **4 %**]\n\n:small[Aké sú odpovede na dve neformálne otázky zo zadania slovnej úlohy? Ako súvisia s riešeniami formálnych problémov?]\n\n…",
+      "data": "::h3[:icon[write] :cnt[b]{.i}. Interpretácia]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **4 %**]\n\n:small[Aké sú odpovede na dve neformálne otázky zo zadania slovnej úlohy? Ako súvisia s riešeniami formálnych problémov?]\n\nx) To, že formula $X$ logicky *vyplýva* z teórie $T$ znamená, že záver *\"Ak neexistuje žiadna škatuľa, tak nič Schrödingerovo nepradie.\"* **je správny**.\n\ny) To, že formula $Y$ logicky *nevyplýva* z teórie $T$ znamená, že záver *\"Ak je nejaká mačka živá a nejaká mŕtva, tak niečo Schrödingerovo pradie.\"* **je nesprávny**.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -182,12 +182,12 @@
             {
               "proposition_id": 1941,
               "proposition": "4. Dekanom fakulty je iba ten, kto má na príslušnej fakulte funkčné obdobie s nejakým začiatočným a koncovým dátumom.",
-              "solution": "\\forall x \\forall y ((dean_of(x, y) & faculty(y)) -> \\exists z \\exists w (date(z) & date(w) & fun_period(x, y, z, w)))"
+              "solution": "\\forall x \\forall y ((dean_of(x, y) & faculty(y)) -> \\exists z \\exists w ((date(z) & date(w)) & fun_period(x, y, z, w)))"
             },
             {
               "proposition_id": 1942,
               "proposition": "5. Žiadna fakulta nemá viac ako jedného dekana.",
-              "solution": "\\forall x \\forall y \\forall z ((faculty(x) & dean_of(y, x) & dean_of(z, x)) -> z = y)"
+              "solution": "\\forall x (faculty(x) -> \\forall y \\forall z ((dean_of(y, x) & dean_of(z, x)) -> y = z))"
             },
             {
               "proposition_id": 1943,
@@ -197,27 +197,317 @@
             {
               "proposition_id": 1944,
               "proposition": "7. Niektorí zamestnanci jednej fakulty sú zamestnancami aj inej.",
-              "solution": "\\exists x \\exists y \\exists z (employee(x, y) & faculty(y) & employee(x, z) & faculty(z) & y != z)"
+              "solution": "\\exists x \\exists y \\exists z ((((employee(x, y) & faculty(y)) & employee(x, z)) & faculty(z)) & y != z)"
             },
             {
               "proposition_id": 1945,
               "proposition": "8. Zamestnanci fakulty sú zamestnancami práve tých univerzít, ktorých súčasťou je táto fakulta.",
-              "solution": "\\forall x \\forall y \\forall z ((faculty(y) & employee(x, y) & university(z)) -> (employee(x, z) <-> part_of(y, z)))"
+              "solution": "\\forall x \\forall y \\forall z (((faculty(y) & employee(x, y)) & university(z)) -> (employee(x, z) <-> part_of(y, z)))"
             },
             {
               "proposition_id": 1946,
               "proposition": "9. UK_BA má práve dve sídla.",
-              "solution": "\\exists x \\exists y (located_in(UK_BA, x) & located_in(UK_BA, y) & x != y & \\neg \\exists z (located_in(UK_BA, z) & z != y & x != z))"
+              "solution": "\\exists x \\exists y (((located_in(UK_BA, x) & located_in(UK_BA, y)) & x != y) & \\neg \\exists z (located_in(UK_BA, z) & (z != y & x != z)))"
             },
             {
               "proposition_id": 1947,
               "proposition": "10. Ak niekto sedí v aspoň dvoch kanceláriách, každá z nich je súčasťou inej fakulty.",
-              "solution": "\\forall x \\forall y \\forall z ((occupies(x, y) & office(y) & occupies(x, z) & office(z) & z != y) -> \\exists w (faculty(w) & part_of(y, w) & \\exists v (faculty(v)& part_of(z, v) & v != w)))"
+              "solution": "\\forall x \\forall y \\forall z (((((occupies(x, y) & office(y)) & occupies(x, z)) & office(z)) & z != y) -> \\exists w ((faculty(w) & part_of(y, w)) & \\exists v ((faculty(v)&part_of(z, v)) & v != w)))"
             }
           ]
         },
         "exerciseId": 52
       },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "53": {
+      "id": 53,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"cat/1, dead/1, alive/1, schroedinger/1, box/1, in/2, purrs/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"cat\",\"arity\":1},{\"name\":\"dead\",\"arity\":1},{\"name\":\"alive\",\"arity\":1},{\"name\":\"schroedinger\",\"arity\":1},{\"name\":\"box\",\"arity\":1},{\"name\":\"in\",\"arity\":2},{\"name\":\"purrs\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"cat/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"dead/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"alive/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"schroedinger/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"box/1\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"]],\"tableEnabled\":false},\"in/2\":{\"value\":\"(1, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"]],\"tableEnabled\":false},\"purrs/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x(cat(x)→((dead(x)∧alive(x))→schroedinger(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"subLeft\":{\"name\":\"dead\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"alive\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x((cat(x)∧schroedinger(x))→∃y(box(y)∧in(x,y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"box\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x(cat(x)↔purrs(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"purrs\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "55": {
+      "id": 55,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"cat/1, dead/1, alive/1, schroedinger/1, box/1, in/2, purrs/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"cat\",\"arity\":1},{\"name\":\"dead\",\"arity\":1},{\"name\":\"alive\",\"arity\":1},{\"name\":\"schroedinger\",\"arity\":1},{\"name\":\"box\",\"arity\":1},{\"name\":\"in\",\"arity\":2},{\"name\":\"purrs\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"cat/1\":{\"value\":\"3, 4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\"],[\"4\"]],\"tableEnabled\":false},\"dead/1\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\"]],\"tableEnabled\":false},\"alive/1\":{\"value\":\"3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\"]],\"tableEnabled\":false},\"schroedinger/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"box/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"in/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"purrs/1\":{\"value\":\"4, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\"],[\"3\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"3, 4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"3\",\"4\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x(cat(x)→((dead(x)∧alive(x))→schroedinger(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"subLeft\":{\"name\":\"dead\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"alive\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x((cat(x)∧schroedinger(x))→∃y(box(y)∧in(x,y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"box\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x(cat(x)↔purrs(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"purrs\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"((∃x(cat(x)∧alive(x))∧∃x(cat(x)∧dead(x)))→∃x(schroedinger(x)∧purrs(x)))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"alive\",\"terms\":[{\"name\":\"x\"}]}}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"dead\",\"terms\":[{\"name\":\"x\"}]}}}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"purrs\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "56": {
+      "id": 56,
+      "type": "text",
+      "data": "Riešenie w):",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "57": {
+      "id": 57,
+      "type": "text",
+      "data": "Riešenie y):",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "58": {
+      "id": 58,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ( cat(x) → ( ( dead(x) ∧ alive(x) ) → schroedinger(x) ) )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀x ( ( cat(x) ∧ schroedinger(x) ) → ∃y ( box(y) ∧ in(x, y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀x ( cat(x) ↔ purrs(x) )",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F ( ¬ ∃x box(x) → ∀x ( schroedinger(x) → ¬ purrs(x) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "T ¬ ∃x box(x)",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∀x ( schroedinger(x) → ¬ purrs(x) )",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "delta",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∃x box(x)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ( schroedinger(a) → ¬ purrs(a) )",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T schroedinger(a)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "child": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 10,
+                            "value": "F ¬ purrs(a)",
+                            "references": [
+                              "8"
+                            ]
+                          },
+                          "child": {
+                            "type": "gamma",
+                            "node": {
+                              "id": 11,
+                              "value": "T purrs(a)",
+                              "references": [
+                                "10"
+                              ]
+                            },
+                            "child": {
+                              "type": "estt",
+                              "node": {
+                                "id": 12,
+                                "value": "T ( cat(a) ↔ purrs(a) )",
+                                "references": [
+                                  "3"
+                                ]
+                              },
+                              "child": {
+                                "type": "gamma",
+                                "node": {
+                                  "id": 13,
+                                  "value": "T cat(a)",
+                                  "references": [
+                                    "12",
+                                    "11"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "beta",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T ( ( cat(a) ∧ schroedinger(a) ) → ∃y ( box(y) ∧ in(a, y) ) )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "leftChild": {
+                                    "type": "beta",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "F ( cat(a) ∧ schroedinger(a) )",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    },
+                                    "leftChild": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "F cat(a)",
+                                        "references": [
+                                          "15"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "13",
+                                        "16"
+                                      ]
+                                    },
+                                    "rightChild": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 17,
+                                        "value": "F schroedinger(a)",
+                                        "references": [
+                                          "15"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "9",
+                                        "17"
+                                      ]
+                                    }
+                                  },
+                                  "rightChild": {
+                                    "type": "delta",
+                                    "node": {
+                                      "id": 18,
+                                      "value": "T ∃y ( box(y) ∧ in(a, y) )",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 19,
+                                        "value": "T ( box(b) ∧ in(a, b) )",
+                                        "references": [
+                                          "18"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "gamma",
+                                        "node": {
+                                          "id": 20,
+                                          "value": "T box(b)",
+                                          "references": [
+                                            "19"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "closed",
+                                          "node": {
+                                            "id": 21,
+                                            "value": "F box(b)",
+                                            "references": [
+                                              "7"
+                                            ]
+                                          },
+                                          "closed": [
+                                            "20",
+                                            "21"
+                                          ]
+                                        },
+                                        "substitution": {
+                                          "str": "x->b"
+                                        }
+                                      }
+                                    },
+                                    "substitution": {
+                                      "str": "y->b"
+                                    }
+                                  }
+                                },
+                                "substitution": {
+                                  "str": "x->a"
+                                }
+                              }
+                            },
+                            "substitution": {
+                              "str": "x->a"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "substitution": {
+                      "str": "x->a"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "59": {
+      "id": 59,
+      "type": "text",
+      "data": "Riešenie x):",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -234,6 +524,12 @@
     39,
     41,
     42,
+    56,
+    53,
+    59,
+    58,
+    57,
+    55,
     43,
     44,
     28,
