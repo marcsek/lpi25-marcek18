@@ -1,20 +1,20 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.Deque;
-import java.util.ArrayDeque;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 class Variable {
     private final String name;
     private final Literal tLit, fLit;
-    private Boolean val; // this is tri-state: null == unset
+    private Boolean val;// this is tri-state: null == unset
 
     /**
      * Create a new variable with the two corresponding literals.
@@ -76,10 +76,10 @@ class Variable {
 
     @Override
     public String toString() {
-        return "Var<" + name() +":" + (isSet() ? val.toString() : "unset") + ">";
+        return "Var<" + name() + ":" + (isSet() ? val.toString() : "unset") + ">";
     }
 
-    public static Variable fromString(String name, Map<String,Variable> vars) {
+    public static Variable fromString(String name, Map<String, Variable> vars) {
         if (vars.containsKey(name))
             return vars.get(name);
         Variable v = new Variable(name);
@@ -91,7 +91,7 @@ class Variable {
     public boolean equals(Object other) {
         if (this == other) return true;
         if (!(other instanceof Variable)) return false;
-        Variable v = (Variable)other;
+        Variable v = (Variable) other;
         return name().equals(v.name());
     }
 
@@ -136,7 +136,7 @@ class Literal {
         return toString() + w;
     }
 
-    public static Literal fromString(String s, Map<String,Variable> vars) {
+    public static Literal fromString(String s, Map<String, Variable> vars) {
         s = s.trim();
         boolean sign = true;
         if (s.charAt(0) == '-' || s.charAt(0) == '¬') {
@@ -150,7 +150,7 @@ class Literal {
     public boolean equals(Object other) {
         if (this == other) return true;
         if (!(other instanceof Literal)) return false;
-        Literal l = (Literal)other;
+        Literal l = (Literal) other;
         return (name().equals(l.name())) && (sign() == l.sign());
     }
 
@@ -227,9 +227,8 @@ class Clause extends HashSet<Literal> {
     @Override
     public String toString() {
         return stream()
-            .map(l -> l.toString(watched()))
-            .collect(Collectors.joining(" "))
-        ;
+                .map(l -> l.toString(watched()))
+                .collect(Collectors.joining(" "));
     }
 
     public static Clause fromString(String s, Map<String, Variable> vars) {
@@ -237,10 +236,7 @@ class Clause extends HashSet<Literal> {
         if (s.isEmpty())
             return new Clause(Collections.emptyList());
         return new Clause(
-            Pattern.compile("[ ∨]+").splitAsStream(s)
-                .map(cs -> Literal.fromString(cs, vars))
-                .collect(Collectors.toList())
-        );
+                Pattern.compile("[ ∨]+").splitAsStream(s).map(cs -> Literal.fromString(cs, vars)).collect(Collectors.toList()));
     }
 
     /**
@@ -251,7 +247,12 @@ class Clause extends HashSet<Literal> {
      * @param lit the new literal to be watched
      */
     void setWatch(int index, Literal lit) {
-        throw new RuntimeException("Not implemented");
+        var prevWatched = watched()[index];
+        if (prevWatched != null)
+            prevWatched.watchedIn().remove(this);
+
+        watched()[index] = lit;
+        lit.watchedIn().add(this);
     }
 
     /**
@@ -263,7 +264,21 @@ class Clause extends HashSet<Literal> {
      *         false if no acceptable literal was found (old won't be changed)
      */
     public boolean findNewWatch(Literal old) {
-        throw new RuntimeException("Not implemented");
+        if (!old.isSet() || old.isTrue())
+            return true;
+
+        var watchedList = Arrays.asList(watched());
+        var candidate = stream()
+                                .filter(l -> (!l.isSet() || l.isTrue()) && watchedList.indexOf(l) == -1)
+                                .findAny()
+                                .orElse(null);
+        if (candidate == null)
+            return false;
+
+        int index = watchedList.indexOf(old);
+        setWatch(index, candidate);
+
+        return true;
     }
 }
 
@@ -303,7 +318,7 @@ class UnitClause {
     public boolean equals(Object other) {
         if (this == other) return true;
         if (!(other instanceof UnitClause)) return false;
-        UnitClause uc = (UnitClause)other;
+        UnitClause uc = (UnitClause) other;
         return (clause.equals(uc.clause)) && (unsetLiteral.equals(uc.unsetLiteral));
     }
 }
@@ -321,19 +336,18 @@ class Cnf extends HashSet<Clause> {
     @Override
     public String toString() {
         return stream()
-            .map(Clause::toString)
-            .map(s -> s + "\n")
-            .collect(Collectors.joining(""))
-        ;
+                .map(Clause::toString)
+                .map(s -> s + "\n")
+                .collect(Collectors.joining(""));
     }
 }
 
 class Theory {
     private final Cnf cnf = new Cnf();
-    private final Map<String,Variable> vars = new HashMap<String,Variable>();
+    private final Map<String, Variable> vars = new HashMap<String, Variable>();
     private final Deque<Literal> assignedLits = new ArrayDeque<Literal>();
     public Theory(String... cls) {
-        for (String s : cls) {
+        for (String s: cls) {
             cnf.add(Clause.fromString(s, vars));
         }
     }
@@ -355,7 +369,21 @@ class Theory {
      *         the theory is already unsatisfiable), true otherwise.
      */
     public boolean initWatched(Set<UnitClause> units) {
-        throw new RuntimeException("Not implemented");
+        for (var clause: cnf()) {
+            if (clause.isEmpty()) return false;
+
+            var literals = new ArrayList<>(clause);
+            if (clause.size() == 1) {
+                clause.setWatch(0, literals.get(0));
+                clause.setWatch(1, literals.get(0));
+                units.add(new UnitClause(clause, literals.get(0)));
+            } else {
+                clause.setWatch(0, literals.get(0));
+                clause.setWatch(1, literals.get(1));
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -372,14 +400,29 @@ class Theory {
      *         true otherwise
      */
     public boolean setLiteral(Literal l, Set<UnitClause> units) {
-        throw new RuntimeException("Not implemented");
+        l.setTrue();
+        assignedLits.add(l);
+
+        for (var clause: cnf()) {
+            int index = Arrays.asList(clause.watched()).indexOf(l.not());
+
+            if (index == -1 || clause.findNewWatch(l.not())) continue;
+
+            var otherWatched = clause.watched()[index == 0 ? 1 : 0];
+            if (!otherWatched.isSet())
+                units.add(new UnitClause(clause, otherWatched));
+            else if (otherWatched.isFalse())
+                return false;
+        }
+
+        return true;
     }
 
     /**
      * Unset the last assigned literal/variable.
      */
     public void unsetLiteral() {
-        throw new RuntimeException("Not implemented");
+        if (!assignedLits.isEmpty())
+            assignedLits.pollLast().unset();
     }
-
 }
