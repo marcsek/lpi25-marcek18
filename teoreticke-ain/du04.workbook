@@ -15,30 +15,57 @@
       "id": 3,
       "type": "text",
       "data": "## Úloha 4.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **70 %** · :icon[source] Zbierka: :xref[3.4.5]{.exbook label=\"príklad\"}.]\n\nUvažujme jazyk $\\Lang$ výrokovologickej časti logiky prvého rádu bez rovnosti.\nNech $X$ a $Y$ sú ľubovoľné výrokovologické formuly jazyka $\\Lang$, nech $T$ je ľubovoľná\nvýrokovologická teória v $\\Lang$.\n\nDokážte alebo vyvráťte na základe definícií vyplývania a pravdivosti vo výrokovologickom ohodnotení:",
-      "idCounter": 4,
+      "idCounter": 5,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          4
+        ],
+        "entities": {
+          "4": {
+            "author": "pukancova",
+            "text": "62%",
+            "timestamp": 1744146698859,
+            "id": 4
+          }
+        }
       }
     },
     "4": {
       "id": 4,
       "type": "text",
       "data": "::h3[**:cnt[b]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\nAk $T \\npentails (X \\lor Y)$, tak $T \\pentails \\lnot X$ a $T \\pentails \\lnot Y$.\n\n::h4[:icon[write] Riešenie.]{.h6}\n\n\nTvrdenie ***nie je*** pravdivé.\n\nKontrapríklad:\nMajme prázdnu teóriu $T = \\{\\}$ a tiež jazyk\n$\\Lang$ s $\\Consts = \\{a\\}, \\Preds = \\{\\sym{p}^1\\}$. Nech platí $X = Y = \\sym{p}(\\sym{a})$.\n\nOhodnotenia znázorníme v tabuľke.\n:::div{.table.table-truth}\n|  | $X$ | $\\neg X$ | $Y$ |$\\neg Y$ | $(X \\lor Y)$ |  |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| $v_1$ | 1 | $\\npmodels$| 1 | $\\npmodels$ | $\\pmodels$ |\n| $v_2$ | 0 | $\\pmodels$ | 0 | $\\pmodels$ | $\\npmodels$ |\n:::\n\\\nKeďže $T = \\{\\}$, tak $v_1 \\pmodels T$ a $v_2 \\pmodels T$. Zároveň $v_1 \\pmodels (X \\lor Y)$ a $v_2 \\npmodels (X \\lor Y)$, takže $T \\npmodels (X \\lor Y)$. Avšak $v_1 \\npmodels \\neg X$ a $v_1 \\npmodels \\neg Y$, čiže $T \\npmodels \\neg X$ ani $T \\npmodels \\neg Y$.\n\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "pukancova",
+            "text": "Ok, ale bolo by fajn ešte uviesť, čo idete kontrapríkladom ukázať (v závere sa k tomu dostávate, ale čitateľ si to odtiaľ musí po kúskoch poskladať).\n\n32%",
+            "timestamp": 1744146681326,
+            "id": 0
+          }
+        }
       }
     },
     "5": {
       "id": 5,
       "type": "text",
       "data": "::h3[**:cnt[b]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\nAk $T \\npentails (X \\land Y)$, tak $T \\npentails X$ alebo $T \\npentails Y$.\n\n::h4[:icon[write] Riešenie.]{.h6}\n\nTvrdenie ***je*** pravdivé.\n\n*Dôkaz* sporom. Predpokladajme, že \n$$\nT \\npmodels (X \\land Y)\n\\tag{1}\n$$\n$$\nT \\pmodels X\n\\tag{2}\n$$\n$$\nT \\pmodels Y\n\\tag{3}\n$$\n\nZ $(1)$ teda existuje ohodnotenie $v^*$, pre ktoré platí $v^* \\pmodels T$ a $v^* \\npmodels (X \\land Y)$. Potom z *def. ohodnotenia* $v^* \\pmodels \\neg (X \\land Y)$, *z def. negácie konjunkcie*  $v^* \\pmodels (\\neg X \\lor \\neg Y)$, *z def. ohodnotenia* $v^* \\pmodels \\neg X$ alebo $v^* \\pmodels \\neg Y$ rovnako ako $v^* \\npmodels X$ alebo $v^* \\npmodels Y$ $(4)$. Ale zároveň z $(2)$ $v^* \\pmodels X$ a z $(3)$ $v^* \\pmodels Y$ (keďže vieme, že $v^* \\pmodels T$). To je v spore so $(4)$, teda platí pôvodné tvrdenie.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "pukancova",
+            "text": "Čo je definícia negácie konjunkcie? Opierať ste sa mali o definíciu pravdivosti formuly v ohodnotení. Z $v^* \\npmodels (X \\land Y)$ vieme, že $v^* \\npmodels X$ alebo $v^* \\npmodels Y$. Našťastie sa k tomu po nesprávnych krokoch (úpravy formúl) dostávate aj Vy.\n\nZáver super.\n\n30%",
+            "timestamp": 1744146430879,
+            "id": 0
+          }
+        }
       }
     },
     "28": {
@@ -55,60 +82,114 @@
       "id": 29,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n:small[:icon[source]\n[5. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.5).]\n\nNech $\\Tabl$ je tablo pre množinu označených formúl $\\setc{ \\sign T A \\mid A \\in T }$ a nech $\\pi$ je vetva v $\\Tabl$. Nech $T$ je nesplniteľná. Potom:\n\n:::enum{.i}\n* [x]  $\\pi$ môže byť otvorená.\n* [ ]  $\\Tabl$ je uzavreté.\n* [ ]  Niektorá formula $A\\in T$ je nesplniteľná.\n* [x]  $\\Tabl$ nemôže byť úplné a otvorené.\n* [ ]  Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "5% – OK",
+            "timestamp": 1744332583944,
+            "id": 0
+          }
+        }
       }
     },
     "30": {
       "id": 30,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n:small[:icon[source]\n[3. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.3).]\n\nNech $T\\pentails X$. Potom:\n\n:::enum{.i}\n* [ ]  $\\lnot X$ nevyplýva z $T$. \n* [x]  Ak $T$ je prázdna, tak $\\lnot X$ je nesplniteľná formula.\n* [x]  Ak $T\\pentails (X\\land \\lnot X)$, tak neexistuje model $T$.\n* [x]  Ak $T$ je splniteľná, tak $\\lnot X$ je falzifikovateľná.\n* [ ]  Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "5% – OK",
+            "timestamp": 1744332553587,
+            "id": 0
+          }
+        }
       }
     },
     "31": {
       "id": 31,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n:small[:icon[source]\n[7. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.7).]\n\nNech $\\Struct = (D,i)$ je ľubovoľná štruktúra pre $\\Lang$. Nech $\\sym{p}^1$, $\\sym{r}^1$ sú predikáty jazyka $\\Lang$. Nech $i(\\sym{p})=\\sete{2, 4}$ a $i(\\sym{r})=\\sete{1, 2, 3, 4}$. Potom:\n\n:::enum{.i}\n* [x] $\\Struct\\models \\A \\vx (\\sym{p}(\\vx)\\limpl\\sym{r}(\\vx))$\n* [ ] $\\Struct\\models \\A \\vx (\\sym{p}(\\vx)\\land\\sym{r}(\\vx))$\n* [x] $\\Struct\\models \\E \\vx (\\sym{p}(\\vx)\\land\\sym{r}(\\vx))$\n* [ ] $\\Struct\\models \\E \\vx (\\sym{p}(\\vx)\\land\\lnot\\sym{r}(\\vx))$\n* [ ]  Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "5% – OK",
+            "timestamp": 1744332615446,
+            "id": 0
+          }
+        }
       }
     },
     "32": {
       "id": 32,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n:small[:icon[source]\n[3. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.3).]\n\nNech $T\\pentails X$ a $T\\pentails Y$. Potom:\n\n:::enum{.i}\n* [ ]  $X$ a $Y$ sú výrokovologicky ekvivalentné formuly.\n* [ ]  Ak $X$ je splniteľná, tak $Y$ je tiež splniteľná.\n* [ ]  Nemôže byť súčasne $X$ tautológia a $Y$ nesplniteľná formula.\n* [ ]  $T\\cup \\{X\\}\\npentails Y$\n* [x]  Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "5% – OK",
+            "timestamp": 1744332568263,
+            "id": 0
+          }
+        }
       }
     },
     "33": {
       "id": 33,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n:small[:icon[source]\n[5. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.5).]\n\nNech $\\Tabl$ je tablo pre množinu označených formúl $\\setc{ \\sign T A \\mid A \\in T }$ a nech $\\pi$ je vetva v $\\Tabl$. Nech $\\Tabl$ je otvorené a úplné. Potom:\n\n:::enum{.i}\n* [x]  $T$ je splniteľná.\n* [x]  Ak je $\\pi$ otvorená, tak určuje ohodnotenie $v$, pre ktoré $v\\pmodels T$.\n* [ ]  Ak je $\\pi$ uzavretá, tak určuje ohodnotenie $v$, pre ktoré $v\\npmodels T$.\n* [ ]  $\\pi$ nemôže byť uzavretá.\n* [ ]  Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "5% – OK",
+            "timestamp": 1744332597910,
+            "id": 0
+          }
+        }
       }
     },
     "34": {
       "id": 34,
       "type": "text",
       "data": "::h3[**:cnt[c]{.a})**]{.h6.mt-0.me-2.mb-0.float-start.lh-base}\n:small[:icon[source]\n[7. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.7).]\n\nNech $\\Struct = (D,i)$ je ľubovoľná štruktúra pre $\\Lang$. Nech $\\sym{p}^1$, $\\sym{r}^1$ sú predikáty jazyka $\\Lang$. Nech $d \\in i(\\sym{p})$ pre nejaké $d\\in D$. Potom:\n\n:::enum{.i}\n* [x] $\\Struct\\models \\E \\vx (\\sym{p}(\\vx)\\lor\\sym{r}(\\vx))$\n* [ ] Ak $d\\in i(\\sym{r})$, tak $\\Struct\\models \\A \\vx (\\sym{p}(\\vx)\\limpl\\sym{r}(\\vx))$.\n* [ ] $\\Struct\\nmodels \\A \\vx \\sym{p}(\\vx)$\n* [x] Ak je v $\\Struct$ pravdivá formula $\\A \\vx (\\sym{p}(\\vx)\\limpl\\sym{r}(\\vx))$, tak predikátový symbol $\\sym{r}^1$ má neprázdnu interpretáciu.\n* [ ]  Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "5% – OK",
+            "timestamp": 1744332632388,
+            "id": 0
+          }
+        }
       }
     }
   },
