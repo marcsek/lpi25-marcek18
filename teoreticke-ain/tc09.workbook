@@ -87,17 +87,8 @@
       "data": "::h3[:cnt[c]{.i}. Formálne riešenie]{.h5}\n\n:icon[tools]\nDokážte (v aplikácii Tableau editor)\nalebo vyvráťte (v aplikácii Structure explorer), že:\n\n1. $\\{\\mathrm{NE}[P], \\mathrm{Im}[f], \\mathrm{Im}[g], \\mathrm{S}[f\\circ g]\\} \\entails \\mathrm{S}[f]$\n\n2. $\\{\\mathrm{NE}[P], \\mathrm{Im}[f], \\mathrm{Im}[g], \\mathrm{S}[f\\circ g]\\} \\entails \\mathrm{S}[g]$\n\n:::aside{.note.bg-transparent.p-0}\n:icon[technical]\nV aplikácii Tableau editor vyberte sadu pravidiel **Basic FOL**.\nPrácu s logickými spojkami si zjednodušte využitím korektných výrokovologických pravidiel (MP, MT, DS, NCS, …)\nz :xref[4.4.1]{.exbook label=\"úlohy\"} v zbierke.\n:::",
       "idCounter": 1,
       "comments": {
-        "ids": [
-          0
-        ],
-        "entities": {
-          "0": {
-            "author": "marcsek",
-            "text": "Mozno to aj neplati 🤡👩‍🦽👩‍🦽",
-            "timestamp": 1744720778852,
-            "id": 0
-          }
-        }
+        "ids": [],
+        "entities": {}
       }
     },
     "38": {
@@ -667,13 +658,91 @@
           }
         },
         "rightChild": {
-          "type": "open",
+          "type": "alpha",
           "node": {
             "id": 10,
             "value": "F ( ∀y ( f(x) ≐ y → A(y) ) ∨ ¬ A(f(x)) )",
             "references": [
               "1"
             ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 11,
+              "value": "F ∀y ( f(x) ≐ y → A(y) )",
+              "references": [
+                "10"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 12,
+                "value": "F  ¬ A(f(x))",
+                "references": [
+                  "10"
+                ]
+              },
+              "child": {
+                "type": "delta",
+                "node": {
+                  "id": 13,
+                  "value": "T A(f(x))",
+                  "references": [
+                    "12"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 14,
+                    "value": "F ( f(x) ≐ a → A(a) )",
+                    "references": [
+                      "11"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 15,
+                      "value": "T  f(x) ≐ a",
+                      "references": [
+                        "14"
+                      ]
+                    },
+                    "child": {
+                      "type": "leibnitz",
+                      "node": {
+                        "id": 16,
+                        "value": "F A(a)",
+                        "references": [
+                          "14"
+                        ]
+                      },
+                      "child": {
+                        "type": "closed",
+                        "node": {
+                          "id": 17,
+                          "value": "T A(a)",
+                          "references": [
+                            "15",
+                            " 13"
+                          ]
+                        },
+                        "closed": [
+                          "16",
+                          "17"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": "y->a"
+                }
+              }
+            }
           }
         },
         "config": "Basic FOL"
@@ -719,7 +788,7 @@
                 "type": "open",
                 "node": {
                   "id": 5,
-                  "value": "F ∀y ( Q(y) → ∃x ( P(x) ∧ f(x) ≐ y ) )",
+                  "value": "F ∀y ( R(y) → ∃x ( Q(x) ∧ g(x) ≐ y ) )",
                   "references": []
                 }
               }
@@ -728,6 +797,16 @@
         },
         "config": "Basic FOL"
       },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "76": {
+      "id": 76,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"P/1, Q/1, R/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"P\",\"arity\":1},{\"name\":\"Q\",\"arity\":1},{\"name\":\"R\",\"arity\":1}]},\"functions\":{\"value\":\"f/1, g/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"f\",\"arity\":1},{\"name\":\"g\",\"arity\":1}]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"P/1\":{\"value\":\"a\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"a\"]],\"tableEnabled\":false},\"Q/1\":{\"value\":\"b, d\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"b\"],[\"d\"]],\"tableEnabled\":false},\"R/1\":{\"value\":\"c\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"c\"]],\"tableEnabled\":false}},\"functions\":{\"f/1\":{\"value\":\"(a, b), (b, b), (c, b), (d, c)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"a\",\"b\"],[\"b\",\"b\"],[\"c\",\"b\"],[\"d\",\"c\"]],\"tableEnabled\":false},\"g/1\":{\"value\":\"(c, a), (b, c), (a, b), (d, c)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"c\",\"a\"],[\"b\",\"c\"],[\"a\",\"b\"],[\"d\",\"c\"]],\"tableEnabled\":false}},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"a, b, c, d\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"a\",\"b\",\"c\",\"d\"]}},\"expressions\":{\"formulas\":[{\"value\":\"\\\\exists x P(x)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall x (P(x) -> Q(f(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"Q\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall x (Q(x) -> R(g(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"Q\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"R\",\"terms\":[{\"name\":\"g\",\"terms\":[{\"name\":\"x\"}]}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall y (R(y) -> \\\\exists x (P(x) & g(f(x)) = y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"R\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"name\":\"g\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]}]},\"subRight\":{\"name\":\"y\"}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall y (Q(y) -> \\\\exists x (P(x) & f(x) = y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"Q\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"y\"}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -750,6 +829,7 @@
     29,
     70,
     30,
+    76,
     75,
     52,
     22,
