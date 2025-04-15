@@ -85,10 +85,19 @@
       "id": 30,
       "type": "text",
       "data": "::h3[:cnt[c]{.i}. Formálne riešenie]{.h5}\n\n:icon[tools]\nDokážte (v aplikácii Tableau editor)\nalebo vyvráťte (v aplikácii Structure explorer), že:\n\n1. $\\{\\mathrm{NE}[P], \\mathrm{Im}[f], \\mathrm{Im}[g], \\mathrm{S}[f\\circ g]\\} \\entails \\mathrm{S}[f]$\n\n2. $\\{\\mathrm{NE}[P], \\mathrm{Im}[f], \\mathrm{Im}[g], \\mathrm{S}[f\\circ g]\\} \\entails \\mathrm{S}[g]$\n\n:::aside{.note.bg-transparent.p-0}\n:icon[technical]\nV aplikácii Tableau editor vyberte sadu pravidiel **Basic FOL**.\nPrácu s logickými spojkami si zjednodušte využitím korektných výrokovologických pravidiel (MP, MT, DS, NCS, …)\nz :xref[4.4.1]{.exbook label=\"úlohy\"} v zbierke.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "Mozno to aj neplati 🤡👩‍🦽👩‍🦽",
+            "timestamp": 1744720778852,
+            "id": 0
+          }
+        }
       }
     },
     "38": {
@@ -328,36 +337,396 @@
             {
               "proposition_id": 2068,
               "proposition": "Im[𝑓]: Obraz množiny 𝑃 v zobrazení 𝑓 je podmnožinou 𝑄.",
-              "solution": null
+              "solution": "\\forall x (P(x) -> Q(f(x)))"
             },
             {
               "proposition_id": 2069,
               "proposition": "Im[𝑔]: Obraz množiny 𝑄 v zobrazení 𝑔 je podmnožinou 𝑅.",
-              "solution": null
+              "solution": "\\forall x (Q(x) -> R(g(x)))"
             },
             {
               "proposition_id": 2070,
               "proposition": "S[𝑓]: 𝑓 je surjektívne zobrazenie z 𝑃 na 𝑄.",
-              "solution": null
+              "solution": "\\forall y (Q(y) -> \\exists x (P(x) & f(x) = y))"
             },
             {
               "proposition_id": 2071,
               "proposition": "S[𝑔]: 𝑔 je surjektívne zobrazenie z 𝑄 na 𝑅.",
-              "solution": null
+              "solution": "\\forall y (R(y) -> \\exists x (Q(x) & g(x) = y))"
             },
             {
               "proposition_id": 2072,
               "proposition": "S[𝑓∘𝑔]: Zložené zobrazenie 𝑓∘𝑔 je surjektívne zobrazenie z 𝑃 na 𝑅.",
-              "solution": null
+              "solution": "\\forall y (R(y) -> \\exists x (P(x) & g(f(x)) = y))"
             },
             {
               "proposition_id": 2073,
               "proposition": "NE[𝑃]: 𝑃 je neprázdna množina.",
-              "solution": null
+              "solution": "\\exists x P(x)"
             }
           ]
         },
         "exerciseId": 56
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "71": {
+      "id": 71,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T x ≐ y",
+          "references": []
+        },
+        "child": {
+          "type": "leibnitz",
+          "node": {
+            "id": 2,
+            "value": "F y ≐ x",
+            "references": []
+          },
+          "child": {
+            "type": "refl",
+            "node": {
+              "id": 3,
+              "value": "F y = y",
+              "references": [
+                "1",
+                "2"
+              ]
+            },
+            "child": {
+              "type": "closed",
+              "node": {
+                "id": 4,
+                "value": "T y = y",
+                "references": []
+              },
+              "closed": [
+                "3",
+                "4"
+              ]
+            }
+          }
+        },
+        "config": "Propositional with equality"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "72": {
+      "id": 72,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T x ≐ y",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T parent(mother(v), x)",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ¬ parent(mother(w), y)",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F ¬ w ≐ v",
+                "references": []
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F parent(mother(w), y)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "leibnitz",
+                  "node": {
+                    "id": 6,
+                    "value": "T w ≐ v",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "leibnitz",
+                    "node": {
+                      "id": 7,
+                      "value": "T parent(mother(v), y)",
+                      "references": [
+                        "1",
+                        "2"
+                      ]
+                    },
+                    "child": {
+                      "type": "closed",
+                      "node": {
+                        "id": 8,
+                        "value": "F parent(mother(v), y)",
+                        "references": [
+                          "6",
+                          " 5"
+                        ]
+                      },
+                      "closed": [
+                        "7",
+                        "8"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Propositional with equality"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "73": {
+      "id": 73,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x A(x)",
+          "references": []
+        },
+        "child": {
+          "type": "delta",
+          "node": {
+            "id": 2,
+            "value": "F ∀x A(f(x))",
+            "references": []
+          },
+          "child": {
+            "type": "gamma",
+            "node": {
+              "id": 3,
+              "value": "F A(f(a))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "closed",
+              "node": {
+                "id": 4,
+                "value": "T A(f(a))",
+                "references": [
+                  "1"
+                ]
+              },
+              "closed": [
+                "3",
+                "4"
+              ]
+            },
+            "substitution": {
+              "str": "x->f(a)"
+            }
+          },
+          "substitution": {
+            "str": "x->a"
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "74": {
+      "id": 74,
+      "type": "tableauEditor",
+      "data": {
+        "type": "ecdf",
+        "node": {
+          "id": 1,
+          "value": "F ( ∀y ( f(x) ≐ y → A(y) ) ↔ A(f(x)) )",
+          "references": []
+        },
+        "leftChild": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T ( ∀y ( f(x) ≐ y → A(y) ) ∧ ¬ A(f(x)) )",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ∀y ( f(x) ≐ y → A(y) )",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T ¬ A(f(x))",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "gamma",
+                "node": {
+                  "id": 5,
+                  "value": "F A(f(x))",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "beta",
+                  "node": {
+                    "id": 6,
+                    "value": "T ( f(x) ≐ f(x) → A(f(x)) )",
+                    "references": [
+                      "3"
+                    ]
+                  },
+                  "leftChild": {
+                    "type": "refl",
+                    "node": {
+                      "id": 7,
+                      "value": "F f(x) ≐ f(x)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "closed",
+                      "node": {
+                        "id": 8,
+                        "value": "T f(x) ≐ f(x)",
+                        "references": []
+                      },
+                      "closed": [
+                        "7",
+                        "8"
+                      ]
+                    }
+                  },
+                  "rightChild": {
+                    "type": "closed",
+                    "node": {
+                      "id": 9,
+                      "value": "T A(f(x))",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "closed": [
+                      "5",
+                      "9"
+                    ]
+                  }
+                },
+                "substitution": {
+                  "str": "y->f(x)"
+                }
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 10,
+            "value": "F ( ∀y ( f(x) ≐ y → A(y) ) ∨ ¬ A(f(x)) )",
+            "references": [
+              "1"
+            ]
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "75": {
+      "id": 75,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x P(x)",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀x ( P(x) → Q(f(x)) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀x ( Q(x) → R(g(x)) )",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ∀y ( R(y) → ∃x ( P(x) ∧ g(f(x)) ≐ y ) )",
+                "references": []
+              },
+              "child": {
+                "type": "open",
+                "node": {
+                  "id": 5,
+                  "value": "F ∀y ( Q(y) → ∃x ( P(x) ∧ f(x) ≐ y ) )",
+                  "references": []
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic FOL"
       },
       "idCounter": 0,
       "comments": {
@@ -370,13 +739,18 @@
     1,
     69,
     7,
+    71,
+    72,
     54,
     64,
+    73,
     65,
+    74,
     18,
     29,
     70,
     30,
+    75,
     52,
     22,
     38,
