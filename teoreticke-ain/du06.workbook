@@ -197,52 +197,52 @@
             {
               "proposition_id": 2058,
               "proposition": "1. Študenti a učitelia sú osoby.",
-              "solution": null
+              "solution": "\\forall x (student(x) | teacher(x) -> person(x))"
             },
             {
               "proposition_id": 2059,
               "proposition": "2. Autormi prác sú iba osoby.",
-              "solution": ""
+              "solution": "\\forall x (thesis(x) -> person(author(x)))"
             },
             {
               "proposition_id": 2060,
               "proposition": "3.  Sú tri typy študijných programov a záverečných prác: magisterský, bakalársky alebo doktorandský. ",
-              "solution": null
+              "solution": "\\forall x (thesis(x) | study_prog(x) -> type(x) = bachelor | type(x) = master | type(x) = doctoral)"
             },
             {
               "proposition_id": 2061,
               "proposition": "4. Každý študent, ktorý je autorom nejakej práce, má k tejto práci priradeného učiteľa ako školiteľa tejto práce.",
-              "solution": ""
+              "solution": "\\forall x ((thesis(x) & student(author(x)) ->  teacher(supervisor(author(x), x)) ))"
             },
             {
               "proposition_id": 2062,
               "proposition": "5. Existujú nejaké dve práce, ktoré majú rovnakého autora.",
-              "solution": null
+              "solution": "\\exists x \\exists y (thesis(x) & thesis(y) & x != y & author(x) = author(y))"
             },
             {
               "proposition_id": 2063,
               "proposition": "6. Ak má práca dvoch vedúcich, potom jeden z nich je školiteľom (tejto práce a jej autora) a ďalšieho vedúceho práca nemá.",
-              "solution": null
+              "solution": "\\forall x \\forall y \\forall z (x != y & advisor(x, z) & advisor(y, z) & thesis(z) -> (supervisor(author(z), z) = x | supervisor(author(z), z) = y) & \\neg \\exists w (supervisor(author(z), z) = w & (w != x & w != y)))"
             },
             {
               "proposition_id": 2064,
               "proposition": "7. Žiaden študent nemôže byť učiteľ, okrem študentov doktorandského programu.",
-              "solution": null
+              "solution": "\\forall x (student(x) & \\neg \\exists y (study_prog(y) & type(y) = doctoral & studies(x, y)) -> \\neg teacher(x))"
             },
             {
               "proposition_id": 2065,
               "proposition": "8. Názvy (tituly) záverečných prác sú unikátne.",
-              "solution": null
+              "solution": "\\forall x \\forall y (thesis(x) & thesis(y) & title(x) = title(y) -> x = y)"
             },
             {
               "proposition_id": 2066,
               "proposition": "9. Bakalárske a magisterské študijné programy sú pregraduálne.",
-              "solution": null
+              "solution": "\\forall x (study_prog(x) & (type(x) = bachelor | type(x) = master) -> undergraduate(x))"
             },
             {
               "proposition_id": 2067,
               "proposition": "10. Osoba je bakalárom (Bc), ak jej bakalárska práca je obhájená.",
-              "solution": null
+              "solution": "\\forall x (thesis(x) & type(x) = bachelor & status(x) = defended & person(author(x)) -> Bc(author(x)))"
             }
           ]
         },
