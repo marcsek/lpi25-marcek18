@@ -17,10 +17,10 @@ class Variable {
     private Boolean val;// this is tri-state: null == unset
 
     /**
-     * Create a new variable with the two corresponding literals.
-     *
-     * @param name name of the variable
-     */
+   * Create a new variable with the two corresponding literals.
+   *
+   * @param name name of the variable
+   */
     private Variable(String name) {
         this.name = name;
         tLit = new Literal(this, true);
@@ -29,50 +29,38 @@ class Variable {
     }
 
     /**
-     * @return the name of the variable
-     */
-    public String name() {
-        return name;
-    }
+   * @return the name of the variable
+   */
+    public String name() { return name; }
 
     /**
-     * Return the positive or negative literal for this variable.
-     */
-    public Literal lit(boolean sign) {
-        return sign ? tLit : fLit;
-    }
+   * Return the positive or negative literal for this variable.
+   */
+    public Literal lit(boolean sign) { return sign ? tLit : fLit; }
 
     /**
-     * Set the variable to either true or false.
-     * Note: do not use this method directly.
-     * Use `setTrue` on the corresponding literal!
-     */
-    void set(boolean val) {
-        this.val = val;
-    }
+   * Set the variable to either true or false.
+   * Note: do not use this method directly.
+   * Use `setTrue` on the corresponding literal!
+   */
+    void set(boolean val) { this.val = val; }
 
     /**
-     * Unset the variable
-     */
-    void unset() {
-        val = null;
-    }
+   * Unset the variable
+   */
+    void unset() { val = null; }
 
     /**
-     * @return true if the variable is assigned a value
-     */
-    public boolean isSet() {
-        return val != null;
-    }
+   * @return true if the variable is assigned a value
+   */
+    public boolean isSet() { return val != null; }
 
     /**
-     * Return the valuation of this variable.
-     *
-     * @return null if the variable is unset, true/false otherwise
-     */
-    public Boolean val() {
-        return val;
-    }
+   * Return the valuation of this variable.
+   *
+   * @return null if the variable is unset, true/false otherwise
+   */
+    public Boolean val() { return val; }
 
     @Override
     public String toString() {
@@ -89,8 +77,10 @@ class Variable {
 
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        if (!(other instanceof Variable)) return false;
+        if (this == other)
+            return true;
+        if (!(other instanceof Variable))
+            return false;
         Variable v = (Variable) other;
         return name().equals(v.name());
     }
@@ -107,22 +97,16 @@ class Literal {
     private final Set<Clause> watchedIn = new HashSet<Clause>();
 
     /**
-     * Create a new literal.
-     * Should be called only from Variable's constructor!
-     */
+   * Create a new literal.
+   * Should be called only from Variable's constructor!
+   */
     Literal(Variable variable, boolean sign) {
         this.variable = variable;
         this.sign = sign;
     }
-    public Variable variable() {
-        return variable;
-    }
-    public String name() {
-        return variable.name();
-    }
-    public boolean sign() {
-        return sign;
-    }
+    public Variable variable() { return variable; }
+    public String name() { return variable.name(); }
+    public boolean sign() { return sign; }
 
     @Override
     public String toString() {
@@ -131,8 +115,10 @@ class Literal {
 
     public String toString(Literal[] watched) {
         String w = "";
-        if (watched[0] == this) w += "(1)";
-        if (watched[1] == this) w += "(2)";
+        if (watched[0] == this)
+            w += "(1)";
+        if (watched[1] == this)
+            w += "(2)";
         return toString() + w;
     }
 
@@ -148,8 +134,10 @@ class Literal {
 
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        if (!(other instanceof Literal)) return false;
+        if (this == other)
+            return true;
+        if (!(other instanceof Literal))
+            return false;
         Literal l = (Literal) other;
         return (name().equals(l.name())) && (sign() == l.sign());
     }
@@ -160,68 +148,56 @@ class Literal {
     }
 
     /**
-     * Change the assignment of the variable so that this literal becomes true.
-     * I.e. if this is a negative literal, the variable becomes false.
-     */
-    void setTrue() {
-        variable.set(sign);
-    }
+   * Change the assignment of the variable so that this literal becomes true.
+   * I.e. if this is a negative literal, the variable becomes false.
+   */
+    void setTrue() { variable.set(sign); }
 
     /**
-     * Unset the literal / variable.
-     */
-    void unset() {
-        variable.unset();
-    }
+   * Unset the literal / variable.
+   */
+    void unset() { variable.unset(); }
 
     /**
-     * @return true if the literal / variable is assigned a value
-     */
-    boolean isSet() {
-        return variable.isSet();
-    }
+   * @return true if the literal / variable is assigned a value
+   */
+    boolean isSet() { return variable.isSet(); }
 
     /**
-     * @return true if the variable is assigned a value that makes the literal true
-     */
-    boolean isTrue() {
-        return variable.isSet() && sign == variable.val();
-    }
+   * @return true if the variable is assigned a value that makes the literal
+   *     true
+   */
+    boolean isTrue() { return variable.isSet() && sign == variable.val(); }
 
     /**
-     * @return true if the variable is assigned a value that makes the literal false
-     */
-    boolean isFalse() {
-        return variable.isSet() && sign != variable.val();
-    }
+   * @return true if the variable is assigned a value that makes the literal
+   *     false
+   */
+    boolean isFalse() { return variable.isSet() && sign != variable.val(); }
 
     /**
-     * @return the complementary literal to this one
-     */
-    public Literal not() {
-        return variable.lit(!sign);
-    }
+   * @return the complementary literal to this one
+   */
+    public Literal not() { return variable.lit(!sign); }
 
     /**
-     * References to clauses where this literal is being watched.
-     *
-     * When the watched literals in a clase change, this needs to be
-     * updated / kept in sync!
-     */
+   * References to clauses where this literal is being watched.
+   *
+   * When the watched literals in a clase change, this needs to be
+   * updated / kept in sync!
+   */
     Set<Clause> watchedIn() { return watchedIn; }
 }
 
 class Clause extends HashSet<Literal> {
     Literal[] watched = {null, null};
 
-    private Clause(Collection<? extends Literal> lits) {
-        super(lits);
-    }
+    private Clause(Collection<? extends Literal> lits) { super(lits); }
 
     /**
-     * References to the literals being watched in this clause.
-     * Can be null if a literal is not watched!
-     */
+   * References to the literals being watched in this clause.
+   * Can be null if a literal is not watched!
+   */
     Literal[] watched() { return watched; }
 
     @Override
@@ -235,17 +211,19 @@ class Clause extends HashSet<Literal> {
         s = s.trim().replaceFirst("^\\(", "").replaceFirst("\\)$", "").trim();
         if (s.isEmpty())
             return new Clause(Collections.emptyList());
-        return new Clause(
-                Pattern.compile("[ ∨]+").splitAsStream(s).map(cs -> Literal.fromString(cs, vars)).collect(Collectors.toList()));
+        return new Clause(Pattern.compile("[ ∨]+")
+                                  .splitAsStream(s)
+                                  .map(cs -> Literal.fromString(cs, vars))
+                                  .collect(Collectors.toList()));
     }
 
     /**
-     * Set the watched literal for the given index (0,1) to be `lit`.
-     * This method must maintain correct watchedIn links in Literal-s.
-     *
-     * @param index which watched literal to set / change
-     * @param lit the new literal to be watched
-     */
+   * Set the watched literal for the given index (0,1) to be `lit`.
+   * This method must maintain correct watchedIn links in Literal-s.
+   *
+   * @param index which watched literal to set / change
+   * @param lit the new literal to be watched
+   */
     void setWatch(int index, Literal lit) {
         var prevWatched = watched()[index];
         if (prevWatched != null)
@@ -256,22 +234,24 @@ class Clause extends HashSet<Literal> {
     }
 
     /**
-     * Find a new watched literal to replace old.
-     *
-     * @param old the old watched literal to replace
-     *        (usually when it became false)
-     * @return true if new watched literal was found,
-     *         false if no acceptable literal was found (old won't be changed)
-     */
+   * Find a new watched literal to replace old.
+   *
+   * @param old the old watched literal to replace
+   *        (usually when it became false)
+   * @return true if new watched literal was found,
+   *         false if no acceptable literal was found (old won't be changed)
+   */
     public boolean findNewWatch(Literal old) {
         if (!old.isSet() || old.isTrue())
             return true;
 
         var watchedList = Arrays.asList(watched());
-        var candidate = stream()
-                                .filter(l -> (!l.isSet() || l.isTrue()) && watchedList.indexOf(l) == -1)
-                                .findAny()
-                                .orElse(null);
+        var candidate =
+                stream()
+                        .filter(
+                                l -> (!l.isSet() || l.isTrue()) && watchedList.indexOf(l) == -1)
+                        .findAny()
+                        .orElse(null);
         if (candidate == null)
             return false;
 
@@ -300,39 +280,39 @@ class UnitClause {
         this.unsetLiteral = unsetLiteral;
     }
     /**
-     * @return the  (unit) clause
-     */
+   * @return the  (unit) clause
+   */
     public Clause clause() { return clause; }
     /**
-     * @return the (last) literal that is inset in this unit clause
-     */
+   * @return the (last) literal that is inset in this unit clause
+   */
     public Literal unsetLiteral() { return unsetLiteral; }
 
     @Override
-    public String toString() { return "Unit<" + clause + "," + unsetLiteral + ">"; }
+    public String toString() {
+        return "Unit<" + clause + "," + unsetLiteral + ">";
+    }
 
     @Override
-    public int hashCode() { return clause.hashCode() * 31 + unsetLiteral.hashCode(); }
+    public int hashCode() {
+        return clause.hashCode() * 31 + unsetLiteral.hashCode();
+    }
 
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        if (!(other instanceof UnitClause)) return false;
+        if (this == other)
+            return true;
+        if (!(other instanceof UnitClause))
+            return false;
         UnitClause uc = (UnitClause) other;
         return (clause.equals(uc.clause)) && (unsetLiteral.equals(uc.unsetLiteral));
     }
 }
 
 class Cnf extends HashSet<Clause> {
-    Cnf() {
-        super();
-    }
-    Cnf(Clause... cls) {
-        super(Arrays.asList(cls));
-    }
-    Cnf(Collection<? extends Clause> cls) {
-        super(cls);
-    }
+    Cnf() { super(); }
+    Cnf(Clause... cls) { super(Arrays.asList(cls)); }
+    Cnf(Collection<? extends Clause> cls) { super(cls); }
     @Override
     public String toString() {
         return stream()
@@ -357,20 +337,21 @@ class Theory {
     public int nAssigned() { return assignedLits.size(); }
 
     /**
-     * Initialize the watched literals in each clause,
-     * so that two appropriate literals are watched for each.
-     *
-     * If a clause contains only one literal, it should be watched
-     * and the clause should be added to the list of unit clauses
-     * `units`.
-     *
-     * @param units a set where unit clauses should be added.
-     * @return false if an empty clause was encountered (i.e.
-     *         the theory is already unsatisfiable), true otherwise.
-     */
+   * Initialize the watched literals in each clause,
+   * so that two appropriate literals are watched for each.
+   *
+   * If a clause contains only one literal, it should be watched
+   * and the clause should be added to the list of unit clauses
+   * `units`.
+   *
+   * @param units a set where unit clauses should be added.
+   * @return false if an empty clause was encountered (i.e.
+   *         the theory is already unsatisfiable), true otherwise.
+   */
     public boolean initWatched(Set<UnitClause> units) {
         for (var clause: cnf()) {
-            if (clause.isEmpty()) return false;
+            if (clause.isEmpty())
+                return false;
 
             var literals = new ArrayList<>(clause);
             if (clause.size() == 1) {
@@ -387,26 +368,28 @@ class Theory {
     }
 
     /**
-     * Set the literal to be true and adjust any watches
-     * on the opposite literal accordingly.
-     *
-     * Also add any clauses that became "unit" clauses
-     * (all literals are false except one that is unset)
-     * into the set referenced by units.
-     *
-     * @param l the literal to become true
-     * @return false if a clause becomes unsatisfied (all literals became/are false)
-     *         or if an already set literal is requsted to be set the wrong way,
-     *         true otherwise
-     */
+   * Set the literal to be true and adjust any watches
+   * on the opposite literal accordingly.
+   *
+   * Also add any clauses that became "unit" clauses
+   * (all literals are false except one that is unset)
+   * into the set referenced by units.
+   *
+   * @param l the literal to become true
+   * @return false if a clause becomes unsatisfied (all literals became/are
+   *     false)
+   *         or if an already set literal is requsted to be set the wrong way,
+   *         true otherwise
+   */
     public boolean setLiteral(Literal l, Set<UnitClause> units) {
         l.setTrue();
         assignedLits.add(l);
 
-        for (var clause: cnf()) {
+        for (var clause: new ArrayList<>(l.not().watchedIn())) {
             int index = Arrays.asList(clause.watched()).indexOf(l.not());
 
-            if (index == -1 || clause.findNewWatch(l.not())) continue;
+            if (index == -1 || clause.findNewWatch(l.not()))
+                continue;
 
             var otherWatched = clause.watched()[index == 0 ? 1 : 0];
             if (!otherWatched.isSet())
@@ -419,8 +402,8 @@ class Theory {
     }
 
     /**
-     * Unset the last assigned literal/variable.
-     */
+   * Unset the last assigned literal/variable.
+   */
     public void unsetLiteral() {
         if (!assignedLits.isEmpty())
             assignedLits.pollLast().unset();
