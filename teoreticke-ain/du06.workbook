@@ -174,7 +174,7 @@
     "63": {
       "id": 63,
       "type": "text",
-      "data": "::h4[:icon[write] Riešenie.]{.h6}\n\nPodľa def. 5, $\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))$    \nvtt\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ pre :mark[…] $e$.\n\nNech $e$ je ľubovoľné :mark[…]. \nPotom podľa def. 4:\n\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ vtt\n* $\\Struct \\models … [e …]$,\n* $\\Struct \\models … [e …]$ a $\\Struct \\models … [e …]$,\n* …\n",
+      "data": "::h4[:icon[write] Riešenie.]{.h6}\n\nPodľa def. 5, $\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))$    \nvtt\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ pre :mark[ohodnotenie premenných] $e$.\n\nNech $e$ je ľubovoľné :mark[ohodnotenie premenných]. \nPotom podľa def. 4:\n\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ vtt\n* $\\Struct \\models … [e …]$,\n* $\\Struct \\models … [e …]$ a $\\Struct \\models … [e …]$,\n* …\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
