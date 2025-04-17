@@ -114,7 +114,7 @@
     "56": {
       "id": 56,
       "type": "text",
-      "data": "::h4[:icon[write] Definícia :cnt[d]. [9]]{.h6.float-start.my-0.me-2.lh-base}\nNech :mark[$\\Struct = (D, i)$]\nje štruktúra pre $\\Lang$, $e$ je ohodnotenie premenných.\nRelácia :dfn[štruktúra $\\Struct$ :mark[spĺňa] formulu $X$\npri ohodnotení $e$] (skrátene $\\Struct\\models X[e]$)\nmá nasledovnú induktívnu definíciu:\n* $\\Struct\\models t_1 \\doteq t_2[e]$ vtt\n  :mark[$t_1^\\Struct[e] = t_2^\\Struct[e]$],\n* $\\Struct\\models P(t_1,\\dots,t_n)[e]$ vtt\n  :mark[$\\bigl(t_1^\\Struct[e], \\dots, t_n^\\Struct[e] \\bigr) \\in i(P)$],\n* $\\Struct\\models \\lnot A [e]$ vtt\n  $\\Struct\\nmodels A [e]$,\n* $\\Struct\\models ( A \\land B )[e]$ vtt\n  $\\Struct\\models A [e]$ a zároveň $\\Struct\\models B [e]$,\n* $\\Struct\\models ( A \\lor B )[e]$ vtt\n  $\\Struct\\models A [e]$ alebo $\\Struct\\models B [e]$,\n* $\\Struct\\models ( A \\limpl B )[e]$ vtt\n  :mark[$\\Struct \\nmodels A[e]$ alebo $\\Struct \\nmodels B[e]$],\n* $\\Struct\\models \\E{x}A [e]$\n  vtt pre :mark[pre nejaký prvok $m \\in D$]\n  máme :mark[$\\Struct \\models A[e(x/m)]$],\n* $\\Struct\\models \\A{x}A [e]$\n  vtt pre :mark[pre každý prvok $m \\in D$]\n  máme :mark[$\\Struct \\models A[e(x/m)]$],\n\npre všetky arity $n>0$,\nvšetky predikátové symboly $P$ s aritou $n$,\nvšetky :mark[termy] $t_1$, $t_2$, …, $t_n$,\nvšetky premenné $x$\na všetky formuly $A$, $B$ jazyka $\\Lang$.",
+      "data": "::h4[:icon[write] Definícia :cnt[d]. [9]]{.h6.float-start.my-0.me-2.lh-base}\nNech :mark[$\\Struct = (D, i)$]\nje štruktúra pre $\\Lang$, $e$ je ohodnotenie premenných.\nRelácia :dfn[štruktúra $\\Struct$ :mark[spĺňa] formulu $X$\npri ohodnotení $e$] (skrátene $\\Struct\\models X[e]$)\nmá nasledovnú induktívnu definíciu:\n* $\\Struct\\models t_1 \\doteq t_2[e]$ vtt\n  :mark[$t_1^\\Struct[e] = t_2^\\Struct[e]$],\n* $\\Struct\\models P(t_1,\\dots,t_n)[e]$ vtt\n  :mark[$\\bigl(t_1^\\Struct[e], \\dots, t_n^\\Struct[e] \\bigr) \\in i(P)$],\n* $\\Struct\\models \\lnot A [e]$ vtt\n  $\\Struct\\nmodels A [e]$,\n* $\\Struct\\models ( A \\land B )[e]$ vtt\n  $\\Struct\\models A [e]$ a zároveň $\\Struct\\models B [e]$,\n* $\\Struct\\models ( A \\lor B )[e]$ vtt\n  $\\Struct\\models A [e]$ alebo $\\Struct\\models B [e]$,\n* $\\Struct\\models ( A \\limpl B )[e]$ vtt\n  :mark[$\\Struct \\nmodels A[e]$ alebo $\\Struct \\models B[e]$],\n* $\\Struct\\models \\E{x}A [e]$\n  vtt pre :mark[pre nejaký prvok $m \\in D$]\n  máme :mark[$\\Struct \\models A[e(x/m)]$],\n* $\\Struct\\models \\A{x}A [e]$\n  vtt pre :mark[pre každý prvok $m \\in D$]\n  máme :mark[$\\Struct \\models A[e(x/m)]$],\n\npre všetky arity $n>0$,\nvšetky predikátové symboly $P$ s aritou $n$,\nvšetky :mark[termy] $t_1$, $t_2$, …, $t_n$,\nvšetky premenné $x$\na všetky formuly $A$, $B$ jazyka $\\Lang$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -134,7 +134,7 @@
     "58": {
       "id": 58,
       "type": "text",
-      "data": "::h4[:icon[write] Kontrapríklad pre i.]{.h6.float-start.my-0.me-2.lh-base}\nNech\n\n* $S^+ = \\sete{ … }$\n* $t = …$\n\nUkážte, že:\n1. $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y) }$ je splniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Structure explorer.\n   Zostrojte v nej štruktúru $\\Struct$ a ohodnotenie $e$ také,\n   že $\\Struct \\models S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y) } [e]$.\n   Do aplikácie vložte formuly z tejto množiny označených formúl,\n   pričom znamienko $\\sign{F}$ nahraďte negáciou\n   a znamienko $\\sign{T}$ vynechajte.\n\n1. $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y), \\sign{F} R(t,y) }$\n   je nesplniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Tableau editor.\n   Zostrojte v nej uzavreté tablo pre množinu označených formúl\n   $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y), \\sign{F} R(t,y) }$.\n   Term $t$ samozrejme musíte do poslednej formuly dosadiť.\n",
+      "data": "::h4[:icon[write] Kontrapríklad pre i.]{.h6.float-start.my-0.me-2.lh-base}\nNech\n\n* $S^+ = \\sete{ \\sign{T} \\forall x \\ R(f(x), y) }$\n* $t = f(x)$\n\nUkážte, že:\n1. $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y) }$ je splniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Structure explorer.\n   Zostrojte v nej štruktúru $\\Struct$ a ohodnotenie $e$ také,\n   že $\\Struct \\models S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y) } [e]$.\n   Do aplikácie vložte formuly z tejto množiny označených formúl,\n   pričom znamienko $\\sign{F}$ nahraďte negáciou\n   a znamienko $\\sign{T}$ vynechajte.\n\n1. $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y), \\sign{F} R(t,y) }$\n   je nesplniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Tableau editor.\n   Zostrojte v nej uzavreté tablo pre množinu označených formúl\n   $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y), \\sign{F} R(t,y) }$.\n   Term $t$ samozrejme musíte do poslednej formuly dosadiť.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -144,7 +144,7 @@
     "60": {
       "id": 60,
       "type": "text",
-      "data": "::h3[:icon[ui-checks]{.text-primary} :icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[8. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.8).\n]\n\nNech $P^1$ a $R^2$ sú predikátové symboly,\n$f^1$ a $g^1$ funkčné symboly,\na nech $x$, $y$ a $z$ sú navzájom rôzne premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie, v ktorých\nje uvedená substitúcia aplikovateľná na formulu.\nAk je substitúcia aplikovateľná, nahraďte $…$ výsledkom\naplikácie substitúcie na formulu.\n\n* [ ] Substitúcia $\\{ y \\mapsto f(z) \\}$ je aplikovateľná na formulu $(P(y) \\land \\A{x} R(f(x),g(y)))$     \n    a $(P(y) \\land \\A{x} R(f(x),g(y))) \\{ y \\mapsto f(z) \\} = …$.\n* [ ] Substitúcia $\\{ x \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ x \\mapsto f(x) \\} = …$.\n* [ ] Substitúcia $\\{ z \\mapsto x \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ z \\mapsto x \\} = …$.\n* [ ] Substitúcia $\\{ y \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(g(y)) \\land \\A{x} R(x,y))$     \n    a $(P(g(y)) \\land \\A{x} R(x,y)) \\{ y \\mapsto f(x) \\} = …$.\n* [ ] Žiadna z uvedených substitúcií nie je aplikovateľná na príslušnú formulu.\n",
+      "data": "::h3[:icon[ui-checks]{.text-primary} :icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[8. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.8).\n]\n\nNech $P^1$ a $R^2$ sú predikátové symboly,\n$f^1$ a $g^1$ funkčné symboly,\na nech $x$, $y$ a $z$ sú navzájom rôzne premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie, v ktorých\nje uvedená substitúcia aplikovateľná na formulu.\nAk je substitúcia aplikovateľná, nahraďte $…$ výsledkom\naplikácie substitúcie na formulu.\n\n* [x] Substitúcia $\\{ y \\mapsto f(z) \\}$ je aplikovateľná na formulu $(P(y) \\land \\A{x} R(f(x),g(y)))$     \n    a $(P(y) \\land \\A{x} R(f(x),g(y))) \\{ y \\mapsto f(z) \\} = (P(f(z)) \\land \\A{x} R(f(x),g(f(z))))$.\n* [x] Substitúcia $\\{ x \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ x \\mapsto f(x) \\} = (P(f(x)) \\land \\A{x} R(x,y))$.\n* [x] Substitúcia $\\{ z \\mapsto x \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ z \\mapsto x \\} = (P(x) \\land \\A{x} R(x,y))$.\n* [ ] Substitúcia $\\{ y \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(g(y)) \\land \\A{x} R(x,y))$     \n    a $(P(g(y)) \\land \\A{x} R(x,y)) \\{ y \\mapsto f(x) \\} = …$.\n* [ ] Žiadna z uvedených substitúcií nie je aplikovateľná na príslušnú formulu.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -164,7 +164,7 @@
     "62": {
       "id": 62,
       "type": "text",
-      "data": "::h4[:icon[write] Kontrapríklad pre ii.]{.h6.float-start.my-0.me-2.lh-base}\nNech\n\n* $S^+ = \\sete{ … }$\n\nUkážte, že:\n1. $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y) }$ je splniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Structure explorer.\n   Zostrojte v nej štruktúru $\\Struct$ a ohodnotenie $e$ také,\n   že $\\Struct \\models S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y) } [e]$.\n   Do aplikácie vložte formuly z tejto množiny označených formúl,\n   pričom znamienko $\\sign{F}$ nahraďte negáciou\n   a znamienko $\\sign{T}$ vynechajte.\n\n1. $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y), \\sign{F} \\A{y} R(f(y),y) }$\n   je nesplniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Tableau editor.\n   Zostrojte v nej uzavreté tablo pre množinu označených formúl\n   $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y), \\sign{F} \\A{y} R(f(y),y) }$.\n",
+      "data": "::h4[:icon[write] Kontrapríklad pre ii.]{.h6.float-start.my-0.me-2.lh-base}\nNech\n\n* $S^+ = \\sete{ \\forall x \\  R(f(x), x)}$\n\nUkážte, že:\n1. $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y) }$ je splniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Structure explorer.\n   Zostrojte v nej štruktúru $\\Struct$ a ohodnotenie $e$ také,\n   že $\\Struct \\models S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y) } [e]$.\n   Do aplikácie vložte formuly z tejto množiny označených formúl,\n   pričom znamienko $\\sign{F}$ nahraďte negáciou\n   a znamienko $\\sign{T}$ vynechajte.\n\n1. $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y), \\sign{F} \\A{y} R(f(y),y) }$\n   je nesplniteľná.\n\n   :icon[tools]\n   Za túto bunku vložte aplikáciu Tableau editor.\n   Zostrojte v nej uzavreté tablo pre množinu označených formúl\n   $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y), \\sign{F} \\A{y} R(f(y),y) }$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -174,7 +174,7 @@
     "63": {
       "id": 63,
       "type": "text",
-      "data": "::h4[:icon[write] Riešenie.]{.h6}\n\nPodľa def. 5, $\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))$    \nvtt\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ pre :mark[ohodnotenie premenných] $e$.\n\nNech $e$ je ľubovoľné :mark[ohodnotenie premenných]. \nPotom podľa def. 4:\n\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ vtt\n* $\\Struct \\models … [e …]$,\n* $\\Struct \\models … [e …]$ a $\\Struct \\models … [e …]$,\n* …\n",
+      "data": "::h4[:icon[write] Riešenie.]{.h6}\n\nPodľa def. 5, $\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))$    \nvtt\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ pre :mark[každé ohodnotenie] $e$.\n\nNech $e$ je ľubovoľné :mark[ohodnotenie premenných]. \nPotom podľa def. 4:\n\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ vtt\n* $\\Struct \\models (P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y))) [e(x/3)]$,\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models \\lnot \\A{y}(R(f(x),a) \\limpl P(y)) [e (x/3)]$,\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\nmodels \\A{y}(R(f(x),a) \\limpl P(y))) [e(x/3)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\nmodels (R(f(x),a) \\limpl P(y))) [e(x/3)(y/2)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models R(f(x),a))[e(x/3)(y/2)]$ a $\\Struct \\nmodels P(y)[e(x/3)(y/2)]$\n* $x^\\Struct [e(x/3)] \\in i(P)$ a $(f(x)^\\Struct[e(x/3)(y/2)],a^\\Struct[e(x/3)(y/2)])) \\in i(R)$ a $ y^\\Struct [e(x/3)(y/2)] \\not\\in i(P)$\n\nĎalej podľa def. 3:\n\n* $x^\\Struct [e(x/3)] \\in i(P)$ a $(i(f)(x^\\Struct[e(x/3)(y/2)]), a^\\Struct[e(x/3)(y/2)])) \\in i(R)$ a $ y^\\Struct [e(x/3)(y/2)] \\not\\in i(P)$\n* $3 \\in i(P)$ a $(i(f)(3), 2) \\in i(R)$ a $ 2 \\not\\in i(P)$\n* $3 \\in i(P)$ a $(2, 2) \\in i(R)$ a $ 2 \\not\\in i(P)$\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -487,6 +487,141 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "71": {
+      "id": 71,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"R/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"R\",\"arity\":2}]},\"functions\":{\"value\":\"f/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"f\",\"arity\":1}]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"R/2\":{\"value\":\"(3, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\",\"3\"]],\"tableEnabled\":false}},\"functions\":{\"f/1\":{\"value\":\"(1, 3), (2, 3), (3, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"3\"],[\"2\",\"3\"],[\"3\",\"3\"]],\"tableEnabled\":false}},\"variables\":{\"value\":\"(y, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"y\",\"3\"]]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"\\\\forall x R(f(x), y)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"R\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]},{\"name\":\"y\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\neg ∀x R(x,y)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"R\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "76": {
+      "id": 76,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T \\forall x R(f(x), y)",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "F ¬ ∀x R(x,y)",
+            "references": []
+          },
+          "child": {
+            "type": "gamma",
+            "node": {
+              "id": 3,
+              "value": "F R(f(x),y)",
+              "references": []
+            },
+            "child": {
+              "type": "closed",
+              "node": {
+                "id": 4,
+                "value": "T R(f(x), y)",
+                "references": [
+                  "1"
+                ]
+              },
+              "closed": [
+                "3",
+                "4"
+              ]
+            },
+            "substitution": {
+              "str": ""
+            }
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "77": {
+      "id": 77,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"R/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"R\",\"arity\":2}]},\"functions\":{\"value\":\"f/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"f\",\"arity\":1}]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"R/2\":{\"value\":\"(1, 2), (2, 3), (3, 1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"2\",\"3\"],[\"3\",\"1\"]],\"tableEnabled\":false}},\"functions\":{\"f/1\":{\"value\":\"(2, 1), (3, 2), (1, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\",\"1\"],[\"3\",\"2\"],[\"1\",\"3\"]],\"tableEnabled\":false}},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x R(f(x), x)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"R\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]},{\"name\":\"x\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\neg ∃x ∀y R(x , y)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"R\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "79": {
+      "id": 79,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x R(f(x), x)",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "F ∃x ∀y R(x, y)",
+            "references": []
+          },
+          "child": {
+            "type": "delta",
+            "node": {
+              "id": 3,
+              "value": "F ∀y R(f(y), y)",
+              "references": []
+            },
+            "child": {
+              "type": "gamma",
+              "node": {
+                "id": 4,
+                "value": "F R(f(a), a)",
+                "references": [
+                  "3"
+                ]
+              },
+              "child": {
+                "type": "closed",
+                "node": {
+                  "id": 5,
+                  "value": "T R(f(a), a)",
+                  "references": [
+                    "1"
+                  ]
+                },
+                "closed": [
+                  "4",
+                  "5"
+                ]
+              },
+              "substitution": {
+                "str": "x->a"
+              }
+            },
+            "substitution": {
+              "str": "y->a"
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -509,7 +644,11 @@
     60,
     61,
     58,
-    62
+    71,
+    76,
+    62,
+    77,
+    79
   ],
   "settings": {
     "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n% Sets\n\\newcommand{\\sete}[1]{\\{#1\\}} % enumerated\n\\newcommand{\\setc}[1]{\\{\\,#1\\,\\}} % comprehended\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\\newcommand\\sP{\\sym{P}}\n\\newcommand\\sQ{\\sym{Q}}\n\\newcommand\\sR{\\sym{R}}\n\\newcommand\\sS{\\sym{S}}\n\\newcommand\\sff{\\sym{f}}\n\\newcommand\\sfg{\\sym{g}}\n\\newcommand\\sfh{\\sym{h}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Auxiliary\n\\providecommand{\\NModels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\nobreak\\mkern-1.5mu}\\models}\n\n% General\n\\providecommand{\\nmodels}{\\mathrel{\\NModels}}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\mathrel{\\NModels_{\\mathrm{p}}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n% Tableaux %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\newcommand{\\Tabl}{\\mathcal{T}}\n\n\\newcommand\\sign[1]{\\mathop{\\text{\\textsf{\\textbf{#1}}}}\\nolimits}"
