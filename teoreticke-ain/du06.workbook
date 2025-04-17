@@ -622,6 +622,16 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "80": {
+      "id": 80,
+      "type": "text",
+      "data": "::h4[:icon[write] Riešenie.]{.h6}\n\nPodľa def. 5, $\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))$    \nvtt\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ pre :mark[každé ohodnotenie] $e$.\n\nNech $e$ je ľubovoľné :mark[ohodnotenie premenných]. \nPotom podľa def. 4:\n\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ vtt\n* $\\Struct \\models (P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y))) [e(x/3)]$,\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models \\lnot \\A{y}(R(f(x),a) \\limpl P(y)) [e (x/3)]$,\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\nmodels \\A{y}(R(f(x),a) \\limpl P(y))) [e(x/3)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\nmodels (R(f(x),a) \\limpl P(y))) [e(x/3)(y/2)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models R(f(x),a))[e(x/3)(y/2)]$ a $\\Struct \\nmodels P(y)[e(x/3)(y/2)]$\n* $x^\\Struct [e(x/3)] \\in i(P)$ a $(f(x)^\\Struct[e(x/3)(y/2)],a^\\Struct[e(x/3)(y/2)])) \\in i(R)$ a $ y^\\Struct [e(x/3)(y/2)] \\not\\in i(P)$\n\nĎalej podľa def. 3:\n\n* $x^\\Struct [e(x/3)] \\in i(P)$ a $(i(f)(x^\\Struct[e(x/3)(y/2)]), a^\\Struct[e(x/3)(y/2)])) \\in i(R)$ a $ y^\\Struct [e(x/3)(y/2)] \\not\\in i(P)$\n* $3 \\in i(P)$ a $(i(f)(3), 2) \\in i(R)$ a $ 2 \\not\\in i(P)$\n* $3 \\in i(P)$ a $(2, 2) \\in i(R)$ a $ 2 \\not\\in i(P)$\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -641,6 +651,7 @@
     57,
     52,
     63,
+    80,
     60,
     61,
     58,
