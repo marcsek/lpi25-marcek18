@@ -54,7 +54,7 @@
     "48": {
       "id": 48,
       "type": "text",
-      "data": "::h3[:icon[write] Záver]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **5 %**]\n\n:small[Vyslovte jasný záver o (ne)vyplývaní $X$ z teórie $T$. Vysvetlite, **prečo** vaše tablo dokazuje vyplývanie resp. prečo (ne)pravdivosť formuly a teórie vo vašej štruktúre dokazuje nevyplývanie.]\n\n...",
+      "data": "::h3[:icon[write] Záver]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **5 %**]\n\n:small[Vyslovte jasný záver o (ne)vyplývaní $X$ z teórie $T$. Vysvetlite, **prečo** vaše tablo dokazuje vyplývanie resp. prečo (ne)pravdivosť formuly a teórie vo vašej štruktúre dokazuje nevyplývanie.]\n\nPretože existuje uzavreté tablo pre množinu označených formúl $S^+ = \\{\\sign{T} A \\mid A \\in T\\} \\cup \\{\\sign{F} X\\}$, formula $X$ je dokázateľná z teórie $T$. Potom formula $X$ logicky vyplýva z teórie $T$.\n\n\nTo znamená, že záver *\"Ak existuje nejaký prvok, ktorý je v relácii $R$ s každým prvkom, tak existuje prvok z množiny $P$, ktorý je v relácii $Q$ s každým prvkom z $P$\"* **je správny**.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -253,6 +253,240 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "69": {
+      "id": 69,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x P(f(x))",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀y ( P(y) → ∃x f(x) ≐ y )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀x ∀y ( R(x, y) → Q(f(x), f(y)) )",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F ( ∃x ∀y R(x, y) → ∃x ( P(x) ∧ ∀y ( P(y) → Q(x, y) ) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "T ∃x ∀y R(x, y)",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "delta",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∃x ( P(x) ∧ ∀y ( P(y) → Q(x, y) ) )",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "gamma",
+                    "node": {
+                      "id": 7,
+                      "value": "T ∀y R(a, y)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "gamma",
+                      "node": {
+                        "id": 8,
+                        "value": "T P(f(a))",
+                        "references": [
+                          "1"
+                        ]
+                      },
+                      "child": {
+                        "type": "ncs",
+                        "node": {
+                          "id": 9,
+                          "value": "F ( P(f(a)) ∧ ∀y ( P(y) → Q(f(a), y) ) )",
+                          "references": [
+                            "6"
+                          ]
+                        },
+                        "child": {
+                          "type": "delta",
+                          "node": {
+                            "id": 10,
+                            "value": "F ∀y ( P(y) → Q(f(a), y) )",
+                            "references": [
+                              "8",
+                              "9"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 11,
+                              "value": "F ( P(b) → Q(f(a), b) )",
+                              "references": [
+                                "10"
+                              ]
+                            },
+                            "child": {
+                              "type": "alpha",
+                              "node": {
+                                "id": 12,
+                                "value": "F Q(f(a), b)",
+                                "references": [
+                                  "11"
+                                ]
+                              },
+                              "child": {
+                                "type": "gamma",
+                                "node": {
+                                  "id": 13,
+                                  "value": "T P(b)",
+                                  "references": [
+                                    "11"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "mp",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T ( P(b) → ∃x f(x) ≐ b )",
+                                    "references": [
+                                      "2"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "delta",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T ∃x f(x) ≐ b",
+                                      "references": [
+                                        "13",
+                                        "14"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "gamma",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "T f(c) ≐ b",
+                                        "references": [
+                                          "15"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "gammaStar",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "T R(a, c)",
+                                          "references": [
+                                            "7"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "mp",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T ( R(a, c) → Q(f(a), f(c)) )",
+                                            "references": [
+                                              "3"
+                                            ]
+                                          },
+                                          "child": {
+                                            "type": "leibnitz",
+                                            "node": {
+                                              "id": 19,
+                                              "value": "T Q(f(a), f(c))",
+                                              "references": [
+                                                "17",
+                                                "18"
+                                              ]
+                                            },
+                                            "child": {
+                                              "type": "closed",
+                                              "node": {
+                                                "id": 20,
+                                                "value": "T Q(f(a), b)",
+                                                "references": [
+                                                  "16",
+                                                  "19"
+                                                ]
+                                              },
+                                              "closed": [
+                                                "12",
+                                                "20"
+                                              ]
+                                            }
+                                          }
+                                        },
+                                        "substitution": {
+                                          "str": "x->a, y->c"
+                                        }
+                                      },
+                                      "substitution": {
+                                        "str": "y->c"
+                                      }
+                                    },
+                                    "substitution": {
+                                      "str": "x->c"
+                                    }
+                                  }
+                                },
+                                "substitution": {
+                                  "str": "y->b"
+                                }
+                              }
+                            }
+                          },
+                          "substitution": {
+                            "str": "y->b"
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": "x->f(a)"
+                      }
+                    },
+                    "substitution": {
+                      "str": "x->a"
+                    }
+                  },
+                  "substitution": {
+                    "str": "x->a"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -261,6 +495,7 @@
     68,
     35,
     47,
+    69,
     48,
     28,
     49,
