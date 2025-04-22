@@ -35,10 +35,19 @@
       "id": 35,
       "type": "text",
       "data": "## Úloha 6.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **40 %** · :icon[source] Zbierka: :xref[6.4.6]{.exbook label=\"úloha\"}.]\n\nUvažujme teóriu $T=\\{A_1,A_2,A_3\\}$, ktorá vznikla formalizáciou nasledujúcich tvrdení o funkciách a reláciách:\n\n1. $f$ je zobrazenie do množiny $P$.  \n   $A_1 = \\A{\\vx}\\sym{P}(\\sym{f}(\\vx))$\n\n2. Zobrazenie $f$ je surjektívne na $P$.  \n   $A_2 = \\A{\\vy}(\\sym{P}(\\vy)\\limpl\\E{\\vx}\\sym{f}(\\vx)\\doteq\\vy   )$\n\n3. Ak sú nejaké prvky v relácii $R$, tak ich obrazy v $f$ sú v relácii $Q$.  \n   $A_3 = \\A{\\vx}\\A{\\vy}\\bigl(\\sym{R}(\\vx,\\vy)\\limpl\\sym{Q}(\\sym{f}(\\vx),\\sym{f}(\\vy))\\bigr)$\n\nZistite, či z výrokov 1–3 vyplýva:\n:::enum{.a}\n24. Ak existuje nejaký prvok, ktorý je v relácii $R$ s každým prvkom, tak existuje prvok z množiny $P$, ktorý je v relácii $Q$ s každým prvkom z $P$.\n:::\nTeda zistite, či z teórie $T$ vyplýva formula:    \n$\nX = \\bigl(\\E{\\vx}\\A{\\vy}\\sym{R}(\\vx,\\vy)\\limpl\\E{\\vx}\\bigl(\\sym{P}(\\vx)\\land\n\\A{\\vy}(\\sym{P}(\\vy)\\limpl\\sym{Q}(\\vx,\\vy))\\bigr)\\bigr)\n$\n\n:::aside{.note.p-0.bg-transparent}\n:icon[help]\n**Pomôcka.** Predstavme si $R$ a $Q$ ako čiastočné usporiadania a $f$ ako ich izomorfizmus. Potom by sme vlastne dokazovali, že ak má $R$ najmenší prvok, tak ho má aj $Q$.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "iveta331",
+            "text": "40%\n\npekne :)",
+            "timestamp": 1745348103914,
+            "id": 0
+          }
+        }
       }
     },
     "47": {
