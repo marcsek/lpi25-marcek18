@@ -15,10 +15,19 @@
       "id": 3,
       "type": "text",
       "data": "## Úloha 5.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **30 %** · :icon[source] Zbierka: :xref[5.3.13]{.exbook label=\"úloha\"}.]\n\n:icon[tools] Pomocou aplikácie Formalization checker sformalizujte nižšie uvedené výroky ako ucelenú teóriu $T = \\{A_1, \\ldots, A_{10}\\}$\nv danom jazyku $\\Lang$.\n\nZamýšľaný význam predikátových symbolov je:\n\n:::div{.table.table-intended-meaning.small}\n| Predikátový symbol            | Zamýšľaný význam |\n|-------------------------------|------------------|\n| department($x$)             | $x$ je katedra  |\n| faculty($x$)                | $x$ je fakulta  |\n| university($x$)             | $x$ je univerzita  |\n| date($x$)                   | $x$ je dátum  |\n| office($x$)                 | $x$ je kancelária  |\n| classroom($x$)              | $x$ je učebňa  |\n| part_of($x$,$y$)            | $x$ je súčasťou $y$ |\n| located_in($x$,$y$)         | $x$ má sídlo/nachádza sa v (mieste) $y$ |\n| dean_of($x$,$y$)            | $x$ je dekanom $y$ |\n| employee($x$,$y$)           | $x$ je zamestnancom $y$ |\n| occupies($x$,$y$)           | $x$ sedí v (miestnosti) $y$ |\n| fun_period($x$,$y$,$z$,$w$) | $x$ je dekanom $y$ vo funkčnom období od $z$ do $w$|\n\n\n\n:::",
-      "idCounter": 5,
+      "idCounter": 6,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          5
+        ],
+        "entities": {
+          "5": {
+            "author": "boborova3",
+            "text": "Ok.\n\n30%",
+            "timestamp": 1744729475664,
+            "id": 5
+          }
+        }
       }
     },
     "28": {
@@ -45,30 +54,57 @@
       "id": 30,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %**\n]\n\nSprávne doplňte definície na miestach vyznačených „:mark[…]“ resp. „:mark[$…$]“.\nNie vždy postačuje jedno slovo alebo symbol.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[technical] Zachovajte značky `:mark[]`.\n:::\n\n::h4[Definícia 1.]{.h6.float-start.my-0.me-2.lh-base}\n_Symbolmi jazyka $\\Lang$ relačnej logiky prvého rádu_ sú:\n* _indivíduové premenné_ z nejakej :mark[nekonečnej spočítateľnej] množiny $\\Vars$;\n* _:mark[mimologické] symboly_, ktorými sú:\n    * _indivíduové konštanty_\n      z nejakej:mark[spočítateľnej] množiny\n      :mark[$\\mathcal{C}_\\Lang$],\n    * _:mark[predikátové] symboly_\n      z nejakej :mark[spočíteteľnej] množiny\n      :mark[$\\mathcal{P}_\\Lang$];\n* _:mark[logické] symboly_, ktorými sú:\n    * :mark[logické spojky] $\\lnot$ (unárna), $\\land$, $\\lor$, $\\limpl$ (binárne),\n    * :mark[symbol rovnosti] $\\doteq$,\n    * :mark[kvantifikátory] $\\forall$ a $\\exists$;\n* _:mark[pomocné] symboly_, ktorými sú $($, $)$, a $,$ (ľavá a pravá zátvorka a čiarka).\n\nMnožiny $\\Vars$, $\\Consts$ a $\\Preds$ sú :mark[vzájomne disjunktné].\n:mark[Logické a pomocné] symboly sa nevyskytujú v symboloch z $\\Vars$, $\\Consts$ a $\\Preds$.\n\nKaždému symbolu :mark[$P \\in \\mathcal{P}_\\Lang$]\nje priradená _:mark[arita]_\n:mark[$\\mathrm{ar}_\\Lang(P) \\in \\mathbb{N}^+$].\n\n\n::h4[Definícia 2.]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu.\n\n* _:mark[Rovnostný atóm]_ jazyka $\\Lang$\n  je každá postupnosť symbolov $t_1 \\doteq t_2$,\n  kde $t_1$ a $t_2$ sú termy jazyka $\\Lang$.\n* _Predikátový atóm_ jazyka $\\Lang$\n  je každá postupnosť symbolov :mark[$P(t_1, \\dots, t_n)$, kde $P$ je predikátový symbol s aritou $n$ a $t_1 \\dots t_n$ sú termy jazyka $\\Lang$.]\n\n_:mark[Atomickými formulami]_\n(skrátene _:mark[atómami]_) jazyka $\\Lang$\nsúhrnne nazývame všetky :mark[rovnostné a predikátové]\njazyka $\\Lang$.\n\nMnožinu :mark[všetkých atómov]\njazyka $\\Lang$ označujeme :mark[$\\mathcal{A}_\\Lang$].\n\n\n::h4[Definícia 3.]{.h6.float-start.my-0.me-2.lh-base}\nMnožina $\\Forms$ všetkých :mark[formúl]\njazyka relačnej logiky prvého rádu $\\Lang$\nje :mark[najmenšia množina postupností symbolov] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms \\subseteq \\Forms$].\n* Ak $A \\in \\Forms$,\n  tak :mark[aj postupnosť symbolov $\\neg A \\in \\Forms$].\n* Ak $A, B \\in \\Forms$,\n  tak :mark[aj postupnosti symbolov $(A \\land B), (A \\lor B), (A \\limpl B)$ patria do $\\Forms$].\n* Ak :mark[x je indivíduová premenná]\n  a $A \\in \\Forms$,\n  tak :mark[tak aj postupnosti symbolov $\\exists x A$ a $\\forall x A$ patria do $\\Forms$].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[formulou]_ jazyka $\\Lang$.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "crnkjck",
+            "text": "OK – **10,0 %**",
+            "timestamp": 1745396222283,
+            "id": 0
+          }
+        }
       }
     },
     "32": {
       "id": 32,
       "type": "text",
       "data": "::h3[:icon[ui-checks]{.text-primary} :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** \n]\n\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu,\nkde $\\Preds = \\{\\asym{1}{P},\\asym{1}{Q},\\asym{2}{R}\\}$.\n\nNech $\\Struct = (\\N,i)$ je štruktúra pre $\\Lang$, kde\n\n$\\quad\\begin{aligned}\ni(\\sym{P}) &= \\setc{ 2n \\mid n \\in \\N },\\\\\ni(\\sym{Q}) &= \\setc{ 3n+4 \\mid n \\in \\N },\\\\\ni(\\sym{R}) &= \\setc{ (k,n) \\in \\N^2 \\mid k \\text{ delí } n }\n\\end{aligned}$\n\n(teda $i(\\sym{P}) = \\sete{0, 2, 4, \\ldots}$,\n$i(\\sym{Q}) = \\sete{4, 7, 10, \\ldots}$)\na napr. $(3,6) \\in i(\\sym{R})$, $(4,7) \\notin i(\\sym{R})$).\n\nNech $e$ je ľubovoľné ohodnotenie indivíduových premenných jazyka $\\Lang$ a $x$, $y$ sú dve rôzne indivíduové premenné tohto jazyka.\n\nZ nasledujúcich prípadov označte `[x]` práve tie, ktoré sú pravdivé:\n:::enum{.i}\n* [x]  $\\Struct \\models (\\sym{P}(\\vx)\\limpl\\sym{Q}(\\vx))\\,[e(\\vx/10)(\\vy/9)]$\n* [x]  $\\Struct \\models \\bigl(\\sym{P}(\\vx)\\limpl(\\sym{Q}(\\vy) \\land \\sym{R}(\\vx,\\vy))\\bigr)\\,[e(\\vx/5)(\\vy/13)]$\n* [ ]  $\\Struct \\models \\A{\\vx}(\\sym{P}(\\vx)\\limpl\\sym{R}(\\vx,\\vy))\\,[e(\\vx/4)(\\vy/16)]$\n* [x]  $\\Struct \\models \\bigl(\\sym{P}(\\vx) \\limpl \\E{\\vy}(\\sym{Q}(\\vy) \\land \\sym{R}(\\vx,\\vy))\\bigr)\\,[e(\\vx/2)(\\vy/23)]$\n* [ ]  Žiadna z uvedených formúl nie je splnená v $\\Struct$ pri príslušnom ohodnotení.\n:::\n\n:::aside{.note.p-0.bg-transparent}\n:icon[explanation]\nInterpretácie predikátov sme zadefinovali pomocou\nštandardných aritmetických operácií na prirodzených číslach $\\N$ (vrátane $0$).\nPre $k$, $n \\in \\N$ je vzťah <dfn>$k$ delí $n$</dfn>\ntiež definovaný štandardne:\nexistuje $q \\in \\N$ také, že $k \\TIMES q = n$.\n\n:icon[warning]\nUvedomte si, že:\n* $k$ delí $0$ pre každé $k\\in\\N$ (lebo $k\\TIMES 0 = 0$),\n* $0$ delí $n$ iba pre $n=0$ (lebo $0\\TIMES q = 0$),\n* $k$ delí $1$ iba pre $k=1$ (lebo $k\\TIMES q = 1$ iba pre $k = q = 1$),\n* $1$ delí $n$ pre každé $n\\in\\N$ (lebo $1 \\TIMES n = n$).\n:::",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "amszek",
+            "text": "OK – **5%**",
+            "timestamp": 1744852578673,
+            "id": 1
+          }
+        }
       }
     },
     "33": {
       "id": 33,
       "type": "text",
       "data": "::h3[:icon[ui-checks]{.text-primary} :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %**\n]\n\nZ nasledujúcich prípadov označte `[x]` práve tie, ktoré sú pravdivé:\n\n:::enum{.i}\n* [x] Premenná $\\vx$ má vo formule $\\A{\\vy}(\\E{\\vx}\\sR(\\vx,\\vy) \\limpl (\\sR(\\vy,\\vx) \\land \\sP(\\vy)))$ voľný výskyt.\n* [ ] Premenná $\\vy$ nemá vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ viazaný výskyt.\n* [x] Premenná $\\vy$ je vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ voľná.\n* [ ] Premenná $\\vy$ je vo formule $(\\sP(\\vy) \\lor \\E{\\vx}(\\lnot\\A{\\vy}\\sR(\\vx,\\vy) \\land \\sR(\\vy,\\vx)))$ viazaná.\n* [ ] Ani jedna z vyššie uvedených možností nie je pravdivá.\n:::\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "OK – **5%**",
+            "timestamp": 1744852562925,
+            "id": 0
+          }
+        }
       }
     },
     "35": {
@@ -85,10 +121,19 @@
       "id": 39,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne problémy]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **6 %**]\n\n:::aside{.small}\nAké formálne logické problémy musíme vyriešiť, aby sme overili správnosť záverov x) a y)?\nNapr. splniteľnosť ktorej konkrétnej formuly/teórie, tautologickosť ktorej konkrétnej formuly, ekvivalencia ktorých konkrétnych formúl, vyplývanie/nezávislosť ktorej konkrétnej formuly z/od ktorej konkrétnej teórie, atď.\n\n:icon[help] Závery sú 2 a každému zodpovedá jeden logický problém.\n**Navyše** všetky závery ovplyvňuje **ďalší** dôležitý logický problém,\nktorý musíme vyriešiť ako prvý. Nižšie ho označujeme w).\n\n:icon[warning] Nerozširujte jazyk $\\Lang$.\nFormálne logické problémy sa dajú sformulovať na účely tejto úlohy\ndostatočne presne využitím iba existujúcich predikátov a konštanty.\n:::\n\nw) Musíme zistiť, či je teória $T$ splniteľná.\n\nx) Musíme zistiť, či formula $X$ vypláva z teória $T$.\n\ny) Musíme zistiť, či formula $Y$ vypláva z teória $T$.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Skloňovanie trochu odišlo.\nInak ok.\n\n6%",
+            "timestamp": 1744917923176,
+            "id": 0
+          }
+        }
       }
     },
     "40": {
@@ -105,10 +150,19 @@
       "id": 41,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne riešenie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **24 %**]\n\n:::aside{.small}\nAko vyriešime jednotlivé formálne problémy, ktoré ste určili v časti ii?\nPrípustné sú nasledovné spôsoby riešenia:\n* skonštruovanie uzavretého tabla pre vhodnú množinu označených formúl – uveďte akú;\n* nájdenie vhodnej štruktúry s požadovanými vlastnosťami – uveďte akými.\n:::\n\n1. Na overenie splniteľnosti téorie $T$, stačí nájsť ľubovoľnú štruktúru $\\Struct$ v ktorej je $T$ pravdivá.\n\n2. To, že formula $X$ vyplýva z $T$ sa pokúsime dokázať nájdením uzavretého tabla pre množinu označených formúl $S^+ = \\{ \\sign TA \\mid A \\in T \\} \\ \\cup \\ \\{ \\sign FX \\}$\n\n3. Pokúsime sa nájsť štruktúrú $\\Struct$, v ktorej je $T$ pravdivá a $Y$ nie je.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "24%",
+            "timestamp": 1745007300015,
+            "id": 0
+          }
+        }
       }
     },
     "42": {
@@ -125,30 +179,57 @@
       "id": 43,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Formálne výsledky]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **6 %**]\n\n:small[Aké sú výsledky riešenia formálnych logických problémov? Zdôvodnite ich, teda vysvetlite, prečo vaše tablo/štruktúra/ohodnotenie ukazuje, že formula/teória je (ne)splniteľná/(ne)vyplýva z teórie a pod.]\n\nw) Našli sme štruktúru $\\Struct$, v ktorej je $T$ pravdivá, keďže pre každú formulu $A$ z $T$ platí $\\Struct \\entails A$. Teória $T$ je teda splniteľná.\n\nx) Pretože existuje uzavreté tablo pre množinu označených formúl\n$S^+$, formula $X$ je dokázateľná z teórie $T$.\nPotom formula $X$ logicky vyplýva z teórie $T$.\n\ny) Našli sme štruktúru $\\Struct$, v ktorej je $T$ pravdivá, ale $Y$ nepravdivá. Preto $Y$ logicky nevyplýva z $T$.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.\n\n6%",
+            "timestamp": 1745007363896,
+            "id": 0
+          }
+        }
       }
     },
     "44": {
       "id": 44,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[b]{.i}. Interpretácia]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **4 %**]\n\n:small[Aké sú odpovede na dve neformálne otázky zo zadania slovnej úlohy? Ako súvisia s riešeniami formálnych problémov?]\n\nx) To, že formula $X$ logicky *vyplýva* z teórie $T$ znamená, že záver *\"Ak neexistuje žiadna škatuľa, tak nič Schrödingerovo nepradie.\"* **je správny**.\n\ny) To, že formula $Y$ logicky *nevyplýva* z teórie $T$ znamená, že záver *\"Ak je nejaká mačka živá a nejaká mŕtva, tak niečo Schrödingerovo pradie.\"* **je nesprávny**.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.\n\n4%",
+            "timestamp": 1745007379172,
+            "id": 0
+          }
+        }
       }
     },
     "45": {
       "id": 45,
       "type": "text",
       "data": "::h4[:icon[write] Riešenie.]{.h6}\n\n$X_1 = \\sete{4, 16}$\n\n$X_2 = \\setc{ n \\in D \\mid \\Struct \\models A_2 [e(x/n)] }$,    \nkde $A_2 = \\left( Q(x) \\land P(x) \\right)$.\n\n$X_3 = \\sete{(1, 7), (7, 7), (1, 13), (13, 13), (1, 19), (19, 19)}$\n\n$X_4 = \\setc{ (m, n) \\in D^2 \\mid \\Struct \\models A_4 [e(x/m)(y/n)] }$,    \nkde $A_4 = (R(x, y) \\land Q(x) \\land P(x) \\land \\neg Q(y))$.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "crnkjck",
+            "text": "OK – **10%**",
+            "timestamp": 1745396770332,
+            "id": 0
+          }
+        }
       }
     },
     "51": {
@@ -228,20 +309,38 @@
       "id": 53,
       "type": "structureExplorer",
       "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"cat/1, dead/1, alive/1, schroedinger/1, box/1, in/2, purrs/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"cat\",\"arity\":1},{\"name\":\"dead\",\"arity\":1},{\"name\":\"alive\",\"arity\":1},{\"name\":\"schroedinger\",\"arity\":1},{\"name\":\"box\",\"arity\":1},{\"name\":\"in\",\"arity\":2},{\"name\":\"purrs\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"cat/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"dead/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"alive/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"schroedinger/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"box/1\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"]],\"tableEnabled\":false},\"in/2\":{\"value\":\"(1, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"]],\"tableEnabled\":false},\"purrs/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x(cat(x)→((dead(x)∧alive(x))→schroedinger(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"subLeft\":{\"name\":\"dead\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"alive\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x((cat(x)∧schroedinger(x))→∃y(box(y)∧in(x,y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"box\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x(cat(x)↔purrs(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"purrs\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1745007180041,
+            "id": 0
+          }
+        }
       }
     },
     "55": {
       "id": 55,
       "type": "structureExplorer",
       "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"cat/1, dead/1, alive/1, schroedinger/1, box/1, in/2, purrs/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"cat\",\"arity\":1},{\"name\":\"dead\",\"arity\":1},{\"name\":\"alive\",\"arity\":1},{\"name\":\"schroedinger\",\"arity\":1},{\"name\":\"box\",\"arity\":1},{\"name\":\"in\",\"arity\":2},{\"name\":\"purrs\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"cat/1\":{\"value\":\"3, 4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\"],[\"4\"]],\"tableEnabled\":false},\"dead/1\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\"]],\"tableEnabled\":false},\"alive/1\":{\"value\":\"3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\"]],\"tableEnabled\":false},\"schroedinger/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"box/1\":{\"value\":\"5\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"5\"]],\"tableEnabled\":false},\"in/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"purrs/1\":{\"value\":\"4, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\"],[\"3\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"3, 4, 5\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"3\",\"4\",\"5\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x(cat(x)→((dead(x)∧alive(x))→schroedinger(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"subLeft\":{\"name\":\"dead\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"alive\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x((cat(x)∧schroedinger(x))→∃y(box(y)∧in(x,y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"box\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x(cat(x)↔purrs(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"purrs\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"((∃x(cat(x)∧alive(x))∧∃x(cat(x)∧dead(x)))→∃x(schroedinger(x)∧purrs(x)))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"alive\",\"terms\":[{\"name\":\"x\"}]}}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"cat\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"dead\",\"terms\":[{\"name\":\"x\"}]}}}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"schroedinger\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"purrs\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1745007284831,
+            "id": 0
+          }
+        }
       }
     },
     "56": {
@@ -498,10 +597,19 @@
         },
         "config": "Basic FOL"
       },
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.\n\nSkúste využívať aj korektné pravidlá, tablo bude menšie, rýchlejšie ho uzavriete.\n\nNapr. NCS sa dalo taktiež využiť.",
+            "timestamp": 1745007229724,
+            "id": 0
+          }
+        }
       }
     },
     "59": {
