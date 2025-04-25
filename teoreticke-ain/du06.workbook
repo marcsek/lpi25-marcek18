@@ -154,10 +154,19 @@
       "id": 60,
       "type": "text",
       "data": "::h3[:icon[ui-checks]{.text-primary} :icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[8. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.8).\n]\n\nNech $P^1$ a $R^2$ sú predikátové symboly,\n$f^1$ a $g^1$ funkčné symboly,\na nech $x$, $y$ a $z$ sú navzájom rôzne premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie, v ktorých\nje uvedená substitúcia aplikovateľná na formulu.\nAk je substitúcia aplikovateľná, nahraďte $…$ výsledkom\naplikácie substitúcie na formulu.\n\n* [x] Substitúcia $\\{ y \\mapsto f(z) \\}$ je aplikovateľná na formulu $(P(y) \\land \\A{x} R(f(x),g(y)))$     \n    a $(P(y) \\land \\A{x} R(f(x),g(y))) \\{ y \\mapsto f(z) \\} = (P(f(z)) \\land \\A{x} R(f(x),g(f(z))))$.\n* [x] Substitúcia $\\{ x \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ x \\mapsto f(x) \\} = (P(f(x)) \\land \\A{x} R(x,y))$.\n* [x] Substitúcia $\\{ z \\mapsto x \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ z \\mapsto x \\} = (P(x) \\land \\A{x} R(x,y))$.\n* [ ] Substitúcia $\\{ y \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(g(y)) \\land \\A{x} R(x,y))$     \n    a $(P(g(y)) \\land \\A{x} R(x,y)) \\{ y \\mapsto f(x) \\} = …$.\n* [ ] Žiadna z uvedených substitúcií nie je aplikovateľná na príslušnú formulu.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "OK – 5,0 %",
+            "timestamp": 1745545887451,
+            "id": 0
+          }
+        }
       }
     },
     "61": {
