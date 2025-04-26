@@ -173,10 +173,19 @@
       "id": 61,
       "type": "text",
       "data": "::h3[:cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %** ·\n:icon[source] Zdroj:\n[8. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.8).\n]\n\nNech $\\Lang$ je jazyk logiky prvého rádu.\nNech $R^2$ je niektorý predikátový symbol\na $f^1$ niektorý funkčný symbol jazyka $\\Lang$.\n\nUkážte, že ani jedno z nasledujúcich tvrdení **neplatí** tým,\nže nájdete kontrapríklad v podobe vhodnej množiny $S^+$\na (pre tvrdenie i) termu $t$.\n\n\n::::blockquote{.fst-italic.border-start.border-danger}\n:::enum{.i}\n1. Nech $S^+$ je ľubovoľná množina označených formúl\n   a $t$ je ľubovoľný term jazyka $\\Lang$.\n   \n   Ak $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y) }$ je splniteľná,    \n   tak $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y), \\sign{F} R(t,y) }$ je splniteľná.\n\n3. Nech $S^+$ je ľubovoľná množina označených formúl jazyka $\\Lang$.\n\n   Ak $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y) }$ je splniteľná,    \n   tak $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y), \\sign{F} \\A{y} R(f(y),y) }$ je splniteľná.\n:::\n::::\n\n::::aside{.note.bg-transparent.p-0}\n:icon[explanation]\nMnožinu $S^+$ si môžeme predstaviť ako množinu formúl na vetve tabla.\n\nPrvé tvrdenie zodpovedá **nesprávnemu použitiu pravidla $\\boldsymbol\\delta$**\n(namiesto premennej, ktorá sa na vetve nevyskytuje voľná,\npoužijeme hocijaký term $t$).\n\nDruhé tvrdenie zodpovedá použitiu substitúcie $\\{ x \\mapsto f(y)\\}$ **neaplikovateľnej** na formulu $\\A{y} R(x,y)$ v pravidle $\\gamma$.\n::::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "iveta331",
+            "text": "10%",
+            "timestamp": 1745676452877,
+            "id": 0
+          }
+        }
       }
     },
     "62": {
