@@ -164,7 +164,7 @@
     "34": {
       "id": 34,
       "type": "text",
-      "data": ":icon[write]\nNa záver doplňte:\n\n$…_4$ formalizuje: „Ak má Zita nejaký mobil, tak ho používa.“",
+      "data": ":icon[write]\nNa záver doplňte:\n\n$B_4$ formalizuje: „Ak má Zita nejaký mobil, tak ho používa.“",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -184,7 +184,7 @@
     "36": {
       "id": 36,
       "type": "text",
-      "data": ":icon[write]\nNa záver doplňte:\n\n$…_5$ formalizuje: „Keď všetko funguje, kontrolka je zelená.“",
+      "data": ":icon[write]\nNa záver doplňte:\n\n$A_5$ formalizuje: „Keď všetko funguje, kontrolka je zelená.“",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -214,7 +214,7 @@
     "39": {
       "id": 39,
       "type": "text",
-      "data": ":icon[write]\nNa záver doplňte:\n\n$…_3$ formalizuje: „Žiaden softvér nie je bezchybný.“\n\n$…_3$ formalizuje: „Nie je pravda, že nejaký softvér nie je bezchybný,“ teda „Každý softvér ….“",
+      "data": ":icon[write]\nNa záver doplňte:\n\n$B_3$ formalizuje: „Žiaden softvér nie je bezchybný.“\n\n$A_3$ formalizuje: „Nie je pravda, že nejaký softvér nie je bezchybný,“ teda „Každý softvér ….“",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -234,7 +234,7 @@
     "41": {
       "id": 41,
       "type": "text",
-      "data": ":icon[write]\nNa záver doplňte:\n\n$…_6$ formalizuje: „Niečo je žlté a niečo modré.“\n\n$…_6$ formalizuje: „Niečo je žlté aj modré.“\n",
+      "data": ":icon[write]\nNa záver doplňte:\n\n$A_6$ formalizuje: „Niečo je žlté a niečo modré.“\n\n$B_6$ formalizuje: „Niečo je žlté aj modré.“\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -254,7 +254,7 @@
     "43": {
       "id": 43,
       "type": "text",
-      "data": ":icon[write]\nNa záver doplňte:\n\n$…_7$ formalizuje: „Všetko sú vidličky alebo všetko sú lyžice.“\n\n$…_7$ formalizuje: „Všetko je vidlička alebo lyžica.“\n",
+      "data": ":icon[write]\nNa záver doplňte:\n\n$B_7$ formalizuje: „Všetko sú vidličky alebo všetko sú lyžice.“\n\n$A_7$ formalizuje: „Všetko je vidlička alebo lyžica.“\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -324,7 +324,7 @@
     "50": {
       "id": 50,
       "type": "text",
-      "data": ":icon[write]\nNa záver doplňte:\n\n$…_8$ formalizuje: „Nikto sa neprechádza vonku, keď tam prší.“\n",
+      "data": ":icon[write]\nNa záver doplňte:\n\n$A_8$ formalizuje: „Nikto sa neprechádza vonku, keď tam prší.“\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -453,6 +453,66 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "57": {
+      "id": 57,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"software/1,bugFree/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"software\",\"arity\":1},{\"name\":\"bugFree\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"software/1\":{\"value\":\"1,2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"]],\"tableEnabled\":false},\"bugFree/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"¬∃x(software(x)∧¬bugFree(x))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"software\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"bugFree\",\"terms\":[{\"name\":\"x\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"¬∃x(software(x)∧bugFree(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"software\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"bugFree\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "58": {
+      "id": 58,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Zita\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Zita\"]},\"predicates\":{\"value\":\"has/2, mobile/1,uses/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"has\",\"arity\":2},{\"name\":\"mobile\",\"arity\":1},{\"name\":\"uses\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"Zita\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"has/2\":{\"value\":\"(4,2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\",\"2\"]],\"tableEnabled\":false},\"mobile/1\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"]],\"tableEnabled\":false},\"uses/2\":{\"value\":\"(4,2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\",\"2\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3,4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\",\"4\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∃x((has(Zita,x)∧mobile(x))→uses(Zita,x))\",\"expressionValue\":true,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"has\",\"terms\":[{\"name\":\"Zita\"},{\"name\":\"x\"}]},\"subRight\":{\"name\":\"mobile\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"uses\",\"terms\":[{\"name\":\"Zita\"},{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x((has(Zita,x)∧mobile(x))→uses(Zita,x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"has\",\"terms\":[{\"name\":\"Zita\"},{\"name\":\"x\"}]},\"subRight\":{\"name\":\"mobile\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"uses\",\"terms\":[{\"name\":\"Zita\"},{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "59": {
+      "id": 59,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"statusLight\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"statusLight\"]},\"predicates\":{\"value\":\"works/1, green/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"works\",\"arity\":1},{\"name\":\"green\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"statusLight\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"works/1\":{\"value\":\"1,2,3,4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"],[\"3\"],[\"4\"]],\"tableEnabled\":false},\"green/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3,4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\",\"4\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(∀x works(x)→green(statusLight))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"works\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"green\",\"terms\":[{\"name\":\"statusLight\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(works(x)→green(statusLight))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"works\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"green\",\"terms\":[{\"name\":\"statusLight\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "60": {
+      "id": 60,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"yellow/1, blue/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"yellow\",\"arity\":1},{\"name\":\"blue\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"yellow/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"blue/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(∃x yellow(x)∧∃x blue(x))\",\"expressionValue\":true,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"yellow\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"blue\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x(yellow(x)∧blue(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"yellow\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"blue\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "61": {
+      "id": 61,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"fork/1, spoon/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"fork\",\"arity\":1},{\"name\":\"spoon\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"fork/1\":{\"value\":\"1,2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"]],\"tableEnabled\":false},\"spoon/1\":{\"value\":\"3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"3\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x(fork(x)∨spoon(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"fork\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"spoon\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"(∀x fork(x)∨∀x spoon(x))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"fork\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"spoon\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "62": {
+      "id": 62,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"outside\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"outside\"]},\"predicates\":{\"value\":\"walks/2,rains/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"walks\",\"arity\":2},{\"name\":\"rains\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{\"outside\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"rains/1\":{\"value\":\"4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\"]],\"tableEnabled\":false},\"walks/2\":{\"value\":\"(1,4)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"4\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3,4\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\",\"4\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(rains(outside)→¬∃x walks(x,outside))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"name\":\"rains\",\"terms\":[{\"name\":\"outside\"}]},\"subRight\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"walks\",\"terms\":[{\"name\":\"x\"},{\"name\":\"outside\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"¬∃x(rains(outside)→walks(x,outside))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"rains\",\"terms\":[{\"name\":\"outside\"}]},\"subRight\":{\"name\":\"walks\",\"terms\":[{\"name\":\"x\"},{\"name\":\"outside\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -470,21 +530,27 @@
     32,
     30,
     37,
+    57,
     38,
     39,
     33,
+    58,
     47,
     34,
     35,
+    59,
     46,
     36,
     40,
+    60,
     45,
     41,
     42,
+    61,
     44,
     43,
     48,
+    62,
     49,
     50,
     2,
