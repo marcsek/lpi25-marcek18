@@ -74,7 +74,7 @@
     "12": {
       "id": 12,
       "type": "text",
-      "data": "$A_2 = \\A{\\vx}\\E{\\vy}(\\sym{loves}(\\vx,\\vy) \\limpl \\sym{in\\_love}(\\vx))$  \n$B_2 = \\A{\\vx}(\\E{\\vy}\\sym{loves}(\\vx,\\vy) \\limpl \\sym{in\\_love}(\\vx))$   \n\n:icon[write]\nDoplňte:\n\n:mark[$…_2$] formalizuje: „Každý/-á, kto niekoho ľúbi, je zaľúbený/-á.“\n\n:icon[tools]\nPod túto bunku vložte aplikáciu Structure explorer a zostrojte štruktúru dokazujúcu, že $\\{ A_2 \\} \\nentails B_2$.",
+      "data": "$A_2 = \\A{\\vx}\\E{\\vy}(\\sym{loves}(\\vx,\\vy) \\limpl \\sym{in\\_love}(\\vx))$  \n$B_2 = \\A{\\vx}(\\E{\\vy}\\sym{loves}(\\vx,\\vy) \\limpl \\sym{in\\_love}(\\vx))$   \n\n:icon[write]\nDoplňte:\n\n:mark[$B_2$] formalizuje: „Každý/-á, kto niekoho ľúbi, je zaľúbený/-á.“\n\n:icon[tools]\nPod túto bunku vložte aplikáciu Structure explorer a zostrojte štruktúru dokazujúcu, že $\\{ A_2 \\} \\nentails B_2$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -84,7 +84,7 @@
     "13": {
       "id": 13,
       "type": "text",
-      "data": "$A_3 = \\A{\\vx}\\E{\\vy}(\\sym{supervisor}(\\vx,\\vy) \\limpl \\sym{collaborates}(\\vx,\\vy))$    \n$B_3 = \\A{\\vx}\\A{\\vy}(\\sym{supervisor}(\\vx,\\vy) \\limpl \\sym{collaborates}(\\vx,\\vy))$\n\n:icon[write]\nDoplňte:\n\n:mark[$…_3$] formalizuje: „Kto má nejakú/-ého školiteľku/-a, ten s ňou/ním spolupracuje.“\n\n:icon[tools]\nPod túto bunku vložte aplikáciu Structure explorer a zostrojte štruktúru dokazujúcu, že $\\{ A_3 \\} \\nentails B_3$.",
+      "data": "$A_3 = \\A{\\vx}\\E{\\vy}(\\sym{supervisor}(\\vx,\\vy) \\limpl \\sym{collaborates}(\\vx,\\vy))$    \n$B_3 = \\A{\\vx}\\A{\\vy}(\\sym{supervisor}(\\vx,\\vy) \\limpl \\sym{collaborates}(\\vx,\\vy))$\n\n:icon[write]\nDoplňte:\n\n:mark[$B_3$] formalizuje: „Kto má nejakú/-ého školiteľku/-a, ten s ňou/ním spolupracuje.“\n\n:icon[tools]\nPod túto bunku vložte aplikáciu Structure explorer a zostrojte štruktúru dokazujúcu, že $\\{ A_3 \\} \\nentails B_3$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -94,7 +94,7 @@
     "18": {
       "id": 18,
       "type": "text",
-      "data": "**b)** Formuly $A_1,\\dots,A_4$ možno vyabstrahovať do nasledovných\nštyroch všeobecných schém, kde $P$, $Q$ a $R$ označujú _formuly_ s voľnými premennými $x$ a $y$ (teda nie nutne iba jednoduché predikáty):\n\n$B_1 = \\A{x}\\bigl(P(x) \\limpl \\E{y}(Q(y)\\land R(x,y))\\bigr)$  \n$B_2 = \\A{x}\\bigl(P(x) \\limpl \\E{y}(Q(y)\\land R(y,x))\\bigr)$  \n$B_3 = \\E{x}\\bigl(P(x) \\land  \\A{y}(Q(y)\\limpl R(x,y))\\bigr)$  \n$B_4 = \\E{x}\\bigl(P(x) \\land  \\A{y}(Q(y)\\limpl R(y,x))\\bigr)$\n\n:icon[write]\nUrčte, ktorej schéme (alebo schémam) zodpovedá každý z nasledujúcich výrokov\n(v zátvorkách je odporúčaná formula $R$). Zaškrtnite _práve všetky_ správne možnosti.\nAk je možností viac, vysvetlite, kedy je vhodné použiť ktorú.\n\n1. V ZOO je zvieratko, ktoré chodia kŕmiť všetky deti.  \n   ($\\sym{feeds}(x,y)$ – $x$ chodí kŕmiť $y$)\n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [ ] $B_3$\n   * [ ] $B_4$\n3. Každý týždeň na Obchodnej zbijú cudzinca.  \n   ($\\sym{gets\\_beaten}(x,t)$ — na Obchodnej zbijú $x$ v období $t$)\n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [ ] $B_3$\n   * [ ] $B_4$\n5. Každú hodinu mi vyvoláva nejaký otravný predajca.  \n   ($\\sym{calls}(x,\\sym{ja},t)$ – telefonicky ma otravuje $x$ v čase $t$)\n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [ ] $B_3$\n   * [ ] $B_4$\n7. Každý študent má kamaráta, ktorý je tiež študent.  \n   ($\\sym{friend}(x,y)$ – $x$ a $y$ sú kamaráti)\n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [ ] $B_3$\n   * [ ] $B_4$\n9. Jeden študent sa kamaráti so všetkými študentmi.  \n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [ ] $B_3$\n   * [ ] $B_4$\n\n",
+      "data": "**b)** Formuly $A_1,\\dots,A_4$ možno vyabstrahovať do nasledovných\nštyroch všeobecných schém, kde $P$, $Q$ a $R$ označujú _formuly_ s voľnými premennými $x$ a $y$ (teda nie nutne iba jednoduché predikáty):\n\n$B_1 = \\A{x}\\bigl(P(x) \\limpl \\E{y}(Q(y)\\land R(x,y))\\bigr)$  \n$B_2 = \\A{x}\\bigl(P(x) \\limpl \\E{y}(Q(y)\\land R(y,x))\\bigr)$  \n$B_3 = \\E{x}\\bigl(P(x) \\land  \\A{y}(Q(y)\\limpl R(x,y))\\bigr)$  \n$B_4 = \\E{x}\\bigl(P(x) \\land  \\A{y}(Q(y)\\limpl R(y,x))\\bigr)$\n\n:icon[write]\nUrčte, ktorej schéme (alebo schémam) zodpovedá každý z nasledujúcich výrokov\n(v zátvorkách je odporúčaná formula $R$). Zaškrtnite _práve všetky_ správne možnosti.\nAk je možností viac, vysvetlite, kedy je vhodné použiť ktorú.\n\n1. V ZOO je zvieratko, ktoré chodia kŕmiť všetky deti.  \n   ($\\sym{feeds}(x,y)$ – $x$ chodí kŕmiť $y$)\n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [ ] $B_3$\n   * [x] $B_4$\n3. Každý týždeň na Obchodnej zbijú cudzinca.  \n   ($\\sym{gets\\_beaten}(x,t)$ — na Obchodnej zbijú $x$ v období $t$)\n   * [ ] $B_1$\n   * [x] $B_2$\n   * [x] $B_3$\n   * [ ] $B_4$\n5. Každú hodinu mi vyvoláva nejaký otravný predajca.  \n   ($\\sym{calls}(x,\\sym{ja},t)$ – telefonicky ma otravuje $x$ v čase $t$)\n   * [ ] $B_1$\n   * [x] $B_2$\n   * [x] $B_3$\n   * [ ] $B_4$\n7. Každý študent má kamaráta, ktorý je tiež študent.  \n   ($\\sym{friend}(x,y)$ – $x$ a $y$ sú kamaráti)\n   * [x] $B_1$\n   * [x] $B_2$\n   * [ ] $B_3$\n   * [ ] $B_4$\n9. Jeden študent sa kamaráti so všetkými študentmi.  \n   * [ ] $B_1$\n   * [ ] $B_2$\n   * [x] $B_3$\n   * [x] $B_4$\n\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -673,13 +673,107 @@
           }
         },
         "rightChild": {
-          "type": "open",
+          "type": "alpha",
           "node": {
             "id": 13,
             "value": "F ((∀x A(x)∧∀x B(x))->∀x (A(x)∧B(x)))",
             "references": [
               "1"
             ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 14,
+              "value": "T (∀x A(x)∧∀x B(x))",
+              "references": [
+                "13"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 15,
+                "value": "F ∀x (A(x)∧B(x))",
+                "references": [
+                  "13"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 16,
+                  "value": "T ∀x A(x)",
+                  "references": [
+                    "14"
+                  ]
+                },
+                "child": {
+                  "type": "delta",
+                  "node": {
+                    "id": 17,
+                    "value": "T ∀x B(x)",
+                    "references": [
+                      "14"
+                    ]
+                  },
+                  "child": {
+                    "type": "gamma",
+                    "node": {
+                      "id": 18,
+                      "value": "F (A(x)∧B(x))",
+                      "references": [
+                        "15"
+                      ]
+                    },
+                    "child": {
+                      "type": "ncs",
+                      "node": {
+                        "id": 19,
+                        "value": "T A(x)",
+                        "references": [
+                          "16"
+                        ]
+                      },
+                      "child": {
+                        "type": "gamma",
+                        "node": {
+                          "id": 20,
+                          "value": "F B(x)",
+                          "references": [
+                            "19",
+                            "18"
+                          ]
+                        },
+                        "child": {
+                          "type": "closed",
+                          "node": {
+                            "id": 21,
+                            "value": "T B(x)",
+                            "references": [
+                              "17"
+                            ]
+                          },
+                          "closed": [
+                            "20",
+                            "21"
+                          ]
+                        },
+                        "substitution": {
+                          "str": ""
+                        }
+                      }
+                    },
+                    "substitution": {
+                      "str": ""
+                    }
+                  },
+                  "substitution": {
+                    "str": ""
+                  }
+                }
+              }
+            }
           }
         },
         "config": "Basic FOL"
@@ -701,20 +795,10 @@
           "references": []
         },
         "leftChild": {
-          "type": "open",
+          "type": "alpha",
           "node": {
             "id": 2,
             "value": "F ((∃x A(x)→C)->∀x (A(x)→C))",
-            "references": [
-              "1"
-            ]
-          }
-        },
-        "rightChild": {
-          "type": "alpha",
-          "node": {
-            "id": 3,
-            "value": "F (∀x (A(x)→C)->(∃x A(x)→C))",
             "references": [
               "1"
             ]
@@ -722,34 +806,34 @@
           "child": {
             "type": "alpha",
             "node": {
-              "id": 4,
-              "value": "T ∀x (A(x)→C)",
+              "id": 3,
+              "value": "T (∃x A(x)→C)",
               "references": [
-                "3"
+                "2"
               ]
             },
             "child": {
-              "type": "alpha",
+              "type": "delta",
               "node": {
-                "id": 5,
-                "value": "F (∃x A(x)→C)",
+                "id": 4,
+                "value": "F ∀x (A(x)→C)",
                 "references": [
-                  "3"
+                  "2"
                 ]
               },
               "child": {
                 "type": "alpha",
                 "node": {
-                  "id": 6,
-                  "value": "T ∃x A(x)",
+                  "id": 5,
+                  "value": "F (A(a)→C)",
                   "references": [
-                    "5"
+                    "4"
                   ]
                 },
                 "child": {
-                  "type": "delta",
+                  "type": "mt",
                   "node": {
-                    "id": 7,
+                    "id": 6,
                     "value": "F C",
                     "references": [
                       "5"
@@ -758,34 +842,125 @@
                   "child": {
                     "type": "gamma",
                     "node": {
-                      "id": 8,
-                      "value": "T A(z)",
+                      "id": 7,
+                      "value": "F ∃x A(x)",
                       "references": [
-                        "6"
+                        "6",
+                        "3"
                       ]
                     },
                     "child": {
-                      "type": "mp",
+                      "type": "alpha",
                       "node": {
-                        "id": 9,
-                        "value": "T (A(z)→C)",
+                        "id": 8,
+                        "value": "F A(a)",
                         "references": [
-                          "4"
+                          "7"
                         ]
                       },
                       "child": {
                         "type": "closed",
                         "node": {
-                          "id": 10,
-                          "value": "T C",
+                          "id": 9,
+                          "value": "T A(a)",
                           "references": [
-                            "9",
-                            "8"
+                            "5"
                           ]
                         },
                         "closed": [
-                          "7",
-                          "10"
+                          "8",
+                          "9"
+                        ]
+                      }
+                    },
+                    "substitution": {
+                      "str": "x->a"
+                    }
+                  }
+                }
+              },
+              "substitution": {
+                "str": "x->a"
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "alpha",
+          "node": {
+            "id": 10,
+            "value": "F (∀x (A(x)→C)->(∃x A(x)→C))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 11,
+              "value": "T ∀x (A(x)→C)",
+              "references": [
+                "10"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 12,
+                "value": "F (∃x A(x)→C)",
+                "references": [
+                  "10"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 13,
+                  "value": "T ∃x A(x)",
+                  "references": [
+                    "12"
+                  ]
+                },
+                "child": {
+                  "type": "delta",
+                  "node": {
+                    "id": 14,
+                    "value": "F C",
+                    "references": [
+                      "12"
+                    ]
+                  },
+                  "child": {
+                    "type": "gamma",
+                    "node": {
+                      "id": 15,
+                      "value": "T A(z)",
+                      "references": [
+                        "13"
+                      ]
+                    },
+                    "child": {
+                      "type": "mp",
+                      "node": {
+                        "id": 16,
+                        "value": "T (A(z)→C)",
+                        "references": [
+                          "11"
+                        ]
+                      },
+                      "child": {
+                        "type": "closed",
+                        "node": {
+                          "id": 17,
+                          "value": "T C",
+                          "references": [
+                            "16",
+                            "15"
+                          ]
+                        },
+                        "closed": [
+                          "14",
+                          "17"
                         ]
                       }
                     },
@@ -828,6 +1003,208 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "51": {
+      "id": 51,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"loves/2, in_love/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"loves\",\"arity\":2},{\"name\":\"in_love\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"loves/2\":{\"value\":\"(1, 2), (2, 1), (2, 3), (3, 2), (1, 3), (3, 1), (3, 3), (2, 2), (1, 1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"2\",\"1\"],[\"2\",\"3\"],[\"3\",\"2\"],[\"1\",\"3\"],[\"3\",\"1\"],[\"3\",\"3\"],[\"2\",\"2\"],[\"1\",\"1\"]],\"tableEnabled\":false},\"in_love/1\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"],[\"3\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y (loves(x,y)→in_love(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"loves\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in_love\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x (∃y loves(x,y)→in_love(x))\",\"expressionValue\":true,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"loves\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}},\"subRight\":{\"name\":\"in_love\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "52": {
+      "id": 52,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x (∃y loves(x,y)→in_love(x))",
+          "references": []
+        },
+        "child": {
+          "type": "delta",
+          "node": {
+            "id": 2,
+            "value": "F ∀x ∃y (loves(x,y)→in_love(x))",
+            "references": []
+          },
+          "child": {
+            "type": "gamma",
+            "node": {
+              "id": 3,
+              "value": "F ∃y (loves(a,y)→in_love(a))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "gamma",
+              "node": {
+                "id": 4,
+                "value": "T (∃y loves(a,y)→in_love(a))",
+                "references": [
+                  "1"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F (loves(a,b)→in_love(a))",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "T loves(a,b)",
+                    "references": [
+                      "5"
+                    ]
+                  },
+                  "child": {
+                    "type": "mt",
+                    "node": {
+                      "id": 7,
+                      "value": "F in_love(a)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "gamma",
+                      "node": {
+                        "id": 8,
+                        "value": "F ∃y loves(a,y)",
+                        "references": [
+                          "7",
+                          "4"
+                        ]
+                      },
+                      "child": {
+                        "type": "closed",
+                        "node": {
+                          "id": 9,
+                          "value": "F loves(a,b)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "closed": [
+                          "6",
+                          "9"
+                        ]
+                      },
+                      "substitution": {
+                        "str": "y->b"
+                      }
+                    }
+                  }
+                }
+              },
+              "substitution": {
+                "str": "y->b"
+              }
+            },
+            "substitution": {
+              "str": "x->a"
+            }
+          },
+          "substitution": {
+            "str": "x->a"
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "53": {
+      "id": 53,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"supervisor/2, collaborates/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"supervisor\",\"arity\":2},{\"name\":\"collaborates\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"supervisor/2\":{\"value\":\"(1, 2), (2, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"2\",\"2\"]],\"tableEnabled\":false},\"collaborates/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y (supervisor(x,y)→collaborates(x,y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"collaborates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x ∀y (supervisor(x,y)→collaborates(x,y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"collaborates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "54": {
+      "id": 54,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ∀y (supervisor(x,y)→collaborates(x,y))",
+          "references": []
+        },
+        "child": {
+          "type": "delta",
+          "node": {
+            "id": 2,
+            "value": "F ∀x ∃y (supervisor(x,y)→collaborates(x,y))",
+            "references": []
+          },
+          "child": {
+            "type": "gammaStar",
+            "node": {
+              "id": 3,
+              "value": "F ∃y (supervisor(x,y)→collaborates(x,y))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "gamma",
+              "node": {
+                "id": 4,
+                "value": "T (supervisor(x,y)→collaborates(x,y))",
+                "references": [
+                  "1"
+                ]
+              },
+              "child": {
+                "type": "closed",
+                "node": {
+                  "id": 5,
+                  "value": "F (supervisor(x,y)→collaborates(x,y))",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "closed": [
+                  "4",
+                  "5"
+                ]
+              },
+              "substitution": {
+                "str": ""
+              }
+            },
+            "substitution": {
+              "str": ""
+            }
+          },
+          "substitution": {
+            "str": ""
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -847,9 +1224,13 @@
     23,
     50,
     12,
+    51,
     24,
+    52,
     13,
+    53,
     25,
+    54,
     8,
     40,
     41,
