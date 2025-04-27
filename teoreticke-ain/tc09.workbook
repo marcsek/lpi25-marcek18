@@ -1136,6 +1136,120 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "82": {
+      "id": 82,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x fears(x, Dracula)",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ¬ ∃x ( ¬ x ≐ me ∧ fears(Dracula, x) )",
+            "references": []
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "F me = Dracula",
+              "references": []
+            },
+            "child": {
+              "type": "gamma",
+              "node": {
+                "id": 4,
+                "value": "F ∃x ( ¬ x ≐ me ∧ fears(Dracula, x) )",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "gamma",
+                "node": {
+                  "id": 5,
+                  "value": "F ( ¬ Dracula ≐ me ∧ fears(Dracula, Dracula) )",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "ncs",
+                  "node": {
+                    "id": 6,
+                    "value": "T fears(Dracula, Dracula)",
+                    "references": [
+                      "1"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "F ¬ Dracula ≐ me",
+                      "references": [
+                        "6",
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "refl",
+                      "node": {
+                        "id": 8,
+                        "value": "T Dracula ≐ me",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "leibnitz",
+                        "node": {
+                          "id": 9,
+                          "value": "T Dracula = Dracula",
+                          "references": []
+                        },
+                        "child": {
+                          "type": "closed",
+                          "node": {
+                            "id": 10,
+                            "value": "T me = Dracula",
+                            "references": [
+                              "8",
+                              "9"
+                            ]
+                          },
+                          "closed": [
+                            "3",
+                            "10"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": "x->Dracula"
+                }
+              },
+              "substitution": {
+                "str": "x->Dracula"
+              }
+            }
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1167,6 +1281,7 @@
     66,
     63,
     67,
+    82,
     68
   ],
   "settings": {
