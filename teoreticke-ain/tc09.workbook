@@ -147,7 +147,7 @@
             {
               "proposition_id": 1697,
               "proposition": "1. Figúrky stoja na políčkach. Králi a veže sú figúrky.",
-              "solution": null
+              "solution": "\\forall x ((piece(x) -> (square(on(x))))) & \\forall x (king(x) | rook(x) -> piece(x))"
             },
             {
               "proposition_id": 1698,
