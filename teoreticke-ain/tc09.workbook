@@ -152,57 +152,57 @@
             {
               "proposition_id": 1698,
               "proposition": "2. Riadok políčka je číslo a stĺpec políčka je písmeno.",
-              "solution": null
+              "solution": "\\forall x (square(x) -> number(row(x)) & letter(col(x)))"
             },
             {
               "proposition_id": 1699,
               "proposition": "3. Pre každú dvojicu čísla a písmena existuje políčko, ktorého riadok má toto číslo a stĺpec toto písmeno.",
-              "solution": null
+              "solution": "\\forall x \\forall y (number(x) & letter(y) -> \\exists z (square(z) & row(z) = x & col(z) = y))"
             },
             {
               "proposition_id": 1700,
               "proposition": "4. Figúrky a políčka majú bielu alebo čiernu farbu.",
-              "solution": null
+              "solution": "\\forall x (piece(x) | square(x) -> clr(x) = white | clr(x) = black)"
             },
             {
               "proposition_id": 1701,
               "proposition": "5. Na jednom políčku môže stáť najviac jedna figúrka.",
-              "solution": null
+              "solution": "\\forall x(piece(x) & square(on(x)) -> \\neg \\exists y (piece(y) & square(on(y)) & on(x) = on(y) & x != y ))"
             },
             {
               "proposition_id": 1702,
               "proposition": "6. Figúrka nemôže zobrať figúrku rovnakej farby.",
-              "solution": null
+              "solution": "\\forall x \\forall y (clr(x) = clr(y) & piece(x) & piece(y) -> \\neg may_take(x, y))"
             },
             {
               "proposition_id": 1703,
               "proposition": "7. Susedné políčka s rovnakým riadkom alebo stĺpcom majú rozdielnu farbu.",
-              "solution": null
+              "solution": "\\forall x \\forall y (square(x) & square(y) & neighbour(x, y) & (row(x) = row(y) | col(x) = col(y)) -> clr(x) != clr(y))"
             },
             {
               "proposition_id": 1704,
               "proposition": "8. Veža sa môže posunúť iba na políčko, ktoré má rovnaký riadok alebo stĺpec ako jej políčko, no nie je to jej políčko.",
-              "solution": null
+              "solution": "\\forall x (rook(x) -> \\forall y (square(y) & may_enter(x, y) -> (row(on(x)) = row(y) | col(on(x)) = col(y)) & on(x) != y))"
             },
             {
               "proposition_id": 1705,
               "proposition": "9. Kráľ je v šachu, ak sa nejaká figúrka inej farby môže presunúť na jeho políčko.",
-              "solution": null
+              "solution": "\\forall x \\forall y (piece(x) & king(y) & clr(x) != clr(y) & may_enter(x, on(y)) -> check(y))"
             },
             {
               "proposition_id": 1706,
               "proposition": "10. Figúrka sa môže presunúť na políčko s inou figúrkou iba vtedy, keď ju môže zobrať.",
-              "solution": null
+              "solution": "\\forall x \\forall y (piece(x) & piece(y) & square(on(y)) & x != y & may_enter(x, on(y)) -> may_take(x, y))"
             },
             {
               "proposition_id": 1707,
               "proposition": "11. Na nejakom políčku stojí nejaký kráľ a na toto políčko sa môže presunúť nejaká veža. Je aj také políčko, na ktorom nestojí žiadna figúrka.",
-              "solution": null
+              "solution": "\\exists x \\exists y (square(x) & king(y) & on(y) = x & \\exists z (rook(z) & may_enter(z, x))) & \\exists x (square(x) & \\neg \\exists y ( piece(y) &on(y) = x))"
             },
             {
               "proposition_id": 1708,
               "proposition": "12. Figúrky a políčka sú navzájom disjunktné.",
-              "solution": null
+              "solution": "\\forall x \\forall y (piece(x) & square(y) -> x != y)"
             }
           ]
         },
@@ -954,6 +954,188 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "78": {
+      "id": 78,
+      "type": "tableauEditor",
+      "data": {
+        "type": "ecdf",
+        "node": {
+          "id": 1,
+          "value": "F ( ∃y ( f(x) ≐ y ∧ A(y) ) ↔ A(f(x)) )",
+          "references": []
+        },
+        "leftChild": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T ( ∃y ( f(x) ≐ y ∧ A(y) ) ∧ ¬ A(f(x)) )",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ∃y ( f(x) ≐ y ∧ A(y) )",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T ¬ A(f(x))",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "delta",
+                "node": {
+                  "id": 5,
+                  "value": "F A(f(x))",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "T ( f(x) ≐ y ∧ A(y) )",
+                    "references": [
+                      "3"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "T f(x) ≐ y",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "leibnitz",
+                      "node": {
+                        "id": 8,
+                        "value": "T A(y)",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "closed",
+                        "node": {
+                          "id": 9,
+                          "value": "F A(y)",
+                          "references": [
+                            "7",
+                            "5"
+                          ]
+                        },
+                        "closed": [
+                          "8",
+                          "9"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": ""
+                }
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "alpha",
+          "node": {
+            "id": 10,
+            "value": "F ( ∃y ( f(x) ≐ y ∧ A(y) ) ∨ ¬ A(f(x)) )",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 11,
+              "value": "F ∃y ( f(x) ≐ y ∧ A(y) )",
+              "references": [
+                "10"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 12,
+                "value": "F ¬ A(f(x))",
+                "references": [
+                  "10"
+                ]
+              },
+              "child": {
+                "type": "gamma",
+                "node": {
+                  "id": 13,
+                  "value": "T A(f(x))",
+                  "references": [
+                    "12"
+                  ]
+                },
+                "child": {
+                  "type": "ncs",
+                  "node": {
+                    "id": 14,
+                    "value": "F (f(x) ≐ f(x) ∧ A(f(x)))",
+                    "references": [
+                      "11"
+                    ]
+                  },
+                  "child": {
+                    "type": "refl",
+                    "node": {
+                      "id": 15,
+                      "value": "F f(x) ≐ f(x)",
+                      "references": [
+                        "13",
+                        "14"
+                      ]
+                    },
+                    "child": {
+                      "type": "closed",
+                      "node": {
+                        "id": 16,
+                        "value": "T f(x) ≐ f(x)",
+                        "references": []
+                      },
+                      "closed": [
+                        "15",
+                        "16"
+                      ]
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": "y->f(x)"
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -967,6 +1149,7 @@
     73,
     65,
     74,
+    78,
     18,
     29,
     70,
