@@ -230,17 +230,17 @@
             {
               "proposition_id": 1714,
               "proposition": "1. Každý sa bojí Drakulu.",
-              "solution": null
+              "solution": "\\forall x (fears(x, Dracula))"
             },
             {
               "proposition_id": 1715,
               "proposition": "2. Drakula sa bojí iba mňa.",
-              "solution": null
+              "solution": "\\neg \\exists x (x != me & fears(Dracula, x))"
             },
             {
               "proposition_id": 1716,
               "proposition": "3. Takže som Drakula",
-              "solution": null
+              "solution": "me = Dracula"
             }
           ]
         },
