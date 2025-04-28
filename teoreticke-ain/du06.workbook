@@ -15,10 +15,19 @@
       "id": 3,
       "type": "text",
       "data": "## Úloha 6.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **30 %** · :icon[source] Zbierka: :xref[6.1.5]{.exbook label=\"úloha\"}.]\n\n:icon[tools] Pomocou aplikácie Formalization checker sformalizujte nižšie uvedené výroky ako ucelenú teóriu $T = \\{A_1, \\ldots, A_{10}\\}$\nv danom jazyku $\\Lang$.\n\nZamýšľaný význam mimologických symbolov je:\n\n:::::div{.row}\n::::div{.col-md-6}\n:::div{.table.table-intended-meaning.small}\n| Predikátový sym.            | Zamýšľaný význam |\n|-------------------------------|------------------|\n| thesis($x$)          | $x$ je záverečná práca |\n| person($x$)          | $x$ je osoba  |\n| student($x$)         | $x$ je študent/-ka  |\n| Bc($x$)              | $x$ je bakalár/-ka  |\n| teacher($x$)         | $x$ je učiteľ/-ka  |\n| study_prog($x$)      | $x$ je študijný program  |\n| undergraduate($x$)   | $x$ je pregraduálny  |\n| studies($x$,$y$)     | $x$ študuje (št. prog.) $y$ |\n| advisor($x$,$y$)     | $x$ je vedúcim/-ou (práce) $y$ |\n:::\n::::\n::::div{.col-md-6}\n:::div{.table.table-intended-meaning.small}\n| Funkčný sym. | Zamýšľaný význam     |\n|----------------|----------------------|\n| author($x$)    | autor/-ka (práce) $x$|\n| type($x$)      | typ (práce/štud. prog.) $x$ |\n| title($x$)     | názov/titul (práce) $x$ |\n| status($x$)    | stav (práce) $x$  |\n| :span[supervisor($x$,$y$)]{.text-nowrap} | školiteľ/-ka študenta/-ky $x$ a práce $y$ |\n:::\n:::div{.table.table-intended-meaning.small}\n| Ind. konšt.  | Zamýšľaný význam     |\n|----------------|----------------------|\n| bachelor       | bakalársky typ |\n| master         | magisterský typ |\n| doctoral       | doktorandský typ |\n| defended       | obhájený stav  |\n:::\n::::\n:::::",
-      "idCounter": 6,
+      "idCounter": 7,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          6
+        ],
+        "entities": {
+          "6": {
+            "author": "boborova3",
+            "text": "Ok. 30%",
+            "timestamp": 1745827376876,
+            "id": 6
+          }
+        }
       }
     },
     "28": {
