@@ -83,10 +83,19 @@
       "id": 49,
       "type": "text",
       "data": "::h3[:cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %** ·\n:icon[source] Zdroj:\n[9. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.9) [9],\n[7. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.7) [7].\n]\n\nSprávne doplňte definície na miestach vyznačených „:mark[…]“ resp. „:mark[$…$]“.\nNie vždy postačuje jedno slovo alebo symbol.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[warning] V tejto časti pracujeme s **jazykmi logiky prvého rádu**,\nteda takými, ktoré majú aj **funkčné symboly**.\n(Jazyky logiky prvého rádu bez funkčných symbolov,\nktorými sme sa zaoberali pred 9. prednáškou, nazývame _relačné_.)\n\n:icon[technical] Zachovajte značky `:mark[]`.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Nesprávne alebo nie celkom správne:\n* Definícia 2: Porovnajte svoju verziu s :xref[10.11]{.lec label='def.'}\n\n9,5 %",
+            "timestamp": 1745829287797,
+            "id": 0
+          }
+        }
       }
     },
     "52": {
