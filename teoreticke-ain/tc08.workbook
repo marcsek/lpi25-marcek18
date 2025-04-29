@@ -1670,6 +1670,231 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "63": {
+      "id": 63,
+      "type": "tableauEditor",
+      "data": {
+        "type": "ecdf",
+        "node": {
+          "id": 1,
+          "value": "F ( ∃x ( A(x) ∨ B(x) ) ↔ ( ∃x A(x) ∨ ∃x B(x) ) )",
+          "references": []
+        },
+        "leftChild": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T ( ∃x ( A(x) ∨ B(x) ) ∧ ¬ ( ∃x A(x) ∨ ∃x B(x) ) )",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ∃x ( A(x) ∨ B(x) )",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T ¬ ( ∃x A(x) ∨ ∃x B(x) )",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F ( ∃x A(x) ∨ ∃x B(x) )",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∃x A(x)",
+                    "references": [
+                      "5"
+                    ]
+                  },
+                  "child": {
+                    "type": "delta",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∃x B(x)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "gamma",
+                      "node": {
+                        "id": 8,
+                        "value": "T ( A(a) ∨ B(a) )",
+                        "references": [
+                          "3"
+                        ]
+                      },
+                      "child": {
+                        "type": "ds",
+                        "node": {
+                          "id": 9,
+                          "value": "F A(a)",
+                          "references": [
+                            "6"
+                          ]
+                        },
+                        "child": {
+                          "type": "gamma",
+                          "node": {
+                            "id": 10,
+                            "value": "T B(a)",
+                            "references": [
+                              "9",
+                              "8"
+                            ]
+                          },
+                          "child": {
+                            "type": "closed",
+                            "node": {
+                              "id": 11,
+                              "value": "F B(a)",
+                              "references": [
+                                "7"
+                              ]
+                            },
+                            "closed": [
+                              "10",
+                              "11"
+                            ]
+                          },
+                          "substitution": {
+                            "str": "x->a"
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": "x->a"
+                      }
+                    },
+                    "substitution": {
+                      "str": "x->a"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "alpha",
+          "node": {
+            "id": 12,
+            "value": "F ( ∃x ( A(x) ∨ B(x) ) ∨ ¬ ( ∃x A(x) ∨ ∃x B(x) ) )",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 13,
+              "value": "F ∃x ( A(x) ∨ B(x) )",
+              "references": [
+                "12"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 14,
+                "value": "F ¬ ( ∃x A(x) ∨ ∃x B(x) )",
+                "references": [
+                  "12"
+                ]
+              },
+              "child": {
+                "type": "gamma",
+                "node": {
+                  "id": 15,
+                  "value": "T ( ∃x A(x) ∨ ∃x B(x) )",
+                  "references": [
+                    "14"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 16,
+                    "value": "F ( A(a) ∨ B(a) )",
+                    "references": [
+                      "13"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 17,
+                      "value": "F A(a)",
+                      "references": [
+                        "16"
+                      ]
+                    },
+                    "child": {
+                      "type": "beta",
+                      "node": {
+                        "id": 18,
+                        "value": "F B(a)",
+                        "references": [
+                          "16"
+                        ]
+                      },
+                      "leftChild": {
+                        "type": "open",
+                        "node": {
+                          "id": 19,
+                          "value": "T ∃x A(x)",
+                          "references": [
+                            "15"
+                          ]
+                        }
+                      },
+                      "rightChild": {
+                        "type": "open",
+                        "node": {
+                          "id": 20,
+                          "value": "T ∃x B(x)",
+                          "references": [
+                            "15"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": "x->a"
+                }
+              }
+            }
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1680,6 +1905,7 @@
     46,
     34,
     47,
+    63,
     36,
     48,
     39,
