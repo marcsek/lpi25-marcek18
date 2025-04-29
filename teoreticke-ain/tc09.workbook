@@ -760,7 +760,7 @@
         "type": "assumption",
         "node": {
           "id": 1,
-          "value": "T ∀x P(x)",
+          "value": "T ∃x P(x)",
           "references": []
         },
         "child": {
@@ -813,7 +813,7 @@
                       "type": "gamma",
                       "node": {
                         "id": 8,
-                        "value": "F ∃x ( Q(x) ∧ g(x) ≐ a ) ",
+                        "value": "F ∃x ( Q(x) ∧ g(x) ≐ a )",
                         "references": [
                           "6"
                         ]
@@ -887,7 +887,7 @@
                                       "type": "ncs",
                                       "node": {
                                         "id": 16,
-                                        "value": "F ( Q(f(b)) ∧ g(f(b)) ≐ a ) ",
+                                        "value": "F ( Q(f(b)) ∧ g(f(b)) ≐ a )",
                                         "references": [
                                           "8"
                                         ]
