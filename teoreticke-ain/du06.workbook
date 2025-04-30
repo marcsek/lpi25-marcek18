@@ -15,10 +15,19 @@
       "id": 3,
       "type": "text",
       "data": "## Úloha 6.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **30 %** · :icon[source] Zbierka: :xref[6.1.5]{.exbook label=\"úloha\"}.]\n\n:icon[tools] Pomocou aplikácie Formalization checker sformalizujte nižšie uvedené výroky ako ucelenú teóriu $T = \\{A_1, \\ldots, A_{10}\\}$\nv danom jazyku $\\Lang$.\n\nZamýšľaný význam mimologických symbolov je:\n\n:::::div{.row}\n::::div{.col-md-6}\n:::div{.table.table-intended-meaning.small}\n| Predikátový sym.            | Zamýšľaný význam |\n|-------------------------------|------------------|\n| thesis($x$)          | $x$ je záverečná práca |\n| person($x$)          | $x$ je osoba  |\n| student($x$)         | $x$ je študent/-ka  |\n| Bc($x$)              | $x$ je bakalár/-ka  |\n| teacher($x$)         | $x$ je učiteľ/-ka  |\n| study_prog($x$)      | $x$ je študijný program  |\n| undergraduate($x$)   | $x$ je pregraduálny  |\n| studies($x$,$y$)     | $x$ študuje (št. prog.) $y$ |\n| advisor($x$,$y$)     | $x$ je vedúcim/-ou (práce) $y$ |\n:::\n::::\n::::div{.col-md-6}\n:::div{.table.table-intended-meaning.small}\n| Funkčný sym. | Zamýšľaný význam     |\n|----------------|----------------------|\n| author($x$)    | autor/-ka (práce) $x$|\n| type($x$)      | typ (práce/štud. prog.) $x$ |\n| title($x$)     | názov/titul (práce) $x$ |\n| status($x$)    | stav (práce) $x$  |\n| :span[supervisor($x$,$y$)]{.text-nowrap} | školiteľ/-ka študenta/-ky $x$ a práce $y$ |\n:::\n:::div{.table.table-intended-meaning.small}\n| Ind. konšt.  | Zamýšľaný význam     |\n|----------------|----------------------|\n| bachelor       | bakalársky typ |\n| master         | magisterský typ |\n| doctoral       | doktorandský typ |\n| defended       | obhájený stav  |\n:::\n::::\n:::::",
-      "idCounter": 6,
+      "idCounter": 7,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          6
+        ],
+        "entities": {
+          "6": {
+            "author": "boborova3",
+            "text": "Ok. 30%",
+            "timestamp": 1745827376876,
+            "id": 6
+          }
+        }
       }
     },
     "28": {
@@ -35,10 +44,19 @@
       "id": 35,
       "type": "text",
       "data": "## Úloha 6.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **40 %** · :icon[source] Zbierka: :xref[6.4.6]{.exbook label=\"úloha\"}.]\n\nUvažujme teóriu $T=\\{A_1,A_2,A_3\\}$, ktorá vznikla formalizáciou nasledujúcich tvrdení o funkciách a reláciách:\n\n1. $f$ je zobrazenie do množiny $P$.  \n   $A_1 = \\A{\\vx}\\sym{P}(\\sym{f}(\\vx))$\n\n2. Zobrazenie $f$ je surjektívne na $P$.  \n   $A_2 = \\A{\\vy}(\\sym{P}(\\vy)\\limpl\\E{\\vx}\\sym{f}(\\vx)\\doteq\\vy   )$\n\n3. Ak sú nejaké prvky v relácii $R$, tak ich obrazy v $f$ sú v relácii $Q$.  \n   $A_3 = \\A{\\vx}\\A{\\vy}\\bigl(\\sym{R}(\\vx,\\vy)\\limpl\\sym{Q}(\\sym{f}(\\vx),\\sym{f}(\\vy))\\bigr)$\n\nZistite, či z výrokov 1–3 vyplýva:\n:::enum{.a}\n24. Ak existuje nejaký prvok, ktorý je v relácii $R$ s každým prvkom, tak existuje prvok z množiny $P$, ktorý je v relácii $Q$ s každým prvkom z $P$.\n:::\nTeda zistite, či z teórie $T$ vyplýva formula:    \n$\nX = \\bigl(\\E{\\vx}\\A{\\vy}\\sym{R}(\\vx,\\vy)\\limpl\\E{\\vx}\\bigl(\\sym{P}(\\vx)\\land\n\\A{\\vy}(\\sym{P}(\\vy)\\limpl\\sym{Q}(\\vx,\\vy))\\bigr)\\bigr)\n$\n\n:::aside{.note.p-0.bg-transparent}\n:icon[help]\n**Pomôcka.** Predstavme si $R$ a $Q$ ako čiastočné usporiadania a $f$ ako ich izomorfizmus. Potom by sme vlastne dokazovali, že ak má $R$ najmenší prvok, tak ho má aj $Q$.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "iveta331",
+            "text": "40%\n\npekne :)",
+            "timestamp": 1745348103914,
+            "id": 0
+          }
+        }
       }
     },
     "47": {
@@ -65,10 +83,19 @@
       "id": 49,
       "type": "text",
       "data": "::h3[:cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %** ·\n:icon[source] Zdroj:\n[9. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.9) [9],\n[7. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.7) [7].\n]\n\nSprávne doplňte definície na miestach vyznačených „:mark[…]“ resp. „:mark[$…$]“.\nNie vždy postačuje jedno slovo alebo symbol.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[warning] V tejto časti pracujeme s **jazykmi logiky prvého rádu**,\nteda takými, ktoré majú aj **funkčné symboly**.\n(Jazyky logiky prvého rádu bez funkčných symbolov,\nktorými sme sa zaoberali pred 9. prednáškou, nazývame _relačné_.)\n\n:icon[technical] Zachovajte značky `:mark[]`.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Nesprávne alebo nie celkom správne:\n* Definícia 2: Porovnajte svoju verziu s :xref[10.11]{.lec label='def.'}\n\n9,5 %",
+            "timestamp": 1745829287797,
+            "id": 0
+          }
+        }
       }
     },
     "52": {
@@ -145,20 +172,38 @@
       "id": 60,
       "type": "text",
       "data": "::h3[:icon[ui-checks]{.text-primary} :icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[8. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.8).\n]\n\nNech $P^1$ a $R^2$ sú predikátové symboly,\n$f^1$ a $g^1$ funkčné symboly,\na nech $x$, $y$ a $z$ sú navzájom rôzne premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie, v ktorých\nje uvedená substitúcia aplikovateľná na formulu.\nAk je substitúcia aplikovateľná, nahraďte $…$ výsledkom\naplikácie substitúcie na formulu.\n\n* [x] Substitúcia $\\{ y \\mapsto f(z) \\}$ je aplikovateľná na formulu $(P(y) \\land \\A{x} R(f(x),g(y)))$     \n    a $(P(y) \\land \\A{x} R(f(x),g(y))) \\{ y \\mapsto f(z) \\} = (P(f(z)) \\land \\A{x} R(f(x),g(f(z))))$.\n* [x] Substitúcia $\\{ x \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ x \\mapsto f(x) \\} = (P(f(x)) \\land \\A{x} R(x,y))$.\n* [x] Substitúcia $\\{ z \\mapsto x \\}$ je aplikovateľná na formulu $(P(x) \\land \\A{x} R(x,y))$     \n    a $(P(x) \\land \\A{x} R(x,y)) \\{ z \\mapsto x \\} = (P(x) \\land \\A{x} R(x,y))$.\n* [ ] Substitúcia $\\{ y \\mapsto f(x) \\}$ je aplikovateľná na formulu $(P(g(y)) \\land \\A{x} R(x,y))$     \n    a $(P(g(y)) \\land \\A{x} R(x,y)) \\{ y \\mapsto f(x) \\} = …$.\n* [ ] Žiadna z uvedených substitúcií nie je aplikovateľná na príslušnú formulu.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "OK – 5,0 %",
+            "timestamp": 1745545887451,
+            "id": 0
+          }
+        }
       }
     },
     "61": {
       "id": 61,
       "type": "text",
       "data": "::h3[:cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %** ·\n:icon[source] Zdroj:\n[8. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.8).\n]\n\nNech $\\Lang$ je jazyk logiky prvého rádu.\nNech $R^2$ je niektorý predikátový symbol\na $f^1$ niektorý funkčný symbol jazyka $\\Lang$.\n\nUkážte, že ani jedno z nasledujúcich tvrdení **neplatí** tým,\nže nájdete kontrapríklad v podobe vhodnej množiny $S^+$\na (pre tvrdenie i) termu $t$.\n\n\n::::blockquote{.fst-italic.border-start.border-danger}\n:::enum{.i}\n1. Nech $S^+$ je ľubovoľná množina označených formúl\n   a $t$ je ľubovoľný term jazyka $\\Lang$.\n   \n   Ak $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y) }$ je splniteľná,    \n   tak $S^+ \\cup \\sete{ \\sign{F} \\A{x} R(x,y), \\sign{F} R(t,y) }$ je splniteľná.\n\n3. Nech $S^+$ je ľubovoľná množina označených formúl jazyka $\\Lang$.\n\n   Ak $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y) }$ je splniteľná,    \n   tak $S^+ \\cup \\sete{ \\sign{F} \\E{x}\\A{y} R(x,y), \\sign{F} \\A{y} R(f(y),y) }$ je splniteľná.\n:::\n::::\n\n::::aside{.note.bg-transparent.p-0}\n:icon[explanation]\nMnožinu $S^+$ si môžeme predstaviť ako množinu formúl na vetve tabla.\n\nPrvé tvrdenie zodpovedá **nesprávnemu použitiu pravidla $\\boldsymbol\\delta$**\n(namiesto premennej, ktorá sa na vetve nevyskytuje voľná,\npoužijeme hocijaký term $t$).\n\nDruhé tvrdenie zodpovedá použitiu substitúcie $\\{ x \\mapsto f(y)\\}$ **neaplikovateľnej** na formulu $\\A{y} R(x,y)$ v pravidle $\\gamma$.\n::::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "iveta331",
+            "text": "10%",
+            "timestamp": 1745676452877,
+            "id": 0
+          }
+        }
       }
     },
     "62": {
@@ -617,10 +662,19 @@
       "id": 80,
       "type": "text",
       "data": "::h4[:icon[write] Riešenie.]{.h6}\n\nPodľa def. 5, $\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))$    \nvtt\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ pre :mark[každé ohodnotenie] $e$.\n\nNech $e$ je ľubovoľné :mark[ohodnotenie premenných]. \nPotom podľa def. 4:\n\n$\\Struct \\models \\E{x}(P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y)))[e]$ vtt\n* $\\Struct \\models (P(x) \\land \\lnot \\A{y}(R(f(x),a) \\limpl P(y))) [e(x/3)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models \\lnot \\A{y}(R(f(x),a) \\limpl P(y)) [e (x/3)]$,\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models \\E{y} \\neg (R(f(x),a) \\limpl P(y)) [e (x/3)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models \\E{y} (R(f(x),a) \\land \\neg P(y)) [e (x/3)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models (R(f(x),a) \\land \\neg P(y)) [e (x/3)(y/2)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models R(f(x),a))[e(x/3)(y/2)]$ a $\\Struct \\models \\neg P(y)[e(x/3)(y/2)]$\n* $\\Struct \\models P(x)[e(x/3)]$ a $\\Struct \\models R(f(x),a))[e(x/3)(y/2)]$ a $\\Struct \\nmodels P(y)[e(x/3)(y/2)]$\n* $x^\\Struct [e(x/3)] \\in i(P)$ a $(f(x)^\\Struct[e(x/3)(y/2)],a^\\Struct[e(x/3)(y/2)])) \\in i(R)$ a $ y^\\Struct [e(x/3)(y/2)] \\not\\in i(P)$\n\nĎalej podľa def. 3:\n\n* $x^\\Struct [e(x/3)] \\in i(P)$ a $(i(f)(x^\\Struct[e(x/3)(y/2)]), a^\\Struct[e(x/3)(y/2)])) \\in i(R)$ a $ y^\\Struct [e(x/3)(y/2)] \\not\\in i(P)$\n* $3 \\in i(P)$ a $(i(f)(3), 2) \\in i(R)$ a $ 2 \\not\\in i(P)$\n* $3 \\in i(P)$ a $(2, 2) \\in i(R)$ a $ 2 \\not\\in i(P)$\n\nČo je pravdivé v štruktúre $\\Struct$.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "crnkjck",
+            "text": "Čiastočne dobre, našli ste hodnoty $x$ a $y$ dosvedčujúce pravdivosť formuly. Vyhodnotenie termov, atómov a konjunkcie je tiež správne.\n\nAle pri vyhodnocovani podla def. 4 sa formula nemeni. Namiesto de Morganovskych uprav sa splnenie $\\models$ meni na nesplnenie $\\nmodels$.\n\n4 %",
+            "timestamp": 1746034338469,
+            "id": 0
+          }
+        }
       }
     }
   },
