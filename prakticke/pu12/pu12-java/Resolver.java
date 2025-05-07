@@ -1,47 +1,45 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Resolver {
 
     public static Set<Clause> resolve(Clause a, Clause b) {
-        Set<Clause> result = new HashSet<>();
+        var result = new HashSet<Clause>();
+        var resolvable = a.stream().filter(l -> b.contains(l.not())).toList();
 
-        for (Literal lit: a) {
-            if (b.contains(lit.not())) {
-                Set<Literal> newLits = new HashSet<>(a);
-                newLits.remove(lit);
-                for (Literal l: b) {
-                    if (!l.equals(lit.not())) {
-                        newLits.add(l);
-                    }
-                }
-                result.add(new Clause(newLits));
-            }
+        for (var lit: resolvable) {
+            var newLits = new HashSet<>(a);
+            newLits.remove(lit);
+            var newLitsB = new HashSet<>(b);
+            newLitsB.remove(lit.not());
+            newLits.addAll(newLitsB);
+            result.add(new Clause(newLits));
         }
 
         return result;
     }
 
     public static boolean isSatisfiable(Cnf theory) {
-        Set<Clause> clauses = new HashSet<>(theory);
-        List<Clause> clauseList = new ArrayList<>(clauses);
+        var clauses = new ArrayList<>(theory);
+        var seen = new HashSet<>(theory);
 
-        int idx = 0;
-        while (idx < clauseList.size()) {
-            Clause ci = clauseList.get(idx);
-            if (ci.isEmpty()) return false;
-            for (int j = 0; j < idx; j++) {
-                Clause cj = clauseList.get(j);
-                if (cj.isEmpty()) return false;
-                Set<Clause> resolvents = resolve(ci, cj);
+        for (int i = 0; i < clauses.size(); i++) {
+            var c1 = clauses.get(i);
+            if (c1.isEmpty()) return false;
+
+            for (int j = i - 1; j >= 0; j--) {
+                var c2 = clauses.get(j);
+                if (c2.isEmpty()) return false;
+
+                var resolvents = resolve(c1, c2);
                 if (resolvents.contains(new Clause())) return false;
-                resolvents.removeAll(clauses);
+
+                // ak je iba nadmnozina uz videneho tak skip
+                resolvents.removeIf(r -> seen.stream().anyMatch(c -> r.containsAll(c)));
+
+                resolvents.removeAll(seen);
+                seen.addAll(resolvents);
                 clauses.addAll(resolvents);
-                clauseList.addAll(resolvents);
             }
-            idx++;
         }
         return true;
     }
