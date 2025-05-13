@@ -95,10 +95,19 @@
       "id": 21,
       "type": "text",
       "data": ":::header\n## Cvičenie 12.:cnt[a]\n\n:small[\n:icon[source]\nZbierka: :xref[6.4.5]{.exbook label=\"úloha\"}.\nPracovné hárky: [cvičenie 9.3](../../tc09/teoreticke-ain/tc09.workbook).]\n:::\n\nUvažujme teóriu $T = \\{ A_1, \\ldots, A_4 \\}$ o vlastnostiach funkcií $f$ a $g$ v jazyku $\\Lang$ s $\\Consts = \\emptyset$, $\\Funcs = \\{ \\sym{f}^1, \\sym{g}^1 \\}$ a $\\Preds = \\{ \\sym{P}^1, \\sym{Q}^1 \\}$, kde:\n\n$\nA_1 = \\A{\\vy_1} \\A{\\vy_2} \\bigl(\\sym{g}(\\vy_1)\\doteq\\sym{g}(\\vy_2)\\limpl \\vy_1\\doteq \\vy_2\\bigr)\n,\\\\\nA_2 = \\A{\\vz} \\bigl(\\sym{Q}(\\vz)\\limpl \\E{\\vx} \\sym{g}(\\sym{f}(\\vx))\\doteq \\vz\\bigr)\n,\\\\\nA_3 = \\A{\\vy} \\bigl(\\sym{P}(\\vy) \\limpl \\sym{Q}(\\sym{g}(\\vy))\\bigr)\n,\\\\\nA_4 = \\bigl(\\E{\\vy} \\sym{P}(\\vy) \\land \\E{\\vz} \\sym{Q}(\\vz) \\bigr)\n$\n\na formuly\n\n$\nX_1 = \\A{\\vx_1} \\A{\\vx_2} \n    \\bigl(\\sym{f}(\\vx_1)\\doteq\\sym{f}(\\vx_2)\\limpl \\vx_1\\doteq \\vx_2\\bigr)\n,\\\\\nX_2 = \\A{\\vy} \\bigl(\\sym{P}(\\vy)\\limpl \\E{\\vx} \\sym{f}(\\vx)\\doteq \\vy\\bigr)\n.$\n\nO každej z formúl $X_1$, $X_2$ _jednotlivo_ rozhodnite,\nči vyplýva alebo nevyplýva z teórie $T$.\n\nVyplývanie dokážte tablom s najviac 20 uzlami a zdôvodnite,\nprečo ho vaše tablo dokazuje.\nNevyplývanie dokážte nájdením štruktúry, ktorá je kontrapríkladom,\na krátko vysvetlite, prečo ním je\n(ktoré formuly sú ne-/pravdivé).\n\n:::aside{.note.bg-transparent.p-0}\n:icon[tools]\nNa vytvorenie tabla a štruktúry použite aplikáciu Tableau editor resp. Structure explorer, ktoré si vložíte nižšie. Zdôvodnenia vpíšte do nových textových buniek.\n\n:icon[technical]\nV aplikácii Tableau editor vyberte sadu pravidiel **Full FOL**.\nPrácu s logickými spojkami si zjednodušte využitím korektných výrokovologických pravidiel (MP, MT, DS, NCS, …)\nz :xref[4.4.1]{.exbook label=\"úlohy\"} v zbierke.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "Velmi sa im paci",
+            "timestamp": 1747137047557,
+            "id": 0
+          }
+        }
       }
     },
     "31": {
@@ -137,37 +146,37 @@
             {
               "proposition_id": 1813,
               "proposition": "1. Každý, kto jazdí na nejakom Harleyi, je drsniak.",
-              "solution": null
+              "solution": "\\forall x (\\exists y (Harley(y) & rides(x, y)) -> rough_character(x))"
             },
             {
               "proposition_id": 1814,
               "proposition": "2. Všetci motorkári jazdia na niečom, čo je buď Harley alebo BMW.",
-              "solution": null
+              "solution": "\\forall x (biker(x) -> (\\exists y (rides(x, y) & (Harley(y) | BMW(y)))))"
             },
             {
               "proposition_id": 1815,
               "proposition": "3. Každý, kto jazdí na nejakom BMW, je karierista.",
-              "solution": null
+              "solution": "\\forall x (\\exists y (rides(x, y) & BMW(y)) -> yuppie(x))"
             },
             {
               "proposition_id": 1816,
               "proposition": "4. Každý karierista je právnik.",
-              "solution": null
+              "solution": "\\forall x (yuppie(x) -> lawyer(x))"
             },
             {
               "proposition_id": 1817,
               "proposition": "5. Dobré dievčatá nerandia s drsniakmi.",
-              "solution": null
+              "solution": "\\forall x ((girl(x) & nice(x)) -> \\neg \\exists y (rough_character(y) & dates(x, y)))"
             },
             {
               "proposition_id": 1818,
               "proposition": "6. Mary je dobré dievča a John je motorkár.",
-              "solution": null
+              "solution": "nice(Mary) & girl(Mary) & biker(John)"
             },
             {
               "proposition_id": 1819,
               "proposition": "X. Ak John nie je právnik, tak s ním Mary nerandí.",
-              "solution": null
+              "solution": "\\neg lawyer(John) -> \\neg dates(Mary, John)"
             }
           ]
         },
@@ -298,6 +307,243 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "46": {
+      "id": 46,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"theory/1, in/2, formula/1, satisfiable/1, true/2, valuation/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"theory\",\"arity\":1},{\"name\":\"in\",\"arity\":2},{\"name\":\"formula\",\"arity\":1},{\"name\":\"satisfiable\",\"arity\":1},{\"name\":\"true\",\"arity\":2},{\"name\":\"valuation\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"theory/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"in/2\":{\"value\":\"(2, 1), (3, 1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\",\"1\"],[\"3\",\"1\"]],\"tableEnabled\":false},\"formula/1\":{\"value\":\"2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"],[\"3\"]],\"tableEnabled\":false},\"satisfiable/1\":{\"value\":\"2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"],[\"3\"]],\"tableEnabled\":false},\"true/2\":{\"value\":\"(4, 2), (5, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\",\"2\"],[\"5\",\"3\"]],\"tableEnabled\":false},\"valuation/1\":{\"value\":\"4, 5\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"4\"],[\"5\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3, 4, 5\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\",\"4\",\"5\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀T (theory(T)→∀A (in(A,T)→formula(A)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"T\",\"subFormula\":{\"subLeft\":{\"name\":\"theory\",\"terms\":[{\"name\":\"T\"}]},\"subRight\":{\"variableName\":\"A\",\"subFormula\":{\"subLeft\":{\"name\":\"in\",\"terms\":[{\"name\":\"A\"},{\"name\":\"T\"}]},\"subRight\":{\"name\":\"formula\",\"terms\":[{\"name\":\"A\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀T ∀v ((theory(T)∧valuation(v))→ (true(v,T)↔∀A (in(A,T)→true(v,A))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"T\",\"subFormula\":{\"variableName\":\"v\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"theory\",\"terms\":[{\"name\":\"T\"}]},\"subRight\":{\"name\":\"valuation\",\"terms\":[{\"name\":\"v\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"true\",\"terms\":[{\"name\":\"v\"},{\"name\":\"T\"}]},\"subRight\":{\"variableName\":\"A\",\"subFormula\":{\"subLeft\":{\"name\":\"in\",\"terms\":[{\"name\":\"A\"},{\"name\":\"T\"}]},\"subRight\":{\"name\":\"true\",\"terms\":[{\"name\":\"v\"},{\"name\":\"A\"}]}}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀z (satisfiable(z)↔∃v (valuation(v)∧true(v,z)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"z\",\"subFormula\":{\"subLeft\":{\"name\":\"satisfiable\",\"terms\":[{\"name\":\"z\"}]},\"subRight\":{\"variableName\":\"v\",\"subFormula\":{\"subLeft\":{\"name\":\"valuation\",\"terms\":[{\"name\":\"v\"}]},\"subRight\":{\"name\":\"true\",\"terms\":[{\"name\":\"v\"},{\"name\":\"z\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃v valuation(v)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"v\",\"subFormula\":{\"name\":\"valuation\",\"terms\":[{\"name\":\"v\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀T (theory(T)→(¬formula(T)∧¬valuation(T)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"T\",\"subFormula\":{\"subLeft\":{\"name\":\"theory\",\"terms\":[{\"name\":\"T\"}]},\"subRight\":{\"subLeft\":{\"subFormula\":{\"name\":\"formula\",\"terms\":[{\"name\":\"T\"}]}},\"subRight\":{\"subFormula\":{\"name\":\"valuation\",\"terms\":[{\"name\":\"T\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀X (formula(X)→¬valuation(X))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"X\",\"subFormula\":{\"subLeft\":{\"name\":\"formula\",\"terms\":[{\"name\":\"X\"}]},\"subRight\":{\"subFormula\":{\"name\":\"valuation\",\"terms\":[{\"name\":\"X\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀T ((theory(T)∧∀A (in(A,T)→satisfiable(A)))→satisfiable(T))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"T\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"theory\",\"terms\":[{\"name\":\"T\"}]},\"subRight\":{\"variableName\":\"A\",\"subFormula\":{\"subLeft\":{\"name\":\"in\",\"terms\":[{\"name\":\"A\"},{\"name\":\"T\"}]},\"subRight\":{\"name\":\"satisfiable\",\"terms\":[{\"name\":\"A\"}]}}}},\"subRight\":{\"name\":\"satisfiable\",\"terms\":[{\"name\":\"T\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "47": {
+      "id": 47,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀T ∀X (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀v ∀A ∀B (true(v,and(A,B))↔(true(v,A)∧true(v,B)))",
+            "references": []
+          },
+          "child": {
+            "type": "deltaStar",
+            "node": {
+              "id": 3,
+              "value": "F ∀T ∀X ∀Y (¬entails(T,and(X,Y))→ (¬entails(T,X)∨¬entails(T,Y)))",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F (¬entails(A,and(X,Y))→ (¬entails(A,X)∨¬entails(A,Y)))",
+                "references": [
+                  "3"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "T ¬entails(A,and(X,Y))",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F (¬entails(A,X)∨¬entails(A,Y))",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "F entails(A,and(X,Y))",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ¬entails(A,X)",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "F ¬entails(A,Y)",
+                          "references": [
+                            "6"
+                          ]
+                        },
+                        "child": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 10,
+                            "value": "T entails(A,X)",
+                            "references": [
+                              "8"
+                            ]
+                          },
+                          "child": {
+                            "type": "gammaStar",
+                            "node": {
+                              "id": 11,
+                              "value": "T entails(A,Y)",
+                              "references": [
+                                "9"
+                              ]
+                            },
+                            "child": {
+                              "type": "estf",
+                              "node": {
+                                "id": 12,
+                                "value": "T  (entails(A,and(X,Y))↔ ∀v ((valuation(v)∧true(v,A))→true(v,and(X,Y))))",
+                                "references": [
+                                  "1"
+                                ]
+                              },
+                              "child": {
+                                "type": "delta",
+                                "node": {
+                                  "id": 13,
+                                  "value": "F ∀v ((valuation(v)∧true(v,A))→true(v,and(X,Y)))",
+                                  "references": [
+                                    "7",
+                                    "12"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "F ((valuation(v)∧true(v,A))→true(v,and(X,Y)))",
+                                    "references": [
+                                      "13"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "alpha",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T (valuation(v)∧true(v,A))",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "alpha",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "F true(v,and(X,Y))",
+                                        "references": [
+                                          "14"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "alpha",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "T valuation(v)",
+                                          "references": [
+                                            "15"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "gammaStar",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T true(v,A)",
+                                            "references": [
+                                              "15"
+                                            ]
+                                          },
+                                          "child": {
+                                            "type": "estf",
+                                            "node": {
+                                              "id": 19,
+                                              "value": "T (true(v,and(X,Y))↔(true(v,X)∧true(v,Y)))",
+                                              "references": [
+                                                "2"
+                                              ]
+                                            },
+                                            "child": {
+                                              "type": "open",
+                                              "node": {
+                                                "id": 20,
+                                                "value": "F (true(v,X)∧true(v,Y))",
+                                                "references": [
+                                                  "16",
+                                                  " 19"
+                                                ]
+                                              }
+                                            }
+                                          },
+                                          "substitution": {
+                                            "str": "A->X, B->Y"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "substitution": {
+                                  "str": ""
+                                }
+                              }
+                            },
+                            "substitution": {
+                              "str": "X->and(X, Y), T->A"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "substitution": {
+              "str": "T->A"
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 1,
+      "comments": {
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "marcsek",
+            "text": "💀👻",
+            "timestamp": 1747139812655,
+            "id": 0
+          }
+        }
+      }
     }
   },
   "cellsOrder": [
@@ -307,9 +553,11 @@
     3,
     31,
     42,
+    46,
     34,
     40,
     43,
+    47,
     35,
     32,
     44,
