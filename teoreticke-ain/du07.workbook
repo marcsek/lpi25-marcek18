@@ -114,7 +114,7 @@
     "17": {
       "id": 17,
       "type": "text",
-      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\n_Symbolmi jazyka $\\Lang$ relačnej logiky prvého rádu so spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$_ sú:\n* _indivíduové premenné_ z nejakej :mark[…] množiny $\\Vars$;\n* _:mark[…] symboly_, ktorými sú:\n    * _indivíduové konštanty_\n      z nejakej:mark[…] množiny\n      :mark[$\\mathcal{…}_\\Lang$],\n    * _:mark[…] symboly_\n      z nejakej :mark[…] množiny\n      :mark[$\\mathcal{…}_\\Lang$];\n* _:mark[…] symboly_, ktorými sú:\n    * :mark[…] $\\lnor$ (binárna),\n    * :mark[…] $\\doteq$,\n    * :mark[…] ${\\leq}1$;\n* _:mark[…] symboly_, ktorými sú $($, $)$, a $,$ (ľavá a pravá zátvorka a čiarka).\n\nMnožiny $\\Vars$, $\\Consts$ a $\\Preds$ sú :mark[…].\n:mark[…] symboly sa nevyskytujú v symboloch z $\\Vars$, $\\Consts$ a $\\Preds$.\n\nKaždému symbolu :mark[$… \\in \\mathcal{…}_\\Lang$]\nje priradená _:mark[…]_\n:mark[$\\mathrm{…}_\\Lang(…) \\in …$].\n",
+      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\n_Symbolmi jazyka $\\Lang$ relačnej logiky prvého rádu so spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$_ sú:\n* _indivíduové premenné_ z nejakej :mark[nekonečnej spočítateľnej] množiny $\\Vars$;\n* _:mark[mimologické] symboly_, ktorými sú:\n    * _indivíduové konštanty_\n      z nejakej:mark[spočítateľnej] množiny\n      :mark[$\\mathcal{C}_\\Lang$],\n    * _:mark[predikátové] symboly_\n      z nejakej :mark[spočítateľnej] množiny\n      :mark[$\\mathcal{P}_\\Lang$];\n* _:mark[logické] symboly_, ktorými sú:\n    * :mark[logická spojka] $\\lnor$ (binárna),\n    * :mark[symbol rovnosti] $\\doteq$,\n    * :mark[kvantifikátor] ${\\leq}1$;\n* _:mark[pomocné] symboly_, ktorými sú $($, $)$, a $,$ (ľavá a pravá zátvorka a čiarka).\n\nMnožiny $\\Vars$, $\\Consts$ a $\\Preds$ sú :mark[vzájomne disjunktné].\n:mark[Logické a pomocné] symboly sa nevyskytujú v symboloch z $\\Vars$, $\\Consts$ a $\\Preds$.\n\nKaždému symbolu :mark[$P \\in \\mathcal{P}_\\Lang$]\nje priradená _:mark[arita]_\n:mark[$\\mathrm{ar}_\\Lang(P) \\in \\mathbb{N}^+$].\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -134,7 +134,7 @@
     "19": {
       "id": 19,
       "type": "text",
-      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu\nso spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$ $\\Lang$.\n\n_Množina $\\Forms$ všetkých formúl jazyka $\\Lang$_\nje :mark[…] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms … \\Forms$].\n* Ak $A, B \\in \\Forms$,\n  tak :mark[…].\n* Ak :mark[…]\n  a $A \\in \\Forms$,\n  tak :mark[…].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[…]_ jazyka $\\Lang$.\n",
+      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu\nso spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$ $\\Lang$.\n\n_Množina $\\Forms$ všetkých formúl jazyka $\\Lang$_\nje :mark[najmenšia množina postupností symbolov] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms \\subseteq \\Forms$].\n* Ak $A, B \\in \\Forms$,\n    tak :mark[aj postupnosť symbolov $(A \\lnor B)$ patrí do $\\Forms$].\n* Ak :mark[x je indivíduová premenná]\n  a $A \\in \\Forms$,\n  tak :mark[aj postupnosť symbolov ${\\leq}1$ patrí do $\\Forms$].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[formulov]_ jazyka $\\Lang$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -154,7 +154,7 @@
     "21": {
       "id": 21,
       "type": "text",
-      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu\nso spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$ $\\Lang$.\nNech $\\Struct = (D,i)$\nje štruktúra pre $\\Lang$, $e$ je ohodnotenie premenných.\n\nRelácia :dfn[štruktúra $\\Struct$ :mark[…] formulu $X$\npri ohodnotení $e$] (skrátene $\\Struct\\models X[e]$)\nmá nasledovnú induktívnu definíciu:\n* $\\Struct\\models t_1 \\doteq t_2[e]$ vtt\n  :mark[$…$],\n* $\\Struct\\models P(t_1,\\dots,t_n)[e]$ vtt\n  :mark[$…$],\n* $\\Struct\\models ( A \\lnor B )[e]$ vtt\n  :mark[$… A …$ … $… B …$],\n* $\\Struct\\models {\\leq}1x\\,A\\,[e]$\n  vtt :mark[… $… A …$ …].\n\npre všetky arity $n>0$,\nvšetky predikátové symboly $P$ s aritou $n$,\nvšetky :mark[…] $t_1$, $t_2$, …, $t_n$,\nvšetky premenné $x$\na všetky formuly $A$, $B$ jazyka $\\Lang$.",
+      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu\nso spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$ $\\Lang$.\nNech $\\Struct = (D,i)$\nje štruktúra pre $\\Lang$, $e$ je ohodnotenie premenných.\n\nRelácia :dfn[štruktúra $\\Struct$ :mark[spĺňa] formulu $X$\npri ohodnotení $e$] (skrátene $\\Struct\\models X[e]$)\nmá nasledovnú induktívnu definíciu:\n* $\\Struct\\models t_1 \\doteq t_2[e]$ vtt\n  :mark[$t_1^\\Struct[e] = t_2^\\Struct[e]$],\n* $\\Struct\\models P(t_1,\\dots,t_n)[e]$ vtt\n  :mark[$\\bigl(t_1^\\Struct[e], \\dots, t_n^\\Struct[e] \\bigr) \\in i(P)$],\n* $\\Struct\\models ( A \\lnor B )[e]$ vtt\n  :mark[$\\Struct \\nmodels A[e]$ a $\\Struct \\nmodels B[e]$],\n* $\\Struct\\models {\\leq}1x\\,A\\,[e]$\n  vtt :mark[pre všetky rôzne $d_1, d_2 \\in D$ máme $\\Struct \\nmodels A[e(x/d_1)]$ alebo $\\Struct \\nmodels A[e(x/d_2)]$].\n\npre všetky arity $n>0$,\nvšetky predikátové symboly $P$ s aritou $n$,\nvšetky :mark[termy] $t_1$, $t_2$, …, $t_n$,\nvšetky premenné $x$\na všetky formuly $A$, $B$ jazyka $\\Lang$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -164,7 +164,7 @@
     "22": {
       "id": 22,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[10. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.10) – [kapitola 15](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=section.15).\n]\n\nNech $c$ a $d$ sú indivíduové konštanty, $P^2$ je predikátový symbol,\n$f^1$ a $g^2$ funkčné symboly\na nech $w$, $x$, $y$ a $z$ sú navzájom rôzne indivíduové premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie,\nv ktorých sú uvedené atómy unifikovateľné.\nAk sú atómy unifikovateľné,\ndoplňte ich najvšeobecnejší unifikátor.\n\n* [ ] Atómy $P(c,x)$ a $P(x,d)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [ ] Atómy $P(c,x)$ a $P(x,y)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [ ] Atómy $P(f(x),y)$ a $P(y,x)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [ ] Atómy $P(x,g(z,x))$ a $P(f(c),g(w,f(y)))$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [ ] Žiadna z uvedených dvojíc atómov nie je unifikovateľná.\n",
+      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[10. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.10) – [kapitola 15](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=section.15).\n]\n\nNech $c$ a $d$ sú indivíduové konštanty, $P^2$ je predikátový symbol,\n$f^1$ a $g^2$ funkčné symboly\na nech $w$, $x$, $y$ a $z$ sú navzájom rôzne indivíduové premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie,\nv ktorých sú uvedené atómy unifikovateľné.\nAk sú atómy unifikovateľné,\ndoplňte ich najvšeobecnejší unifikátor.\n\n* [ ] Atómy $P(c,x)$ a $P(x,d)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [x] Atómy $P(c,x)$ a $P(x,y)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{x \\mapsto c, y \\mapsto c\\}$].\n* [ ] Atómy $P(f(x),y)$ a $P(y,x)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [x] Atómy $P(x,g(z,x))$ a $P(f(c),g(w,f(y)))$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{x \\mapsto f(c), y \\mapsto c, z \\mapsto w \\}$].\n* [ ] Žiadna z uvedených dvojíc atómov nie je unifikovateľná.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -174,7 +174,7 @@
     "23": {
       "id": 23,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[9. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.9) –\n:xref[10.9]{.lec label=\"dohoda\"},\n[kapitola 11](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=section.11).\n]\n\nUrčte, ktorého z typov $\\alpha$, $\\beta$, $\\gamma$, $\\delta$\nsú nasledujúce označené formuly.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[technical] Vnútri `:mark[$…$]` ponechajte iba správny typ, ostatné zmažte.\n\n:icon[explanation] Typ je _vždy_ určený jednoznačne (nie len v tejto úlohe).\n\n:icon[warning] Vo formulách sme vynechali zátvorky podľa :xref[10.9]{.lec label=\"dohody\"}.\n:::\n\n:::enum{.i}\n1. $\\sign F \\A{x} R(c,x) \\limpl \\E{y} R(y,c)$:\n   :mark[$\\alpha/\\beta/\\gamma/\\delta$]\n2. $\\sign T \\A{x}(R(c,x) \\limpl R(x,c))$:\n   :mark[$\\alpha/\\beta/\\gamma/\\delta$]\n3. $\\sign F \\E{x} P(x) \\land \\A{y}(P(y) \\limpl R(c,y))$:\n   :mark[$\\alpha/\\beta/\\gamma/\\delta$]\n4. $\\sign T \\E{x}(P(x) \\land \\A{y}(P(y) \\limpl R(y,x)))$:\n   :mark[$\\alpha/\\beta/\\gamma/\\delta$]\n5. $\\sign F \\lnot\\A{x}(\\E{y}(P(y) \\land \\lnot R(x,y)) \\lor \\lnot\\E{y}(\\lnot P(y) \\land R(x,y)))$:\n   :mark[$\\alpha/\\beta/\\gamma/\\delta$]\n:::",
+      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[9. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.9) –\n:xref[10.9]{.lec label=\"dohoda\"},\n[kapitola 11](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=section.11).\n]\n\nUrčte, ktorého z typov $\\alpha$, $\\beta$, $\\gamma$, $\\delta$\nsú nasledujúce označené formuly.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[technical] Vnútri `:mark[$…$]` ponechajte iba správny typ, ostatné zmažte.\n\n:icon[explanation] Typ je _vždy_ určený jednoznačne (nie len v tejto úlohe).\n\n:icon[warning] Vo formulách sme vynechali zátvorky podľa :xref[10.9]{.lec label=\"dohody\"}.\n:::\n\n:::enum{.i}\n1. $\\sign F \\A{x} R(c,x) \\limpl \\E{y} R(y,c)$:\n   :mark[$\\alpha$]\n2. $\\sign T \\A{x}(R(c,x) \\limpl R(x,c))$:\n   :mark[$\\gamma$]\n3. $\\sign F \\E{x} P(x) \\land \\A{y}(P(y) \\limpl R(c,y))$:\n   :mark[$\\beta$]\n4. $\\sign T \\E{x}(P(x) \\land \\A{y}(P(y) \\limpl R(y,x)))$:\n   :mark[$\\delta$]\n5. $\\sign F \\lnot\\A{x}(\\E{y}(P(y) \\land \\lnot R(x,y)) \\lor \\lnot\\E{y}(\\lnot P(y) \\land R(x,y)))$:\n   :mark[$\\alpha$]\n:::",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -184,7 +184,7 @@
     "24": {
       "id": 24,
       "type": "text",
-      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Prednášky: [podkapitola 8.1](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=subsection.8.1),\n:xref[13.4]{.lec label=\"tvrdenie\"}.\nZbierka: :xref[3.4.5]{.exbook label=\"príklad\"}.\n]\n\nZ nasledujúcich tvrdení označte `[x]` práve tie,\nktoré sú pravdivé.\n\n* [ ] :cnt[e]{.i}. Nech $T$ je teória v nejakom jazyku logiky prvého rádu\n  a nech $X$ je formula tohto jazyka.\n  Ak všetky formuly v $T$ sú platné a $T \\entails X$,\n  tak $X$ je platná.\n* [ ] :cnt[e]{.i}. Nech $S^+$ je ľubovoľná množina označených prvorádových formúl\n  (napríklad z vetvy tabla), $A$ je ľubovoľná formula\n  a $\\tau$ je ľubovoľný term substituovateľný za $x$ v $A$.\n  Nech $\\sign{T} \\A{x} A \\in S^+$.\n  Potom ak $S^+$ je splniteľná, tak\n  $S^+ \\cup \\{\\,\\sign{T}A\\{x \\mapsto \\tau\\}\\,\\}$ je splniteľná.\n* [ ] :cnt[e]{.i}. Nech $T$ je teória v nejakom jazyku logiky prvého rádu\n  a nech $X$ a $Y$ sú formuly tohto jazyka.\n  Ak $T \\cup \\{\\lnot(X \\lor Y)\\}$ je nesplniteľná,\n  tak $T \\entails X$ alebo $T \\entails Y$.\n* [ ] :cnt[e]{.i}. Nech $S^+$ je ľubovoľná množina označených prvorádových formúl\n  (napríklad z vetvy tabla), $A$ je ľubovoľná formula\n  a $\\tau$ je ľubovoľný term substituovateľný za $x$ v $A$.\n  Nech $\\sign{F} \\A{x} A \\in S^+$.\n  Potom ak $S^+$ je splniteľná, tak\n  $S^+ \\cup \\{\\,\\sign{F}A\\{x \\mapsto \\tau\\}\\,\\}$ je splniteľná.\n* [ ] :cnt[e]{.i}. Žiadne z vyššie uvedených tvrdení nie je pravdivé.",
+      "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Prednášky: [podkapitola 8.1](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=subsection.8.1),\n:xref[13.4]{.lec label=\"tvrdenie\"}.\nZbierka: :xref[3.4.5]{.exbook label=\"príklad\"}.\n]\n\nZ nasledujúcich tvrdení označte `[x]` práve tie,\nktoré sú pravdivé.\n\n* [x] :cnt[e]{.i}. Nech $T$ je teória v nejakom jazyku logiky prvého rádu\n  a nech $X$ je formula tohto jazyka.\n  Ak všetky formuly v $T$ sú platné a $T \\entails X$,\n  tak $X$ je platná.\n* [x] :cnt[e]{.i}. Nech $S^+$ je ľubovoľná množina označených prvorádových formúl\n  (napríklad z vetvy tabla), $A$ je ľubovoľná formula\n  a $\\tau$ je ľubovoľný term substituovateľný za $x$ v $A$.\n  Nech $\\sign{T} \\A{x} A \\in S^+$.\n  Potom ak $S^+$ je splniteľná, tak\n  $S^+ \\cup \\{\\,\\sign{T}A\\{x \\mapsto \\tau\\}\\,\\}$ je splniteľná.\n* [ ] :cnt[e]{.i}. Nech $T$ je teória v nejakom jazyku logiky prvého rádu\n  a nech $X$ a $Y$ sú formuly tohto jazyka.\n  Ak $T \\cup \\{\\lnot(X \\lor Y)\\}$ je nesplniteľná,\n  tak $T \\entails X$ alebo $T \\entails Y$.\n* [ ] :cnt[e]{.i}. Nech $S^+$ je ľubovoľná množina označených prvorádových formúl\n  (napríklad z vetvy tabla), $A$ je ľubovoľná formula\n  a $\\tau$ je ľubovoľný term substituovateľný za $x$ v $A$.\n  Nech $\\sign{F} \\A{x} A \\in S^+$.\n  Potom ak $S^+$ je splniteľná, tak\n  $S^+ \\cup \\{\\,\\sign{F}A\\{x \\mapsto \\tau\\}\\,\\}$ je splniteľná.\n* [ ] :cnt[e]{.i}. Žiadne z vyššie uvedených tvrdení nie je pravdivé.",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -208,37 +208,37 @@
             {
               "proposition_id": 2130,
               "proposition": "1. Odletovým a príletovým miestom každého letu je letisko.",
-              "solution": null
+              "solution": "\\A x \\A y \\A z (flight(x, y, z) -> airport(y) & airport(z))"
             },
             {
               "proposition_id": 2131,
               "proposition": "2. Medzinárodný let je práve taký, ktorého odletové a príletové miesto sa nachádza v inej krajine.",
-              "solution": null
+              "solution": "\\A x (international_flight(x) <-> \\E y \\E z (flight(x, y, z) & state(y) != state(z)))"
             },
             {
               "proposition_id": 2132,
               "proposition": "3. Medzinárodné letisko je také a len také letisko, z ktorého odlieta aspoň jeden medzinárodný let.",
-              "solution": null
+              "solution": "\\A x ((international_airport(x) <-> airport(x) & \\E y \\E z (flight(y, x, z) & international_flight(y))))"
             },
             {
               "proposition_id": 2133,
               "proposition": "4. Do a z letiska Snorestone International (ZZZ) lietajú len lietadlá typu Dreamliner NapMax (DNM).",
-              "solution": null
+              "solution": "\\A x \\A y ((flight(x, ZZZ, y) | flight(x, y, ZZZ)) -> plane_type(x) = DNM)"
             },
             {
               "proposition_id": 2134,
               "proposition": "5. Časy odletov jednotlivých letov z jedného miesta sa musia líšiť.",
-              "solution": null
+              "solution": "\\A x \\A y \\A z \\A w \\A v ((flight(x, y, z) & flight(w, y, v) & x != w) -> dep_time(x) != dep_time(w))"
             },
             {
               "proposition_id": 2135,
               "proposition": "6. Dve letiská sú priamo prepojené práve vtedy, ak medzi nimi existuje priamy let.",
-              "solution": null
+              "solution": "\\A x \\A y (airport(x) & airport(y) -> (dir_connected(x, y) <-> \\E z (flight(z, x, y) | flight(z, y, x))))"
             },
             {
               "proposition_id": 2136,
               "proposition": "7. Letiská sú ostrovné práve vtedy, keď ich poloha je na ostrove.",
-              "solution": null
+              "solution": "\\A x (airport(x) -> (island(x) <-> \\E y (island(y) & at(location(x), y))))"
             }
           ]
         },
