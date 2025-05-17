@@ -134,7 +134,7 @@
     "19": {
       "id": 19,
       "type": "text",
-      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu\nso spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$ $\\Lang$.\n\n_Množina $\\Forms$ všetkých formúl jazyka $\\Lang$_\nje :mark[najmenšia množina postupností symbolov] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms \\subseteq \\Forms$].\n* Ak $A, B \\in \\Forms$,\n    tak :mark[aj postupnosť symbolov $(A \\lnor B)$ patrí do $\\Forms$].\n* Ak :mark[x je indivíduová premenná]\n  a $A \\in \\Forms$,\n  tak :mark[aj postupnosť symbolov ${\\leq}1$ patrí do $\\Forms$].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[formulov]_ jazyka $\\Lang$.\n",
+      "data": "::h4[:icon[write] Definícia :cnt[d].]{.h6.float-start.my-0.me-2.lh-base}\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu\nso spojkou $\\lnor$ a kvantifikátorom ${\\leq}1$ $\\Lang$.\n\n_Množina $\\Forms$ všetkých formúl jazyka $\\Lang$_\nje :mark[najmenšia množina postupností symbolov] jazyka $\\Lang$,\nktorá spĺňa všetky nasledujúce podmienky:\n* :mark[$\\Atoms \\subseteq \\Forms$].\n* Ak $A, B \\in \\Forms$,\n    tak :mark[aj postupnosť symbolov $(A \\lnor B)$ patrí do $\\Forms$].\n* Ak :mark[x je indivíduová premenná]\n  a $A \\in \\Forms$,\n  tak :mark[aj postupnosť symbolov ${\\leq}1 x\\,A$ patrí do $\\Forms$].\n\nKaždý prvok $A \\in \\Forms$ nazývame\n_:mark[formulou]_ jazyka $\\Lang$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
