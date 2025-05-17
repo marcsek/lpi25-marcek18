@@ -54,7 +54,7 @@
     "9": {
       "id": 9,
       "type": "text",
-      "data": "::h3[:icon[write] iii. Záver]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **4 %**]\n\n:small[Vyslovte jasný záver o (ne)vyplývaní $X$ z teórie $T$.\nVysvetlite, ako ste k tomuto záveru dospeli pomocou rezolvencie:\nAkú význačnú vlastnosť má rezolvenčné odvodenie?\nAko súvisí klauzálna teória $T''$, pre ktorú ste odvodenie skonštruovali,\ns teóriou $T'$ a s problémom (ne)vyplývania $X$ z $T$?]\n\n...",
+      "data": "::h3[:icon[write] iii. Záver]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **4 %**]\n\n:small[Vyslovte jasný záver o (ne)vyplývaní $X$ z teórie $T$.\nVysvetlite, ako ste k tomuto záveru dospeli pomocou rezolvencie:\nAkú význačnú vlastnosť má rezolvenčné odvodenie?\nAko súvisí klauzálna teória $T''$, pre ktorú ste odvodenie skonštruovali,\ns teóriou $T'$ a s problémom (ne)vyplývania $X$ z $T$?]\n\nKeďže sa nám podarilo pomocou rezolvencie nájsť zamietnutie pre $T''$, čo je ekvisplniteľná klauzálna teória pre teóriu $T'$, resp. $T \\cup \\{\\neg X\\}$, tak $T \\models X$.",
       "idCounter": 0,
       "comments": {
         "ids": [],
