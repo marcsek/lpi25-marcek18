@@ -15,10 +15,19 @@
       "id": 2,
       "type": "text",
       "data": "## Úloha 7.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **21 %** · :icon[source] Zbierka: :xref[6.5.4]{.exbook label=\"úloha\"}.]\n\n:icon[tools] Pomocou aplikácie Formalization checker sformalizujte nižšie uvedené výroky ako ucelenú teóriu $T = \\{A_1, \\ldots, A_{7}\\}$\nv danom jazyku $\\Lang$.\n\nZamýšľaný význam predikátových symbolov je:\n\n:::::div{.row}\n::::div{.col-md-7}\n:::div{.table.table-intended-meaning.small}\n| Predikátový symbol            | Zamýšľaný význam |\n|-------------------------------|------------------|\n| airport($x$)              | $x$ je letisko  |\n| flight($x$,$y$,$z$)       | $x$ je let z miesta $y$ do miesta $z$  |\n| international_flight($x$) | $x$ je medzinárodný let  |\n| international_airport($x$)| $x$ je medzinárodné letisko  |\n| dir_connected($x$,$y$)    | $x$ a $y$ sú priamo prepojené |\n| island($x$)               | $x$ je ostrov/ostrovný  |\n| at($x$,$y$)               | $x$ sa nachádza na $y$ |\n:::\n::::\n::::div{.col-md-5}\n:::div{.table.table-intended-meaning.small}\n| Funkčný symbol | Zamýšľaný význam     |\n|----------------|----------------------|\n| state($x$)     | štát/krajina, v ktorej sa $x$ nachádza|\n| plane_type($x$)| typ lietadla, ktoré lieta letom $x$ |\n| location($x$)  | poloha $x$ |\n| dep_time($x$)  | odletový čas letu $x$  |\n:::\n::::\n:::::",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "pukancova",
+            "text": "Ok. 21%",
+            "timestamp": 1747688261416,
+            "id": 1
+          }
+        }
       }
     },
     "3": {
@@ -35,50 +44,95 @@
       "id": 4,
       "type": "text",
       "data": "## Úloha 7.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **34 %** · :icon[source] Zbierka: :xref[7.3.3]{.exbook label=\"úloha\"}.]\n\nNech $\\Lang$ je jazyk logiky prvého rádu,\nkde $\\Consts = \\{\\sym{a}$, $\\sym{b}$, $\\sym{c}$, $\\sym{E7} \\}$,\n$\\Preds = \\{\n  \\sym{spoj}^3, \\sym{el}^2, \\sym{bus}^2\n\\}$,\n$\\Funcs = \\{\n  \\sym{B}^2, \\sym{prestup}^2\n\\}$\na ostatné použité symboly začínajúce malým písmenom sú indivíduové premenné.\n\nUvažujme klauzálnu teóriu\nv jazyku $\\Lang$:\n$$\n\\begin{align*}\n  T = \\bigl\\{\\,\n      & \\lnot\\sym{el}(\\vx,\\vy) \\lor \\sym{el}(\\vy,\\vx) \n      ,\\\\\n      & \\lnot\\sym{el}(\\vx,\\vy) \\lor \\sym{spoj}(\\vx,\\vy,\\sym{E7})\n      ,\\\\\n      & \\lnot\\sym{bus}(\\vx,\\vy) \\lor \\sym{spoj}(\\vx,\\vy,\\sym{B}(\\vx,\\vy))\n      ,\\\\\n      & \\lnot\\sym{spoj}(\\vx,\\vy, \\vs_1) \\lor \\lnot\\sym{spoj}(\\vy,\\vz, \\vs_2) \\lor \\sym{spoj}(\\vx,\\vz, \\sym{prestup}(\\vs_1,\\vs_2))\n    \\,\\bigr\\}\n  \\\\\n\\end{align*}\n$$\na formulu\n$$\n  X = \n    \\bigl(\\bigl(\\sym{bus}(\\sym{a},\\sym{b})\\land\\E{\\vx}(\\sym{el}(\\sym{b},\\vx)\\land\\sym{el}(\\sym{c},\\vx))\\bigr)\\limpl\\E{\\vx}\\sym{spoj}(\\sym{a},\\sym{c},\\vx)\\bigr)\n  \\,.\n$$\n\nDokážte pomocou rezolvencie, že $T\\entails X$.\n\n::::::aside{.note.p-0.bg-transparent}\n:icon[help]\n**Pomôcka.** Aby ste získali intuitívnejšiu predstavu o význame klauzúl z teórie $T$,\n  predstavte si ich ako implikácie a symboly interpretujte napr. takto:\n:::::div{.row}\n::::div{.col-md-6}\n:::div{.table.table-intended-meaning.small}\n| Predikát. sym.      | Zamýšľaný význam |\n|---------------------|------------------|\n| $\\sym{spoj}(x,y,s)$ | dá sa cestovať z $x$ do $y$ spojením $s$  |\n| $\\sym{el}(x,y)$     | dá sa cestovať električkou z $x$ do $y$ |\n| $\\sym{bus}(x,y)$    | dá sa cestovať autobusom z $x$ do $y$  |\n:::\n::::\n::::div{.col-md-6}\n:::div{.table.table-intended-meaning.small}\n| Indiv. konšt. / Funkčný sym. | Zamýšľaný význam     |\n|----------------------|----------------------|\n| $\\sym{E7}$           | električka číslo 7   |\n| $\\sym{a}$, $\\sym{b}$, $\\sym{c}$ | konkrétne zastávky |\n| $\\sym{B}(x,y)$       | autobus z $x$ do $y$ |\n| $\\sym{prestup}(x,y)$ | spojenie tvorené spojeniami $x$ a $y$ a prestupom medzi nimi |\n:::\n::::\n:::::\n::::::",
-      "idCounter": 4,
+      "idCounter": 5,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          4
+        ],
+        "entities": {
+          "4": {
+            "author": "boborova3",
+            "text": "Pekne. \n\n34%",
+            "timestamp": 1747664814980,
+            "id": 4
+          }
+        }
       }
     },
     "8": {
       "id": 8,
       "type": "text",
       "data": "::h3[:icon[write] i. Úprava na ekvisplniteľnú klauzálnu teóriu]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **5 %**]\n\nO akej teórii musíme zistiť, že je nesplniteľná,\naby sme vyriešili formálny problém, či $T \\entails X$?\n\n$T' = \\mark{T \\cup \\{\\neg X\\}}$\n\nUpravte teóriu $T'$ potrebnú na vyriešenie formálneho problému\nna ekvisplniteľnú klauzálnu teóriu $T''$, aby ste problém mohli riešiť rezolvenciou.\n\n:h5[$\\neg\\boldsymbol{X}$]{.h6}\n\nNNF:\n$\\bigl(\\bigl(\\sym{bus}(\\sym{a},\\sym{b})\\land\\E{\\vx}(\\sym{el}(\\sym{b},\\vx)\\land\\sym{el}(\\sym{c},\\vx))\\bigr)\\land\\A{\\vx} \\neg\\sym{spoj}(\\sym{a},\\sym{c},\\vx)\\bigr)$\n\nPremenovanie premenných:\n\\\n$\\bigl(\\bigl(\\sym{bus}(\\sym{a},\\sym{b})\\land\\E{\\vy}(\\sym{el}(\\sym{b},\\vy)\\land\\sym{el}(\\sym{c},\\vy))\\bigr)\\land\\A{\\vx} \\neg\\sym{spoj}(\\sym{a},\\sym{c},\\vx)\\bigr)$\n\nSkolemizácia:\n\\\n$\\bigl(\\bigl(\\sym{bus}(\\sym{a},\\sym{b})\\land(\\sym{el}(\\sym{b},\\sym{pekny\\_spoj})\\land\\sym{el}(\\sym{c},\\sym{pekny\\_spoj}))\\bigr)\\land\\A{\\vx} \\neg\\sym{spoj}(\\sym{a},\\sym{c},x)\\bigr)$\n\nPNF a CNF:\n\\\n$\\A{\\vx}\\bigl(\\sym{bus}(\\sym{a},\\sym{b})\\land \\sym{el}(\\sym{b},\\sym{pekny\\_spoj})\\land\\sym{el}(\\sym{c},\\sym{pekny\\_spoj})\\land \\neg\\sym{spoj}(\\sym{a},\\sym{c},x)\\bigr)$\n\n$$\n\\begin{align*}\n  T'' = \\bigl\\{\\,\n      & \\lnot\\sym{el}(\\vx,\\vy) \\lor \\sym{el}(\\vy,\\vx) \n      ,\\\\\n      & \\lnot\\sym{el}(\\vx,\\vy) \\lor \\sym{spoj}(\\vx,\\vy,\\sym{E7})\n      ,\\\\\n      & \\lnot\\sym{bus}(\\vx,\\vy) \\lor \\sym{spoj}(\\vx,\\vy,\\sym{B}(\\vx,\\vy))\n      ,\\\\\n      & \\lnot\\sym{spoj}(\\vx,\\vy, \\vs_1) \\lor \\lnot\\sym{spoj}(\\vy,\\vz, \\vs_2) \\lor \\sym{spoj}(\\vx,\\vz, \\sym{prestup}(\\vs_1,\\vs_2))\n      ,\\\\\n      &\\sym{bus}(\\sym{a},\\sym{b})\n      ,\\\\\n      &\\sym{el}(\\sym{b},\\sym{pekny\\_spoj})\n      ,\\\\\n      &\\sym{el}(\\sym{c},\\sym{pekny\\_spoj})\n      ,\\\\\n      &\\neg\\sym{spoj}(\\sym{a},\\sym{c},x)\n      \n      \\,\\bigr\\}\n  \\\\\n\\end{align*}\n$$\n\n:::aside{.note.p-0.bg-transparent}\n:icon[help] **Pomôcky.**\n* Teória $T'$ je vhodnou kombináciou teórie $T$ a formuly $X$.\n* Teória $T''$ je zjednotením teórie $T$ a množiny klauzúl,\n  ktoré vzniknú úpravou tej časti $T'$, ktorá je odvodená od formuly $X$.\n  Upravovať stačí túto druhú časť, pretože teória $T$ už je v klauzálnom tvare.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1747664702549,
+            "id": 0
+          }
+        }
       }
     },
     "9": {
       "id": 9,
       "type": "text",
       "data": "::h3[:icon[write] iii. Záver]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **4 %**]\n\n:small[Vyslovte jasný záver o (ne)vyplývaní $X$ z teórie $T$.\nVysvetlite, ako ste k tomuto záveru dospeli pomocou rezolvencie:\nAkú význačnú vlastnosť má rezolvenčné odvodenie?\nAko súvisí klauzálna teória $T''$, pre ktorú ste odvodenie skonštruovali,\ns teóriou $T'$ a s problémom (ne)vyplývania $X$ z $T$?]\n\nKeďže sa nám podarilo pomocou rezolvencie nájsť zamietnutie pre $T''$, čo je ekvisplniteľná klauzálna teória pre teóriu $T'$, resp. $T \\cup \\{\\neg X\\}$, tak $T \\models X$.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Ok.",
+            "timestamp": 1747662898189,
+            "id": 0
+          }
+        }
       }
     },
     "11": {
       "id": 11,
       "type": "text",
       "data": "::h3[:icon[tools] ii. Rezolvenčné zamietnutie]{.h5}\n:small[:icon[star]{.text-primary} Hodnota: **25 %**]\n\nNájdite rezolvenčné zamietnutie pre klauzálnu teóriu z predošlej časti pomocou aplikácie Resolution editor.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[warning]\n**Upozornenie.**\n* Nezabudnite, že po vhodnej úprave formuly $X$ potrebujete **pridať novovzniknuté skolemovské konštanty a funkcie** do jazyka.\n* Aplikácia Resolution editor vás upozorní na chýbajúce funkcie, no chýbajúce konštanty interpretuje, akoby to boli premenné. **Pre konštanty však platia v unifikácii iné pravidlá, než pre premenné.** Nájdené zamietnutie potom nemusí byť správne.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "boborova3",
+            "text": "Pekne.",
+            "timestamp": 1747662905029,
+            "id": 0
+          }
+        }
       }
     },
     "13": {
       "id": 13,
       "type": "text",
       "data": "## Úloha 7.:cnt[a]\n\n:small[:icon[star]{.text-primary} Hodnota: **20 %** · :icon[source] Zbierka: :xref[7.2.2]{.exbook label=\"úloha\"}.]\n\nMajme teóriu $T=\\{A_1,\\dots,A_3\\}$ v jazyku $\\Lang$ logiky prvého rádu\ns $\\Consts = \\{\\sym{d}\\}$,\n$\\Funcs = \\emptyset$, \n$\\Preds=\\{\\sym{A}^2, \\sym{B}^1, \\sym{C}^2\\}$, kde:\n\n$$\n\\begin{align*}\n  A_1 &= \\A{\\vx}\\bigl(\\sym{B}(\\vx)\\limpl\\bigl(\\E{\\vy}\\sym{A}(\\vx,\\vy)\\lor\\E{\\vy}\\sym{C}(\\vy,\\vx)\\bigr)\\bigr),\n  \\\\\n  A_2 &= \\bigl(\\A{\\vx}\\bigl(\\sym{A}(\\sym{d},\\vx)\\limpl\\E{\\vy}\\sym{B}(\\vy)\\bigr)\\limpl\\sym{B}(\\sym{d})\\bigr),\n  \\\\\n  A_3 &= \\A{\\vx}\\bigl(\\sym{C}(\\vx,\\vx)\\limpl\\A{\\vy}\\bigl(\\sym{A}(\\vx,\\vy)\\limpl\\E{\\vz}\\sym{B}(\\vz)\\bigr)\\bigr)\n  \\,.\n\\end{align*}\n$$\n\nUpravte $T$ na ekvisplniteľnú klauzálnu teóriu $T' = \\bigcup_{i=1}^3 T'_i$\nvo vhodnom rozšírení $\\Lang'$ jazyka $\\Lang$ o skolemovské konštanty a funkcie.\n\n*  Explicitne zapíšte rozšírený jazyk $\\Lang'$.\n*  Pre každú formulu $A_i$, $i = 1$, ..., $3$,\n    zapíšte s ňou ekvisplniteľnú množinu klauzúl $T'_i$.\n* Zapíšte aj kľúčové medzivýsledky úprav\n    (NNF, premenovanie premenných, skolemizáciu, PNF).\n    Medzivýsledok nemusíte písať,\n    ak sa podstatne nelíši od pôvodnej formuly\n    alebo predchádzajúceho medzivýsledku.",
-      "idCounter": 1,
+      "idCounter": 2,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          1
+        ],
+        "entities": {
+          "1": {
+            "author": "pukancova",
+            "text": "20%",
+            "timestamp": 1747774789643,
+            "id": 1
+          }
+        }
       }
     },
     "15": {
@@ -95,10 +149,19 @@
       "id": 16,
       "type": "text",
       "data": "::h3[:cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **10 %** ·\n:icon[source] Zdroj:\n[7. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.7).\n]\n\nZadefinujte neštandardný **jazyk relačnej logiky prvého rádu so spojkou $\\lnor$ (NOR) a kvantifikátorom ${\\leq}1$ (najviac jeden)** _namiesto_ klasických spojok a kvantifikátorov.\n\nNapr. postupnosť symbolov\n${\\leq}1 x(P(x)\\lnor {\\leq}1 y((x \\doteq y \\lnor x \\doteq y) \\lnor R(x,y)))$\nby mala byť formulou v jazyku $\\Lang$, ktorý zadefinujete,\nak $\\Preds = \\{P,R\\}$, $\\arity_\\Lang(P) = 1$, $\\arity_\\Lang(R) = 2$.\n\nZamýšľaný význam neštandardných symbolov je:\n* Formula $(A \\lnor B)$ je splnená\n  vtt je splnená klasická formula $\\lnot(A \\lor B)$.\n* Formula ${\\leq}1 x\\,A$ je splnená\n  vtt $A$ je splnená pre najviac jeden prvok domény.\n\nSprávne doplňte definície na miestach vyznačených „:mark[…]“ resp. „$\\mark{…}$“.\n\n:::aside{.note.p-0.bg-transparent}\n:icon[explanation]\nVo vami zadefinovanom jazyku **nemajú byť** klasické spojky ani kvantifikátory.\n\n:icon[help] Vynechané časti doplňte **podobne**\nako v štandardných definíciách.\n**Nie vždy** postačuje jedno slovo alebo symbol.\n\n:icon[warning]\n**Zachovajte** značky `:mark[]` a `$\\mark{…}$`.\n\n:icon[technical]\nNeštandardnú spojku $\\lnor$ v $\\TeX$u zapisujeme `\\lnor`.\nNeštandardný kvantifikátor ${\\leq}1$ zapisujeme `{\\leq}1`.\n\n:icon[info] Ako táto úloha súvisí s doplňovacími úlohami z `du05` a `du06` a ako sa od nich líši?\n* V tejto úlohe sa zaoberáme **neštandardným** logickým jazykom,\n  ktorý sa ale veľmi podobá na štandardné jazyky logiky prvého rádu,\n  ktorými sme sa zaoberali na tomto predmete.\n* Pre zjednodušenie je tento jazyk **relačný**,\n  teda **neobsahuje funkčné symboly**.\n* Vyberáme definície **syntaxe**\n  (pravidiel konštrukcie termov a formúl ako v `du05`\n  a def. 1 v `du06`)\n  **aj sémantiky** (významu ako def. 2–5 v `du06`) tohto neštandardného jazyka.\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "iveta331",
+            "text": "10%",
+            "timestamp": 1747728743915,
+            "id": 0
+          }
+        }
       }
     },
     "17": {
@@ -155,30 +218,57 @@
       "id": 22,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[10. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.10) – [kapitola 15](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=section.15).\n]\n\nNech $c$ a $d$ sú indivíduové konštanty, $P^2$ je predikátový symbol,\n$f^1$ a $g^2$ funkčné symboly\na nech $w$, $x$, $y$ a $z$ sú navzájom rôzne indivíduové premenné jazyka $\\Lang$.\n\nZ nasledujúcich prípadov označte `[x]` práve tie,\nv ktorých sú uvedené atómy unifikovateľné.\nAk sú atómy unifikovateľné,\ndoplňte ich najvšeobecnejší unifikátor.\n\n* [ ] Atómy $P(c,x)$ a $P(x,d)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [x] Atómy $P(c,x)$ a $P(x,y)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{x \\mapsto c, y \\mapsto c\\}$].\n* [ ] Atómy $P(f(x),y)$ a $P(y,x)$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{… \\mapsto …, …\\}$].\n* [x] Atómy $P(x,g(z,x))$ a $P(f(c),g(w,f(y)))$ sú unifikovateľné.     \n    Ich najvšeobecnejším unifikátorom je substitúcia :mark[$\\{x \\mapsto f(c), y \\mapsto c, z \\mapsto w \\}$].\n* [ ] Žiadna z uvedených dvojíc atómov nie je unifikovateľná.\n",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "OK – 5,0 %",
+            "timestamp": 1747795498914,
+            "id": 0
+          }
+        }
       }
     },
     "23": {
       "id": 23,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Zdroj:\n[9. prednáška](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=lecture.9) –\n:xref[10.9]{.lec label=\"dohoda\"},\n[kapitola 11](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=section.11).\n]\n\nUrčte, ktorého z typov $\\alpha$, $\\beta$, $\\gamma$, $\\delta$\nsú nasledujúce označené formuly.\n\n:::aside{.note.bg-transparent.p-0}\n:icon[technical] Vnútri `:mark[$…$]` ponechajte iba správny typ, ostatné zmažte.\n\n:icon[explanation] Typ je _vždy_ určený jednoznačne (nie len v tejto úlohe).\n\n:icon[warning] Vo formulách sme vynechali zátvorky podľa :xref[10.9]{.lec label=\"dohody\"}.\n:::\n\n:::enum{.i}\n1. $\\sign F \\A{x} R(c,x) \\limpl \\E{y} R(y,c)$:\n   :mark[$\\alpha$]\n2. $\\sign T \\A{x}(R(c,x) \\limpl R(x,c))$:\n   :mark[$\\gamma$]\n3. $\\sign F \\E{x} P(x) \\land \\A{y}(P(y) \\limpl R(c,y))$:\n   :mark[$\\beta$]\n4. $\\sign T \\E{x}(P(x) \\land \\A{y}(P(y) \\limpl R(y,x)))$:\n   :mark[$\\delta$]\n5. $\\sign F \\lnot\\A{x}(\\E{y}(P(y) \\land \\lnot R(x,y)) \\lor \\lnot\\E{y}(\\lnot P(y) \\land R(x,y)))$:\n   :mark[$\\alpha$]\n:::",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "OK – **5,0 %**",
+            "timestamp": 1747795541156,
+            "id": 0
+          }
+        }
       }
     },
     "24": {
       "id": 24,
       "type": "text",
       "data": "::h3[:icon[write] :cnt[c]{.a})]{.h6.float-start.my-0.me-2.lh-base}\n:small[\n:icon[star]{.text-primary} Hodnota: **5 %** ·\n:icon[source] Prednášky: [podkapitola 8.1](https://fmfi-uk-1-ain-412.github.io/lpi/prednasky/poznamky-z-prednasok.pdf#nameddest=subsection.8.1),\n:xref[13.4]{.lec label=\"tvrdenie\"}.\nZbierka: :xref[3.4.5]{.exbook label=\"príklad\"}.\n]\n\nZ nasledujúcich tvrdení označte `[x]` práve tie,\nktoré sú pravdivé.\n\n* [x] :cnt[e]{.i}. Nech $T$ je teória v nejakom jazyku logiky prvého rádu\n  a nech $X$ je formula tohto jazyka.\n  Ak všetky formuly v $T$ sú platné a $T \\entails X$,\n  tak $X$ je platná.\n* [x] :cnt[e]{.i}. Nech $S^+$ je ľubovoľná množina označených prvorádových formúl\n  (napríklad z vetvy tabla), $A$ je ľubovoľná formula\n  a $\\tau$ je ľubovoľný term substituovateľný za $x$ v $A$.\n  Nech $\\sign{T} \\A{x} A \\in S^+$.\n  Potom ak $S^+$ je splniteľná, tak\n  $S^+ \\cup \\{\\,\\sign{T}A\\{x \\mapsto \\tau\\}\\,\\}$ je splniteľná.\n* [ ] :cnt[e]{.i}. Nech $T$ je teória v nejakom jazyku logiky prvého rádu\n  a nech $X$ a $Y$ sú formuly tohto jazyka.\n  Ak $T \\cup \\{\\lnot(X \\lor Y)\\}$ je nesplniteľná,\n  tak $T \\entails X$ alebo $T \\entails Y$.\n* [ ] :cnt[e]{.i}. Nech $S^+$ je ľubovoľná množina označených prvorádových formúl\n  (napríklad z vetvy tabla), $A$ je ľubovoľná formula\n  a $\\tau$ je ľubovoľný term substituovateľný za $x$ v $A$.\n  Nech $\\sign{F} \\A{x} A \\in S^+$.\n  Potom ak $S^+$ je splniteľná, tak\n  $S^+ \\cup \\{\\,\\sign{F}A\\{x \\mapsto \\tau\\}\\,\\}$ je splniteľná.\n* [ ] :cnt[e]{.i}. Žiadne z vyššie uvedených tvrdení nie je pravdivé.",
-      "idCounter": 0,
+      "idCounter": 1,
       "comments": {
-        "ids": [],
-        "entities": {}
+        "ids": [
+          0
+        ],
+        "entities": {
+          "0": {
+            "author": "amszek",
+            "text": "OK – **5,0 %**",
+            "timestamp": 1747795560064,
+            "id": 0
+          }
+        }
       }
     },
     "25": {
