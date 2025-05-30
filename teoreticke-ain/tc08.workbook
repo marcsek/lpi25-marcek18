@@ -994,26 +994,6 @@
         "entities": {}
       }
     },
-    "50": {
-      "id": 50,
-      "type": "structureExplorer",
-      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"student/1, supervisor/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"student\",\"arity\":1},{\"name\":\"supervisor\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"student/1\":{\"value\":\"1, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"3\"]],\"tableEnabled\":false},\"supervisor/2\":{\"value\":\"(2, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\",\"3\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"¬∃x ¬∃y (student(x) ∧ supervisor(x,y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"student\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"¬∃x ∃y (student(x)∧supervisor(x,y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"student\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
-    },
-    "51": {
-      "id": 51,
-      "type": "structureExplorer",
-      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"loves/2, in_love/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"loves\",\"arity\":2},{\"name\":\"in_love\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"loves/2\":{\"value\":\"(1, 2), (2, 1), (2, 3), (3, 2), (1, 3), (3, 1), (3, 3), (2, 2), (1, 1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"2\",\"1\"],[\"2\",\"3\"],[\"3\",\"2\"],[\"1\",\"3\"],[\"3\",\"1\"],[\"3\",\"3\"],[\"2\",\"2\"],[\"1\",\"1\"]],\"tableEnabled\":false},\"in_love/1\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"],[\"3\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y (loves(x,y)→in_love(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"loves\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in_love\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x (∃y loves(x,y)→in_love(x))\",\"expressionValue\":true,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"loves\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}},\"subRight\":{\"name\":\"in_love\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
-    },
     "52": {
       "id": 52,
       "type": "tableauEditor",
@@ -1121,16 +1101,6 @@
         },
         "config": "Full FOL"
       },
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
-    },
-    "53": {
-      "id": 53,
-      "type": "structureExplorer",
-      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"supervisor/2, collaborates/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"supervisor\",\"arity\":2},{\"name\":\"collaborates\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"supervisor/2\":{\"value\":\"(1, 2), (2, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"2\",\"2\"]],\"tableEnabled\":false},\"collaborates/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y (supervisor(x,y)→collaborates(x,y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"collaborates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x ∀y (supervisor(x,y)→collaborates(x,y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"collaborates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -1895,6 +1865,190 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "64": {
+      "id": 64,
+      "type": "tableauEditor",
+      "data": {
+        "type": "ecdf",
+        "node": {
+          "id": 1,
+          "value": "F ( ¬ ∃x ∃y R(x, y) ↔ ∀x ∀y ¬ R(x, y) )",
+          "references": []
+        },
+        "leftChild": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T ( ¬ ∃x ∃y R(x, y) ∧ ¬ ∀x ∀y ¬ R(x, y) )",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ¬ ∃x ∃y R(x, y)",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T ¬ ∀x ∀y ¬ R(x, y)",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F  ∃x ∃y R(x, y)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "delta",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∀x ∀y ¬ R(x, y)",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "delta",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∀y ¬ R(a, y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ¬ R(a, b)",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T R(a, b)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "child": {
+                          "type": "gamma",
+                          "node": {
+                            "id": 10,
+                            "value": "F ∃x ∃y R(x, y)",
+                            "references": [
+                              "3"
+                            ]
+                          },
+                          "child": {
+                            "type": "gamma",
+                            "node": {
+                              "id": 11,
+                              "value": "F ∃y R(a, y)",
+                              "references": [
+                                "10"
+                              ]
+                            },
+                            "child": {
+                              "type": "closed",
+                              "node": {
+                                "id": 12,
+                                "value": "F R(a, b)",
+                                "references": [
+                                  "11"
+                                ]
+                              },
+                              "closed": [
+                                "9",
+                                "12"
+                              ]
+                            },
+                            "substitution": {
+                              "str": "y->b"
+                            }
+                          },
+                          "substitution": {
+                            "str": "x->a"
+                          }
+                        }
+                      }
+                    },
+                    "substitution": {
+                      "str": "y->b"
+                    }
+                  },
+                  "substitution": {
+                    "str": "x->a"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 13,
+            "value": "F ( ¬ ∃x ∃y R(x, y) ∨ ¬ ∀x ∀y ¬ R(x, y) )",
+            "references": [
+              "1"
+            ]
+          }
+        },
+        "config": "Basic FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "66": {
+      "id": 66,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"loves/2, in_love/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"loves\",\"arity\":2},{\"name\":\"in_love\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"loves/2\":{\"value\":\"(1, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"]],\"tableEnabled\":false},\"in_love/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y (loves(x,y)→in_love(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"loves\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"in_love\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x (∃y loves(x,y)→in_love(x))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"loves\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}},\"subRight\":{\"name\":\"in_love\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "67": {
+      "id": 67,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"supervisor/2, collaborates/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"supervisor\",\"arity\":2},{\"name\":\"collaborates\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"supervisor/2\":{\"value\":\"(1, 2), (2, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"2\",\"2\"]],\"tableEnabled\":false},\"collaborates/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y (supervisor(x,y)→collaborates(x,y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"collaborates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∀x ∀y (supervisor(x,y)→collaborates(x,y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"supervisor\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"collaborates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "68": {
+      "id": 68,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"likes/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"likes\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"likes/2\":{\"value\":\"(1, 2), (1, 3), (1, 1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"2\"],[\"1\",\"3\"],[\"1\",\"1\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x ∃y likes(x,y)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"likes\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∃x ∀y likes(x,y)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"likes\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1909,17 +2063,17 @@
     36,
     48,
     39,
+    64,
     7,
     11,
     49,
     23,
-    50,
     12,
-    51,
+    66,
     24,
     52,
     13,
-    53,
+    67,
     25,
     54,
     8,
@@ -1927,6 +2081,7 @@
     55,
     57,
     41,
+    68,
     43,
     58,
     60,
