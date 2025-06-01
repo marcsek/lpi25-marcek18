@@ -1305,6 +1305,16 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "73": {
+      "id": 73,
+      "type": "text",
+      "data": "Dokaz sporom, teda predpokladame ze X je nesplnitelna, S ent X a S je splnitelna. Kedze S je splnitelna tak existuje ohodnotenie v ent S. Potom z S ent X musi platit, ze v ent X, ale to je v spore s X tym, ze X je nesplnitelna. ",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1330,7 +1340,8 @@
     63,
     65,
     66,
-    10
+    10,
+    73
   ],
   "settings": {
     "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n\\newcommand{\\Tabl}{\\mathcal{T}}\n\n\\newcommand\\sign[1]{\\mathop{\\text{\\textsf{\\textbf{#1}}}}\\nolimits}"
