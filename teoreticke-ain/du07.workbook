@@ -339,16 +339,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "31": {
-      "id": 31,
-      "type": "resolutionEditor",
-      "data": "{\"language\":{\"consts\":{\"input\":\"c, d\",\"object\":[\"c\",\"d\"],\"error\":\"\",\"symbols\":[\"c\",\"d\"]},\"funs\":{\"input\":\"\",\"object\":[],\"error\":\"\",\"symbols\":[]},\"preds\":{\"input\":\"P/2, F/2\",\"object\":[[\"P\",2],[\"F\",2]],\"error\":\"\",\"symbols\":[{\"name\":\"P\",\"arity\":2},{\"name\":\"F\",\"arity\":2}]}},\"steps\":{\"order\":[0,1,2],\"allSteps\":[[0,{\"formula\":{\"input\":\"P(c,x) | F(z, z)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"P\",\"terms\":[{\"name\":\"c\"},{\"name\":\"x\"}]},{\"neg\":false,\"name\":\"F\",\"terms\":[{\"name\":\"z\"},{\"name\":\"z\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[1,{\"formula\":{\"input\":\"P(x,d) | F(z, )\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"P\",\"terms\":[{\"name\":\"x\"},{\"name\":\"d\"}]},{\"neg\":false,\"name\":\"F\",\"terms\":[{\"name\":\"z\"},{\"name\":\"y\"}]}],\"litsMultiset\":null},\"error\":{\"message\":\"Expected term but \\\")\\\" found.\",\"expected\":[{\"type\":\"other\",\"description\":\"term\"}],\"found\":\")\",\"location\":{\"start\":{\"offset\":14,\"line\":1,\"column\":15},\"end\":{\"offset\":15,\"line\":1,\"column\":16}},\"name\":\"SyntaxError\"}},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":false,\"emptyClause\":false}],[2,{\"formula\":{\"input\":\"P(c, d)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"P\",\"terms\":[{\"name\":\"c\"},{\"name\":\"d\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"1\",\"object\":0,\"error\":\"\"},\"renaming\":{\"input\":\"x->y\",\"object\":{},\"error\":\"\"},\"reference2\":{\"input\":\"2\",\"object\":1,\"error\":\"\"},\"unifier\":{\"input\":\"x->c, y->d\",\"object\":{},\"error\":\"\"},\"valid\":false,\"emptyClause\":false}]],\"rank\":[[0,0],[1,1],[2,2]],\"id\":3,\"verdict\":false},\"inputChange\":{\"originValue\":\"P(x,d)\"}}",
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -370,7 +360,6 @@
     20,
     21,
     22,
-    31,
     23,
     24
   ],
