@@ -61,8 +61,8 @@
         "entities": {}
       }
     },
-    "35": {
-      "id": 35,
+    "36": {
+      "id": 36,
       "type": "tableauEditor",
       "data": {
         "type": "assumption",
@@ -110,14 +110,14 @@
                     "type": "deltaStar",
                     "node": {
                       "id": 7,
-                      "value": "F ∀x ∀y ∀z ( ( subseteq(x, y) ∧ subseteq(y, z) ) → subseteq(x, z) )",
+                      "value": "F ∀x ∀y ( diff(x, y) ≐ empty → subseteq(x, y) )",
                       "references": []
                     },
                     "child": {
                       "type": "alpha",
                       "node": {
                         "id": 8,
-                        "value": "F ( ( subseteq(A, B) ∧ subseteq(B, C) ) → subseteq(A, C) )",
+                        "value": "F ( diff(a, b) ≐ empty → subseteq(a, b) )",
                         "references": [
                           "7"
                         ]
@@ -126,7 +126,7 @@
                         "type": "alpha",
                         "node": {
                           "id": 9,
-                          "value": "T ( subseteq(A, B) ∧ subseteq(B, C) ) ",
+                          "value": "T diff(a, b) ≐ empty",
                           "references": [
                             "8"
                           ]
@@ -135,7 +135,7 @@
                           "type": "gammaStar",
                           "node": {
                             "id": 10,
-                            "value": "F subseteq(A, C)",
+                            "value": "F subseteq(a, b)",
                             "references": [
                               "8"
                             ]
@@ -144,7 +144,7 @@
                             "type": "estf",
                             "node": {
                               "id": 11,
-                              "value": "T ( subseteq(A, C) ↔ ∀z ( in(z, A) → in(z, C) ) )",
+                              "value": "T ( subseteq(a, b) ↔ ∀z ( in(z, a) → in(z, b) ) )",
                               "references": [
                                 "2"
                               ]
@@ -153,17 +153,17 @@
                               "type": "delta",
                               "node": {
                                 "id": 12,
-                                "value": "F ∀z ( in(z, A) → in(z, C) ) ",
+                                "value": "F ∀z ( in(z, a) → in(z, b) )",
                                 "references": [
-                                  "11",
-                                  "10"
+                                  "10",
+                                  "11"
                                 ]
                               },
                               "child": {
                                 "type": "alpha",
                                 "node": {
                                   "id": 13,
-                                  "value": "F ( in(a, A) → in(a, C) ) ",
+                                  "value": "F ( in(c, a) → in(c, b) )",
                                   "references": [
                                     "12"
                                   ]
@@ -172,155 +172,119 @@
                                   "type": "alpha",
                                   "node": {
                                     "id": 14,
-                                    "value": "T in(a, A)",
+                                    "value": "T in(c, a)",
                                     "references": [
                                       "13"
                                     ]
                                   },
                                   "child": {
-                                    "type": "alpha",
+                                    "type": "gammaStar",
                                     "node": {
                                       "id": 15,
-                                      "value": "F in(a, C)",
+                                      "value": "F in(c, b)",
                                       "references": [
                                         "13"
                                       ]
                                     },
                                     "child": {
-                                      "type": "alpha",
+                                      "type": "gamma",
                                       "node": {
                                         "id": 16,
-                                        "value": "T subseteq(A, B)",
+                                        "value": "T ( in(c, diff(a, b)) ↔ ( in(c, a) ∧ ¬ in(c, b) ) )",
                                         "references": [
-                                          "9"
+                                          "6"
                                         ]
                                       },
                                       "child": {
-                                        "type": "gammaStar",
+                                        "type": "alpha",
                                         "node": {
                                           "id": 17,
-                                          "value": "T subseteq(B, C)",
+                                          "value": "T¬ in(c, empty)",
                                           "references": [
-                                            "9"
+                                            "3"
                                           ]
                                         },
                                         "child": {
-                                          "type": "estt",
+                                          "type": "leibnitz",
                                           "node": {
                                             "id": 18,
-                                            "value": "T ( subseteq(A, B) ↔ ∀z ( in(z, A) → in(z, B) ) )",
+                                            "value": "F in(c, empty)",
                                             "references": [
-                                              "2"
+                                              "17"
                                             ]
                                           },
                                           "child": {
-                                            "type": "open",
+                                            "type": "estf",
                                             "node": {
                                               "id": 19,
-                                              "value": "T ∀z ( in(z, A) → in(z, B) )",
+                                              "value": "T ( in(c, empty) ↔ ( in(c, a) ∧ ¬ in(c, b) ) )",
                                               "references": [
-                                                "18",
+                                                "9",
                                                 "16"
                                               ]
+                                            },
+                                            "child": {
+                                              "type": "ncs",
+                                              "node": {
+                                                "id": 20,
+                                                "value": "F ( in(c, a) ∧ ¬ in(c, b) )",
+                                                "references": [
+                                                  "18",
+                                                  "19"
+                                                ]
+                                              },
+                                              "child": {
+                                                "type": "alpha",
+                                                "node": {
+                                                  "id": 21,
+                                                  "value": "F ¬ in(c, b)",
+                                                  "references": [
+                                                    "14",
+                                                    "20"
+                                                  ]
+                                                },
+                                                "child": {
+                                                  "type": "closed",
+                                                  "node": {
+                                                    "id": 22,
+                                                    "value": "T in(c, b)",
+                                                    "references": [
+                                                      "21"
+                                                    ]
+                                                  },
+                                                  "closed": [
+                                                    "15",
+                                                    "22"
+                                                  ]
+                                                }
+                                              }
                                             }
                                           }
-                                        },
-                                        "substitution": {
-                                          "str": "x->A, y->B"
                                         }
+                                      },
+                                      "substitution": {
+                                        "str": "z->c"
                                       }
+                                    },
+                                    "substitution": {
+                                      "str": "x->a, y->b, z->c"
                                     }
                                   }
                                 }
                               },
                               "substitution": {
-                                "str": "z->a"
+                                "str": "z->c"
                               }
                             }
                           },
                           "substitution": {
-                            "str": "x->A, y->C"
+                            "str": "x->a, y->b"
                           }
                         }
                       }
                     },
                     "substitution": {
-                      "str": "x->A, y->B, z->C"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "config": "Full FOL"
-      },
-      "idCounter": 1,
-      "comments": {
-        "ids": [
-          0
-        ],
-        "entities": {
-          "0": {
-            "author": "marcsek",
-            "text": "Este 3. krat to treba pouzit ! GL!",
-            "timestamp": 1745929895393,
-            "id": 0
-          }
-        }
-      }
-    },
-    "36": {
-      "id": 36,
-      "type": "tableauEditor",
-      "data": {
-        "type": "assumption",
-        "node": {
-          "id": 1,
-          "value": "T ∀x ∀y ( ∀z ( in(z, x) ↔ in(z, y) ) → x ≐ y )",
-          "references": []
-        },
-        "child": {
-          "type": "assumption",
-          "node": {
-            "id": 2,
-            "value": "T ∀x ∀y ( subseteq(x, y) ↔ ∀z ( in(z, x) → in(z, y) ) )",
-            "references": []
-          },
-          "child": {
-            "type": "assumption",
-            "node": {
-              "id": 3,
-              "value": "T ∀z ¬ in(z, empty)",
-              "references": []
-            },
-            "child": {
-              "type": "assumption",
-              "node": {
-                "id": 4,
-                "value": "T ∀x ∀y ∀z ( in(z, inter(x, y)) ↔ ( in(z, x) ∧ in(z, y) ) )",
-                "references": []
-              },
-              "child": {
-                "type": "assumption",
-                "node": {
-                  "id": 5,
-                  "value": "T ∀x ∀y ∀z ( in(z, union(x, y)) ↔ ( in(z, x) ∨ in(z, y) ) )",
-                  "references": []
-                },
-                "child": {
-                  "type": "assumption",
-                  "node": {
-                    "id": 6,
-                    "value": "T ∀x ∀y ∀z ( in(z, diff(x, y)) ↔ ( in(z, x) ∧ ¬ in(z, y) ) )",
-                    "references": []
-                  },
-                  "child": {
-                    "type": "open",
-                    "node": {
-                      "id": 7,
-                      "value": "F ∀x ∀y ( diff(x, y) ≐ empty → subseteq(x, y) )",
-                      "references": []
+                      "str": "x->a, y->b"
                     }
                   }
                 }
@@ -382,11 +346,187 @@
                     "references": []
                   },
                   "child": {
-                    "type": "open",
+                    "type": "deltaStar",
                     "node": {
                       "id": 7,
                       "value": "F ∀u ∀x ∀y ( subseteq(union(x, y), u) → subseteq(x, u) )",
                       "references": []
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ( subseteq(union(a, b), k) → subseteq(a, k) )",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T subseteq(union(a, b), k)",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "child": {
+                          "type": "gammaStar",
+                          "node": {
+                            "id": 10,
+                            "value": "F subseteq(a, k)",
+                            "references": [
+                              "8"
+                            ]
+                          },
+                          "child": {
+                            "type": "estf",
+                            "node": {
+                              "id": 11,
+                              "value": "T ( subseteq(a, k) ↔ ∀z ( in(z, a) → in(z, k) ) )",
+                              "references": [
+                                "2"
+                              ]
+                            },
+                            "child": {
+                              "type": "delta",
+                              "node": {
+                                "id": 12,
+                                "value": "F ∀z ( in(z, a) → in(z, k) )",
+                                "references": [
+                                  "10",
+                                  "11"
+                                ]
+                              },
+                              "child": {
+                                "type": "alpha",
+                                "node": {
+                                  "id": 13,
+                                  "value": "F ( in(c, a) → in(c, k) )",
+                                  "references": [
+                                    "12"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T  in(c, a)",
+                                    "references": [
+                                      "13"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "gammaStar",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "F in(c, k)",
+                                      "references": [
+                                        "13"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "estt",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "T ( subseteq(union(a, b), k) ↔ ∀z ( in(z, union(a, b)) → in(z, k) ) )",
+                                        "references": [
+                                          "2"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "gamma",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "T ∀z ( in(z, union(a, b)) → in(z, k) )",
+                                          "references": [
+                                            "9",
+                                            "16"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "mt",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T ( in(c, union(a, b)) → in(c, k) )",
+                                            "references": [
+                                              "17"
+                                            ]
+                                          },
+                                          "child": {
+                                            "type": "gammaStar",
+                                            "node": {
+                                              "id": 19,
+                                              "value": "F in(c, union(a, b))",
+                                              "references": [
+                                                "15",
+                                                "18"
+                                              ]
+                                            },
+                                            "child": {
+                                              "type": "estf",
+                                              "node": {
+                                                "id": 20,
+                                                "value": "T ( in(c, union(a, b)) ↔ ( in(c, a) ∨ in(c, b) ) )",
+                                                "references": [
+                                                  "5"
+                                                ]
+                                              },
+                                              "child": {
+                                                "type": "alpha",
+                                                "node": {
+                                                  "id": 21,
+                                                  "value": "F ( in(c, a) ∨ in(c, b) )",
+                                                  "references": [
+                                                    "19",
+                                                    "20"
+                                                  ]
+                                                },
+                                                "child": {
+                                                  "type": "closed",
+                                                  "node": {
+                                                    "id": 22,
+                                                    "value": "F  in(c, a)",
+                                                    "references": [
+                                                      "21"
+                                                    ]
+                                                  },
+                                                  "closed": [
+                                                    "14",
+                                                    "22"
+                                                  ]
+                                                }
+                                              }
+                                            },
+                                            "substitution": {
+                                              "str": "x->a, y->b, z->c"
+                                            }
+                                          }
+                                        },
+                                        "substitution": {
+                                          "str": "z->c"
+                                        }
+                                      }
+                                    },
+                                    "substitution": {
+                                      "str": "x->union(a, b), y->k"
+                                    }
+                                  }
+                                }
+                              },
+                              "substitution": {
+                                "str": "z->c"
+                              }
+                            }
+                          },
+                          "substitution": {
+                            "str": "x->a, y->k"
+                          }
+                        }
+                      }
+                    },
+                    "substitution": {
+                      "str": "x->a, y->b, u->k"
                     }
                   }
                 }
@@ -568,6 +708,282 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "62": {
+      "id": 62,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ∀y ( ∀z ( in(z, x) ↔ in(z, y) ) → x ≐ y )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀x ∀y ( subseteq(x, y) ↔ ∀z ( in(z, x) → in(z, y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀z ¬ in(z, empty)",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ∀x ∀y ∀z ( in(z, inter(x, y)) ↔ ( in(z, x) ∧ in(z, y) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ∀x ∀y ∀z ( in(z, union(x, y)) ↔ ( in(z, x) ∨ in(z, y) ) )",
+                  "references": []
+                },
+                "child": {
+                  "type": "assumption",
+                  "node": {
+                    "id": 6,
+                    "value": "T ∀x ∀y ∀z ( in(z, diff(x, y)) ↔ ( in(z, x) ∧ ¬ in(z, y) ) )",
+                    "references": []
+                  },
+                  "child": {
+                    "type": "deltaStar",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∀x ∀y ∀z ( ( subseteq(x, y) ∧ subseteq(y, z) ) → subseteq(x, z) )",
+                      "references": []
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ( ( subseteq(a, b) ∧ subseteq(b, c) ) → subseteq(a, c) )",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T ( subseteq(a, b) ∧ subseteq(b, c) ) ",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "child": {
+                          "type": "alpha",
+                          "node": {
+                            "id": 10,
+                            "value": "F subseteq(a, c)",
+                            "references": [
+                              "8"
+                            ]
+                          },
+                          "child": {
+                            "type": "alpha",
+                            "node": {
+                              "id": 11,
+                              "value": "T subseteq(a, b)",
+                              "references": [
+                                "9"
+                              ]
+                            },
+                            "child": {
+                              "type": "gammaStar",
+                              "node": {
+                                "id": 12,
+                                "value": "T subseteq(b, c)",
+                                "references": [
+                                  "9"
+                                ]
+                              },
+                              "child": {
+                                "type": "estf",
+                                "node": {
+                                  "id": 13,
+                                  "value": "T ( subseteq(a, c) ↔ ∀z ( in(z, a) → in(z, c) ) )",
+                                  "references": [
+                                    "2"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "delta",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "F ∀z ( in(z, a) → in(z, c) )",
+                                    "references": [
+                                      "10",
+                                      "13"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "gammaStar",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "F  (in(l, a) → in(l, c))",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "estt",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "T ( subseteq(a, b) ↔ ∀z ( in(z, a) → in(z, b) ) )",
+                                        "references": [
+                                          "2"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "gamma",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "T ∀z ( in(z, a) → in(z, b) )",
+                                          "references": [
+                                            "11",
+                                            "16"
+                                          ]
+                                        },
+                                        "child": {
+                                          "type": "gammaStar",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T ( in(l, a) → in(l, b))",
+                                            "references": [
+                                              "17"
+                                            ]
+                                          },
+                                          "child": {
+                                            "type": "estt",
+                                            "node": {
+                                              "id": 19,
+                                              "value": "T ( subseteq(b, c) ↔ ∀z ( in(z, b) → in(z, c) ) )",
+                                              "references": [
+                                                "2"
+                                              ]
+                                            },
+                                            "child": {
+                                              "type": "gamma",
+                                              "node": {
+                                                "id": 20,
+                                                "value": "T ∀z ( in(z, b) → in(z, c) )",
+                                                "references": [
+                                                  "12",
+                                                  "19"
+                                                ]
+                                              },
+                                              "child": {
+                                                "type": "alpha",
+                                                "node": {
+                                                  "id": 21,
+                                                  "value": "T ( in(l, b) → in(l, c) )",
+                                                  "references": [
+                                                    "20"
+                                                  ]
+                                                },
+                                                "child": {
+                                                  "type": "alpha",
+                                                  "node": {
+                                                    "id": 22,
+                                                    "value": "T in(l, a)",
+                                                    "references": [
+                                                      "15"
+                                                    ]
+                                                  },
+                                                  "child": {
+                                                    "type": "mp",
+                                                    "node": {
+                                                      "id": 23,
+                                                      "value": "F in(l, c)",
+                                                      "references": [
+                                                        "15"
+                                                      ]
+                                                    },
+                                                    "child": {
+                                                      "type": "mp",
+                                                      "node": {
+                                                        "id": 24,
+                                                        "value": "T  in(l, b)",
+                                                        "references": [
+                                                          "22",
+                                                          "18"
+                                                        ]
+                                                      },
+                                                      "child": {
+                                                        "type": "closed",
+                                                        "node": {
+                                                          "id": 25,
+                                                          "value": "T in(l, c) ",
+                                                          "references": [
+                                                            "24",
+                                                            "21"
+                                                          ]
+                                                        },
+                                                        "closed": [
+                                                          "23",
+                                                          "25"
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "substitution": {
+                                                "str": "z->l"
+                                              }
+                                            }
+                                          },
+                                          "substitution": {
+                                            "str": " x->b, y->c"
+                                          }
+                                        },
+                                        "substitution": {
+                                          "str": "z->l"
+                                        }
+                                      }
+                                    },
+                                    "substitution": {
+                                      "str": "x->a, y->b"
+                                    }
+                                  },
+                                  "substitution": {
+                                    "str": "z->l"
+                                  }
+                                }
+                              },
+                              "substitution": {
+                                "str": "x->a, y->c"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "substitution": {
+                      "str": "x->a, y->b, z->c"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -583,7 +999,7 @@
     7,
     38,
     36,
-    35,
+    62,
     37,
     39,
     41,
