@@ -984,6 +984,327 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "63": {
+      "id": 63,
+      "type": "tableauEditor",
+      "data": {
+        "type": "gamma",
+        "node": {
+          "id": 1,
+          "value": "F ∃x(drinks(x)→∀y drinks(y))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "F (drinks(x)→∀y drinks(y))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T drinks(x)",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "delta",
+              "node": {
+                "id": 4,
+                "value": "F ∀y drinks(y)",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "gamma",
+                "node": {
+                  "id": 5,
+                  "value": "F drinks(y)",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F (drinks(y)→∀y drinks(y))",
+                    "references": [
+                      "1"
+                    ]
+                  },
+                  "child": {
+                    "type": "closed",
+                    "node": {
+                      "id": 7,
+                      "value": "T drinks(y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "closed": [
+                      "5",
+                      "7"
+                    ]
+                  }
+                },
+                "substitution": {
+                  "str": "x->y"
+                }
+              },
+              "substitution": {
+                "str": ""
+              }
+            }
+          }
+        },
+        "substitution": {
+          "str": ""
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "65": {
+      "id": 65,
+      "type": "tableauEditor",
+      "data": {
+        "type": "delta",
+        "node": {
+          "id": 1,
+          "value": "F ∀x(∃y knows(x,father(y))→∃y knows(x,y))",
+          "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "F (∃y knows(x,father(y))→∃y knows(x,y))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ∃y knows(x,father(y))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "delta",
+              "node": {
+                "id": 4,
+                "value": "F ∃y knows(x,y)",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "gamma",
+                "node": {
+                  "id": 5,
+                  "value": "T knows(x,father(y))",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "closed",
+                  "node": {
+                    "id": 6,
+                    "value": "F knows(x,father(y))",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "closed": [
+                    "5",
+                    "6"
+                  ]
+                },
+                "substitution": {
+                  "str": "y->father(y)"
+                }
+              },
+              "substitution": {
+                "str": ""
+              }
+            }
+          }
+        },
+        "substitution": {
+          "str": ""
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "66": {
+      "id": 66,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x(social(best_friend(x))→∃y knows(x,best_friend(y)))",
+          "references": []
+        },
+        "child": {
+          "type": "gamma",
+          "node": {
+            "id": 2,
+            "value": "F ∃x(social(x)→∀y ∃z knows(mother(y),z))",
+            "references": []
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "F (social(best_friend(mother(b)))→∀y ∃z knows(mother(y),z))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "T social(best_friend(mother(b)))",
+                "references": [
+                  "3"
+                ]
+              },
+              "child": {
+                "type": "delta",
+                "node": {
+                  "id": 5,
+                  "value": "F ∀y ∃z knows(mother(y),z)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "gamma",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∃z knows(mother(l),z)",
+                    "references": [
+                      "5"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "F (social(best_friend(mother(l)))→∀y ∃z knows(mother(y),z))",
+                      "references": [
+                        "2"
+                      ]
+                    },
+                    "child": {
+                      "type": "gamma",
+                      "node": {
+                        "id": 8,
+                        "value": "T social(best_friend(mother(l)))",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "mp",
+                        "node": {
+                          "id": 9,
+                          "value": "T (social(best_friend(mother(l)))→∃y knows(mother(l),best_friend(y)))",
+                          "references": [
+                            "1"
+                          ]
+                        },
+                        "child": {
+                          "type": "delta",
+                          "node": {
+                            "id": 10,
+                            "value": "T ∃y knows(mother(l),best_friend(y))",
+                            "references": [
+                              "8",
+                              "9"
+                            ]
+                          },
+                          "child": {
+                            "type": "gamma",
+                            "node": {
+                              "id": 11,
+                              "value": "T knows(mother(l),best_friend(o))",
+                              "references": [
+                                "10"
+                              ]
+                            },
+                            "child": {
+                              "type": "closed",
+                              "node": {
+                                "id": 12,
+                                "value": "F knows(mother(l),best_friend(o))",
+                                "references": [
+                                  "6"
+                                ]
+                              },
+                              "closed": [
+                                "11",
+                                "12"
+                              ]
+                            },
+                            "substitution": {
+                              "str": "z->best_friend(o)"
+                            }
+                          },
+                          "substitution": {
+                            "str": "y->o"
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": "x->mother(l)"
+                      }
+                    }
+                  },
+                  "substitution": {
+                    "str": "x->best_friend(mother(l))"
+                  }
+                },
+                "substitution": {
+                  "str": "y->l"
+                }
+              }
+            }
+          },
+          "substitution": {
+            "str": "x->best_friend(mother(b))"
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1006,6 +1327,9 @@
     42,
     43,
     9,
+    63,
+    65,
+    66,
     10
   ],
   "settings": {
