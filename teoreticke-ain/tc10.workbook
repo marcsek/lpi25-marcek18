@@ -409,12 +409,12 @@
             {
               "proposition_id": 2095,
               "proposition": "𝐷₅: Čierne políčko je práve také políčko, ktorého farba je čierna.",
-              "solution": null
+              "solution": "\\A x (black_square(x) <-> clr(x) = black)"
             },
             {
               "proposition_id": 2096,
               "proposition": "𝐷₆: Premenenou figúrkou nazývame pešiaka, ktorý sa nachádza (na políčku) v riadku 1 alebo 8. (Nič iné premenenou figúrkou nenazývame.)",
-              "solution": "\\A x (promoted_piece(x) <-> (pawn(x) & row(on(x)) = 1 | row(on(x)) = 8))"
+              "solution": "\\A x (promoted_piece(x) <-> (pawn(x) & (row(on(x)) = 1 | row(on(x)) = 8)))"
             }
           ]
         },
