@@ -228,7 +228,7 @@
             {
               "proposition_id": 2134,
               "proposition": "5. Časy odletov jednotlivých letov z jedného miesta sa musia líšiť.",
-              "solution": "\\A x \\A y \\A z ()"
+              "solution": "\\A x \\A y \\A z \\A w \\A v (flight(x, y, z) & flight(w, ))"
             },
             {
               "proposition_id": 2135,
