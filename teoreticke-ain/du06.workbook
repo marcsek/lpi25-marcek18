@@ -197,12 +197,12 @@
             {
               "proposition_id": 2058,
               "proposition": "1. Študenti a učitelia sú osoby.",
-              "solution": null
+              "solution": "\\A x (student(x) | teacher(x) -> person(x))"
             },
             {
               "proposition_id": 2059,
               "proposition": "2. Autormi prác sú iba osoby.",
-              "solution": ""
+              "solution": "\\A x ()"
             },
             {
               "proposition_id": 2060,
