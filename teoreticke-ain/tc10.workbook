@@ -409,7 +409,7 @@
             {
               "proposition_id": 2095,
               "proposition": "𝐷₅: Čierne políčko je práve také políčko, ktorého farba je čierna.",
-              "solution": "\\A x (black_square(x) <-> clr(x) = black)"
+              "solution": "\\A x (black_square(x) <-> clr(x) = black & square(x))"
             },
             {
               "proposition_id": 2096,
