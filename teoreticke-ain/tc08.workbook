@@ -292,7 +292,7 @@
             {
               "proposition_id": 1977,
               "proposition": "2. Učiteľ, ktorý je profesorom, musí byť školiteľom aspoň jedného študenta.",
-              "solution": null
+              "solution": "\\A x (teacher(x) & professor(x) -> \\E y (s))"
             },
             {
               "proposition_id": 1978,
