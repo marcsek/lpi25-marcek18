@@ -317,12 +317,12 @@
             {
               "proposition_id": 1982,
               "proposition": "7. Každý študent má najviac jedného školiteľa.",
-              "solution": "\\A x (student(x) -> \\A y (supervises(y, x) -> \\A z (supervises(z, x) -> z != y)))"
+              "solution": "\\A x (student(x) -> \\A y (supervises(y, x) -> \\A z (supervises(z, x) -> z = y)))"
             },
             {
               "proposition_id": 1983,
               "proposition": "8. Každý doktorand má práve jedného školiteľa.",
-              "solution": null
+              "solution": "\\A x (phd_student(x) -> \\E y ())"
             },
             {
               "proposition_id": 1984,
