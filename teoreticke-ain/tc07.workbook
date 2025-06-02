@@ -352,12 +352,12 @@
             {
               "proposition_id": 1452,
               "proposition": "2. Všetko sú ľudia.",
-              "solution": "\\"
+              "solution": "\\A x (human(x))"
             },
             {
               "proposition_id": 1453,
               "proposition": "3. Všetci doktorandi sú študenti.",
-              "solution": null
+              "solution": "\\A x (phd_student(x))"
             },
             {
               "proposition_id": 1454,
