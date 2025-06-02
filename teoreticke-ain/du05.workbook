@@ -187,7 +187,7 @@
             {
               "proposition_id": 1942,
               "proposition": "5. Žiadna fakulta nemá viac ako jedného dekana.",
-              "solution": "\\A x (faculty(x) -> )"
+              "solution": "\\A x (faculty(x) -> \\A y \\A z (dean_of(y, x) & dean_of(z, y) -))"
             },
             {
               "proposition_id": 1943,
