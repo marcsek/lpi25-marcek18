@@ -297,7 +297,7 @@
             {
               "proposition_id": 1978,
               "proposition": "3. Vzťah „byť spolužiakom“ je symetrický a tranzitívny.",
-              "solution": "\\A x \\A"
+              "solution": "\\A x \\A y (classmates(x, y) -> classmates)"
             },
             {
               "proposition_id": 1979,
