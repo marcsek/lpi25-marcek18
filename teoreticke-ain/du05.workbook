@@ -172,12 +172,12 @@
             {
               "proposition_id": 1939,
               "proposition": "2. Fakulty majú svoje sídlo.",
-              "solution": "\\A x (faculty(x) -> \\E y occupies(x, y))"
+              "solution": "\\A x (faculty(x) -> \\E y located_in(x, y))"
             },
             {
               "proposition_id": 1940,
               "proposition": "3. Každá katedra je súčasťou nejakej fakulty a každá fakulta zas nejakej univerzity. ",
-              "solution": null
+              "solution": "\\A x (department(x) -> part)"
             },
             {
               "proposition_id": 1941,
