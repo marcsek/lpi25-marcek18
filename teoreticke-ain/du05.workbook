@@ -192,7 +192,7 @@
             {
               "proposition_id": 1943,
               "proposition": "6. Pre nejakú univerzitu platí, že všetky učebne a kancelárie, ktoré sú jej súčasťou, sa nachádzajú v Bratislave.",
-              "solution": "\\E x (university(x) & \\A y ())"
+              "solution": "\\E x (university(x) & \\A y (office(y) | classroom(y) -> located_in(y, Bratislava)))"
             },
             {
               "proposition_id": 1944,
