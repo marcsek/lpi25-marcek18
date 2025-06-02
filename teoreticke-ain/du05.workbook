@@ -177,12 +177,12 @@
             {
               "proposition_id": 1940,
               "proposition": "3. Každá katedra je súčasťou nejakej fakulty a každá fakulta zas nejakej univerzity. ",
-              "solution": "\\A x (department(x) -> \\E y (part_of(x, y) & facult)) & \\A x (faculty(x) -> \\E y )"
+              "solution": "\\A x (department(x) -> \\E y (part_of(x, y) & faculty(y))) & \\A x (faculty(x) -> \\E y (university(y) & part_of(x, y)))"
             },
             {
               "proposition_id": 1941,
               "proposition": "4. Dekanom fakulty je iba ten, kto má na príslušnej fakulte funkčné obdobie s nejakým začiatočným a koncovým dátumom.",
-              "solution": null
+              "solution": "\\A x "
             },
             {
               "proposition_id": 1942,
