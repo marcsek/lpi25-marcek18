@@ -307,7 +307,7 @@
             {
               "proposition_id": 1980,
               "proposition": "5. Študent, ktorý absolvoval nejaký predmet, je spokojný.",
-              "solution": "\\A x (student(x) & \\E y (passes(x, y))"
+              "solution": "\\A x (student(x) & \\E y (passes(x, y) & subject(y)) -> satisfied(x))"
             },
             {
               "proposition_id": 1981,
