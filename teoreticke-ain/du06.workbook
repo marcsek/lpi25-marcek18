@@ -202,7 +202,7 @@
             {
               "proposition_id": 2059,
               "proposition": "2. Autormi prác sú iba osoby.",
-              "solution": "\\A x ()"
+              "solution": "\\A x (thesis(x) -> person(author(x)))"
             },
             {
               "proposition_id": 2060,
