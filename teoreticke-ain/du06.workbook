@@ -212,7 +212,7 @@
             {
               "proposition_id": 2061,
               "proposition": "4. Každý študent, ktorý je autorom nejakej práce, má k tejto práci priradeného učiteľa ako školiteľa tejto práce.",
-              "solution": "\\A x (student(x) & \\E y (thesis(y) & author(y)))"
+              "solution": "\\A x (student(x) & \\E y (thesis(y) & author(y) = x) -> \\E z advisor(z, e))"
             },
             {
               "proposition_id": 2062,
