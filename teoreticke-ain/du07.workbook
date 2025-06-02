@@ -218,7 +218,7 @@
             {
               "proposition_id": 2132,
               "proposition": "3. Medzinárodné letisko je také a len také letisko, z ktorého odlieta aspoň jeden medzinárodný let.",
-              "solution": null
+              "solution": "\\A x (international_airport(x) <-> \\E x)"
             },
             {
               "proposition_id": 2133,
