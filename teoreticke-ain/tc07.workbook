@@ -392,7 +392,7 @@
             {
               "proposition_id": 1460,
               "proposition": "10. Adamov školiteľ je docent alebo profesor v prípade, že je Adam doktorand.",
-              "solution": null
+              "solution": "phd_student(Adam) -> \\A x (super)"
             },
             {
               "proposition_id": 1461,
