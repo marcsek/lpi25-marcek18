@@ -213,7 +213,7 @@
             {
               "proposition_id": 2131,
               "proposition": "2. Medzinárodný let je práve taký, ktorého odletové a príletové miesto sa nachádza v inej krajine.",
-              "solution": "\\A x \\A y \\A z (international_flight(x) -> state(y) != state(z) )"
+              "solution": "\\A x \\A y \\A z (international_flight(x) & flight(x, y, z) -> state(y) != state(z))"
             },
             {
               "proposition_id": 2132,
