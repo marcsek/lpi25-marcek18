@@ -44,7 +44,7 @@
     "10": {
       "id": 10,
       "type": "text",
-      "data": "::h3[:cnt[c]{.i}. Formálny problém]{.h5}\n\n:icon[write]\nPre uvedenú otázku sformulujte príslušný logický problém\ntýkajúci sa teórie $T$ a formuly $X$.\n\n…\n\n:icon[write]\nAko tento problém vyriešite pomocou rezolvencie?\n\n…\n",
+      "data": "::h3[:cnt[c]{.i}. Formálny problém]{.h5}\n\n:icon[write]\nPre uvedenú otázku sformulujte príslušný logický problém\ntýkajúci sa teórie $T$ a formuly $X$.\n\nMusíme zistiť, či formula $X$ vyplýva z teórie $T$.\n\n:icon[write]\nAko tento problém vyriešite pomocou rezolvencie?\n\nVytvorime klauzálnu teóriu $T' = T \\cup \\{ \\neg X \\}$ o ktorej musím zistiť, či je nesplniteľná. To urobíme tým, že pomocou rezolvencie nájdeme zamiestunie pre $T'$.\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -54,7 +54,7 @@
     "12": {
       "id": 12,
       "type": "text",
-      "data": "::h3[:cnt[c]{.i}. Formálne riešenie]{.h5}\n\n::h4[Úprava na ekvisplniteľnú klauzálnu teóriu]{.h6}\n\n:icon[write]\nUpravte teóriu potrebnú na vyriešenie formálneho problému rezolvenciou\nna ekvisplniteľnú klauzálnu teóriu.\n\n…",
+      "data": "::h3[:cnt[c]{.i}. Formálne riešenie]{.h5}\n\n::h4[Úprava na ekvisplniteľnú klauzálnu teóriu]{.h6}\n\n:icon[write]\nUpravte teóriu potrebnú na vyriešenie formálneho problému rezolvenciou\nna ekvisplniteľnú klauzálnu teóriu.\n\n**$A_1$**:\n\nNNF, premenovanie, skolemizacia:\n\n$\\forall x (\\A y (\\neg\\sym{Harley}(y) \\lor \\neg \\sym{rides}(x, y)) \\lor \\sym{rough\\_character}(x))$\n\nPNF, CNF:\n\n$\\forall x \\A y (\\neg\\sym{Harley}(y) \\lor \\neg \\sym{rides}(x, y) \\lor \\sym{rough\\_character}(x))$\n\n$T''_{A_1} = \\left\\{ \\left( \\neg\\sym{Harley}(y) \\lor \\neg \\sym{rides}(x, y) \\lor \\sym{rough\\_character}(x) \\right) \\right\\}$\n\n\n**$A_2$**:\n\nNNF, premenovanie:\n\n$\\A x (\\neg\\sym{biker}(x) \\lor (\\E y (\\sym{rides}(x, y) \\land (\\sym{Harley}(y) \\lor \\sym{BMW}(y)))))$\n\nSkolemizacia, PNF:\n\n$\\A x (\\neg\\sym{biker}(x) \\lor ((\\sym{rides}(x, f(x)) \\land (\\sym{Harley}(f(x)) \\lor \\sym{BMW}(f(x))))))$\n\nCNF:\n\n$\\A x ((\\neg\\sym{biker}(x) \\lor \\sym{rides}(x, f(x))) \\land (\\neg\\sym{biker}(x) \\lor \\sym{Harley}(f(x)) \\lor \\sym{BMW}(f(x))))$\n\n$T''_{A_2} = \\left\\{ (\\neg\\sym{biker}(x) \\lor \\sym{rides}(x, f(x))), (\\neg\\sym{biker}(x) \\lor \\sym{Harley}(f(x)) \\lor \\sym{BMW}(f(x))) \\right\\}$\n\n**$A_3$**:\n\nNNF, premenovanie, skolemizacia:\n\n$\\A x (\\A y (\\neg\\sym{rides}(x, y) \\lor \\neg\\sym{BMW}(y)) \\lor \\sym{yuppie}(x))$\n\nPNF, CNF:\n\n$\\A x \\A y (\\neg\\sym{rides}(x, y) \\lor \\neg\\sym{BMW}(y) \\lor \\sym{yuppie}(x))$\n\n$T''_{A_3} = \\left\\{ (\\neg\\sym{rides}(x, y) \\lor \\neg\\sym{BMW}(y) \\lor \\sym{yuppie}(x)) \\right\\}$\n\n**$A_4$**:\n\nNNF, premenovanie, Skolemizacia, PNF, CNF:\n\n$\\A x (\\neg\\sym{yuppie}(x) \\lor \\sym{lawyer}(x))$\n\n$T''_{A_4} = \\left\\{ (\\neg\\sym{yuppie}(x) \\lor \\sym{lawyer}(x)) \\right\\}$\n\n**$A_5$**:\n\nNNF, premenovanie, skolemizacia:\n\n$\\A x ((\\neg\\sym{girl}(x) \\lor \\neg\\sym{nice}(x)) \\lor \\A y (\\neg\\sym{rough\\_character}(y) \\lor \\neg\\sym{dates}(x, y)))$\n\nPNF, CNF:\n\n$\\A x \\A y (\\neg\\sym{girl}(x) \\lor \\neg\\sym{nice}(x) \\lor \\neg\\sym{rough\\_character}(y) \\lor \\neg\\sym{dates}(x, y))$\n\n$T''_{A_5} = \\left\\{ (\\neg\\sym{girl}(x) \\lor \\neg\\sym{nice}(x) \\lor \\neg\\sym{rough\\_character}(y) \\lor \\neg\\sym{dates}(x, y)) \\right\\}$\n\n**$A_6$**:\n\n$\\sym{nice}(Mary) \\land \\sym{girl}(Mary) \\land \\sym{biker}(John)$\n\n$T''_{A_6} = \\left\\{ \\sym{nice}(Mary), \\sym{girl}(Mary), \\sym{biker}(John) \\right\\}$\n\n**$\\neg X$**:\n\nNNF, premenovanie, skolemizacia, PNF, CNF:\n\n$\\neg \\sym{lawyer}(John) \\land \\sym{dates}(Mary, John)$\n\n$T''_{\\neg X} = \\left\\{ \\neg \\sym{lawyer}(John), \\sym{dates}(Mary, John) \\right\\}$\n",
       "idCounter": 0,
       "comments": {
         "ids": [],
@@ -97,17 +97,8 @@
       "data": ":::header\n## Cvičenie 12.:cnt[a]\n\n:small[\n:icon[source]\nZbierka: :xref[6.4.5]{.exbook label=\"úloha\"}.\nPracovné hárky: [cvičenie 9.3](../../tc09/teoreticke-ain/tc09.workbook).]\n:::\n\nUvažujme teóriu $T = \\{ A_1, \\ldots, A_4 \\}$ o vlastnostiach funkcií $f$ a $g$ v jazyku $\\Lang$ s $\\Consts = \\emptyset$, $\\Funcs = \\{ \\sym{f}^1, \\sym{g}^1 \\}$ a $\\Preds = \\{ \\sym{P}^1, \\sym{Q}^1 \\}$, kde:\n\n$\nA_1 = \\A{\\vy_1} \\A{\\vy_2} \\bigl(\\sym{g}(\\vy_1)\\doteq\\sym{g}(\\vy_2)\\limpl \\vy_1\\doteq \\vy_2\\bigr)\n,\\\\\nA_2 = \\A{\\vz} \\bigl(\\sym{Q}(\\vz)\\limpl \\E{\\vx} \\sym{g}(\\sym{f}(\\vx))\\doteq \\vz\\bigr)\n,\\\\\nA_3 = \\A{\\vy} \\bigl(\\sym{P}(\\vy) \\limpl \\sym{Q}(\\sym{g}(\\vy))\\bigr)\n,\\\\\nA_4 = \\bigl(\\E{\\vy} \\sym{P}(\\vy) \\land \\E{\\vz} \\sym{Q}(\\vz) \\bigr)\n$\n\na formuly\n\n$\nX_1 = \\A{\\vx_1} \\A{\\vx_2} \n    \\bigl(\\sym{f}(\\vx_1)\\doteq\\sym{f}(\\vx_2)\\limpl \\vx_1\\doteq \\vx_2\\bigr)\n,\\\\\nX_2 = \\A{\\vy} \\bigl(\\sym{P}(\\vy)\\limpl \\E{\\vx} \\sym{f}(\\vx)\\doteq \\vy\\bigr)\n.$\n\nO každej z formúl $X_1$, $X_2$ _jednotlivo_ rozhodnite,\nči vyplýva alebo nevyplýva z teórie $T$.\n\nVyplývanie dokážte tablom s najviac 20 uzlami a zdôvodnite,\nprečo ho vaše tablo dokazuje.\nNevyplývanie dokážte nájdením štruktúry, ktorá je kontrapríkladom,\na krátko vysvetlite, prečo ním je\n(ktoré formuly sú ne-/pravdivé).\n\n:::aside{.note.bg-transparent.p-0}\n:icon[tools]\nNa vytvorenie tabla a štruktúry použite aplikáciu Tableau editor resp. Structure explorer, ktoré si vložíte nižšie. Zdôvodnenia vpíšte do nových textových buniek.\n\n:icon[technical]\nV aplikácii Tableau editor vyberte sadu pravidiel **Full FOL**.\nPrácu s logickými spojkami si zjednodušte využitím korektných výrokovologických pravidiel (MP, MT, DS, NCS, …)\nz :xref[4.4.1]{.exbook label=\"úlohy\"} v zbierke.\n:::",
       "idCounter": 1,
       "comments": {
-        "ids": [
-          0
-        ],
-        "entities": {
-          "0": {
-            "author": "marcsek",
-            "text": "Velmi sa im paci",
-            "timestamp": 1747137047557,
-            "id": 0
-          }
-        }
+        "ids": [],
+        "entities": {}
       }
     },
     "31": {
@@ -950,6 +941,211 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "50": {
+      "id": 50,
+      "type": "resolutionEditor",
+      "data": "{\"language\":{\"consts\":{\"input\":\"Mary, John\",\"object\":[\"Mary\",\"John\"],\"error\":\"\",\"symbols\":[\"Mary\",\"John\"]},\"funs\":{\"input\":\"f/1\",\"object\":[[\"f\",1]],\"error\":\"\",\"symbols\":[{\"name\":\"f\",\"arity\":1}]},\"preds\":{\"input\":\"Harley/1, rides/2, rough_character/1, biker/1, BMW/1, yuppie/1, lawyer/1, girl/1, nice/1, dates/2\",\"object\":[[\"Harley\",1],[\"rides\",2],[\"rough_character\",1],[\"biker\",1],[\"BMW\",1],[\"yuppie\",1],[\"lawyer\",1],[\"girl\",1],[\"nice\",1],[\"dates\",2]],\"error\":\"\",\"symbols\":[{\"name\":\"Harley\",\"arity\":1},{\"name\":\"rides\",\"arity\":2},{\"name\":\"rough_character\",\"arity\":1},{\"name\":\"biker\",\"arity\":1},{\"name\":\"BMW\",\"arity\":1},{\"name\":\"yuppie\",\"arity\":1},{\"name\":\"lawyer\",\"arity\":1},{\"name\":\"girl\",\"arity\":1},{\"name\":\"nice\",\"arity\":1},{\"name\":\"dates\",\"arity\":2}]}},\"steps\":{\"order\":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],\"allSteps\":[[0,{\"formula\":{\"input\":\"¬Harley(y)∨¬rides(x,y)∨rough_character(x)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"Harley\",\"terms\":[{\"name\":\"y\"}]},{\"neg\":true,\"name\":\"rides\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},{\"neg\":false,\"name\":\"rough_character\",\"terms\":[{\"name\":\"x\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[1,{\"formula\":{\"input\":\"¬biker(x)∨rides(x,f(x))\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"biker\",\"terms\":[{\"name\":\"x\"}]},{\"neg\":false,\"name\":\"rides\",\"terms\":[{\"name\":\"x\"},{\"name\":\"f\",\"subts\":[{\"name\":\"x\"}]}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[2,{\"formula\":{\"input\":\"¬biker(x)∨Harley(f(x))∨BMW(f(x))\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"biker\",\"terms\":[{\"name\":\"x\"}]},{\"neg\":false,\"name\":\"Harley\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"x\"}]}]},{\"neg\":false,\"name\":\"BMW\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"x\"}]}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[3,{\"formula\":{\"input\":\"¬rides(x,y)∨¬BMW(y)∨yuppie(x)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"rides\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},{\"neg\":true,\"name\":\"BMW\",\"terms\":[{\"name\":\"y\"}]},{\"neg\":false,\"name\":\"yuppie\",\"terms\":[{\"name\":\"x\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[4,{\"formula\":{\"input\":\"¬yuppie(x)∨lawyer(x)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"yuppie\",\"terms\":[{\"name\":\"x\"}]},{\"neg\":false,\"name\":\"lawyer\",\"terms\":[{\"name\":\"x\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[5,{\"formula\":{\"input\":\"¬girl(x)∨¬nice(x)∨¬rough_character(y)∨¬dates(x,y)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"girl\",\"terms\":[{\"name\":\"x\"}]},{\"neg\":true,\"name\":\"nice\",\"terms\":[{\"name\":\"x\"}]},{\"neg\":true,\"name\":\"rough_character\",\"terms\":[{\"name\":\"y\"}]},{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[6,{\"formula\":{\"input\":\"nice(Mary)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"nice\",\"terms\":[{\"name\":\"Mary\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[7,{\"formula\":{\"input\":\"girl(Mary)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"girl\",\"terms\":[{\"name\":\"Mary\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[8,{\"formula\":{\"input\":\"biker(John)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"biker\",\"terms\":[{\"name\":\"John\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[9,{\"formula\":{\"input\":\"¬lawyer(John)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"lawyer\",\"terms\":[{\"name\":\"John\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[10,{\"formula\":{\"input\":\"dates(Mary,John)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"John\"}]}],\"litsMultiset\":null},\"error\":\"\"},\"rule\":\"Assumption\",\"reference1\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"\",\"error\":{\"name\":\"EmptyError\",\"message\":\"This field cannot be empty\"}},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[11,{\"formula\":{\"input\":\"rides(John,f(John))\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"rides\",\"terms\":[{\"name\":\"John\"},{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]}],\"litsMultiset\":[[{\"neg\":false,\"name\":\"rides\",\"terms\":[{\"name\":\"John\"},{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"2\",\"object\":1,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"9\",\"object\":8,\"error\":\"\"},\"unifier\":{\"input\":\"x->John\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[12,{\"formula\":{\"input\":\"¬yuppie(John)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"yuppie\",\"terms\":[{\"name\":\"John\"}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"yuppie\",\"terms\":[{\"name\":\"John\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"5\",\"object\":4,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"10\",\"object\":9,\"error\":\"\"},\"unifier\":{\"input\":\"x->John\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[13,{\"formula\":{\"input\":\"¬rides(John,y)∨¬BMW(y)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"rides\",\"terms\":[{\"name\":\"John\"},{\"name\":\"y\"}]},{\"neg\":true,\"name\":\"BMW\",\"terms\":[{\"name\":\"y\"}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"rides\",\"terms\":[{\"name\":\"John\"},{\"name\":\"y\"}]},1],[{\"neg\":true,\"name\":\"BMW\",\"terms\":[{\"name\":\"y\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"4\",\"object\":3,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"13\",\"object\":12,\"error\":\"\"},\"unifier\":{\"input\":\"x->John\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[14,{\"formula\":{\"input\":\"¬BMW(f(John))\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"BMW\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"BMW\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"14\",\"object\":13,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"12\",\"object\":11,\"error\":\"\"},\"unifier\":{\"input\":\"y->f(John)\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[15,{\"formula\":{\"input\":\"Harley(f(John))∨BMW(f(John))\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"Harley\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},{\"neg\":false,\"name\":\"BMW\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]}],\"litsMultiset\":[[{\"neg\":false,\"name\":\"Harley\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},1],[{\"neg\":false,\"name\":\"BMW\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"3\",\"object\":2,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"9\",\"object\":8,\"error\":\"\"},\"unifier\":{\"input\":\"x->John\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[16,{\"formula\":{\"input\":\"Harley(f(John))\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"Harley\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]}],\"litsMultiset\":[[{\"neg\":false,\"name\":\"Harley\",\"terms\":[{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"16\",\"object\":15,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"15\",\"object\":14,\"error\":\"\"},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[17,{\"formula\":{\"input\":\"¬rides(x,f(John))∨rough_character(x)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"rides\",\"terms\":[{\"name\":\"x\"},{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},{\"neg\":false,\"name\":\"rough_character\",\"terms\":[{\"name\":\"x\"}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"rides\",\"terms\":[{\"name\":\"x\"},{\"name\":\"f\",\"subts\":[{\"name\":\"John\"}]}]},1],[{\"neg\":false,\"name\":\"rough_character\",\"terms\":[{\"name\":\"x\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"1\",\"object\":0,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"17\",\"object\":16,\"error\":\"\"},\"unifier\":{\"input\":\"y->f(John)\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[18,{\"formula\":{\"input\":\"rough_character(John)\",\"object\":{\"lits\":[{\"neg\":false,\"name\":\"rough_character\",\"terms\":[{\"name\":\"John\"}]}],\"litsMultiset\":[[{\"neg\":false,\"name\":\"rough_character\",\"terms\":[{\"name\":\"John\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"18\",\"object\":17,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"12\",\"object\":11,\"error\":\"\"},\"unifier\":{\"input\":\"x->John\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[19,{\"formula\":{\"input\":\"¬nice(Mary)∨¬rough_character(y)∨¬dates(Mary,y)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"nice\",\"terms\":[{\"name\":\"Mary\"}]},{\"neg\":true,\"name\":\"rough_character\",\"terms\":[{\"name\":\"y\"}]},{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"y\"}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"nice\",\"terms\":[{\"name\":\"Mary\"}]},1],[{\"neg\":true,\"name\":\"rough_character\",\"terms\":[{\"name\":\"y\"}]},1],[{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"y\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"6\",\"object\":5,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"8\",\"object\":7,\"error\":\"\"},\"unifier\":{\"input\":\"x->Mary\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[20,{\"formula\":{\"input\":\"¬rough_character(y)∨¬dates(Mary,y)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"rough_character\",\"terms\":[{\"name\":\"y\"}]},{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"y\"}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"rough_character\",\"terms\":[{\"name\":\"y\"}]},1],[{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"y\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"20\",\"object\":19,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"7\",\"object\":6,\"error\":\"\"},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[21,{\"formula\":{\"input\":\"¬dates(Mary,John)\",\"object\":{\"lits\":[{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"John\"}]}],\"litsMultiset\":[[{\"neg\":true,\"name\":\"dates\",\"terms\":[{\"name\":\"Mary\"},{\"name\":\"John\"}]},1]]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"21\",\"object\":20,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"19\",\"object\":18,\"error\":\"\"},\"unifier\":{\"input\":\"y->John\",\"object\":{},\"error\":\"\"},\"valid\":true,\"emptyClause\":false}],[22,{\"formula\":{\"input\":\"□\",\"object\":{\"lits\":[],\"litsMultiset\":[]},\"error\":\"\"},\"rule\":\"Resolution\",\"reference1\":{\"input\":\"11\",\"object\":10,\"error\":\"\"},\"renaming\":{\"input\":\"\",\"error\":\"\"},\"reference2\":{\"input\":\"22\",\"object\":21,\"error\":\"\"},\"unifier\":{\"input\":\"\",\"error\":\"\"},\"valid\":true,\"emptyClause\":true}]],\"rank\":[[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],[21,21],[22,22]],\"id\":23,\"verdict\":true},\"inputChange\":{\"originValue\":\"\"}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "51": {
+      "id": 51,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"P/1, Q/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"P\",\"arity\":1},{\"name\":\"Q\",\"arity\":1}]},\"functions\":{\"value\":\"f/1, g/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"f\",\"arity\":1},{\"name\":\"g\",\"arity\":1}]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"P/1\":{\"value\":\"1, 2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"]],\"tableEnabled\":false},\"Q/1\":{\"value\":\"1, 2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"]],\"tableEnabled\":false}},\"functions\":{\"f/1\":{\"value\":\"(1, 1), (2, 1), (3, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"1\"],[\"2\",\"1\"],[\"3\",\"2\"]],\"tableEnabled\":false},\"g/1\":{\"value\":\"(1, 1), (2, 2), (3, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"1\"],[\"2\",\"2\"],[\"3\",\"3\"]],\"tableEnabled\":false}},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1,2,3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x∀y(g(x)≐g(y)→x≐y)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"g\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"g\",\"terms\":[{\"name\":\"y\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"x\"},\"subRight\":{\"name\":\"y\"}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀z (Q(z)→∃x g(f(x))≐z)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"z\",\"subFormula\":{\"subLeft\":{\"name\":\"Q\",\"terms\":[{\"name\":\"z\"}]},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"g\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]}]},\"subRight\":{\"name\":\"z\"}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀y (P(y)→Q(g(y)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"name\":\"Q\",\"terms\":[{\"name\":\"g\",\"terms\":[{\"name\":\"y\"}]}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃y P(y)∧∃z Q(z)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"P\",\"terms\":[{\"name\":\"y\"}]}},\"subRight\":{\"variableName\":\"z\",\"subFormula\":{\"name\":\"Q\",\"terms\":[{\"name\":\"z\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x∀y(f(x)≐f(y)→x≐y)\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"f\",\"terms\":[{\"name\":\"y\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"x\"},\"subRight\":{\"name\":\"y\"}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "53": {
+      "id": 53,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀a ∀b ( g(a) ≐ g(b) → a ≐ b )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀z ( Q(z) → ∃x g(f(x)) ≐ z )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀y ( P(y) → Q(g(y)) )",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ( ∃y P(y) ∧ ∃z Q(z) )",
+                "references": []
+              },
+              "child": {
+                "type": "delta",
+                "node": {
+                  "id": 5,
+                  "value": "F ∀y ( P(y) → ∃x f(x) ≐ y )",
+                  "references": []
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F ( P(y) → ∃x f(x) ≐ y )",
+                    "references": [
+                      "5"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "T P(y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "gamma",
+                      "node": {
+                        "id": 8,
+                        "value": "F ∃x f(x) ≐ y",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "mp",
+                        "node": {
+                          "id": 9,
+                          "value": "T ( P(y) → Q(g(y)) )",
+                          "references": [
+                            "3"
+                          ]
+                        },
+                        "child": {
+                          "type": "gamma",
+                          "node": {
+                            "id": 10,
+                            "value": "T Q(g(y))",
+                            "references": [
+                              "7",
+                              "9"
+                            ]
+                          },
+                          "child": {
+                            "type": "mp",
+                            "node": {
+                              "id": 11,
+                              "value": "T ( Q(g(y)) → ∃x g(f(x)) ≐ g(y) )",
+                              "references": [
+                                "2"
+                              ]
+                            },
+                            "child": {
+                              "type": "delta",
+                              "node": {
+                                "id": 12,
+                                "value": "T ∃x g(f(x)) ≐ g(y)",
+                                "references": [
+                                  "10",
+                                  "11"
+                                ]
+                              },
+                              "child": {
+                                "type": "gammaStar",
+                                "node": {
+                                  "id": 13,
+                                  "value": "T g(f(x)) ≐ g(y)",
+                                  "references": [
+                                    "12"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "mp",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T ( g(f(x)) ≐ g(y) → f(x) ≐ y )",
+                                    "references": [
+                                      "1"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "gamma",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T f(x) ≐ y",
+                                      "references": [
+                                        "13",
+                                        "14"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "F f(x) ≐ y",
+                                        "references": [
+                                          "8"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "15",
+                                        "16"
+                                      ]
+                                    },
+                                    "substitution": {
+                                      "str": ""
+                                    }
+                                  }
+                                },
+                                "substitution": {
+                                  "str": "a->f(x), b->y"
+                                }
+                              },
+                              "substitution": {
+                                "str": ""
+                              }
+                            }
+                          },
+                          "substitution": {
+                            "str": "z->g(y)"
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": ""
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": ""
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -975,11 +1171,14 @@
     10,
     12,
     13,
+    50,
     14,
     21,
     38,
+    51,
     36,
     37,
+    53,
     39
   ],
   "settings": {
