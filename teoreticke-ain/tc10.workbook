@@ -365,7 +365,7 @@
             {
               "proposition_id": 1752,
               "proposition": "𝐷₁: Figúrka môže zobrať figúrku práve vtedy, keď sú rozdielnej farby a tá prvá sa môže posunúť tam, kde tá druhá stojí.",
-              "solution": "\\A x (piece(x) -> \\A y may_take(x, y) <-)"
+              "solution": "\\A x (piece(x) -> \\A y (may_take(x, y) <-> clr(x) != clr(y) &))"
             },
             {
               "proposition_id": 1753,
