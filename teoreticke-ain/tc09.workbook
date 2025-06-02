@@ -192,7 +192,7 @@
             {
               "proposition_id": 1706,
               "proposition": "10. Figúrka sa môže presunúť na políčko s inou figúrkou iba vtedy, keď ju môže zobrať.",
-              "solution": "\\A x \\A y (piece(x) & piece(y) & may_take(x, y) & square(on(y)) -> may_enter(x, on(y)))"
+              "solution": ""
             },
             {
               "proposition_id": 1707,
