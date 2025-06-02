@@ -327,7 +327,7 @@
             {
               "proposition_id": 1984,
               "proposition": "9. Nikto si nezapisuje výberové predmety.",
-              "solution": "\\neg \\E x \\E y ()"
+              "solution": "\\neg \\E x \\E y (subject(y) & optional(y) & \\E z enrolled_in(x, y, z))"
             },
             {
               "proposition_id": 1985,
