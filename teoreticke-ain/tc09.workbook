@@ -197,12 +197,12 @@
             {
               "proposition_id": 1707,
               "proposition": "11. Na nejakom políčku stojí nejaký kráľ a na toto políčko sa môže presunúť nejaká veža. Je aj také políčko, na ktorom nestojí žiadna figúrka.",
-              "solution": "\\E x \\E y (king(x) & square(on(x)) & rook(y) & may_enter(y, on(x))) & \\E x (square(x) & \\neg \\E y (piece(y) & x != on(y)))"
+              "solution": "\\E x \\E y (king(x) & square(on(x)) & rook(y) & may_enter(y, on(x))) & \\E x (square(x) & \\neg \\E y (piece(y) & x = on(y)))"
             },
             {
               "proposition_id": 1708,
               "proposition": "12. Figúrky a políčka sú navzájom disjunktné.",
-              "solution": null
+              "solution": "\\A x \\A y (piece(x) & square(y))"
             }
           ]
         },
