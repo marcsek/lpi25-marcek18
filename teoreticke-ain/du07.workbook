@@ -208,12 +208,12 @@
             {
               "proposition_id": 2130,
               "proposition": "1. Odletovým a príletovým miestom každého letu je letisko.",
-              "solution": "\\A x \\A y \\A z (airport(y) & airport(z) & flight(x, y, z))"
+              "solution": "\\A x \\A y \\A z (flight(x, y, z) -> airport(y) & airport(z))"
             },
             {
               "proposition_id": 2131,
               "proposition": "2. Medzinárodný let je práve taký, ktorého odletové a príletové miesto sa nachádza v inej krajine.",
-              "solution": null
+              "solution": "\\A x "
             },
             {
               "proposition_id": 2132,
