@@ -322,7 +322,7 @@
             {
               "proposition_id": 1983,
               "proposition": "8. Každý doktorand má práve jedného školiteľa.",
-              "solution": "\\A x (phd_student(x) -> \\E y ())"
+              "solution": "\\A x (phd_student(x) -> \\E y (supervises(y, x) & \\A z (supervises(z, x) -> y = z)))"
             },
             {
               "proposition_id": 1984,
