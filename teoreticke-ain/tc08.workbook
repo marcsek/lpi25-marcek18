@@ -312,7 +312,7 @@
             {
               "proposition_id": 1981,
               "proposition": "6. Študent absolvuje nejaký predmet, iba ak ho má zapísaný.",
-              "solution": null
+              "solution": "\\A x \\A y (student(x) & subject(y) & passes(x, y) -> enrolled_in(x, y))"
             },
             {
               "proposition_id": 1982,
