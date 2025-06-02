@@ -177,7 +177,7 @@
             {
               "proposition_id": 1703,
               "proposition": "7. Susedné políčka s rovnakým riadkom alebo stĺpcom majú rozdielnu farbu.",
-              "solution": null
+              "solution": "\\A x \\A y (square(x) & square(y) & neighbour(x, y & ))"
             },
             {
               "proposition_id": 1704,
