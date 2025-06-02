@@ -370,7 +370,7 @@
             {
               "proposition_id": 1753,
               "proposition": "𝐷₂: Kráľ je v šachu, ak a iba ak ho môže nejaká figúrka zobrať.",
-              "solution": "\\A x (k)"
+              "solution": "\\A x (king(x) -> check(x) <-> \\E y (pie))"
             },
             {
               "proposition_id": 1754,
