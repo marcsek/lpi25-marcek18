@@ -167,7 +167,7 @@
             {
               "proposition_id": 1938,
               "proposition": "1. FMFI je fakulta, ktorá je súčasťou univerzity UK_BA a sídli v Bratislave.",
-              "solution": null
+              "solution": "faculty(FMFI) & part_of(FMFI, UK_BA) & "
             },
             {
               "proposition_id": 1939,
