@@ -375,12 +375,12 @@
             {
               "proposition_id": 1754,
               "proposition": "𝐷₃: Kráľ je v mate vtedy a len vtedy, keď je v šachu a nemôže sa posunúť na žiadne políčko.",
-              "solution": "\\A x (king(x) -> stale_mate(x) <-> \\neg \\E y (may_enter(x, y) & square(y)))"
+              "solution": "\\A x (king(x) -> check_mate(x) <-> \\neg \\E y (may_enter(x, y) & square(y)) & check(x))"
             },
             {
               "proposition_id": 1755,
               "proposition": "𝐷₄: Kráľ je v pate, keď nie je v šachu a zároveň sa žiadna figúrka jeho farby nemôže posunúť na žiadne políčko. Inak v pate nie je.",
-              "solution": null
+              "solution": "\\A x (king)"
             }
           ]
         },
