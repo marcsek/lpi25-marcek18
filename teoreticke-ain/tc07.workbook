@@ -382,7 +382,7 @@
             {
               "proposition_id": 1458,
               "proposition": "8. Doktorandi profesora Nového sú cvičiaci na Teórii všetkého alebo Úvode do abstrakcie.",
-              "solution": "\\A x (ph)"
+              "solution": "\\A x (phd_student(x) & supervisor(Novy, x) -> )"
             },
             {
               "proposition_id": 1459,
