@@ -375,7 +375,7 @@
             {
               "proposition_id": 1754,
               "proposition": "𝐷₃: Kráľ je v mate vtedy a len vtedy, keď je v šachu a nemôže sa posunúť na žiadne políčko.",
-              "solution": "\\A x "
+              "solution": "\\A x (king(x) -> stale_mate(x) <-> \\new \\E )"
             },
             {
               "proposition_id": 1755,
