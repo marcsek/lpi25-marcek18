@@ -317,7 +317,7 @@
             {
               "proposition_id": 1982,
               "proposition": "7. Každý študent má najviac jedného školiteľa.",
-              "solution": "\\A x (student(x) -> \\A y (supervises(y, x) -> ))"
+              "solution": "\\A x (student(x) -> \\A y (supervises(y, x) -> \\neg \\E z (supervises(z, x))))"
             },
             {
               "proposition_id": 1983,
