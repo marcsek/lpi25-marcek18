@@ -380,7 +380,7 @@
             {
               "proposition_id": 1755,
               "proposition": "𝐷₄: Kráľ je v pate, keď nie je v šachu a zároveň sa žiadna figúrka jeho farby nemôže posunúť na žiadne políčko. Inak v pate nie je.",
-              "solution": "\\A x (king(x) -> stale_mate(x) <-> \\neg check(x) & )"
+              "solution": "\\A x (king(x) -> stale_mate(x) <-> \\neg check(x) & \\neg \\E y (piece(y) & clr(y) = clr(x)))"
             }
           ]
         },
