@@ -312,12 +312,12 @@
             {
               "proposition_id": 1981,
               "proposition": "6. Študent absolvuje nejaký predmet, iba ak ho má zapísaný.",
-              "solution": "\\A x \\A y (student(x) & subject(y) & passes(x, y) -> enrolled_in(x, y))"
+              "solution": "\\A x \\A y (student(x) & subject(y) & passes(x, y) -> \\E z enrolled_in(x, y, z))"
             },
             {
               "proposition_id": 1982,
               "proposition": "7. Každý študent má najviac jedného školiteľa.",
-              "solution": null
+              "solution": "\\A x (student(x) -> \\A y (supervises(y, x) -> ))"
             },
             {
               "proposition_id": 1983,
