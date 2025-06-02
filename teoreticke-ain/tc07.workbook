@@ -357,12 +357,12 @@
             {
               "proposition_id": 1453,
               "proposition": "3. Všetci doktorandi sú študenti.",
-              "solution": "\\A x (phd_student(x))"
+              "solution": "\\A x (phd_student(x) -> student(x))"
             },
             {
               "proposition_id": 1454,
               "proposition": "4. Niektorí doktorandi sú aj učiteľmi.",
-              "solution": null
+              "solution": "\\E x (phd_student(x) & teacher(x))"
             },
             {
               "proposition_id": 1455,
