@@ -402,7 +402,7 @@
             {
               "proposition_id": 1462,
               "proposition": "12. Teóriu všetkého si nemôžu zapísať tí, čo neabsolvovali ani Históriu vesmíru, ani Úvod do abstrakcie.",
-              "solution": null
+              "solution": "\\A x (enrolled_in(x, Theory_of_everything))"
             },
             {
               "proposition_id": 1463,
