@@ -292,12 +292,12 @@
             {
               "proposition_id": 1977,
               "proposition": "2. Učiteľ, ktorý je profesorom, musí byť školiteľom aspoň jedného študenta.",
-              "solution": "\\A x (teacher(x) & professor(x) -> \\E y (s))"
+              "solution": "\\A x (teacher(x) & professor(x) -> \\E y (supervises(x, y) & student(y)))"
             },
             {
               "proposition_id": 1978,
               "proposition": "3. Vzťah „byť spolužiakom“ je symetrický a tranzitívny.",
-              "solution": null
+              "solution": "\\A x \\A"
             },
             {
               "proposition_id": 1979,
