@@ -392,12 +392,12 @@
             {
               "proposition_id": 1460,
               "proposition": "10. Adamov školiteľ je docent alebo profesor v prípade, že je Adam doktorand.",
-              "solution": "phd_student(Adam) -> \\A x (super)"
+              "solution": "phd_student(Adam) -> \\A x (supervisor(x, Adam) ->associate_prof(x) | full_prof(x) )"
             },
             {
               "proposition_id": 1461,
               "proposition": "11.  Docentka Mladá školí iba takých študentov, ktorí absolvovali s vyznamenaním Históriu vesmíru, ale nie sú doktorandi.",
-              "solution": null
+              "solution": "\\A x "
             },
             {
               "proposition_id": 1462,
