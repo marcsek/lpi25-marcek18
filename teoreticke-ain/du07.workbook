@@ -233,7 +233,7 @@
             {
               "proposition_id": 2135,
               "proposition": "6. Dve letiská sú priamo prepojené práve vtedy, ak medzi nimi existuje priamy let.",
-              "solution": "\\A x \\A y (airport(x) & airport(y) -> (dir_connected(x, y) <-> \\E z))"
+              "solution": "\\A x \\A y (airport(x) & airport(y) -> (dir_connected(x, y) <-> \\E z flight(z, x, y)))"
             },
             {
               "proposition_id": 2136,
