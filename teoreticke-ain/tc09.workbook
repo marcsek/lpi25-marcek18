@@ -157,12 +157,12 @@
             {
               "proposition_id": 1699,
               "proposition": "3. Pre každú dvojicu čísla a písmena existuje políčko, ktorého riadok má toto číslo a stĺpec toto písmeno.",
-              "solution": "\\A x \\A y (number(x) & letter(x) -> \\E z (square(z) row(z)))"
+              "solution": "\\A x \\A y (number(x) & letter(y) -> \\E z (square(z) & row(z) = x & col(z) = y))"
             },
             {
               "proposition_id": 1700,
               "proposition": "4. Figúrky a políčka majú bielu alebo čiernu farbu.",
-              "solution": null
+              "solution": "\\A x ()"
             },
             {
               "proposition_id": 1701,
