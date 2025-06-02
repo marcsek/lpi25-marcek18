@@ -397,7 +397,7 @@
             {
               "proposition_id": 1461,
               "proposition": "11.  Docentka Mladá školí iba takých študentov, ktorí absolvovali s vyznamenaním Históriu vesmíru, ale nie sú doktorandi.",
-              "solution": "\\A x ()"
+              "solution": "\\A x (supervisor(Mlada, x) & student(x) -> aced(x, ))"
             },
             {
               "proposition_id": 1462,
