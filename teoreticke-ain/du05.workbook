@@ -182,12 +182,12 @@
             {
               "proposition_id": 1941,
               "proposition": "4. Dekanom fakulty je iba ten, kto má na príslušnej fakulte funkčné obdobie s nejakým začiatočným a koncovým dátumom.",
-              "solution": "\\A x \\A y (dean_of(x, y) & faculty(x) -> \\E v \\E w (date(v) & date(w) & fun_period(x, y, v, w)))"
+              "solution": "\\A x \\A y (dean_of(x, y) & faculty(y) -> \\E v \\E w (date(v) & date(w) & fun_period(x, y, v, w)))"
             },
             {
               "proposition_id": 1942,
               "proposition": "5. Žiadna fakulta nemá viac ako jedného dekana.",
-              "solution": null
+              "solution": "\\A x (faculty(x) -> )"
             },
             {
               "proposition_id": 1943,
