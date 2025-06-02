@@ -417,7 +417,7 @@
             {
               "proposition_id": 1465,
               "proposition": "15. Ak má Mladá nejakého doktoranda, ktorý nie je externý, tak je šťastná.",
-              "solution": "\\E x (phd_student(x) & )"
+              "solution": "\\E x (phd_student(x) & supervisor(Mlada, x) & \\neg external(x)) -> happy(Mlada)"
             },
             {
               "proposition_id": 1466,
