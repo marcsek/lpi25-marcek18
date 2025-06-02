@@ -232,7 +232,7 @@
             {
               "proposition_id": 2065,
               "proposition": "8. Názvy (tituly) záverečných prác sú unikátne.",
-              "solution": "\\A x \\A y (thesis(x) & thesis(y) -> title(x) != title(y))"
+              "solution": "\\A x \\A y (thesis(x) & thesis(y) & x != y -> title(x) != title(y))"
             },
             {
               "proposition_id": 2066,
