@@ -197,7 +197,7 @@
             {
               "proposition_id": 1944,
               "proposition": "7. Niektorí zamestnanci jednej fakulty sú zamestnancami aj inej.",
-              "solution": "\\E x \\E y (employee(x, y))"
+              "solution": "\\E x \\E y (employee(x, y) & faculty(y) & \\E z (faculty(z) & employee(x, z) & z != y))"
             },
             {
               "proposition_id": 1945,
