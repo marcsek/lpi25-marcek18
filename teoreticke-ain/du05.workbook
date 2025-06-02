@@ -202,7 +202,7 @@
             {
               "proposition_id": 1945,
               "proposition": "8. Zamestnanci fakulty sú zamestnancami práve tých univerzít, ktorých súčasťou je táto fakulta.",
-              "solution": "\\A x \\A y (faculty(y) & employee(x, y) -> \\A z (university(z) & part_of(y, z) <-> employee(x, z)))"
+              "solution": "\\A x \\A y (faculty(y) & employee(x, y) -> \\A z ((university(z) & part_of(y, z)) <-> employee(x, z)))"
             },
             {
               "proposition_id": 1946,
