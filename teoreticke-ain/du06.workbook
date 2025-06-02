@@ -237,12 +237,12 @@
             {
               "proposition_id": 2066,
               "proposition": "9. Bakalárske a magisterské študijné programy sú pregraduálne.",
-              "solution": "\\A x ((study_prog(x) & type(x) = bachelor | type(x) = master) -> undergraduate(x))"
+              "solution": "\\A x ((study_prog(x) & (type(x) = bachelor | type(x) = master)) -> undergraduate(x))"
             },
             {
               "proposition_id": 2067,
               "proposition": "10. Osoba je bakalárom (Bc), ak jej bakalárska práca je obhájená.",
-              "solution": null
+              "solution": "\\A x (thesis(x) & defended(x))"
             }
           ]
         },
