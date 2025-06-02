@@ -238,7 +238,7 @@
             {
               "proposition_id": 2136,
               "proposition": "7. Letiská sú ostrovné práve vtedy, keď ich poloha je na ostrove.",
-              "solution": null
+              "solution": "\\A x (airport(x) -> (island(x) <-> location()))"
             }
           ]
         },
