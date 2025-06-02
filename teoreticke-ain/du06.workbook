@@ -242,7 +242,7 @@
             {
               "proposition_id": 2067,
               "proposition": "10. Osoba je bakalárom (Bc), ak jej bakalárska práca je obhájená.",
-              "solution": "\\A x (thesis(x) & type(x) = bachelor & status(x) = defended -> )"
+              "solution": "\\A x (thesis(x) & type(x) = bachelor & status(x) = defended -> Bc(author(x)) & person(author(x)))"
             }
           ]
         },
