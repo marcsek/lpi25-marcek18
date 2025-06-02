@@ -238,7 +238,7 @@
             {
               "proposition_id": 2136,
               "proposition": "7. Letiská sú ostrovné práve vtedy, keď ich poloha je na ostrove.",
-              "solution": "\\A x ((island(x) <-> \\E y (island(y) & at(location(x), y)) & a))"
+              "solution": "\\A x (airport(x) -> (island(x) <-> \\E y (island(y) & at(location(x), y))))"
             }
           ]
         },
