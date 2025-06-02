@@ -365,12 +365,12 @@
             {
               "proposition_id": 1752,
               "proposition": "𝐷₁: Figúrka môže zobrať figúrku práve vtedy, keď sú rozdielnej farby a tá prvá sa môže posunúť tam, kde tá druhá stojí.",
-              "solution": "\\A x (piece(x) -> \\A y (may_take(x, y) <-> clr(x) != clr(y) & piece(y) & may_enter(x, on(y))))"
+              "solution": "\\A x  \\A y (piece(x) & piece(y) ->  (may_take(x, y) <-> clr(x) != clr(y) & may_enter(x, on(y))))"
             },
             {
               "proposition_id": 1753,
               "proposition": "𝐷₂: Kráľ je v šachu, ak a iba ak ho môže nejaká figúrka zobrať.",
-              "solution": null
+              "solution": "\\A x (k)"
             },
             {
               "proposition_id": 1754,
