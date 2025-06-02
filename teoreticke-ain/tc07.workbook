@@ -387,7 +387,7 @@
             {
               "proposition_id": 1459,
               "proposition": "9. Učitelia okrem asistentov sú profesori a docenti.",
-              "solution": "\\A x (teacher(x) & \\neg teaching_assistant(x))"
+              "solution": "\\A x (teacher(x) & \\neg assistant_prof(x) -> associate_prof(x))"
             },
             {
               "proposition_id": 1460,
