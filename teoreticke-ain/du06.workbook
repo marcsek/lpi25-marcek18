@@ -227,7 +227,7 @@
             {
               "proposition_id": 2064,
               "proposition": "7. Žiaden študent nemôže byť učiteľ, okrem študentov doktorandského programu.",
-              "solution": "\\A x (student(x) & \\neg \\E y (studies(x, y) & study_prog(y) & type(y).))"
+              "solution": "\\A x (student(x) & \\neg \\E y (studies(x, y) & study_prog(y) & type(y) = doctoral) -> \\neg teacher(x))"
             },
             {
               "proposition_id": 2065,
