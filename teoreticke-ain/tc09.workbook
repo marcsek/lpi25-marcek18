@@ -152,12 +152,12 @@
             {
               "proposition_id": 1698,
               "proposition": "2. Riadok políčka je číslo a stĺpec políčka je písmeno.",
-              "solution": "\\A x (square(x) -> number(row(x)) & letter(column(x)))"
+              "solution": "\\A x (square(x) -> number(row(x)) & letter(col(x)))"
             },
             {
               "proposition_id": 1699,
               "proposition": "3. Pre každú dvojicu čísla a písmena existuje políčko, ktorého riadok má toto číslo a stĺpec toto písmeno.",
-              "solution": null
+              "solution": "\\A x \\A y (number(x) & letter(x))"
             },
             {
               "proposition_id": 1700,
