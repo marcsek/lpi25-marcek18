@@ -407,7 +407,7 @@
             {
               "proposition_id": 1463,
               "proposition": "13. Ak nejaký kurz učí Nový, tak ide o neobľúbený kurz.",
-              "solution": null
+              "solution": "\\A x (teaches(Novy, x) & course(x) -> \\neg popular(x))"
             },
             {
               "proposition_id": 1464,
