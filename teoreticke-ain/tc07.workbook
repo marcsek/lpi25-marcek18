@@ -422,7 +422,7 @@
             {
               "proposition_id": 1466,
               "proposition": "16. Nový je šťastný, iba ak aspoň jeden študent má rád Teóriu všetkého.",
-              "solution": null
+              "solution": "\\E x (student(x) & likes(x, Theory_of_everything)) -> happy(Novy)"
             }
           ]
         },
