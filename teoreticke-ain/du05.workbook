@@ -212,7 +212,7 @@
             {
               "proposition_id": 1947,
               "proposition": "10. Ak niekto sedí v aspoň dvoch kanceláriách, každá z nich je súčasťou inej fakulty.",
-              "solution": "\\A x (\\E y \\E z (office(y) & office (z) & occupies(x, y) & occupies(x, z) & y != z))"
+              "solution": "\\A x \\A y \\A z ((office(y) & office (z) & occupies(x, y) & occupies(x, z) & y != z) -> )"
             }
           ]
         },
