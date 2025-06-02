@@ -208,7 +208,7 @@
             {
               "proposition_id": 2130,
               "proposition": "1. Odletovým a príletovým miestom každého letu je letisko.",
-              "solution": "\\A x "
+              "solution": "\\A x \\A y \\A z (airport(y) & airport(z) & flight(x, y, z))"
             },
             {
               "proposition_id": 2131,
