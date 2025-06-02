@@ -207,7 +207,7 @@
             {
               "proposition_id": 1946,
               "proposition": "9. UK_BA má práve dve sídla.",
-              "solution": "\\E x \\E y (located_in(UK_BA, x) & located_in(UK_BA, y) & \\A z (located_in(UK_BA, z) -> z = y | z = x))"
+              "solution": "\\E x \\E y (located_in(UK_BA, x) & located_in(UK_BA, y) & x != y & \\A z (located_in(UK_BA, z) -> z = y | z = x))"
             },
             {
               "proposition_id": 1947,
