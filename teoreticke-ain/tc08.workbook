@@ -337,7 +337,7 @@
             {
               "proposition_id": 1986,
               "proposition": "11. Najviac dvaja učitelia, ktorí nie sú profesori, sú spokojní.",
-              "solution": null
+              "solution": "\\A x \\A y (teacher(x) & teacher(y) & )"
             },
             {
               "proposition_id": 1987,
