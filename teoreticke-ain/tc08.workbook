@@ -337,7 +337,7 @@
             {
               "proposition_id": 1986,
               "proposition": "11. Najviac dvaja učitelia, ktorí nie sú profesori, sú spokojní.",
-              "solution": "\\A x \\A y (teacher(x) & teacher(y) & \\neg professor(x) & \\neg professor(y) & satisfied(x) & satisfied(y) & x != )"
+              "solution": "\\A x \\A y (teacher(x) & teacher(y) & \\neg professor(x) & \\neg professor(y) & satisfied(x) & satisfied(y) & x != y -> \\neg \\E z (teacher(z) & \\neg professor(x) & satisfied()))"
             },
             {
               "proposition_id": 1987,
