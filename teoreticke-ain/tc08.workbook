@@ -287,7 +287,7 @@
             {
               "proposition_id": 1976,
               "proposition": "1. Je aspoň jeden študent, ktorý je chlapec, a jedna študentka (ktorá je teda dievča) a sú spolužiaci.",
-              "solution": "\\E x (boy(x) & student(x)) & \\E x (girl(x) & student())"
+              "solution": "\\E x \\E x (boy(x) & student(x) & girl(x) & student(x))"
             },
             {
               "proposition_id": 1977,
