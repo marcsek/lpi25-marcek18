@@ -182,12 +182,12 @@
             {
               "proposition_id": 1704,
               "proposition": "8. Veža sa môže posunúť iba na políčko, ktoré má rovnaký riadok alebo stĺpec ako jej políčko, no nie je to jej políčko.",
-              "solution": "\\A x \\A y (rook(x) & may_enter(x, y) & square(y) -> (row(on(x)) = row(y) | col(on(x)) = col(y)) & on(x) = y)"
+              "solution": "\\A x \\A y (rook(x) & may_enter(x, y) & square(y) -> (row(on(x)) = row(y) | col(on(x)) = col(y)) & on(x) != y)"
             },
             {
               "proposition_id": 1705,
               "proposition": "9. Kráľ je v šachu, ak sa nejaká figúrka inej farby môže presunúť na jeho políčko.",
-              "solution": null
+              "solution": "\\A x (king(x) & )"
             },
             {
               "proposition_id": 1706,
