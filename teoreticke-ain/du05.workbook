@@ -177,7 +177,7 @@
             {
               "proposition_id": 1940,
               "proposition": "3. Každá katedra je súčasťou nejakej fakulty a každá fakulta zas nejakej univerzity. ",
-              "solution": "\\A x (department(x) -> part)"
+              "solution": "\\A x (department(x) -> \\E y (part_of(x, y) & facult)) & \\A x (faculty(x) -> \\E y )"
             },
             {
               "proposition_id": 1941,
