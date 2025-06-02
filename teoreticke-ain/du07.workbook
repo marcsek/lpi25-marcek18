@@ -223,7 +223,7 @@
             {
               "proposition_id": 2133,
               "proposition": "4. Do a z letiska Snorestone International (ZZZ) lietajú len lietadlá typu Dreamliner NapMax (DNM).",
-              "solution": "\\A x \\Y"
+              "solution": "\\A x \\A y (f) & airport(ZZZ)"
             },
             {
               "proposition_id": 2134,
