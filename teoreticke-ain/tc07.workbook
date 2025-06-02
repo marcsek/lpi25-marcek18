@@ -412,7 +412,7 @@
             {
               "proposition_id": 1464,
               "proposition": "14. Doktorandi Nového cvičiaci Teóriu všetkého sú externisti.",
-              "solution": "\\A x (phd_student(x) & supervisor(Novy, x) )"
+              "solution": "\\A x (phd_student(x) & supervisor(Novy, x) & teaching_assistant(x, Theory_of_everything) -> external(x))"
             },
             {
               "proposition_id": 1465,
