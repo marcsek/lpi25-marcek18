@@ -332,7 +332,7 @@
             {
               "proposition_id": 1985,
               "proposition": "10. Každý študent má medzi študentmi aspoň dvoch kamarátov.",
-              "solution": "\\A x (student(x) -> \\E x \\E y (student(x) & student(y) & x != y ))"
+              "solution": "\\A x (student(x) -> \\E y \\E z (student(y) & student(z) & y != z & has_friend(x, y) & has_friend(x, z)))"
             },
             {
               "proposition_id": 1986,
