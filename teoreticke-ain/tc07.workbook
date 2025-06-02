@@ -367,7 +367,7 @@
             {
               "proposition_id": 1455,
               "proposition": "5. Nikto neučí sám seba.",
-              "solution": null
+              "solution": "\\neg \\E x (teaches(x, x))"
             },
             {
               "proposition_id": 1456,
