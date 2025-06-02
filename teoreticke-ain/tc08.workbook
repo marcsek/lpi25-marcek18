@@ -302,7 +302,7 @@
             {
               "proposition_id": 1979,
               "proposition": "4. Študenti a školitelia sú disjunktní.",
-              "solution": "\\A x \\A y (student(x) & )"
+              "solution": "\\A x \\A y (student(x) & \\E z supervises(y, z) -> x != y)"
             },
             {
               "proposition_id": 1980,
