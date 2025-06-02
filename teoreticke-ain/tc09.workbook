@@ -192,7 +192,7 @@
             {
               "proposition_id": 1706,
               "proposition": "10. Figúrka sa môže presunúť na políčko s inou figúrkou iba vtedy, keď ju môže zobrať.",
-              "solution": null
+              "solution": "\\A x \\A y (p)"
             },
             {
               "proposition_id": 1707,
