@@ -1269,11 +1269,26 @@
             "references": []
           },
           "child": {
-            "type": "open",
+            "type": "leibnitz",
             "node": {
               "id": 3,
               "value": "T x = x",
               "references": []
+            },
+            "child": {
+              "type": "closed",
+              "node": {
+                "id": 4,
+                "value": "T y = x",
+                "references": [
+                  "1",
+                  "3"
+                ]
+              },
+              "closed": [
+                "",
+                ""
+              ]
             }
           }
         },
