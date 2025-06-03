@@ -1269,26 +1269,14 @@
             "references": []
           },
           "child": {
-            "type": "gamma",
+            "type": "open",
             "node": {
               "id": 3,
-              "value": "",
+              "value": "T A(f(y), y)",
               "references": [
-                "2"
+                "2",
+                "1"
               ]
-            },
-            "child": {
-              "type": "open",
-              "node": {
-                "id": 4,
-                "value": "T A(f(x))",
-                "references": [
-                  "1"
-                ]
-              }
-            },
-            "substitution": {
-              "str": "x->f(x)"
             }
           }
         },
