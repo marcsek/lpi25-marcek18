@@ -446,49 +446,13 @@
                 "references": []
               },
               "child": {
-                "type": "alpha",
+                "type": "open",
                 "node": {
                   "id": 5,
-                  "value": "F parent(mother(w), y)",
+                  "value": "T w ≐ v",
                   "references": [
-                    "3"
+                    "4"
                   ]
-                },
-                "child": {
-                  "type": "leibnitz",
-                  "node": {
-                    "id": 6,
-                    "value": "T w ≐ v",
-                    "references": [
-                      "4"
-                    ]
-                  },
-                  "child": {
-                    "type": "leibnitz",
-                    "node": {
-                      "id": 7,
-                      "value": "T parent(mother(v), y)",
-                      "references": [
-                        "1",
-                        "2"
-                      ]
-                    },
-                    "child": {
-                      "type": "closed",
-                      "node": {
-                        "id": 8,
-                        "value": "F parent(mother(v), y)",
-                        "references": [
-                          "6",
-                          " 5"
-                        ]
-                      },
-                      "closed": [
-                        "7",
-                        "8"
-                      ]
-                    }
-                  }
                 }
               }
             }
