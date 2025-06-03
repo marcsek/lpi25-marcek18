@@ -1250,6 +1250,94 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "84": {
+      "id": 84,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T x ≐ y",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T parent(mother(v), x)",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ¬ parent(mother(w), y)",
+              "references": []
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 4,
+                "value": "F ¬ w ≐ v",
+                "references": []
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F parent(mother(w), y)",
+                  "references": [
+                    "3"
+                  ]
+                },
+                "child": {
+                  "type": "leibnitz",
+                  "node": {
+                    "id": 6,
+                    "value": "T w ≐ v",
+                    "references": [
+                      "4"
+                    ]
+                  },
+                  "child": {
+                    "type": "leibnitz",
+                    "node": {
+                      "id": 7,
+                      "value": "T parent(mother(v), y)",
+                      "references": [
+                        "1",
+                        "2"
+                      ]
+                    },
+                    "child": {
+                      "type": "closed",
+                      "node": {
+                        "id": 8,
+                        "value": "F parent(mother(v), y)",
+                        "references": [
+                          "6",
+                          " 5"
+                        ]
+                      },
+                      "closed": [
+                        "7",
+                        "8"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Propositional with equality"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1258,6 +1346,7 @@
     7,
     71,
     72,
+    84,
     54,
     64,
     73,
