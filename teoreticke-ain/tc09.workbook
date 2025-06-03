@@ -1262,18 +1262,33 @@
           "references": []
         },
         "child": {
-          "type": "gamma",
+          "type": "delta",
           "node": {
             "id": 2,
             "value": "F ∀x A(f(x))",
             "references": []
           },
           "child": {
-            "type": "open",
+            "type": "gamma",
             "node": {
               "id": 3,
-              "value": "T ",
-              "references": []
+              "value": "F A(f(x))",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "open",
+              "node": {
+                "id": 4,
+                "value": "T A(f(x))",
+                "references": [
+                  "1"
+                ]
+              }
+            },
+            "substitution": {
+              "str": "x->f(x)"
             }
           },
           "substitution": {
