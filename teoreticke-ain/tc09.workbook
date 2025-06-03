@@ -1262,41 +1262,22 @@
           "references": []
         },
         "child": {
-          "type": "delta",
+          "type": "gamma",
           "node": {
             "id": 2,
             "value": "F ∀x A(f(x))",
             "references": []
           },
           "child": {
-            "type": "gamma",
+            "type": "open",
             "node": {
               "id": 3,
-              "value": "F A(f(a))",
-              "references": [
-                "2"
-              ]
-            },
-            "child": {
-              "type": "closed",
-              "node": {
-                "id": 4,
-                "value": "T A(f(a))",
-                "references": [
-                  "1"
-                ]
-              },
-              "closed": [
-                "3",
-                "4"
-              ]
-            },
-            "substitution": {
-              "str": "x->f(a)"
+              "value": "T ",
+              "references": []
             }
           },
           "substitution": {
-            "str": "x->a"
+            "str": ""
           }
         },
         "config": "Basic FOL"
