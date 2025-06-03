@@ -1262,33 +1262,18 @@
           "references": []
         },
         "child": {
-          "type": "leibnitz",
+          "type": "refl",
           "node": {
             "id": 2,
             "value": "F y ≐ x",
             "references": []
           },
           "child": {
-            "type": "refl",
+            "type": "open",
             "node": {
               "id": 3,
-              "value": "F y = y",
-              "references": [
-                "1",
-                "2"
-              ]
-            },
-            "child": {
-              "type": "closed",
-              "node": {
-                "id": 4,
-                "value": "T y = y",
-                "references": []
-              },
-              "closed": [
-                "3",
-                "4"
-              ]
+              "value": "T x = x",
+              "references": []
             }
           }
         },
