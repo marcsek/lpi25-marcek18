@@ -222,7 +222,7 @@
             {
               "proposition_id": 2063,
               "proposition": "6. Ak má práca dvoch vedúcich, potom jeden z nich je školiteľom (tejto práce a jej autora) a ďalšieho vedúceho práca nemá.",
-              "solution": "\\A x (thesis(x) -> \\A y \\A z (advisor(y, x) & advisor(z, x) & y != z) -> )"
+              "solution": "\\A x (thesis(x) -> (\\A y \\A z (advisor(y, x) & advisor(z, x) & y != z) -> supervisor(author(x), x) =  z))"
             },
             {
               "proposition_id": 2064,
