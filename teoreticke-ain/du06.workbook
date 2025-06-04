@@ -237,7 +237,7 @@
             {
               "proposition_id": 2066,
               "proposition": "9. Bakalárske a magisterské študijné programy sú pregraduálne.",
-              "solution": "\\A x (study_prog(x) & type(x) = bachel)"
+              "solution": "\\A x (study_prog(x) & (type(x) = bachelor | type(x) = ))"
             },
             {
               "proposition_id": 2067,
