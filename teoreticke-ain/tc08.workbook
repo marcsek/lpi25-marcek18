@@ -357,7 +357,15 @@
     "46": {
       "id": 46,
       "type": "tableauEditor",
-      "data": null,
+      "data": {
+        "type": "open",
+        "node": {
+          "id": 1,
+          "value": "F (∃x (A(x)→B(x))↔(∀x A(x)→∃x B(x)))",
+          "references": []
+        },
+        "config": "Basic FOL"
+      },
       "idCounter": 0,
       "comments": {
         "ids": [],
