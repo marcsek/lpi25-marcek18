@@ -216,13 +216,27 @@
                               ]
                             },
                             "child": {
-                              "type": "open",
+                              "type": "delta",
                               "node": {
                                 "id": 12,
                                 "value": "F ∀z ( in(z, x) → in(z, y) )",
                                 "references": [
+                                  "10",
                                   "11"
                                 ]
+                              },
+                              "child": {
+                                "type": "open",
+                                "node": {
+                                  "id": 13,
+                                  "value": "F ( in(z, x) → in(z, y) )",
+                                  "references": [
+                                    "12"
+                                  ]
+                                }
+                              },
+                              "substitution": {
+                                "str": ""
                               }
                             }
                           },
