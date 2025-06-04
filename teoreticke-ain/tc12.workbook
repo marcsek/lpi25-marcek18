@@ -1204,13 +1204,34 @@
                       ]
                     },
                     "child": {
-                      "type": "open",
+                      "type": "gamma",
                       "node": {
                         "id": 8,
                         "value": "F ∃x f(x) ≐ y",
                         "references": [
                           "6"
                         ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T ( P(y) → Q(g(y)) )",
+                          "references": [
+                            "3"
+                          ]
+                        },
+                        "child": {
+                          "type": "open",
+                          "node": {
+                            "id": 10,
+                            "value": "",
+                            "references": []
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": ""
                       }
                     }
                   }
