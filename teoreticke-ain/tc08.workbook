@@ -383,11 +383,33 @@
               ]
             },
             "child": {
-              "type": "open",
+              "type": "alpha",
               "node": {
                 "id": 4,
-                "value": "T ",
-                "references": []
+                "value": "T ¬ ( ∀x A(x) → ∃x B(x) )",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "alpha",
+                "node": {
+                  "id": 5,
+                  "value": "F ( ∀x A(x) → ∃x B(x) )",
+                  "references": [
+                    "4"
+                  ]
+                },
+                "child": {
+                  "type": "open",
+                  "node": {
+                    "id": 6,
+                    "value": "T ∀x A(x)",
+                    "references": [
+                      "5"
+                    ]
+                  }
+                }
               }
             }
           }
@@ -395,7 +417,7 @@
         "rightChild": {
           "type": "open",
           "node": {
-            "id": 5,
+            "id": 7,
             "value": "F ( ∃x ( A(x) → B(x) ) ∨ ¬ ( ∀x A(x) → ∃x B(x) ) )",
             "references": [
               "1"
