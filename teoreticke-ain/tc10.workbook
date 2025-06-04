@@ -173,11 +173,42 @@
                     "references": []
                   },
                   "child": {
-                    "type": "open",
+                    "type": "deltaStar",
                     "node": {
                       "id": 7,
                       "value": "F ∀x ∀y ( diff(x, y) ≐ empty → subseteq(x, y) )",
                       "references": []
+                    },
+                    "child": {
+                      "type": "alpha",
+                      "node": {
+                        "id": 8,
+                        "value": "F ( diff(x, y) ≐ empty → subseteq(x, y) )",
+                        "references": [
+                          "7"
+                        ]
+                      },
+                      "child": {
+                        "type": "alpha",
+                        "node": {
+                          "id": 9,
+                          "value": "T diff(x, y) ≐ empty",
+                          "references": [
+                            "8"
+                          ]
+                        },
+                        "child": {
+                          "type": "open",
+                          "node": {
+                            "id": 10,
+                            "value": "F",
+                            "references": []
+                          }
+                        }
+                      }
+                    },
+                    "substitution": {
+                      "str": ""
                     }
                   }
                 }
