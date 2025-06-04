@@ -1208,13 +1208,34 @@
                       ]
                     },
                     "child": {
-                      "type": "open",
+                      "type": "gammaStar",
                       "node": {
                         "id": 8,
                         "value": "T entails(T,X)",
                         "references": [
                           "7"
                         ]
+                      },
+                      "child": {
+                        "type": "estt",
+                        "node": {
+                          "id": 9,
+                          "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
+                          "references": [
+                            "1"
+                          ]
+                        },
+                        "child": {
+                          "type": "open",
+                          "node": {
+                            "id": 10,
+                            "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
+                            "references": []
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": ""
                       }
                     }
                   }
