@@ -515,7 +515,7 @@
                   ]
                 },
                 "leftChild": {
-                  "type": "gamma",
+                  "type": "delta",
                   "node": {
                     "id": 16,
                     "value": "F ∀x A(x)",
@@ -524,33 +524,40 @@
                     ]
                   },
                   "child": {
-                    "type": "alpha",
+                    "type": "gamma",
                     "node": {
                       "id": 17,
-                      "value": "F ( A(x) → B(x) )",
+                      "value": "F A(x)",
                       "references": [
-                        "13"
+                        "16"
                       ]
                     },
                     "child": {
                       "type": "alpha",
                       "node": {
                         "id": 18,
-                        "value": "T A(x)",
+                        "value": "F ( A(x) → B(x) )",
                         "references": [
-                          "17"
+                          "13"
                         ]
                       },
                       "child": {
-                        "type": "open",
+                        "type": "closed",
                         "node": {
                           "id": 19,
-                          "value": "F B(x)",
+                          "value": "T A(x)",
                           "references": [
-                            "17"
+                            "18"
                           ]
-                        }
+                        },
+                        "closed": [
+                          "17",
+                          "19"
+                        ]
                       }
+                    },
+                    "substitution": {
+                      "str": ""
                     }
                   },
                   "substitution": {
