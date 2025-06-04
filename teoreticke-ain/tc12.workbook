@@ -1226,7 +1226,7 @@
                           ]
                         },
                         "child": {
-                          "type": "estt",
+                          "type": "gammaStar",
                           "node": {
                             "id": 10,
                             "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
@@ -1235,32 +1235,45 @@
                             ]
                           },
                           "child": {
-                            "type": "gamma",
+                            "type": "estt",
                             "node": {
                               "id": 11,
-                              "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
+                              "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
                               "references": [
-                                "9",
-                                "10"
+                                "1"
                               ]
                             },
                             "child": {
-                              "type": "open",
+                              "type": "gamma",
                               "node": {
                                 "id": 12,
-                                "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
                                 "references": [
+                                  "9",
                                   "11"
                                 ]
+                              },
+                              "child": {
+                                "type": "open",
+                                "node": {
+                                  "id": 13,
+                                  "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                  "references": [
+                                    "12"
+                                  ]
+                                }
+                              },
+                              "substitution": {
+                                "str": ""
                               }
-                            },
-                            "substitution": {
-                              "str": ""
                             }
+                          },
+                          "substitution": {
+                            "str": ""
                           }
                         },
                         "substitution": {
-                          "str": ""
+                          "str": "X-.()"
                         }
                       }
                     }
