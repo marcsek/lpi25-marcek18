@@ -1272,41 +1272,52 @@
                                     ]
                                   },
                                   "child": {
-                                    "type": "estt",
+                                    "type": "gammaStar",
                                     "node": {
                                       "id": 15,
-                                      "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
-                                      "references": [
-                                        "1"
-                                      ]
+                                      "value": "T (true(v,and(A,B))↔(true(v,A)∧true(v,B)))",
+                                      "references": []
                                     },
                                     "child": {
-                                      "type": "gamma",
+                                      "type": "estt",
                                       "node": {
                                         "id": 16,
-                                        "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
+                                        "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
                                         "references": [
-                                          "9",
-                                          "15"
+                                          "1"
                                         ]
                                       },
                                       "child": {
-                                        "type": "open",
+                                        "type": "gamma",
                                         "node": {
                                           "id": 17,
-                                          "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                          "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
                                           "references": [
+                                            "9",
                                             "16"
                                           ]
+                                        },
+                                        "child": {
+                                          "type": "open",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                            "references": [
+                                              "17"
+                                            ]
+                                          }
+                                        },
+                                        "substitution": {
+                                          "str": ""
                                         }
-                                      },
-                                      "substitution": {
-                                        "str": ""
                                       }
+                                    },
+                                    "substitution": {
+                                      "str": ""
                                     }
                                   },
                                   "substitution": {
-                                    "str": ""
+                                    "str": "A->X, BB"
                                   }
                                 }
                               }
