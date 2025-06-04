@@ -401,13 +401,36 @@
                   ]
                 },
                 "child": {
-                  "type": "open",
+                  "type": "alpha",
                   "node": {
                     "id": 6,
                     "value": "T ∀x A(x)",
                     "references": [
                       "5"
                     ]
+                  },
+                  "child": {
+                    "type": "delta",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∃x B(x)",
+                      "references": [
+                        "5"
+                      ]
+                    },
+                    "child": {
+                      "type": "open",
+                      "node": {
+                        "id": 8,
+                        "value": "T ( A(x) → B(x) )",
+                        "references": [
+                          "3"
+                        ]
+                      }
+                    },
+                    "substitution": {
+                      "str": ""
+                    }
                   }
                 }
               }
@@ -417,7 +440,7 @@
         "rightChild": {
           "type": "open",
           "node": {
-            "id": 7,
+            "id": 9,
             "value": "F ( ∃x ( A(x) → B(x) ) ∨ ¬ ( ∀x A(x) → ∃x B(x) ) )",
             "references": [
               "1"
