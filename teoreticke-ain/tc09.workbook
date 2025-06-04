@@ -197,7 +197,7 @@
             {
               "proposition_id": 1707,
               "proposition": "11. Na nejakom políčku stojí nejaký kráľ a na toto políčko sa môže presunúť nejaká veža. Je aj také políčko, na ktorom nestojí žiadna figúrka.",
-              "solution": null
+              "solution": "\\E x (king(x) & square(on(x)) & \\E y (rook(y) & may_enter(y, on())))"
             },
             {
               "proposition_id": 1708,
