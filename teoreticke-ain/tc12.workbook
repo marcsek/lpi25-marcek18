@@ -1229,7 +1229,7 @@
                           "type": "gammaStar",
                           "node": {
                             "id": 10,
-                            "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
+                            "value": "T (entails(T,and(A, B))↔ ∀v ((valuation(v)∧true(v,T))→true(v,and(A, B))))",
                             "references": [
                               "1"
                             ]
@@ -1273,7 +1273,7 @@
                           }
                         },
                         "substitution": {
-                          "str": "X-.()"
+                          "str": "X->and(A, B)"
                         }
                       }
                     }
