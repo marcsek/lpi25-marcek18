@@ -202,12 +202,12 @@
             {
               "proposition_id": 2059,
               "proposition": "2. Autormi prác sú iba osoby.",
-              "solution": "\\A x (thesis(x) -> person(author()))"
+              "solution": "\\A x (thesis(x) -> person(author(x)))"
             },
             {
               "proposition_id": 2060,
               "proposition": "3.  Sú tri typy študijných programov a záverečných prác: magisterský, bakalársky alebo doktorandský. ",
-              "solution": null
+              "solution": "\\A x (study_prog(x) | )"
             },
             {
               "proposition_id": 2061,
