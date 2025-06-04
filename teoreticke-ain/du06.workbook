@@ -232,12 +232,12 @@
             {
               "proposition_id": 2065,
               "proposition": "8. Názvy (tituly) záverečných prác sú unikátne.",
-              "solution": "\\A x \\A y (thesis(x) & thesis(y) & x != y -> title())"
+              "solution": "\\A x \\A y (thesis(x) & thesis(y) & x != y -> title(x) != title(y))"
             },
             {
               "proposition_id": 2066,
               "proposition": "9. Bakalárske a magisterské študijné programy sú pregraduálne.",
-              "solution": null
+              "solution": "\\A x (study_prog(x) & type(x) = bachel)"
             },
             {
               "proposition_id": 2067,
