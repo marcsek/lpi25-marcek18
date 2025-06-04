@@ -339,16 +339,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "31": {
-      "id": 31,
-      "type": "formalizationChecker",
-      "data": null,
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -370,7 +360,6 @@
     20,
     21,
     22,
-    31,
     23,
     24
   ],
