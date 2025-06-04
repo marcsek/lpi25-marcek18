@@ -226,13 +226,36 @@
                                 ]
                               },
                               "child": {
-                                "type": "open",
+                                "type": "gamma",
                                 "node": {
                                   "id": 13,
                                   "value": "F ( in(z, x) → in(z, y) )",
                                   "references": [
                                     "12"
                                   ]
+                                },
+                                "child": {
+                                  "type": "alpha",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T ¬ in(z, empty)",
+                                    "references": [
+                                      "3"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "open",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "F in(z, empty)",
+                                      "references": [
+                                        "14"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "substitution": {
+                                  "str": ""
                                 }
                               },
                               "substitution": {
