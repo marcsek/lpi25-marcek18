@@ -1281,48 +1281,59 @@
                                       ]
                                     },
                                     "child": {
-                                      "type": "gammaStar",
+                                      "type": "alpha",
                                       "node": {
                                         "id": 16,
-                                        "value": "F ",
-                                        "references": []
+                                        "value": "F (true(v,X)∧true(v,Y))",
+                                        "references": [
+                                          "14",
+                                          "15"
+                                        ]
                                       },
                                       "child": {
-                                        "type": "estt",
+                                        "type": "gammaStar",
                                         "node": {
                                           "id": 17,
-                                          "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
-                                          "references": [
-                                            "1"
-                                          ]
+                                          "value": "F ",
+                                          "references": []
                                         },
                                         "child": {
-                                          "type": "gamma",
+                                          "type": "estt",
                                           "node": {
                                             "id": 18,
-                                            "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
+                                            "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
                                             "references": [
-                                              "9",
-                                              "17"
+                                              "1"
                                             ]
                                           },
                                           "child": {
-                                            "type": "open",
+                                            "type": "gamma",
                                             "node": {
                                               "id": 19,
-                                              "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                              "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
                                               "references": [
+                                                "9",
                                                 "18"
                                               ]
+                                            },
+                                            "child": {
+                                              "type": "open",
+                                              "node": {
+                                                "id": 20,
+                                                "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                                "references": [
+                                                  "19"
+                                                ]
+                                              }
+                                            },
+                                            "substitution": {
+                                              "str": ""
                                             }
-                                          },
-                                          "substitution": {
-                                            "str": ""
                                           }
+                                        },
+                                        "substitution": {
+                                          "str": ""
                                         }
-                                      },
-                                      "substitution": {
-                                        "str": ""
                                       }
                                     }
                                   },
