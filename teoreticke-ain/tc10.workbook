@@ -272,7 +272,7 @@
                                           ]
                                         },
                                         "child": {
-                                          "type": "open",
+                                          "type": "alpha",
                                           "node": {
                                             "id": 18,
                                             "value": "F ( in(z, x) ∧ ¬ in(z, y) )",
@@ -280,6 +280,16 @@
                                               "15",
                                               "17"
                                             ]
+                                          },
+                                          "child": {
+                                            "type": "open",
+                                            "node": {
+                                              "id": 19,
+                                              "value": "T in(z, x) ",
+                                              "references": [
+                                                "13"
+                                              ]
+                                            }
                                           }
                                         }
                                       }
