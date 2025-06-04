@@ -265,8 +265,11 @@
                                         "type": "open",
                                         "node": {
                                           "id": 17,
-                                          "value": "",
-                                          "references": []
+                                          "value": "T ( in(z, empty) ↔ ( in(z, x) ∧ ¬ in(z, y) ) )",
+                                          "references": [
+                                            "9",
+                                            "6"
+                                          ]
                                         }
                                       }
                                     },
