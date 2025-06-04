@@ -162,7 +162,7 @@
             {
               "proposition_id": 1700,
               "proposition": "4. Figúrky a políčka majú bielu alebo čiernu farbu.",
-              "solution": "\\A x ()"
+              "solution": "\\A x (piece(x) | square(x) -> clr(x) = black | clr(y) = white)"
             },
             {
               "proposition_id": 1701,
