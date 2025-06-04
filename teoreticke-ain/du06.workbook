@@ -207,7 +207,7 @@
             {
               "proposition_id": 2060,
               "proposition": "3.  Sú tri typy študijných programov a záverečných prác: magisterský, bakalársky alebo doktorandský. ",
-              "solution": "\\A x (study_prog(x) | thesis(x) -> type(x) = master | typ)"
+              "solution": "\\A x (study_prog(x) | thesis(x) -> type(x) = master | type(x) = bachelor | type(x) = doctoral)"
             },
             {
               "proposition_id": 2061,
