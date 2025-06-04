@@ -1251,13 +1251,26 @@
                                 ]
                               },
                               "child": {
-                                "type": "open",
+                                "type": "gammaStar",
                                 "node": {
                                   "id": 13,
                                   "value": "T g(f(x)) ≐ g(y)",
                                   "references": [
                                     "12"
                                   ]
+                                },
+                                "child": {
+                                  "type": "open",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T ( g(f(x)) ≐ g(y) → f(x) ≐ y )",
+                                    "references": [
+                                      "1"
+                                    ]
+                                  }
+                                },
+                                "substitution": {
+                                  "str": "a->f(x), b-"
                                 }
                               },
                               "substitution": {
