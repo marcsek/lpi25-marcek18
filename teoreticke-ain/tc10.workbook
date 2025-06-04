@@ -198,13 +198,36 @@
                           ]
                         },
                         "child": {
-                          "type": "open",
+                          "type": "gammaStar",
                           "node": {
                             "id": 10,
                             "value": "F  subseteq(x, y)",
                             "references": [
                               "8"
                             ]
+                          },
+                          "child": {
+                            "type": "estf",
+                            "node": {
+                              "id": 11,
+                              "value": "T( subseteq(x, y) ↔ ∀z ( in(z, x) → in(z, y) ) )",
+                              "references": [
+                                "2"
+                              ]
+                            },
+                            "child": {
+                              "type": "open",
+                              "node": {
+                                "id": 12,
+                                "value": "F ∀z ( in(z, x) → in(z, y) )",
+                                "references": [
+                                  "11"
+                                ]
+                              }
+                            }
+                          },
+                          "substitution": {
+                            "str": ""
                           }
                         }
                       }
