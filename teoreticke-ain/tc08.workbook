@@ -506,13 +506,46 @@
                 ]
               },
               "child": {
-                "type": "open",
+                "type": "gamma",
                 "node": {
                   "id": 15,
                   "value": "T ( ∀x A(x) → ∃x B(x) )",
                   "references": [
                     "14"
                   ]
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 16,
+                    "value": "F ( A(x) → B(x) )",
+                    "references": [
+                      "13"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 17,
+                      "value": "T A(x)",
+                      "references": [
+                        "16"
+                      ]
+                    },
+                    "child": {
+                      "type": "open",
+                      "node": {
+                        "id": 18,
+                        "value": "F B(x)",
+                        "references": [
+                          "16"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": ""
                 }
               }
             }
