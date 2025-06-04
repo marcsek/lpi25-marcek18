@@ -227,12 +227,12 @@
             {
               "proposition_id": 2064,
               "proposition": "7. Žiaden študent nemôže byť učiteľ, okrem študentov doktorandského programu.",
-              "solution": "\\A x ( \\neg teacher(x))"
+              "solution": "\\A x (student(x) & \\neg \\E y (studies(x, y) & study_prog(y) & type(y) = doctoral) -> \\neg teacher(x))"
             },
             {
               "proposition_id": 2065,
               "proposition": "8. Názvy (tituly) záverečných prác sú unikátne.",
-              "solution": null
+              "solution": "\\A x \\A y (thesis(x) & thesis(y) & x != y -> title())"
             },
             {
               "proposition_id": 2066,
