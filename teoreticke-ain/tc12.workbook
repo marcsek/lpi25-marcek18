@@ -1260,17 +1260,28 @@
                                   ]
                                 },
                                 "child": {
-                                  "type": "open",
+                                  "type": "mp",
                                   "node": {
                                     "id": 14,
                                     "value": "T ( g(f(x)) ≐ g(y) → f(x) ≐ y )",
                                     "references": [
                                       "1"
                                     ]
+                                  },
+                                  "child": {
+                                    "type": "open",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T f(x) ≐ y",
+                                      "references": [
+                                        "13",
+                                        "14"
+                                      ]
+                                    }
                                   }
                                 },
                                 "substitution": {
-                                  "str": "a->f(x), b-"
+                                  "str": "a->f(x), b->y"
                                 }
                               },
                               "substitution": {
