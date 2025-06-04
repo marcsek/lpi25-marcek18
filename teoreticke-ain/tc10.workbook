@@ -201,7 +201,7 @@
                           "type": "open",
                           "node": {
                             "id": 10,
-                            "value": "F  (subseteq(x, y)",
+                            "value": "F  subseteq(x, y)",
                             "references": [
                               "8"
                             ]
