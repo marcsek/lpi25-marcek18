@@ -358,26 +358,44 @@
       "id": 46,
       "type": "tableauEditor",
       "data": {
-        "type": "ecdt",
+        "type": "ecdf",
         "node": {
           "id": 1,
           "value": "F ( ∃x ( A(x) → B(x) ) ↔ ( ∀x A(x) → ∃x B(x) ) )",
           "references": []
         },
         "leftChild": {
-          "type": "open",
+          "type": "alpha",
           "node": {
             "id": 2,
             "value": "T ( ∃x ( A(x) → B(x) ) ∧ ¬ ( ∀x A(x) → ∃x B(x) ) )",
             "references": [
               "1"
             ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "T ∃x ( A(x) → B(x) )",
+              "references": [
+                "2"
+              ]
+            },
+            "child": {
+              "type": "open",
+              "node": {
+                "id": 4,
+                "value": "T ",
+                "references": []
+              }
+            }
           }
         },
         "rightChild": {
           "type": "open",
           "node": {
-            "id": 3,
+            "id": 5,
             "value": "F ( ∃x ( A(x) → B(x) ) ∨ ¬ ( ∀x A(x) → ∃x B(x) ) )",
             "references": [
               "1"
