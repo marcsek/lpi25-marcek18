@@ -1232,17 +1232,27 @@
                             ]
                           },
                           "child": {
-                            "type": "open",
+                            "type": "mp",
                             "node": {
                               "id": 11,
-                              "value": "T ( Q(z) → ∃x g(f(x)) ≐ z )",
+                              "value": "T ( Q(g(y)) → ∃x g(f(x)) ≐ g(y) )",
                               "references": [
                                 "2"
                               ]
+                            },
+                            "child": {
+                              "type": "open",
+                              "node": {
+                                "id": 12,
+                                "value": "T ∃x g(f(x)) ≐ g(y)",
+                                "references": [
+                                  "11"
+                                ]
+                              }
                             }
                           },
                           "substitution": {
-                            "str": ""
+                            "str": "z->g(y)"
                           }
                         }
                       },
