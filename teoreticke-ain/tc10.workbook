@@ -300,11 +300,28 @@
                                                 ]
                                               },
                                               "child": {
-                                                "type": "open",
+                                                "type": "alpha",
                                                 "node": {
                                                   "id": 21,
-                                                  "value": "",
-                                                  "references": []
+                                                  "value": "F ¬ in(z, y)",
+                                                  "references": [
+                                                    "19",
+                                                    "18"
+                                                  ]
+                                                },
+                                                "child": {
+                                                  "type": "closed",
+                                                  "node": {
+                                                    "id": 22,
+                                                    "value": "T in(z, y)",
+                                                    "references": [
+                                                      "21"
+                                                    ]
+                                                  },
+                                                  "closed": [
+                                                    "",
+                                                    ""
+                                                  ]
                                                 }
                                               }
                                             }
