@@ -172,12 +172,12 @@
             {
               "proposition_id": 1702,
               "proposition": "6. Figúrka nemôže zobrať figúrku rovnakej farby.",
-              "solution": "\\A x \\A y (piece(x) & may_take(x, y) -> clr(x) != clr(y))"
+              "solution": "\\A x \\A y (piece(x) & piece(y) & may_take(x, y) -> clr(x) != clr(y))"
             },
             {
               "proposition_id": 1703,
               "proposition": "7. Susedné políčka s rovnakým riadkom alebo stĺpcom majú rozdielnu farbu.",
-              "solution": null
+              "solution": "\\A x \\A y (square(x) & square(y) & )"
             },
             {
               "proposition_id": 1704,
