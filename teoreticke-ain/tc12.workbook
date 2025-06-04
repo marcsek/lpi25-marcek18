@@ -1226,11 +1226,27 @@
                           ]
                         },
                         "child": {
-                          "type": "open",
+                          "type": "gamma",
                           "node": {
                             "id": 10,
                             "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
-                            "references": []
+                            "references": [
+                              "8",
+                              "9"
+                            ]
+                          },
+                          "child": {
+                            "type": "open",
+                            "node": {
+                              "id": 11,
+                              "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                              "references": [
+                                "10"
+                              ]
+                            }
+                          },
+                          "substitution": {
+                            "str": ""
                           }
                         }
                       },
