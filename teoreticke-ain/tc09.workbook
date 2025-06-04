@@ -167,12 +167,12 @@
             {
               "proposition_id": 1701,
               "proposition": "5. Na jednom políčku môže stáť najviac jedna figúrka.",
-              "solution": "\\A x \\A y (piece(x) & square(y) & on(x) = y -> \\A z (square(z) &))"
+              "solution": "\\A x \\A y (piece(x) & square(y) & on(x) = y -> \\A z (piece(z) & on(z) = y -> z = x))"
             },
             {
               "proposition_id": 1702,
               "proposition": "6. Figúrka nemôže zobrať figúrku rovnakej farby.",
-              "solution": null
+              "solution": "\\A x ()"
             },
             {
               "proposition_id": 1703,
