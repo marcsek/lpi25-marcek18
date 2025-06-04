@@ -162,12 +162,12 @@
             {
               "proposition_id": 1700,
               "proposition": "4. Figúrky a políčka majú bielu alebo čiernu farbu.",
-              "solution": "\\A x (piece(x) | square(x) -> clr(x) = black | clr(y) = white)"
+              "solution": "\\A x (piece(x) | square(x) -> clr(x) = black | clr(x) = white)"
             },
             {
               "proposition_id": 1701,
               "proposition": "5. Na jednom políčku môže stáť najviac jedna figúrka.",
-              "solution": null
+              "solution": "\\A x (square(x) -> )"
             },
             {
               "proposition_id": 1702,
