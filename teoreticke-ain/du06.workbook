@@ -217,7 +217,7 @@
             {
               "proposition_id": 2062,
               "proposition": "5. Existujú nejaké dve práce, ktoré majú rovnakého autora.",
-              "solution": null
+              "solution": "\\E x \\E y (x != y & thesis(x) & thesis(y) & author(x) = author)"
             },
             {
               "proposition_id": 2063,
