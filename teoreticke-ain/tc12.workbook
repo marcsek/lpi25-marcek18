@@ -1165,11 +1165,24 @@
             "references": []
           },
           "child": {
-            "type": "open",
+            "type": "deltaStar",
             "node": {
               "id": 3,
               "value": "F ∀T ∀X ∀Y (¬entails(T,and(X,Y))→ (¬entails(T,X)∨¬entails(T,Y)))",
               "references": []
+            },
+            "child": {
+              "type": "open",
+              "node": {
+                "id": 4,
+                "value": "F (¬entails(T,and(X,Y))→ (¬entails(T,X)∨¬entails(T,Y)))",
+                "references": [
+                  "3"
+                ]
+              }
+            },
+            "substitution": {
+              "str": ""
             }
           }
         },
