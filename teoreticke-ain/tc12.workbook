@@ -1319,14 +1319,22 @@
                                               ]
                                             },
                                             "child": {
-                                              "type": "open",
+                                              "type": "ncs",
                                               "node": {
                                                 "id": 20,
                                                 "value": "T true(v,X)",
                                                 "references": [
-                                                  "16",
+                                                  "13",
                                                   "19"
                                                 ]
+                                              },
+                                              "child": {
+                                                "type": "open",
+                                                "node": {
+                                                  "id": 21,
+                                                  "value": "F ",
+                                                  "references": []
+                                                }
                                               }
                                             }
                                           },
