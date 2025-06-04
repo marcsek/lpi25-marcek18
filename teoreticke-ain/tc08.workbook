@@ -358,11 +358,27 @@
       "id": 46,
       "type": "tableauEditor",
       "data": {
-        "type": "open",
+        "type": "ecdt",
         "node": {
           "id": 1,
           "value": "F (∃x (A(x)→B(x))↔(∀x A(x)→∃x B(x)))",
           "references": []
+        },
+        "leftChild": {
+          "type": "open",
+          "node": {
+            "id": 2,
+            "value": "T (∃x (A(x)→B(x))↔(∀x A(x)→∃x B(x)))",
+            "references": []
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 3,
+            "value": "",
+            "references": []
+          }
         },
         "config": "Basic FOL"
       },
