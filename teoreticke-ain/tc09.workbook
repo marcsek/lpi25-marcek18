@@ -147,12 +147,12 @@
             {
               "proposition_id": 1697,
               "proposition": "1. Figúrky stoja na políčkach. Králi a veže sú figúrky.",
-              "solution": "\\A x (piece(x) -> square(on(x))) & \\A x (king(x) | rook(x) -> piece(x)) "
+              "solution": "\\A x (piece(x) -> square(on(x))) & \\A x (king(x) | rook(x) -> piece(x))"
             },
             {
               "proposition_id": 1698,
               "proposition": "2. Riadok políčka je číslo a stĺpec políčka je písmeno.",
-              "solution": null
+              "solution": "\\A x ()"
             },
             {
               "proposition_id": 1699,
