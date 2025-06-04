@@ -222,12 +222,12 @@
             {
               "proposition_id": 2063,
               "proposition": "6. Ak má práca dvoch vedúcich, potom jeden z nich je školiteľom (tejto práce a jej autora) a ďalšieho vedúceho práca nemá.",
-              "solution": "\\A x (thesis(x) -> (\\A y \\A z (advisor(y, x) & advisor(z, x) & y != z -> (supervisor(author(x), x) = z | supervisor(author(x), x) = y) & \\neg \\E v (advisor(v, x) & v != y | v != z))))"
+              "solution": "\\A x (thesis(x) -> (\\A y \\A z (advisor(y, x) & advisor(z, x) & y != z -> (supervisor(author(x), x) = z | supervisor(author(x), x) = y) & \\neg \\E v (advisor(v, x) & v != y & v != z))))"
             },
             {
               "proposition_id": 2064,
               "proposition": "7. Žiaden študent nemôže byť učiteľ, okrem študentov doktorandského programu.",
-              "solution": null
+              "solution": "\\A x (student(x))"
             },
             {
               "proposition_id": 2065,
