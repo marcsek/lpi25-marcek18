@@ -262,14 +262,25 @@
                                         ]
                                       },
                                       "child": {
-                                        "type": "open",
+                                        "type": "estf",
                                         "node": {
                                           "id": 17,
                                           "value": "T ( in(z, empty) ↔ ( in(z, x) ∧ ¬ in(z, y) ) )",
                                           "references": [
                                             "9",
-                                            "6"
+                                            "16"
                                           ]
+                                        },
+                                        "child": {
+                                          "type": "open",
+                                          "node": {
+                                            "id": 18,
+                                            "value": "F ( in(z, x) ∧ ¬ in(z, y) )",
+                                            "references": [
+                                              "15",
+                                              "17"
+                                            ]
+                                          }
                                         }
                                       }
                                     },
