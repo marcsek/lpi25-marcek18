@@ -187,7 +187,7 @@
             {
               "proposition_id": 1705,
               "proposition": "9. Kráľ je v šachu, ak sa nejaká figúrka inej farby môže presunúť na jeho políčko.",
-              "solution": null
+              "solution": "\\A x \\A y (king(x) )"
             },
             {
               "proposition_id": 1706,
