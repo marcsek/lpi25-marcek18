@@ -157,7 +157,7 @@
             {
               "proposition_id": 1699,
               "proposition": "3. Pre každú dvojicu čísla a písmena existuje políčko, ktorého riadok má toto číslo a stĺpec toto písmeno.",
-              "solution": null
+              "solution": "\\A x \\A y (letter(x) & number(x) -> )"
             },
             {
               "proposition_id": 1700,
