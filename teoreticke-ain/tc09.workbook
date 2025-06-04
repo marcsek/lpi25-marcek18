@@ -152,7 +152,7 @@
             {
               "proposition_id": 1698,
               "proposition": "2. Riadok políčka je číslo a stĺpec políčka je písmeno.",
-              "solution": "\\A x ()"
+              "solution": "\\A x (square(x) -> number(row(x)) & letter(col(x)))"
             },
             {
               "proposition_id": 1699,
