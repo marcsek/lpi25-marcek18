@@ -167,7 +167,7 @@
             {
               "proposition_id": 1701,
               "proposition": "5. Na jednom políčku môže stáť najviac jedna figúrka.",
-              "solution": "\\A x \\A y (piece(x) & square(y) & on(x) = y)"
+              "solution": "\\A x \\A y (piece(x) & square(y) & on(x) = y -> \\A z (square(z) &))"
             },
             {
               "proposition_id": 1702,
