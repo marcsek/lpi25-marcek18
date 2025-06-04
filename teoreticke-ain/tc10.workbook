@@ -244,13 +244,34 @@
                                     ]
                                   },
                                   "child": {
-                                    "type": "open",
+                                    "type": "gammaStar",
                                     "node": {
                                       "id": 15,
                                       "value": "F in(z, empty)",
                                       "references": [
                                         "14"
                                       ]
+                                    },
+                                    "child": {
+                                      "type": "leibnitz",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "T ( in(z, diff(x, y)) ↔ ( in(z, x) ∧ ¬ in(z, y) ) )",
+                                        "references": [
+                                          "6"
+                                        ]
+                                      },
+                                      "child": {
+                                        "type": "open",
+                                        "node": {
+                                          "id": 17,
+                                          "value": "",
+                                          "references": []
+                                        }
+                                      }
+                                    },
+                                    "substitution": {
+                                      "str": ""
                                     }
                                   }
                                 },
