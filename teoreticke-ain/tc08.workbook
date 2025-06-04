@@ -506,7 +506,7 @@
                 ]
               },
               "child": {
-                "type": "gamma",
+                "type": "beta",
                 "node": {
                   "id": 15,
                   "value": "T ( ∀x A(x) → ∃x B(x) )",
@@ -514,38 +514,54 @@
                     "14"
                   ]
                 },
-                "child": {
-                  "type": "alpha",
+                "leftChild": {
+                  "type": "gamma",
                   "node": {
                     "id": 16,
-                    "value": "F ( A(x) → B(x) )",
-                    "references": [
-                      "13"
-                    ]
+                    "value": "T F",
+                    "references": []
                   },
                   "child": {
                     "type": "alpha",
                     "node": {
                       "id": 17,
-                      "value": "T A(x)",
+                      "value": "F ( A(x) → B(x) )",
                       "references": [
-                        "16"
+                        "13"
                       ]
                     },
                     "child": {
-                      "type": "open",
+                      "type": "alpha",
                       "node": {
                         "id": 18,
-                        "value": "F B(x)",
+                        "value": "T A(x)",
                         "references": [
-                          "16"
+                          "17"
                         ]
+                      },
+                      "child": {
+                        "type": "open",
+                        "node": {
+                          "id": 19,
+                          "value": "F B(x)",
+                          "references": [
+                            "17"
+                          ]
+                        }
                       }
                     }
+                  },
+                  "substitution": {
+                    "str": ""
                   }
                 },
-                "substitution": {
-                  "str": ""
+                "rightChild": {
+                  "type": "open",
+                  "node": {
+                    "id": 20,
+                    "value": "",
+                    "references": []
+                  }
                 }
               }
             }
