@@ -1250,16 +1250,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "85": {
-      "id": 85,
-      "type": "structureExplorer",
-      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"P/1, Q/1, R/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"P\",\"arity\":1},{\"name\":\"Q\",\"arity\":1},{\"name\":\"R\",\"arity\":1}]},\"functions\":{\"value\":\"f/1, g/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"f\",\"arity\":1},{\"name\":\"g\",\"arity\":1}]},\"lockedComponent\":false},\"structure\":{\"constants\":{},\"predicates\":{\"P/1\":{\"value\":\"1, 2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"]],\"tableEnabled\":false},\"Q/1\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"],[\"3\"]],\"tableEnabled\":false},\"R/1\":{\"value\":\"1, 2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"],[\"2\"]],\"tableEnabled\":false}},\"functions\":{\"f/1\":{\"value\":\"(1, 1), (2, 2), (3, 3)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"1\"],[\"2\",\"2\"],[\"3\",\"3\"]],\"tableEnabled\":false},\"g/1\":{\"value\":\"(1, 1), (2, 2), (3, 2)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"1\"],[\"2\",\"2\"],[\"3\",\"2\"]],\"tableEnabled\":false}},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"\\\\exists x P(x)\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall x (P(x) -> Q(f(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"Q\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall x (Q(x) -> R(g(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"Q\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"R\",\"terms\":[{\"name\":\"g\",\"terms\":[{\"name\":\"x\"}]}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall y (R(y) -> \\\\exists x (P(x) & g(f(x)) = y))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"R\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"name\":\"g\",\"terms\":[{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]}]},\"subRight\":{\"name\":\"y\"}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"\\\\forall y (Q(y) -> \\\\exists x (P(x) & f(x) = y))\",\"expressionValue\":false,\"answerValue\":false,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"Q\",\"terms\":[{\"name\":\"y\"}]},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"P\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"name\":\"f\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"y\"}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -1279,7 +1269,6 @@
     70,
     30,
     76,
-    85,
     75,
     52,
     22,
