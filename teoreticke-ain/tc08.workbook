@@ -518,8 +518,10 @@
                   "type": "gamma",
                   "node": {
                     "id": 16,
-                    "value": "T F",
-                    "references": []
+                    "value": "F ∀x A(x)",
+                    "references": [
+                      "15"
+                    ]
                   },
                   "child": {
                     "type": "alpha",
@@ -559,8 +561,10 @@
                   "type": "open",
                   "node": {
                     "id": 20,
-                    "value": "",
-                    "references": []
+                    "value": "T ∃x B(x)",
+                    "references": [
+                      "15"
+                    ]
                   }
                 }
               }
