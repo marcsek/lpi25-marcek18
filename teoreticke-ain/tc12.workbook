@@ -1217,7 +1217,7 @@
                         ]
                       },
                       "child": {
-                        "type": "gammaStar",
+                        "type": "alpha",
                         "node": {
                           "id": 9,
                           "value": "T entails(T,X)",
@@ -1226,30 +1226,28 @@
                           ]
                         },
                         "child": {
-                          "type": "estf",
+                          "type": "gammaStar",
                           "node": {
                             "id": 10,
-                            "value": "T (entails(T,and(X, Y))↔ ∀v ((valuation(v)∧true(v,T))→true(v,and(X, Y))))",
-                            "references": [
-                              "1"
-                            ]
+                            "value": "F ¬entails(T,Y)",
+                            "references": []
                           },
                           "child": {
-                            "type": "delta",
+                            "type": "estf",
                             "node": {
                               "id": 11,
-                              "value": "F ∀v ((valuation(v)∧true(v,T))→true(v,and(X, Y)))",
+                              "value": "T (entails(T,and(X, Y))↔ ∀v ((valuation(v)∧true(v,T))→true(v,and(X, Y))))",
                               "references": [
-                                "6",
-                                "10"
+                                "1"
                               ]
                             },
                             "child": {
-                              "type": "alpha",
+                              "type": "delta",
                               "node": {
                                 "id": 12,
-                                "value": "F ((valuation(v)∧true(v,T))→true(v,and(X, Y)))",
+                                "value": "F ∀v ((valuation(v)∧true(v,T))→true(v,and(X, Y)))",
                                 "references": [
+                                  "6",
                                   "11"
                                 ]
                               },
@@ -1257,124 +1255,136 @@
                                 "type": "alpha",
                                 "node": {
                                   "id": 13,
-                                  "value": "T (valuation(v)∧true(v,T))",
+                                  "value": "F ((valuation(v)∧true(v,T))→true(v,and(X, Y)))",
                                   "references": [
                                     "12"
                                   ]
                                 },
                                 "child": {
-                                  "type": "gammaStar",
+                                  "type": "alpha",
                                   "node": {
                                     "id": 14,
-                                    "value": "F true(v,and(X, Y))",
+                                    "value": "T (valuation(v)∧true(v,T))",
                                     "references": [
-                                      "12"
+                                      "13"
                                     ]
                                   },
                                   "child": {
-                                    "type": "estf",
+                                    "type": "gammaStar",
                                     "node": {
                                       "id": 15,
-                                      "value": "T (true(v,and(X,Y))↔(true(v,X)∧true(v,Y)))",
+                                      "value": "F true(v,and(X, Y))",
                                       "references": [
-                                        "2"
+                                        "13"
                                       ]
                                     },
                                     "child": {
-                                      "type": "gammaStar",
+                                      "type": "estf",
                                       "node": {
                                         "id": 16,
-                                        "value": "F (true(v,X)∧true(v,Y))",
+                                        "value": "T (true(v,and(X,Y))↔(true(v,X)∧true(v,Y)))",
                                         "references": [
-                                          "14",
-                                          "15"
+                                          "2"
                                         ]
                                       },
                                       "child": {
-                                        "type": "estt",
+                                        "type": "gammaStar",
                                         "node": {
                                           "id": 17,
-                                          "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
+                                          "value": "F (true(v,X)∧true(v,Y))",
                                           "references": [
-                                            "1"
+                                            "15",
+                                            "16"
                                           ]
                                         },
                                         "child": {
-                                          "type": "gamma",
+                                          "type": "estt",
                                           "node": {
                                             "id": 18,
-                                            "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
+                                            "value": "T (entails(T,X)↔ ∀v ((valuation(v)∧true(v,T))→true(v,X)))",
                                             "references": [
-                                              "9",
-                                              "17"
+                                              "1"
                                             ]
                                           },
                                           "child": {
-                                            "type": "mp",
+                                            "type": "gamma",
                                             "node": {
                                               "id": 19,
-                                              "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
+                                              "value": "T ∀v ((valuation(v)∧true(v,T))→true(v,X))",
                                               "references": [
+                                                "9",
                                                 "18"
                                               ]
                                             },
                                             "child": {
-                                              "type": "ncs",
+                                              "type": "mp",
                                               "node": {
                                                 "id": 20,
-                                                "value": "T true(v,X)",
+                                                "value": "T ((valuation(v)∧true(v,T))→true(v,X))",
                                                 "references": [
-                                                  "13",
                                                   "19"
                                                 ]
                                               },
                                               "child": {
-                                                "type": "gammaStar",
+                                                "type": "ncs",
                                                 "node": {
                                                   "id": 21,
-                                                  "value": "F true(v,Y)",
+                                                  "value": "T true(v,X)",
                                                   "references": [
-                                                    "20",
-                                                    "16"
+                                                    "14",
+                                                    "20"
                                                   ]
                                                 },
                                                 "child": {
-                                                  "type": "open",
+                                                  "type": "gammaStar",
                                                   "node": {
                                                     "id": 22,
-                                                    "value": "",
-                                                    "references": []
+                                                    "value": "F true(v,Y)",
+                                                    "references": [
+                                                      "21",
+                                                      "17"
+                                                    ]
+                                                  },
+                                                  "child": {
+                                                    "type": "open",
+                                                    "node": {
+                                                      "id": 23,
+                                                      "value": "T (entails(T,Y)↔ ∀v ((valuation(v)∧true(v,T))→true(v,Y)))",
+                                                      "references": [
+                                                        "1"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "substitution": {
+                                                    "str": "X->Y"
                                                   }
-                                                },
-                                                "substitution": {
-                                                  "str": ""
                                                 }
                                               }
+                                            },
+                                            "substitution": {
+                                              "str": ""
                                             }
-                                          },
-                                          "substitution": {
-                                            "str": ""
                                           }
+                                        },
+                                        "substitution": {
+                                          "str": ""
                                         }
-                                      },
-                                      "substitution": {
-                                        "str": ""
                                       }
+                                    },
+                                    "substitution": {
+                                      "str": "A->X, B->Y"
                                     }
-                                  },
-                                  "substitution": {
-                                    "str": "A->X, B->Y"
                                   }
                                 }
+                              },
+                              "substitution": {
+                                "str": ""
                               }
-                            },
-                            "substitution": {
-                              "str": ""
                             }
+                          },
+                          "substitution": {
+                            "str": "X->and(X, Y)"
                           }
-                        },
-                        "substitution": {
-                          "str": "X->and(X, Y)"
                         }
                       }
                     }
