@@ -1213,7 +1213,7 @@
                         ]
                       },
                       "child": {
-                        "type": "alpha",
+                        "type": "mp",
                         "node": {
                           "id": 9,
                           "value": "T ( P(y) → Q(g(y)) )",
@@ -1222,11 +1222,27 @@
                           ]
                         },
                         "child": {
-                          "type": "open",
+                          "type": "gamma",
                           "node": {
                             "id": 10,
-                            "value": "",
-                            "references": []
+                            "value": "T Q(g(y))",
+                            "references": [
+                              "7",
+                              "9"
+                            ]
+                          },
+                          "child": {
+                            "type": "open",
+                            "node": {
+                              "id": 11,
+                              "value": "T ( Q(z) → ∃x g(f(x)) ≐ z )",
+                              "references": [
+                                "2"
+                              ]
+                            }
+                          },
+                          "substitution": {
+                            "str": ""
                           }
                         }
                       },
