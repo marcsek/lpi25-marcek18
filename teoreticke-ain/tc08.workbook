@@ -479,13 +479,43 @@
           }
         },
         "rightChild": {
-          "type": "open",
+          "type": "alpha",
           "node": {
             "id": 12,
             "value": "F ( ∃x ( A(x) → B(x) ) ∨ ¬ ( ∀x A(x) → ∃x B(x) ) )",
             "references": [
               "1"
             ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 13,
+              "value": "F ∃x ( A(x) → B(x) )",
+              "references": [
+                "12"
+              ]
+            },
+            "child": {
+              "type": "alpha",
+              "node": {
+                "id": 14,
+                "value": "F ¬ ( ∀x A(x) → ∃x B(x) )",
+                "references": [
+                  "12"
+                ]
+              },
+              "child": {
+                "type": "open",
+                "node": {
+                  "id": 15,
+                  "value": "T ( ∀x A(x) → ∃x B(x) )",
+                  "references": [
+                    "14"
+                  ]
+                }
+              }
+            }
           }
         },
         "config": "Basic FOL"
