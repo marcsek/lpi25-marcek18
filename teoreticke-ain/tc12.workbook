@@ -1329,11 +1329,25 @@
                                                 ]
                                               },
                                               "child": {
-                                                "type": "open",
+                                                "type": "gammaStar",
                                                 "node": {
                                                   "id": 21,
-                                                  "value": "F ",
-                                                  "references": []
+                                                  "value": "F true(v,Y)",
+                                                  "references": [
+                                                    "20",
+                                                    "16"
+                                                  ]
+                                                },
+                                                "child": {
+                                                  "type": "open",
+                                                  "node": {
+                                                    "id": 22,
+                                                    "value": "",
+                                                    "references": []
+                                                  }
+                                                },
+                                                "substitution": {
+                                                  "str": ""
                                                 }
                                               }
                                             }
