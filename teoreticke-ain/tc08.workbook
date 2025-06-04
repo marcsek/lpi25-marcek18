@@ -419,13 +419,37 @@
                       ]
                     },
                     "child": {
-                      "type": "open",
+                      "type": "gamma",
                       "node": {
                         "id": 8,
                         "value": "T ( A(x) → B(x) )",
                         "references": [
                           "3"
                         ]
+                      },
+                      "child": {
+                        "type": "mp",
+                        "node": {
+                          "id": 9,
+                          "value": "T A(x)",
+                          "references": [
+                            "6"
+                          ]
+                        },
+                        "child": {
+                          "type": "open",
+                          "node": {
+                            "id": 10,
+                            "value": "T B(x)",
+                            "references": [
+                              "9",
+                              "8"
+                            ]
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": ""
                       }
                     },
                     "substitution": {
@@ -440,7 +464,7 @@
         "rightChild": {
           "type": "open",
           "node": {
-            "id": 9,
+            "id": 11,
             "value": "F ( ∃x ( A(x) → B(x) ) ∨ ¬ ( ∀x A(x) → ∃x B(x) ) )",
             "references": [
               "1"
