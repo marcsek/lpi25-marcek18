@@ -361,23 +361,27 @@
         "type": "ecdt",
         "node": {
           "id": 1,
-          "value": "F (∃x (A(x)→B(x))↔(∀x A(x)→∃x B(x)))",
+          "value": "F ( ∃x ( A(x) → B(x) ) ↔ ( ∀x A(x) → ∃x B(x) ) )",
           "references": []
         },
         "leftChild": {
           "type": "open",
           "node": {
             "id": 2,
-            "value": "T (∃x (A(x)→B(x))↔(∀x A(x)→∃x B(x)))",
-            "references": []
+            "value": "T ( ∃x ( A(x) → B(x) ) ∧ ¬ ( ∀x A(x) → ∃x B(x) ) )",
+            "references": [
+              "1"
+            ]
           }
         },
         "rightChild": {
           "type": "open",
           "node": {
             "id": 3,
-            "value": "",
-            "references": []
+            "value": "F ( ∃x ( A(x) → B(x) ) ∨ ¬ ( ∀x A(x) → ∃x B(x) ) )",
+            "references": [
+              "1"
+            ]
           }
         },
         "config": "Basic FOL"
