@@ -1146,6 +1146,191 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "54": {
+      "id": 54,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀a ∀b ( g(a) ≐ g(b) → a ≐ b )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀z ( Q(z) → ∃x g(f(x)) ≐ z )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀y ( P(y) → Q(g(y)) )",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ( ∃y P(y) ∧ ∃z Q(z) )",
+                "references": []
+              },
+              "child": {
+                "type": "delta",
+                "node": {
+                  "id": 5,
+                  "value": "F ∀y ( P(y) → ∃x f(x) ≐ y )",
+                  "references": []
+                },
+                "child": {
+                  "type": "alpha",
+                  "node": {
+                    "id": 6,
+                    "value": "F ( P(y) → ∃x f(x) ≐ y )",
+                    "references": [
+                      "5"
+                    ]
+                  },
+                  "child": {
+                    "type": "alpha",
+                    "node": {
+                      "id": 7,
+                      "value": "T P(y)",
+                      "references": [
+                        "6"
+                      ]
+                    },
+                    "child": {
+                      "type": "gamma",
+                      "node": {
+                        "id": 8,
+                        "value": "F ∃x f(x) ≐ y",
+                        "references": [
+                          "6"
+                        ]
+                      },
+                      "child": {
+                        "type": "mp",
+                        "node": {
+                          "id": 9,
+                          "value": "T ( P(y) → Q(g(y)) )",
+                          "references": [
+                            "3"
+                          ]
+                        },
+                        "child": {
+                          "type": "gamma",
+                          "node": {
+                            "id": 10,
+                            "value": "T Q(g(y))",
+                            "references": [
+                              "7",
+                              "9"
+                            ]
+                          },
+                          "child": {
+                            "type": "mp",
+                            "node": {
+                              "id": 11,
+                              "value": "T ( Q(g(y)) → ∃x g(f(x)) ≐ g(y) )",
+                              "references": [
+                                "2"
+                              ]
+                            },
+                            "child": {
+                              "type": "delta",
+                              "node": {
+                                "id": 12,
+                                "value": "T ∃x g(f(x)) ≐ g(y)",
+                                "references": [
+                                  "10",
+                                  "11"
+                                ]
+                              },
+                              "child": {
+                                "type": "gammaStar",
+                                "node": {
+                                  "id": 13,
+                                  "value": "T g(f(x)) ≐ g(y)",
+                                  "references": [
+                                    "12"
+                                  ]
+                                },
+                                "child": {
+                                  "type": "mp",
+                                  "node": {
+                                    "id": 14,
+                                    "value": "T ( g(f(x)) ≐ g(y) → f(x) ≐ y )",
+                                    "references": [
+                                      "1"
+                                    ]
+                                  },
+                                  "child": {
+                                    "type": "gamma",
+                                    "node": {
+                                      "id": 15,
+                                      "value": "T f(x) ≐ y",
+                                      "references": [
+                                        "13",
+                                        "14"
+                                      ]
+                                    },
+                                    "child": {
+                                      "type": "closed",
+                                      "node": {
+                                        "id": 16,
+                                        "value": "F f(x) ≐ y",
+                                        "references": [
+                                          "8"
+                                        ]
+                                      },
+                                      "closed": [
+                                        "15",
+                                        "16"
+                                      ]
+                                    },
+                                    "substitution": {
+                                      "str": ""
+                                    }
+                                  }
+                                },
+                                "substitution": {
+                                  "str": "a->f(x), b->y"
+                                }
+                              },
+                              "substitution": {
+                                "str": ""
+                              }
+                            }
+                          },
+                          "substitution": {
+                            "str": "z->g(y)"
+                          }
+                        }
+                      },
+                      "substitution": {
+                        "str": ""
+                      }
+                    }
+                  }
+                },
+                "substitution": {
+                  "str": ""
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1179,6 +1364,7 @@
     36,
     37,
     53,
+    54,
     39
   ],
   "settings": {
