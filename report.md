@@ -24,7 +24,15 @@
 |                 |        |                                          |
 |       **Testy** |   37.3 |                                          |
 |                 |        |                                          |
+|       final0605 |  14.75 | ? + 5 + 5 + 4,75 Výsledok je neúplný, ale bude ≥ 10  |
 |                 |        |                                          |
-|         **SUM** | 68.015 |                                          |
+|       **Final** |  14.75 |                                          |
+|                 |        |                                          |
+|      teoria0605 |   18.6 | 10 + 4 + 2,6 + 2 Detaily na konzultáciách  |
+|                 |        |                                          |
+|     **Teória** |   18.6 |                                          |
+|                 |        |                                          |
+|                 |        |                                          |
+|         **SUM** | 101.365 |                                          |
 
 Alias: marcek18
