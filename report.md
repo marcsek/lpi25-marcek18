@@ -33,6 +33,6 @@
 |     **Teória** |   18.6 |                                          |
 |                 |        |                                          |
 |                 |        |                                          |
-|         **SUM** | 101.365 |                                          |
+|         **SUM** | 101.365 | Possible grade: A                        |
 
 Alias: marcek18
