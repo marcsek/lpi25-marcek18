@@ -24,15 +24,15 @@
 |                 |        |                                          |
 |       **Testy** |   37.3 |                                          |
 |                 |        |                                          |
-|       final0605 |  14.75 | ? + 5 + 5 + 4,75 Výsledok je neúplný, ale bude ≥ 10  |
+|       final0605 |  20.75 | 6 + 5 + 5 + 4,75 Detaily na konzultáciách  |
 |                 |        |                                          |
-|       **Final** |  14.75 |                                          |
+|       **Final** |  20.75 |                                          |
 |                 |        |                                          |
 |      teoria0605 |   18.6 | 10 + 4 + 2,6 + 2 Detaily na konzultáciách  |
 |                 |        |                                          |
 |     **Teória** |   18.6 |                                          |
 |                 |        |                                          |
 |                 |        |                                          |
-|         **SUM** | 101.365 | Possible grade: A                        |
+|         **SUM** | 107.365 | Possible grade: A                        |
 
 Alias: marcek18
