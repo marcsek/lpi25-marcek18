@@ -12,12 +12,16 @@
 |**Teoretické domáce úlohy** | 20.715 |                                          |
 |                 |        |                                          |
 |            pu01 |      2 | OK                                       |
+|            pu02 |      2 | ok                                       |
 |            pu03 |      2 | OK                                       |
 |            pu04 |      2 | OK                                       |
 |            pu05 |      2 | OK                                       |
 |            pu06 |      2 | OK                                       |
+|            pu08 |      2 | Ok                                       |
+|            pu09 |      2 | Ok                                       |
+|            pu10 |      2 | OK                                       |
 |                 |        |                                          |
-|**Praktické úlohy** |     10 |                                          |
+|**Praktické úlohy** |     18 |                                          |
 |                 |        |                                          |
 |          test01 |     14 | 4,5 + 4,6 + 4,9                          |
 |          test02 |   23.3 | 6,5 + 7,8 + 9                            |
@@ -33,6 +37,6 @@
 |     **Teória** |   18.6 |                                          |
 |                 |        |                                          |
 |                 |        |                                          |
-|         **SUM** | 107.365 | Possible grade: A                        |
+|         **SUM** | 115.365 | Possible grade: A                        |
 
 Alias: marcek18
