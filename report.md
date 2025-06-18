@@ -21,8 +21,9 @@
 |            pu08 |      2 | Ok                                       |
 |            pu09 |      2 | Ok                                       |
 |            pu10 |      2 | OK                                       |
+|            pu11 |      2 | Ok                                       |
 |                 |        |                                          |
-|**Praktické úlohy** |     20 |                                          |
+|**Praktické úlohy** |     22 |                                          |
 |                 |        |                                          |
 |          test01 |     14 | 4,5 + 4,6 + 4,9                          |
 |          test02 |   23.3 | 6,5 + 7,8 + 9                            |
@@ -37,7 +38,9 @@
 |                 |        |                                          |
 |     **Teória** |   18.6 |                                          |
 |                 |        |                                          |
+|         bonus01 |      2 | Ok                                       |
 |                 |        |                                          |
-|         **SUM** | 117.365 | Possible grade: A                        |
+|                 |        |                                          |
+|         **SUM** | 121.365 | Possible grade: A                        |
 
 Alias: marcek18
