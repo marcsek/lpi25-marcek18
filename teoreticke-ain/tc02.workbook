@@ -263,16 +263,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "40": {
-      "id": 40,
-      "type": "tableauEditor",
-      "data": null,
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -287,7 +277,6 @@
     8,
     2,
     3,
-    40,
     24,
     27,
     25,
