@@ -173,6 +173,16 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "35": {
+      "id": 35,
+      "type": "formalizationChecker",
+      "data": null,
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -185,6 +195,7 @@
     30,
     34,
     26,
+    35,
     7
   ],
   "settings": {
