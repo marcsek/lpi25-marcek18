@@ -272,16 +272,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "38": {
-      "id": 38,
-      "type": "text",
-      "data": "",
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -299,7 +289,6 @@
     1,
     3,
     10,
-    38,
     21,
     18,
     19,
