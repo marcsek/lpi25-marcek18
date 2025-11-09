@@ -173,16 +173,6 @@
         "ids": [],
         "entities": {}
       }
-    },
-    "36": {
-      "id": 36,
-      "type": "structureExplorer",
-      "data": null,
-      "idCounter": 0,
-      "comments": {
-        "ids": [],
-        "entities": {}
-      }
     }
   },
   "cellsOrder": [
@@ -195,7 +185,6 @@
     30,
     34,
     26,
-    36,
     7
   ],
   "settings": {
