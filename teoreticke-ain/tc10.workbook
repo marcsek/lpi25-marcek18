@@ -1315,6 +1315,16 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "74": {
+      "id": 74,
+      "type": "structureExplorer",
+      "data": null,
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -1325,6 +1335,7 @@
     5,
     44,
     49,
+    74,
     45,
     50,
     7,
