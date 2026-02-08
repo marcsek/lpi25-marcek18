@@ -263,6 +263,16 @@
         "ids": [],
         "entities": {}
       }
+    },
+    "39": {
+      "id": 39,
+      "type": "structureExplorer",
+      "data": null,
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
     }
   },
   "cellsOrder": [
@@ -281,6 +291,7 @@
     27,
     25,
     26,
+    39,
     4,
     36,
     5,
